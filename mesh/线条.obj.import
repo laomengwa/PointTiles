@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dw6nldunxjk2t"
+path="res://.godot/imported/线条.obj-9a3ea459e40350fa10033e9606de12cd.mesh"
+
+[deps]
+
+files=["res://.godot/imported/线条.obj-9a3ea459e40350fa10033e9606de12cd.mesh"]
+
+source_file="res://mesh/线条.obj"
+dest_files=["res://.godot/imported/线条.obj-9a3ea459e40350fa10033e9606de12cd.mesh", "res://.godot/imported/线条.obj-9a3ea459e40350fa10033e9606de12cd.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

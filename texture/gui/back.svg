@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16mm"
+   height="16mm"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   sodipodi:docname="back.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#000000"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#ffa3a3"
+     inkscape:document-units="mm"
+     inkscape:zoom="5.6568543"
+     inkscape:cx="11.313708"
+     inkscape:cy="64.346717"
+     inkscape:window-width="1300"
+     inkscape:window-height="702"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <defs
+     id="defs1">
+    <linearGradient
+       id="swatch2"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop2" />
+    </linearGradient>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="-0.65873754 : 8.8215174 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="22.551692 : 9.2653622 : 1"
+       inkscape:persp3d-origin="8 : 5.3333333 : 1"
+       id="perspective11" />
+  </defs>
+  <path
+     style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#fff9f9;stroke-width:3.79828;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+     d="M 1.3522936,9.3514821 9.2584983,1.3334299"
+     id="path9" />
+  <path
+     style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#fff9f9;stroke-width:3.79828;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+     d="M 1.3522936,6.6486978 9.2584983,14.66675"
+     id="path9-9" />
+  <path
+     style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#fff9f9;stroke-width:3.79828;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+     d="M 4.0133386,7.8990932 15.273488,7.9781808"
+     id="path9-9-1" />
+</svg>

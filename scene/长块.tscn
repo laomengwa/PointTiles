@@ -1,0 +1,75 @@
+[gd_scene load_steps=11 format=3 uid="uid://bg2bwfk0ei3ww"]
+
+[ext_resource type="Script" path="res://script/note/黑块.gd" id="1_4utv5"]
+[ext_resource type="FontFile" uid="uid://w0oxygfawslj" path="res://fonts/Futura-Condensed.otf" id="2_ie0fu"]
+[ext_resource type="ArrayMesh" uid="uid://1aphyy4c1vna" path="res://mesh/长条尾.obj" id="2_lg23r"]
+[ext_resource type="Material" uid="uid://cvr5j2im8p1wm" path="res://shader/note/长条尾.tres" id="3_cyhrv"]
+[ext_resource type="ArrayMesh" uid="uid://b03ggimjeg2qc" path="res://mesh/长条头.obj" id="4_yu7v1"]
+[ext_resource type="ArrayMesh" uid="uid://cdxxrma2f7uj3" path="res://mesh/长条腰.obj" id="6_5fkdg"]
+[ext_resource type="Material" uid="uid://bvs8yl85ladsk" path="res://shader/note/长条腰.tres" id="6_saqvq"]
+[ext_resource type="Material" uid="uid://bltgxu1ueverp" path="res://shader/note/长条头.tres" id="8_bg3qh"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_yyfk2"]
+points = PackedVector3Array(-1, -3, 0, 1, -3, 0, -1, 4, 1, -1, 4, -1, 1, 4, 1, 1, 4, -1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6hbun"]
+size = Vector3(2, 3, 1)
+
+[node name="根节点" type="Node3D"]
+rotation_edit_mode = 2
+script = ExtResource("1_4utv5")
+
+[node name="模型" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="长条尾" type="MeshInstance3D" parent="模型"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+mesh = ExtResource("2_lg23r")
+skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("3_cyhrv")
+
+[node name="标签" type="Label3D" parent="模型/长条尾"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+pixel_size = 0.01
+billboard = 1
+no_depth_test = true
+modulate = Color(0.0666667, 0.596078, 0.933333, 1)
+text = "+0"
+font = ExtResource("2_ie0fu")
+font_size = 150
+outline_size = 0
+
+[node name="触摸区域" type="Area3D" parent="模型/长条尾"]
+
+[node name="形状" type="CollisionShape3D" parent="模型/长条尾/触摸区域"]
+shape = SubResource("ConvexPolygonShape3D_yyfk2")
+
+[node name="长条腰" type="MeshInstance3D" parent="模型"]
+visible = false
+mesh = ExtResource("6_5fkdg")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("6_saqvq")
+
+[node name="触摸区域" type="Area3D" parent="模型/长条腰"]
+transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="形状" type="CollisionShape3D" parent="模型/长条腰/触摸区域"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
+shape = SubResource("BoxShape3D_6hbun")
+
+[node name="长条头" type="MeshInstance3D" parent="模型"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
+mesh = ExtResource("4_yu7v1")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("8_bg3qh")
+
+[node name="触摸区域" type="Area3D" parent="模型/长条头"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="形状" type="CollisionShape3D" parent="模型/长条头/触摸区域"]
+shape = SubResource("ConvexPolygonShape3D_yyfk2")
+
+[connection signal="input_event" from="模型/长条尾/触摸区域" to="." method="长块尾触摸区域"]
+[connection signal="mouse_exited" from="模型/长条尾/触摸区域" to="." method="长块尾部失误检测"]
+[connection signal="input_event" from="模型/长条腰/触摸区域" to="." method="长块腰触摸区域"]
+[connection signal="input_event" from="模型/长条头/触摸区域" to="." method="点击事件"]

@@ -1,0 +1,5197 @@
+[gd_scene load_steps=88 format=3 uid="uid://s667etyqdixl"]
+
+[ext_resource type="Theme" uid="uid://dn5wl33wjkk6m" path="res://scene/gui.tres" id="1_cxgoy"]
+[ext_resource type="Texture2D" uid="uid://c61nyddduuj3a" path="res://texture/icon.svg" id="3_cusen"]
+[ext_resource type="Texture2D" uid="uid://sgi1mm2vs722" path="res://texture/exit.svg" id="4_nd7g3"]
+[ext_resource type="Script" path="res://script/MainControl.gd" id="5_df882"]
+[ext_resource type="Script" path="res://script/Setting_Window.gd" id="5_pld4y"]
+[ext_resource type="Texture2D" uid="uid://d2vbbsx481biu" path="res://texture/back.svg" id="6_fbuhg"]
+[ext_resource type="FontFile" uid="uid://urh5xsrel1gx" path="res://fonts/NotoSansCJK-Medium.ttc" id="6_wcw8u"]
+[ext_resource type="Texture2D" uid="uid://cn4jl08q322i3" path="res://texture/menu.svg" id="7_7e0y1"]
+[ext_resource type="Theme" uid="uid://og4ks66dj3mb" path="res://scene/setting_buttom.tres" id="8_nxs4a"]
+[ext_resource type="Script" path="res://script/GameMenu.gd" id="9_waptp"]
+[ext_resource type="Script" path="res://script/SongListRead.gd" id="10_bx6im"]
+[ext_resource type="Texture2D" uid="uid://dr0ccxyc467u4" path="res://texture/search.svg" id="10_s2f8d"]
+[ext_resource type="Script" path="res://scene/播放器关闭.gd" id="12_b88pt"]
+[ext_resource type="Texture2D" uid="uid://yt2imbe173v1" path="res://texture/start_full.svg" id="12_umq50"]
+[ext_resource type="Texture2D" uid="uid://bhoalisuwrqga" path="res://texture/settings.svg" id="14_it1u3"]
+[ext_resource type="Texture2D" uid="uid://dbxf5uyf5ws0r" path="res://texture/[Yeonwa]芭芭拉(原神)-VG93178.jpg" id="14_kln2y"]
+[ext_resource type="Script" path="res://script/GameGUI.gd" id="15_bbf55"]
+[ext_resource type="FontFile" uid="uid://w0oxygfawslj" path="res://fonts/Futura-Condensed.otf" id="15_hpux7"]
+[ext_resource type="Texture2D" uid="uid://cowl4x1ld1vb5" path="res://texture/touchparticles.svg" id="18_t4c6x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_40cwq"]
+
+[sub_resource type="Theme" id="Theme_fru1m"]
+Button/styles/disabled = SubResource("StyleBoxEmpty_40cwq")
+Button/styles/focus = SubResource("StyleBoxEmpty_40cwq")
+Button/styles/hover = SubResource("StyleBoxEmpty_40cwq")
+Button/styles/normal = SubResource("StyleBoxEmpty_40cwq")
+Button/styles/pressed = SubResource("StyleBoxEmpty_40cwq")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xku85"]
+bg_color = Color(1, 0.666667, 0.666667, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fpthl"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(1, 1, 1, 0.2)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_66nwn"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(1, 1, 1, 0.133333)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.533333, 0.533333, 0.533333, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j47fa"]
+bg_color = Color(1, 1, 1, 0.666667)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fcqrc"]
+bg_color = Color(1, 1, 1, 0.666667)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fu6xq"]
+bg_color = Color(1, 0.533333, 0.533333, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_trwm8"]
+bg_color = Color(0.0705882, 0.521569, 0.890196, 0.501961)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ey1t7"]
+bg_color = Color(0.4, 0.4, 0.4, 0.4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o2r3a"]
+bg_color = Color(1, 0.533333, 0.533333, 1)
+
+[sub_resource type="Theme" id="Theme_3dxui"]
+Label/colors/font_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gr8ww"]
+bg_color = Color(1, 0.6, 0.6, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pnffu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i480v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m5y8w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7c74t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0u4vb"]
+
+[sub_resource type="Animation" id="Animation_cybc2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../..:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../..:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../..:mouse_filter")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_2k5um"]
+resource_name = "关闭"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../..:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../..:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../..:mouse_filter")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+
+[sub_resource type="Animation" id="Animation_yvmtb"]
+resource_name = "打开"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../..:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../..:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../..:mouse_filter")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [2, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nmwrw"]
+_data = {
+"RESET": SubResource("Animation_cybc2"),
+"关闭": SubResource("Animation_2k5um"),
+"打开": SubResource("Animation_yvmtb")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pa44f"]
+bg_color = Color(1, 1, 1, 0.666667)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 0.666667, 0.666667, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t3ex3"]
+bg_color = Color(0.0705882, 0.521569, 0.890196, 1)
+
+[sub_resource type="Animation" id="Animation_glsj2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.851654, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_f14yj"]
+resource_name = "加载谱面画面背景"
+length = 8.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4, 6, 8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.713726, 1, 1, 1), Color(1, 0.713726, 1, 1), Color(1, 1, 0.713726, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jjfrf"]
+_data = {
+"RESET": SubResource("Animation_glsj2"),
+"加载谱面画面背景": SubResource("Animation_f14yj")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8cwgx"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.533333, 0.533333, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Theme" id="Theme_cocfk"]
+default_font = ExtResource("15_hpux7")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qyqrd"]
+bg_color = Color(1, 0.25098, 0.25098, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ktctu"]
+bg_color = Color(1, 0.666667, 0.666667, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k0whm"]
+bg_color = Color(1, 1, 1, 0.533333)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_quim2"]
+bg_color = Color(0.866667, 0.866667, 0.866667, 0.866667)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(1, 0.666667, 0.666667, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_elx2w"]
+bg_color = Color(1, 0.666667, 0.666667, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_govni"]
+bg_color = Color(0.866667, 0.866667, 0.866667, 0.4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_col4s"]
+bg_color = Color(0, 0.266667, 0.733333, 0.733333)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7vify"]
+bg_color = Color(1, 0.666667, 0.666667, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_v28wf"]
+line_spacing = 0.0
+font = ExtResource("6_wcw8u")
+font_size = 24
+outline_size = 1
+
+[sub_resource type="Theme" id="Theme_jwcaf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hoiom"]
+bg_color = Color(1, 1, 1, 0.666667)
+border_width_right = 4
+border_color = Color(1, 0.666667, 0.666667, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5o2qi"]
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qx0se"]
+bg_color = Color(0.733333, 0.733333, 0.733333, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_13b4a"]
+bg_color = Color(0.8, 0.8, 0.8, 1)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_h3a0u"]
+initial_velocity_max = 50.0
+gravity = Vector3(0, 98, 0)
+
+[sub_resource type="Animation" id="Animation_fjjqb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("粒子效果:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("粒子效果:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_w640s"]
+resource_name = "按下"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("粒子效果:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("粒子效果:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_vujky"]
+resource_name = "松开"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("粒子效果:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("粒子效果:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xph37"]
+_data = {
+"RESET": SubResource("Animation_fjjqb"),
+"按下": SubResource("Animation_w640s"),
+"松开": SubResource("Animation_vujky")
+}
+
+[sub_resource type="Animation" id="Animation_5onur"]
+resource_name = "Back"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GameMenu:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainMenu:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MainMenu:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.8, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GameMenu:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_qu6rs"]
+resource_name = "ExitWindow"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("窗口/游戏退出:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panel:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_2f20a"]
+resource_name = "ExitWindowClose"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("窗口/游戏退出:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panel:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ele2j"]
+resource_name = "GameMenuDisplayWidthClose_0"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GameMenu/SongInfo:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GameMenu/界面左列表:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(400, 648), Vector2(500, 648)]
+}
+
+[sub_resource type="Animation" id="Animation_uy6d5"]
+resource_name = "GameMenuDisplayWidthClose_2"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GameMenu/SongInfo:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GameMenu/界面左列表:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 648), Vector2(500, 648)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GameMenu/界面左列表:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_6jx5p"]
+resource_name = "GameMenuDisplayWidthExpand_0"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GameMenu/SongInfo:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GameMenu/界面左列表:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(500, 648), Vector2(400, 648)]
+}
+
+[sub_resource type="Animation" id="Animation_0udtr"]
+resource_name = "GameMenuDisplayWidthExpand_2"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GameMenu/SongInfo:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GameMenu/界面左列表:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(500, 648), Vector2(0, 648)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GameMenu/界面左列表:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_qng4c"]
+resource_name = "GameSettingDisplayWidthClose"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Setting_Window/设置选项按钮:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(320, 588), Vector2(1152, 588)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Setting_Window/设置选项:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, false]
+}
+
+[sub_resource type="Animation" id="Animation_voect"]
+resource_name = "GameSettingDisplayWidthExpand"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Setting_Window/设置选项按钮:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1152, 588), Vector2(320, 588)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Setting_Window/设置选项:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_xvmfv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GameMenu:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainMenu:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GameMenu:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MainMenu:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Setting_Window:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Setting_Window:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("窗口/游戏退出:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("GameMenu/SongInfo:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Panel:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Panel:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("GameMenu/界面左列表:size")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(400, 648)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Setting_Window/设置选项:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("GameMenu/界面左列表:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("加载画面:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("加载画面/Panel2:anchor_left")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.35]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("加载画面/Panel:theme_override_styles/panel:bg_color")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.666667)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("GameGUI:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("GameGUI:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("GameGUI/暂停窗口:visible")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("结算画面:modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("结算画面:visible")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("播放器:visible")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("GameGUI/游戏界面暂停键:mouse_filter")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_hy5l1"]
+resource_name = "SettingWindow"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Setting_Window:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Setting_Window:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_e0bys"]
+resource_name = "SettingWindowClose"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Setting_Window:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Setting_Window:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_j7skq"]
+resource_name = "Start"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GameMenu:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainMenu:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GameMenu:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.8, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MainMenu:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_r2kpo"]
+resource_name = "加载谱面画面"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("加载画面:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GameMenu:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GameMenu:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("加载画面:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("加载画面/Panel:theme_override_styles/panel:bg_color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.666667), Color(0.866667, 0.866667, 0.866667, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("加载画面/Panel2:anchor_left")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.35]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Panel:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Panel:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("GameGUI/暂停窗口:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("结算画面:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("结算画面:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("GameGUI:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_ijes2"]
+resource_name = "加载谱面画面关闭"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("加载画面:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("加载画面/Panel2:anchor_left")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.35, -0.5]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("加载画面:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GameGUI:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("GameGUI:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.5, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("GameGUI/游戏界面暂停键:mouse_filter")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [2, 0]
+}
+
+[sub_resource type="Animation" id="Animation_nohp3"]
+resource_name = "暂停窗口"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GameGUI/暂停窗口:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panel:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_w22cu"]
+resource_name = "暂停窗口关闭"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GameGUI/暂停窗口:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panel:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_cusf8"]
+resource_name = "结算画面"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("结算画面:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("结算画面:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GameGUI:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GameGUI:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("GameGUI/暂停窗口:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Panel:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Panel:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_xobqq"]
+resource_name = "结算画面返回"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("结算画面:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("结算画面:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GameMenu:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GameMenu:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hutix"]
+_data = {
+"Back": SubResource("Animation_5onur"),
+"ExitWindow": SubResource("Animation_qu6rs"),
+"ExitWindowClose": SubResource("Animation_2f20a"),
+"GameMenuDisplayWidthClose_0": SubResource("Animation_ele2j"),
+"GameMenuDisplayWidthClose_2": SubResource("Animation_uy6d5"),
+"GameMenuDisplayWidthExpand_0": SubResource("Animation_6jx5p"),
+"GameMenuDisplayWidthExpand_2": SubResource("Animation_0udtr"),
+"GameSettingDisplayWidthClose": SubResource("Animation_qng4c"),
+"GameSettingDisplayWidthExpand": SubResource("Animation_voect"),
+"RESET": SubResource("Animation_xvmfv"),
+"SettingWindow": SubResource("Animation_hy5l1"),
+"SettingWindowClose": SubResource("Animation_e0bys"),
+"Start": SubResource("Animation_j7skq"),
+"加载谱面画面": SubResource("Animation_r2kpo"),
+"加载谱面画面关闭": SubResource("Animation_ijes2"),
+"暂停窗口": SubResource("Animation_nohp3"),
+"暂停窗口关闭": SubResource("Animation_w22cu"),
+"结算画面": SubResource("Animation_cusf8"),
+"结算画面返回": SubResource("Animation_xobqq")
+}
+
+[node name="MainControl" type="Control"]
+layout_direction = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_cxgoy")
+script = ExtResource("5_df882")
+
+[node name="MainMenu" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MainMenu"]
+layout_direction = 2
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -30.0
+offset_right = 95.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "Test 0.0.2 "
+
+[node name="StartGames" type="Button" parent="MainMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_fru1m")
+button_mask = 7
+flat = true
+expand_icon = true
+
+[node name="Label" type="Label" parent="MainMenu/StartGames"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -58.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "点击以开始游戏"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Settings_Button" type="Button" parent="MainMenu"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -90.0
+offset_top = -90.0
+offset_right = -30.0
+offset_bottom = -30.0
+grow_horizontal = 0
+grow_vertical = 0
+tooltip_text = "设置"
+icon = ExtResource("14_it1u3")
+expand_icon = true
+
+[node name="Exit_Button" type="Button" parent="MainMenu"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = -90.0
+offset_right = 90.0
+offset_bottom = -30.0
+grow_vertical = 0
+tooltip_text = "退出游戏"
+icon = ExtResource("4_nd7g3")
+expand_icon = true
+
+[node name="播放器" type="Button" parent="MainMenu"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -90.0
+offset_top = -160.0
+offset_right = -30.0
+offset_bottom = -100.0
+grow_horizontal = 0
+grow_vertical = 0
+tooltip_text = "播放器"
+icon = ExtResource("3_cusen")
+icon_alignment = 1
+expand_icon = true
+
+[node name="GameMenu" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("9_waptp")
+
+[node name="Settings_Bar" type="Control" parent="GameMenu"]
+layout_direction = 2
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 60.0
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="GameMenu/Settings_Bar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xku85")
+
+[node name="MenuBar" type="Button" parent="GameMenu/Settings_Bar"]
+layout_mode = 1
+offset_right = 60.0
+offset_bottom = 60.0
+tooltip_text = "返回"
+icon = ExtResource("6_fbuhg")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Settings" type="Button" parent="GameMenu/Settings_Bar"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -60.0
+offset_right = 60.0
+grow_vertical = 0
+tooltip_text = "设置"
+icon = ExtResource("14_it1u3")
+icon_alignment = 1
+expand_icon = true
+
+[node name="左栏滚动" type="ScrollContainer" parent="GameMenu/Settings_Bar"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_top = 60.0
+offset_right = 60.0
+offset_bottom = -60.0
+grow_vertical = 2
+
+[node name="左栏" type="VBoxContainer" parent="GameMenu/Settings_Bar/左栏滚动"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="播放器" type="Button" parent="GameMenu/Settings_Bar/左栏滚动/左栏"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+tooltip_text = "播放器"
+icon = ExtResource("3_cusen")
+icon_alignment = 1
+expand_icon = true
+
+[node name="界面左列表" type="Control" parent="GameMenu"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 60.0
+offset_right = 460.0
+offset_bottom = 648.0
+grow_vertical = 2
+
+[node name="Tab" type="ScrollContainer" parent="GameMenu/界面左列表"]
+layout_direction = 1
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 54.0
+grow_horizontal = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+follow_focus = true
+horizontal_scroll_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameMenu/界面左列表/Tab"]
+layout_direction = 1
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MenuBar" type="TabBar" parent="GameMenu/界面左列表/Tab/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/tab_selected = SubResource("StyleBoxFlat_fpthl")
+theme_override_styles/tab_hovered = SubResource("StyleBoxFlat_fpthl")
+theme_override_styles/tab_unselected = SubResource("StyleBoxFlat_66nwn")
+theme_override_styles/tab_disabled = SubResource("StyleBoxFlat_66nwn")
+theme_override_styles/tab_focus = SubResource("StyleBoxFlat_66nwn")
+theme_override_styles/button_pressed = SubResource("StyleBoxFlat_66nwn")
+theme_override_styles/button_highlight = SubResource("StyleBoxFlat_66nwn")
+tab_count = 4
+clip_tabs = false
+select_with_rmb = true
+tab_0/title = "轨道"
+tab_1/title = "无轨"
+tab_2/title = "传统"
+tab_3/title = "收藏"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameMenu/界面左列表"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GameMenu/界面左列表/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="LineEdit" type="LineEdit" parent="GameMenu/界面左列表/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "输入歌曲名以搜索……"
+placeholder_text = "输入歌曲名以搜索……"
+
+[node name="Search" type="Button" parent="GameMenu/界面左列表/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+tooltip_text = "搜索"
+icon = ExtResource("10_s2f8d")
+icon_alignment = 1
+
+[node name="Control" type="ScrollContainer" parent="GameMenu/界面左列表/VBoxContainer"]
+custom_minimum_size = Vector2(40, 320)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_j47fa")
+vertical_scroll_mode = 2
+
+[node name="SongList" type="VBoxContainer" parent="GameMenu/界面左列表/VBoxContainer/Control"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("10_bx6im")
+
+[node name="SongInfo" type="Control" parent="GameMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 460.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(692, 648)
+
+[node name="SongInfo" type="ScrollContainer" parent="GameMenu/SongInfo"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fcqrc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameMenu/SongInfo/SongInfo"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="AspectRatioContainer" parent="GameMenu/SongInfo/SongInfo/VBoxContainer"]
+custom_minimum_size = Vector2(400, 250)
+layout_mode = 2
+ratio = 1.6
+alignment_horizontal = 0
+alignment_vertical = 0
+
+[node name="Label" type="Label" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Panel"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_styles/normal = SubResource("StyleBoxFlat_fu6xq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Panel/Label"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+texture_normal = ExtResource("14_kln2y")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Panel/Label"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -125.0
+offset_right = -10.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Panel/Label/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+
+[node name="歌曲名称" type="Label" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Panel/Label/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.933333, 0.933333, 0.933333, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "歌曲选项测试"
+text_overrun_behavior = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Panel/Label/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="艺术家名称" type="Label" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Panel/Label/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.933333, 0.933333, 0.933333, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "艺术家测试"
+text_overrun_behavior = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Panel/Label/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Panel/Label/HBoxContainer/VBoxContainer/HBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Panel/Label/HBoxContainer/VBoxContainer/HBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(28, 35)
+layout_mode = 2
+texture = ExtResource("12_umq50")
+
+[node name="TextureRect2" type="TextureRect" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Panel/Label/HBoxContainer/VBoxContainer/HBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(28, 35)
+layout_mode = 2
+texture = ExtResource("12_umq50")
+
+[node name="TextureRect3" type="TextureRect" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Panel/Label/HBoxContainer/VBoxContainer/HBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(28, 35)
+layout_mode = 2
+texture = ExtResource("12_umq50")
+
+[node name="Control" type="Control" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Panel/Label/HBoxContainer/VBoxContainer/HBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="等级" type="Label" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Panel/Label/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(1, 0.25098, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_trwm8")
+text = "甲"
+horizontal_alignment = 2
+
+[node name="Text2" type="Panel" parent="GameMenu/SongInfo/SongInfo/VBoxContainer"]
+custom_minimum_size = Vector2(0, 180)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ey1t7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Text2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Text2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.933333, 0.933333, 0.933333, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_o2r3a")
+text = "成绩"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Text2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Text2/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme = SubResource("Theme_3dxui")
+
+[node name="Label" type="Label" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Text2/VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "最终评价："
+
+[node name="Label2" type="Label" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Text2/VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.270588, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "甲级"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Text2/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme = SubResource("Theme_3dxui")
+
+[node name="Label" type="Label" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Text2/VBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "最大连击数："
+
+[node name="Label2" type="Label" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Text2/VBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "0
+"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Text2/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme = SubResource("Theme_3dxui")
+
+[node name="Label" type="Label" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Text2/VBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "最高得分："
+
+[node name="Label2" type="Label" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Text2/VBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "0
+"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Text2/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme = SubResource("Theme_3dxui")
+
+[node name="Label" type="Label" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Text2/VBoxContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "精确度："
+
+[node name="Label2" type="Label" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Text2/VBoxContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+text = "0.00%
+"
+
+[node name="Text" type="Panel" parent="GameMenu/SongInfo/SongInfo/VBoxContainer"]
+custom_minimum_size = Vector2(0, 240)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ey1t7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Text"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Text/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.933333, 0.933333, 0.933333, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_o2r3a")
+text = "详情"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Text/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Text/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_3dxui")
+
+[node name="Label" type="Label" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Text/VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "歌曲速度："
+
+[node name="Label2" type="Label" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Text/VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "0.000
+"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Text/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_3dxui")
+
+[node name="Label" type="Label" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Text/VBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "节拍速度："
+
+[node name="Label2" type="Label" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Text/VBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "000
+"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Text/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_3dxui")
+
+[node name="Label" type="Label" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Text/VBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "基准节拍："
+
+[node name="Label2" type="Label" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Text/VBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "0
+"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Text/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_3dxui")
+
+[node name="Label" type="Label" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Text/VBoxContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "物件数量："
+
+[node name="Label2" type="Label" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Text/VBoxContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+text = "0
+"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Text/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_3dxui")
+
+[node name="Label" type="Label" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Text/VBoxContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "谱面类型："
+
+[node name="Label2" type="Label" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Text/VBoxContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+text = "有轨下落式(4轨道)"
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Text/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_3dxui")
+
+[node name="Label" type="Label" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Text/VBoxContainer/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "谱师："
+
+[node name="Label2" type="Label" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/Text/VBoxContainer/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+text = "Test"
+
+[node name="使用倾斜轨道" type="HBoxContainer" parent="GameMenu/SongInfo/SongInfo/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/使用倾斜轨道"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "使用倾斜轨道"
+
+[node name="CheckBox" type="CheckBox" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/使用倾斜轨道"]
+layout_mode = 2
+
+[node name="无限模式" type="HBoxContainer" parent="GameMenu/SongInfo/SongInfo/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/无限模式"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "无限模式"
+
+[node name="CheckBox" type="CheckBox" parent="GameMenu/SongInfo/SongInfo/VBoxContainer/无限模式"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GameMenu/SongInfo/SongInfo/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GameMenu/SongInfo"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -50.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_gr8ww")
+
+[node name="Button" type="Button" parent="GameMenu/SongInfo/Label"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -110.0
+offset_top = -70.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "开始"
+
+[node name="播放器" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_pnffu")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_i480v")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_m5y8w")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_7c74t")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0u4vb")
+script = ExtResource("12_b88pt")
+
+[node name="动画" type="AnimationPlayer" parent="播放器"]
+root_node = NodePath("../Panel/VBoxContainer/HBoxContainer2")
+libraries = {
+"": SubResource("AnimationLibrary_nmwrw")
+}
+
+[node name="Panel" type="Panel" parent="播放器"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -220.0
+offset_right = 320.0
+offset_bottom = -20.0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_pa44f")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="播放器/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="播放器/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_t3ex3")
+text = "歌曲选项测试"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="播放器/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="播放器/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="播放器/Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0:00"
+vertical_alignment = 1
+
+[node name="Button3" type="Button" parent="播放器/Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "上一曲"
+
+[node name="Button" type="Button" parent="播放器/Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "暂停"
+
+[node name="Button2" type="Button" parent="播放器/Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "下一曲"
+
+[node name="Label2" type="Label" parent="播放器/Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0:00"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="播放器/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="Label" type="Label" parent="播放器/Panel/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "当前时间"
+vertical_alignment = 2
+
+[node name="Button" type="Button" parent="播放器/Panel/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "随机"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="播放器/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="时间" type="Label" parent="播放器/Panel/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Timer" type="Timer" parent="播放器/Panel/VBoxContainer/HBoxContainer2"]
+autostart = true
+
+[node name="Button" type="Button" parent="播放器/Panel/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "列表"
+
+[node name="加载画面" type="Control" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="加载背景动画" type="AnimationPlayer" parent="加载画面"]
+libraries = {
+"": SubResource("AnimationLibrary_jjfrf")
+}
+
+[node name="Panel" type="Panel" parent="加载画面"]
+modulate = Color(0.851654, 1, 1, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_j47fa")
+
+[node name="Panel2" type="AspectRatioContainer" parent="加载画面"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.35
+anchor_top = 0.35
+anchor_right = 0.65
+anchor_bottom = 0.65
+offset_left = -127.2
+offset_top = -90.3
+offset_right = 127.2
+offset_bottom = 90.3
+grow_horizontal = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+ratio = 1.6
+alignment_horizontal = 0
+alignment_vertical = 0
+
+[node name="Label" type="Label" parent="加载画面/Panel2"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_styles/normal = SubResource("StyleBoxFlat_fu6xq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="加载画面/Panel2/Label"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+texture_normal = ExtResource("14_kln2y")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="加载画面/Panel2/Label"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -88.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="加载画面/Panel2/Label/VBoxContainer"]
+layout_mode = 2
+
+[node name="歌曲名称" type="Label" parent="加载画面/Panel2/Label/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.933333, 0.933333, 0.933333, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "歌曲选项测试"
+
+[node name="封面" type="Label" parent="加载画面/Panel2/Label/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "封面画师：Yeonwa"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="加载画面/Panel2/Label/VBoxContainer"]
+layout_mode = 2
+
+[node name="艺术家名称" type="Label" parent="加载画面/Panel2/Label/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.933333, 0.933333, 0.933333, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "艺术家测试"
+
+[node name="谱师" type="Label" parent="加载画面/Panel2/Label/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "谱师：Test"
+
+[node name="加载文字" type="Label" parent="加载画面"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -136.0
+offset_bottom = -46.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.933333, 0.933333, 0.933333, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "谱面加载中"
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="加载画面/加载文字"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = -34.0
+offset_right = 160.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_8cwgx")
+
+[node name="Label" type="Label" parent="加载画面"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -48.0
+offset_right = 120.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "测试版本，不代表最终品质"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Button" type="Button" parent="加载画面"]
+layout_mode = 0
+offset_right = 38.0
+offset_bottom = 25.0
+
+[node name="GameGUI" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = SubResource("Theme_cocfk")
+script = ExtResource("15_bbf55")
+
+[node name="游戏界面精确判定" type="Label" parent="GameGUI"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 100.0
+offset_right = 20.0
+offset_bottom = 173.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_wcw8u")
+theme_override_font_sizes/font_size = 40
+text = "完美"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="游戏界面进度条" type="ProgressBar" parent="GameGUI"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_right = 150.0
+offset_bottom = 25.0
+grow_horizontal = 2
+value = 100.0
+
+[node name="游戏界面血量条" type="ProgressBar" parent="GameGUI"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_top = 30.0
+offset_right = 150.0
+offset_bottom = 55.0
+grow_horizontal = 2
+value = 100.0
+
+[node name="游戏界面连击数" type="Label" parent="GameGUI"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 50.0
+offset_right = 20.0
+offset_bottom = 123.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="游戏界面分数" type="Label" parent="GameGUI"]
+layout_direction = 2
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -66.0
+offset_bottom = 25.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0, 0.478431, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "00000000"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="游戏界面精确度" type="Label" parent="GameGUI"]
+layout_direction = 2
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -96.0
+offset_top = 30.0
+offset_bottom = 67.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "0.00%"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="游戏界面速度" type="Label" parent="GameGUI"]
+layout_direction = 2
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -96.0
+offset_top = 60.0
+offset_bottom = 97.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "000(0.000)"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="游戏界面暂停键" type="Button" parent="GameGUI"]
+layout_direction = 2
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 58.0
+offset_bottom = 48.0
+text = "暂停"
+
+[node name="Label" type="Label" parent="GameGUI"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.25098, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 150
+text = "全连击！"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="暂停窗口" type="Window" parent="GameGUI"]
+title = "游戏暂停"
+initial_position = 2
+size = Vector2i(500, 300)
+visible = false
+min_size = Vector2i(400, 250)
+
+[node name="ColorRect" type="ColorRect" parent="GameGUI/暂停窗口"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.866667, 0.866667, 0.866667, 1)
+
+[node name="Label2" type="VBoxContainer" parent="GameGUI/暂停窗口"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="GameGUI/暂停窗口/Label2"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "当前得分:00000000"
+
+[node name="Label2" type="Label" parent="GameGUI/暂停窗口/Label2"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "当前连击数:0"
+
+[node name="Label4" type="Label" parent="GameGUI/暂停窗口/Label2"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "你想要？"
+vertical_alignment = 2
+
+[node name="GridContainer2" type="GridContainer" parent="GameGUI/暂停窗口/Label2"]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 2
+
+[node name="继续" type="Button" parent="GameGUI/暂停窗口/Label2/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "继续"
+
+[node name="重试" type="Button" parent="GameGUI/暂停窗口/Label2/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "重试"
+
+[node name="退出" type="Button" parent="GameGUI/暂停窗口/Label2/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_qyqrd")
+text = "退出"
+
+[node name="设置" type="Button" parent="GameGUI/暂停窗口/Label2/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "设置"
+
+[node name="结算画面" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="左列表" type="VBoxContainer" parent="结算画面"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 400.0
+grow_vertical = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="结算画面/左列表"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="结算画面/左列表/HBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="顶栏" type="Label" parent="结算画面/左列表/HBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_ktctu")
+text = "结算"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="返回" type="Button" parent="结算画面/左列表/HBoxContainer/Control"]
+layout_mode = 0
+offset_right = 60.0
+offset_bottom = 60.0
+tooltip_text = "返回"
+icon = ExtResource("6_fbuhg")
+expand_icon = true
+
+[node name="设置" type="Button" parent="结算画面/左列表/HBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -30.0
+offset_bottom = 30.0
+grow_horizontal = 0
+grow_vertical = 2
+tooltip_text = "设置"
+icon = ExtResource("14_it1u3")
+expand_icon = true
+
+[node name="结算" type="Panel" parent="结算画面/左列表"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_k0whm")
+
+[node name="界面容器" type="ScrollContainer" parent="结算画面/左列表/结算"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -73.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="界面容器" type="VBoxContainer" parent="结算画面/左列表/结算/界面容器"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="AspectRatioContainer" parent="结算画面/左列表/结算/界面容器/界面容器"]
+custom_minimum_size = Vector2(400, 250)
+layout_mode = 2
+ratio = 1.6
+alignment_horizontal = 0
+alignment_vertical = 0
+
+[node name="Label" type="Label" parent="结算画面/左列表/结算/界面容器/界面容器/Panel"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_styles/normal = SubResource("StyleBoxFlat_fu6xq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="结算画面/左列表/结算/界面容器/界面容器/Panel/Label"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+texture_normal = ExtResource("14_kln2y")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="结算画面/左列表/结算/界面容器/界面容器/Panel/Label"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -125.0
+offset_right = -10.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="结算画面/左列表/结算/界面容器/界面容器/Panel/Label/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+
+[node name="歌曲名称" type="Label" parent="结算画面/左列表/结算/界面容器/界面容器/Panel/Label/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.933333, 0.933333, 0.933333, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "歌曲选项测试"
+text_overrun_behavior = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="结算画面/左列表/结算/界面容器/界面容器/Panel/Label/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="艺术家名称" type="Label" parent="结算画面/左列表/结算/界面容器/界面容器/Panel/Label/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.933333, 0.933333, 0.933333, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "艺术家测试"
+text_overrun_behavior = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="结算画面/左列表/结算/界面容器/界面容器/Panel/Label/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="结算画面/左列表/结算/界面容器/界面容器/Panel/Label/HBoxContainer/VBoxContainer/HBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="结算画面/左列表/结算/界面容器/界面容器/Panel/Label/HBoxContainer/VBoxContainer/HBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(28, 35)
+layout_mode = 2
+texture = ExtResource("12_umq50")
+
+[node name="TextureRect2" type="TextureRect" parent="结算画面/左列表/结算/界面容器/界面容器/Panel/Label/HBoxContainer/VBoxContainer/HBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(28, 35)
+layout_mode = 2
+texture = ExtResource("12_umq50")
+
+[node name="TextureRect3" type="TextureRect" parent="结算画面/左列表/结算/界面容器/界面容器/Panel/Label/HBoxContainer/VBoxContainer/HBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(28, 35)
+layout_mode = 2
+texture = ExtResource("12_umq50")
+
+[node name="Control" type="Control" parent="结算画面/左列表/结算/界面容器/界面容器/Panel/Label/HBoxContainer/VBoxContainer/HBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="等级" type="Label" parent="结算画面/左列表/结算/界面容器/界面容器/Panel/Label/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(1, 0.25098, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_trwm8")
+text = "甲"
+horizontal_alignment = 2
+
+[node name="界面容器" type="HBoxContainer" parent="结算画面/左列表/结算/界面容器/界面容器"]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="结算画面/左列表/结算/界面容器/界面容器/界面容器"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="文字" type="Label" parent="结算画面/左列表/结算/界面容器/界面容器/界面容器/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "最大连击数："
+horizontal_alignment = 2
+
+[node name="最大连击数" type="Label" parent="结算画面/左列表/结算/界面容器/界面容器/界面容器"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_hpux7")
+theme_override_font_sizes/font_size = 80
+text = "0"
+horizontal_alignment = 1
+
+[node name="文字2" type="Label" parent="结算画面/左列表/结算/界面容器/界面容器/界面容器"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(1, 0.25098, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "全连击！"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="详细信息" type="Panel" parent="结算画面/左列表/结算/界面容器/界面容器"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_quim2")
+
+[node name="顶栏" type="Label" parent="结算画面/左列表/结算/界面容器/界面容器/详细信息"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 30.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_elx2w")
+text = "详细信息"
+horizontal_alignment = 1
+
+[node name="判定统计列表" type="GridContainer" parent="结算画面/左列表/结算/界面容器/界面容器/详细信息"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 30.0
+offset_right = -6.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+
+[node name="得分" type="Label" parent="结算画面/左列表/结算/界面容器/界面容器/详细信息/判定统计列表"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 0.478431, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_hpux7")
+text = "得分：00000000"
+horizontal_alignment = 1
+
+[node name="精确度" type="Label" parent="结算画面/左列表/结算/界面容器/界面容器/详细信息/判定统计列表"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(1, 0.478431, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_hpux7")
+text = "精确度：0.00%"
+horizontal_alignment = 1
+
+[node name="无瑕度" type="Label" parent="结算画面/左列表/结算/界面容器/界面容器/详细信息/判定统计列表"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 0.972549, 0.901961, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_hpux7")
+text = "无瑕度：0毫秒"
+horizontal_alignment = 1
+
+[node name="速度" type="Label" parent="结算画面/左列表/结算/界面容器/界面容器/详细信息/判定统计列表"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 0.478431, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_hpux7")
+text = "最快速度：0.000"
+horizontal_alignment = 1
+
+[node name="判定统计" type="Panel" parent="结算画面/左列表/结算/界面容器/界面容器"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_quim2")
+
+[node name="顶栏" type="Label" parent="结算画面/左列表/结算/界面容器/界面容器/判定统计"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 30.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_elx2w")
+text = "判定统计"
+horizontal_alignment = 1
+
+[node name="判定统计列表" type="GridContainer" parent="结算画面/左列表/结算/界面容器/界面容器/判定统计"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 30.0
+offset_right = -6.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="完美" type="HBoxContainer" parent="结算画面/左列表/结算/界面容器/界面容器/判定统计/判定统计列表"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="文字" type="Label" parent="结算画面/左列表/结算/界面容器/界面容器/判定统计/判定统计列表/完美"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "完美"
+horizontal_alignment = 1
+
+[node name="乘号" type="Label" parent="结算画面/左列表/结算/界面容器/界面容器/判定统计/判定统计列表/完美"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "×"
+
+[node name="数值" type="Label" parent="结算画面/左列表/结算/界面容器/界面容器/判定统计/判定统计列表/完美"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "0"
+
+[node name="一般" type="HBoxContainer" parent="结算画面/左列表/结算/界面容器/界面容器/判定统计/判定统计列表"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="文字" type="Label" parent="结算画面/左列表/结算/界面容器/界面容器/判定统计/判定统计列表/一般"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0.972549, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "一般
+"
+horizontal_alignment = 1
+
+[node name="乘号" type="Label" parent="结算画面/左列表/结算/界面容器/界面容器/判定统计/判定统计列表/一般"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "×"
+
+[node name="数值" type="Label" parent="结算画面/左列表/结算/界面容器/界面容器/判定统计/判定统计列表/一般"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "0"
+
+[node name="较差" type="HBoxContainer" parent="结算画面/左列表/结算/界面容器/界面容器/判定统计/判定统计列表"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="文字" type="Label" parent="结算画面/左列表/结算/界面容器/界面容器/判定统计/判定统计列表/较差"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "较差"
+horizontal_alignment = 1
+
+[node name="乘号" type="Label" parent="结算画面/左列表/结算/界面容器/界面容器/判定统计/判定统计列表/较差"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "×"
+
+[node name="数值" type="Label" parent="结算画面/左列表/结算/界面容器/界面容器/判定统计/判定统计列表/较差"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "0"
+
+[node name="很差" type="HBoxContainer" parent="结算画面/左列表/结算/界面容器/界面容器/判定统计/判定统计列表"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="文字" type="Label" parent="结算画面/左列表/结算/界面容器/界面容器/判定统计/判定统计列表/很差"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "很差"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="乘号" type="Label" parent="结算画面/左列表/结算/界面容器/界面容器/判定统计/判定统计列表/很差"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "×"
+
+[node name="数值" type="Label" parent="结算画面/左列表/结算/界面容器/界面容器/判定统计/判定统计列表/很差"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "0"
+
+[node name="漏击" type="HBoxContainer" parent="结算画面/左列表/结算/界面容器/界面容器/判定统计/判定统计列表"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="文字" type="Label" parent="结算画面/左列表/结算/界面容器/界面容器/判定统计/判定统计列表/漏击"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "漏击
+"
+horizontal_alignment = 1
+
+[node name="乘号" type="Label" parent="结算画面/左列表/结算/界面容器/界面容器/判定统计/判定统计列表/漏击"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "×"
+
+[node name="数值" type="Label" parent="结算画面/左列表/结算/界面容器/界面容器/判定统计/判定统计列表/漏击"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "0"
+
+[node name="失误" type="HBoxContainer" parent="结算画面/左列表/结算/界面容器/界面容器/判定统计/判定统计列表"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="文字" type="Label" parent="结算画面/左列表/结算/界面容器/界面容器/判定统计/判定统计列表/失误"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "失误
+"
+horizontal_alignment = 1
+
+[node name="乘号" type="Label" parent="结算画面/左列表/结算/界面容器/界面容器/判定统计/判定统计列表/失误"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "×"
+
+[node name="数值" type="Label" parent="结算画面/左列表/结算/界面容器/界面容器/判定统计/判定统计列表/失误"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "0"
+
+[node name="选项" type="HBoxContainer" parent="结算画面/左列表/结算/界面容器/界面容器"]
+layout_mode = 2
+
+[node name="分享" type="Button" parent="结算画面/左列表/结算/界面容器/界面容器/选项"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "分享面板"
+
+[node name="查看排名" type="Button" parent="结算画面/左列表/结算/界面容器/界面容器/选项"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "查看排名"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="结算画面/左列表/结算"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -70.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="重试" type="Button" parent="结算画面/左列表/结算/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "重试"
+text = "重试"
+
+[node name="回放" type="Button" parent="结算画面/左列表/结算/HBoxContainer2"]
+layout_mode = 2
+tooltip_text = "回放"
+text = "回放"
+
+[node name="右列表" type="VBoxContainer" parent="结算画面"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="结算画面/右列表"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_govni")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="结算画面/右列表/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="顶栏" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_elx2w")
+text = "本地排名"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="卡片" type="HBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureButton" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片"]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture_normal = ExtResource("3_cusen")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="排名" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片/TextureRect"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -30.0
+offset_right = 40.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_hpux7")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_col4s")
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="玩家名称" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Test"
+
+[node name="分数" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "00000000"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片"]
+layout_mode = 2
+
+[node name="精确度" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "0.00%"
+horizontal_alignment = 2
+
+[node name="评价" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.25098, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "甲"
+horizontal_alignment = 2
+
+[node name="卡片2" type="HBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureButton" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片2"]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture_normal = ExtResource("3_cusen")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="排名" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片2/TextureRect"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -30.0
+offset_right = 40.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_hpux7")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_col4s")
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="玩家名称" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Test"
+
+[node name="分数" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "00000000"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片2"]
+layout_mode = 2
+
+[node name="精确度" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片2/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "0.00%"
+horizontal_alignment = 2
+
+[node name="评价" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片2/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.25098, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "甲"
+horizontal_alignment = 2
+
+[node name="卡片3" type="HBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureButton" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片3"]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture_normal = ExtResource("3_cusen")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="排名" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片3/TextureRect"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -30.0
+offset_right = 40.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_hpux7")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_col4s")
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="玩家名称" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片3/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Test"
+
+[node name="分数" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片3/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "00000000"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片3"]
+layout_mode = 2
+
+[node name="精确度" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片3/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "0.00%"
+horizontal_alignment = 2
+
+[node name="评价" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片3/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.25098, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "甲"
+horizontal_alignment = 2
+
+[node name="卡片4" type="HBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureButton" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片4"]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture_normal = ExtResource("3_cusen")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="排名" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片4/TextureRect"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -30.0
+offset_right = 40.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_hpux7")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_col4s")
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片4"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="玩家名称" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片4/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Test"
+
+[node name="分数" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片4/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "00000000"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片4"]
+layout_mode = 2
+
+[node name="精确度" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片4/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "0.00%"
+horizontal_alignment = 2
+
+[node name="评价" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片4/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.25098, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "甲"
+horizontal_alignment = 2
+
+[node name="卡片5" type="HBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureButton" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片5"]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture_normal = ExtResource("3_cusen")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="排名" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片5/TextureRect"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -30.0
+offset_right = 40.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_hpux7")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_col4s")
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片5"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="玩家名称" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片5/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Test"
+
+[node name="分数" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片5/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "00000000"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片5"]
+layout_mode = 2
+
+[node name="精确度" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片5/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "0.00%"
+horizontal_alignment = 2
+
+[node name="评价" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片5/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.25098, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "甲"
+horizontal_alignment = 2
+
+[node name="卡片6" type="HBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureButton" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片6"]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture_normal = ExtResource("3_cusen")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="排名" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片6/TextureRect"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -30.0
+offset_right = 40.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_hpux7")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_col4s")
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片6"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="玩家名称" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片6/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Test"
+
+[node name="分数" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片6/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "00000000"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片6"]
+layout_mode = 2
+
+[node name="精确度" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片6/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "0.00%"
+horizontal_alignment = 2
+
+[node name="评价" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片6/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.25098, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "甲"
+horizontal_alignment = 2
+
+[node name="卡片7" type="HBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureButton" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片7"]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture_normal = ExtResource("3_cusen")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="排名" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片7/TextureRect"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -30.0
+offset_right = 40.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_hpux7")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_col4s")
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片7"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="玩家名称" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片7/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Test"
+
+[node name="分数" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片7/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "00000000"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片7"]
+layout_mode = 2
+
+[node name="精确度" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片7/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "0.00%"
+horizontal_alignment = 2
+
+[node name="评价" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片7/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.25098, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "甲"
+horizontal_alignment = 2
+
+[node name="卡片8" type="HBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureButton" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片8"]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture_normal = ExtResource("3_cusen")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="排名" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片8/TextureRect"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -30.0
+offset_right = 40.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_hpux7")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_col4s")
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片8"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="玩家名称" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片8/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Test"
+
+[node name="分数" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片8/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "00000000"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片8"]
+layout_mode = 2
+
+[node name="精确度" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片8/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "0.00%"
+horizontal_alignment = 2
+
+[node name="评价" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片8/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.25098, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "甲"
+horizontal_alignment = 2
+
+[node name="卡片9" type="HBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureButton" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片9"]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture_normal = ExtResource("3_cusen")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="排名" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片9/TextureRect"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -30.0
+offset_right = 40.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_hpux7")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_col4s")
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片9"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="玩家名称" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片9/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Test"
+
+[node name="分数" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片9/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "00000000"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片9"]
+layout_mode = 2
+
+[node name="精确度" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片9/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "0.00%"
+horizontal_alignment = 2
+
+[node name="评价" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片9/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.25098, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "甲"
+horizontal_alignment = 2
+
+[node name="卡片10" type="HBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureButton" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片10"]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture_normal = ExtResource("3_cusen")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="排名" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片10/TextureRect"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -30.0
+offset_right = 40.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_hpux7")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_col4s")
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片10"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="玩家名称" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片10/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Test"
+
+[node name="分数" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片10/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "00000000"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片10"]
+layout_mode = 2
+
+[node name="精确度" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片10/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "0.00%"
+horizontal_alignment = 2
+
+[node name="评价" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片10/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.25098, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "甲"
+horizontal_alignment = 2
+
+[node name="卡片11" type="HBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureButton" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片11"]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture_normal = ExtResource("3_cusen")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="排名" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片11/TextureRect"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -30.0
+offset_right = 40.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_hpux7")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_col4s")
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片11"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="玩家名称" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片11/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Test"
+
+[node name="分数" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片11/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "00000000"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片11"]
+layout_mode = 2
+
+[node name="精确度" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片11/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "0.00%"
+horizontal_alignment = 2
+
+[node name="评价" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片11/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.25098, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "甲"
+horizontal_alignment = 2
+
+[node name="卡片12" type="HBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureButton" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片12"]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture_normal = ExtResource("3_cusen")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="排名" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片12/TextureRect"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -30.0
+offset_right = 40.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_hpux7")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_col4s")
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片12"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="玩家名称" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片12/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Test"
+
+[node name="分数" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片12/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "00000000"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片12"]
+layout_mode = 2
+
+[node name="精确度" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片12/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "0.00%"
+horizontal_alignment = 2
+
+[node name="评价" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片12/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.25098, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "甲"
+horizontal_alignment = 2
+
+[node name="卡片13" type="HBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureButton" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片13"]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture_normal = ExtResource("3_cusen")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="排名" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片13/TextureRect"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -30.0
+offset_right = 40.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_hpux7")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_col4s")
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片13"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="玩家名称" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片13/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Test"
+
+[node name="分数" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片13/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "00000000"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片13"]
+layout_mode = 2
+
+[node name="精确度" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片13/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "0.00%"
+horizontal_alignment = 2
+
+[node name="评价" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片13/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.25098, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "甲"
+horizontal_alignment = 2
+
+[node name="卡片14" type="HBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureButton" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片14"]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture_normal = ExtResource("3_cusen")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="排名" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片14/TextureRect"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -30.0
+offset_right = 40.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_hpux7")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_col4s")
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片14"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="玩家名称" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片14/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Test"
+
+[node name="分数" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片14/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "00000000"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片14"]
+layout_mode = 2
+
+[node name="精确度" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片14/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "0.00%"
+horizontal_alignment = 2
+
+[node name="评价" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片14/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.25098, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "甲"
+horizontal_alignment = 2
+
+[node name="卡片15" type="HBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureButton" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片15"]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture_normal = ExtResource("3_cusen")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="排名" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片15/TextureRect"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -30.0
+offset_right = 40.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_hpux7")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_col4s")
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片15"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="玩家名称" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片15/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Test"
+
+[node name="分数" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片15/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "00000000"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片15"]
+layout_mode = 2
+
+[node name="精确度" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片15/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "0.00%"
+horizontal_alignment = 2
+
+[node name="评价" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片15/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.25098, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "甲"
+horizontal_alignment = 2
+
+[node name="卡片16" type="HBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureButton" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片16"]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture_normal = ExtResource("3_cusen")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="排名" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片16/TextureRect"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -30.0
+offset_right = 40.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_hpux7")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_col4s")
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片16"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="玩家名称" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片16/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Test"
+
+[node name="分数" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片16/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "00000000"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片16"]
+layout_mode = 2
+
+[node name="精确度" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片16/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "0.00%"
+horizontal_alignment = 2
+
+[node name="评价" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2/卡片16/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.25098, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "甲"
+horizontal_alignment = 2
+
+[node name="顶栏2" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_elx2w")
+text = "网络排名"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="结算画面/右列表/ScrollContainer/VBoxContainer2"]
+layout_mode = 2
+text = "未开放"
+
+[node name="底栏" type="Panel" parent="结算画面/右列表"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7vify")
+
+[node name="清除本地成绩" type="Button" parent="结算画面/右列表/底栏"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -128.0
+grow_horizontal = 0
+grow_vertical = 2
+tooltip_text = "清除本地成绩"
+text = "清除本地成绩"
+
+[node name="Setting_Window" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_pld4y")
+
+[node name="顶栏" type="Control" parent="Setting_Window"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 60.0
+grow_horizontal = 2
+
+[node name="Settings_Bar" type="Label" parent="Setting_Window/顶栏"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_ktctu")
+text = "设置"
+label_settings = SubResource("LabelSettings_v28wf")
+horizontal_alignment = 1
+vertical_alignment = 1
+language = "zh"
+structured_text_bidi_override = 1
+
+[node name="MenuBar" type="Button" parent="Setting_Window/顶栏"]
+layout_mode = 0
+offset_right = 60.0
+offset_bottom = 60.0
+tooltip_text = "选单"
+icon = ExtResource("7_7e0y1")
+expand_icon = true
+
+[node name="设置选项按钮" type="Control" parent="Setting_Window"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_top = 60.0
+offset_right = 320.0
+offset_bottom = 1944.0
+grow_vertical = 2
+
+[node name="MenuScroll" type="ScrollContainer" parent="Setting_Window/设置选项按钮"]
+custom_minimum_size = Vector2(40, 320)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_jwcaf")
+theme_override_styles/panel = SubResource("StyleBoxFlat_hoiom")
+follow_focus = true
+scroll_horizontal_custom_step = 0.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Setting_Window/设置选项按钮/MenuScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("8_nxs4a")
+
+[node name="常规" type="Label" parent="Setting_Window/设置选项按钮/MenuScroll/VBoxContainer"]
+layout_mode = 2
+text = "常规"
+label_settings = SubResource("LabelSettings_5o2qi")
+vertical_alignment = 1
+
+[node name="音频" type="Button" parent="Setting_Window/设置选项按钮/MenuScroll/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("8_nxs4a")
+text = "音频"
+alignment = 0
+
+[node name="视频" type="Button" parent="Setting_Window/设置选项按钮/MenuScroll/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("8_nxs4a")
+text = "视频"
+alignment = 0
+
+[node name="控制" type="Button" parent="Setting_Window/设置选项按钮/MenuScroll/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("8_nxs4a")
+text = "控制
+"
+alignment = 0
+
+[node name="外观" type="Button" parent="Setting_Window/设置选项按钮/MenuScroll/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("8_nxs4a")
+text = "外观"
+alignment = 0
+
+[node name="网络" type="Label" parent="Setting_Window/设置选项按钮/MenuScroll/VBoxContainer"]
+layout_mode = 2
+text = "网络"
+label_settings = SubResource("LabelSettings_5o2qi")
+vertical_alignment = 1
+
+[node name="账户" type="Button" parent="Setting_Window/设置选项按钮/MenuScroll/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("8_nxs4a")
+text = "账户"
+alignment = 0
+
+[node name="其他" type="Label" parent="Setting_Window/设置选项按钮/MenuScroll/VBoxContainer"]
+layout_mode = 2
+text = "其他
+"
+label_settings = SubResource("LabelSettings_5o2qi")
+vertical_alignment = 1
+
+[node name="调试" type="Button" parent="Setting_Window/设置选项按钮/MenuScroll/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("8_nxs4a")
+text = "调试"
+alignment = 0
+
+[node name="语言" type="Button" parent="Setting_Window/设置选项按钮/MenuScroll/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("8_nxs4a")
+text = "语言"
+alignment = 0
+
+[node name="关于" type="Button" parent="Setting_Window/设置选项按钮/MenuScroll/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("8_nxs4a")
+text = "关于"
+alignment = 0
+
+[node name="设置选项" type="Control" parent="Setting_Window"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 320.0
+offset_top = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(832, 0)
+
+[node name="文本" type="Label" parent="Setting_Window/设置选项"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_qx0se")
+text = "请在左侧选择你想要设置的选项"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OptionScroll" type="ScrollContainer" parent="Setting_Window/设置选项"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hoiom")
+
+[node name="视频" type="VBoxContainer" parent="Setting_Window/设置选项/OptionScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="Setting_Window/设置选项/OptionScroll/视频"]
+layout_mode = 2
+text = "全屏"
+
+[node name="Button2" type="Button" parent="Setting_Window/设置选项/OptionScroll/视频"]
+layout_mode = 2
+text = "退出全屏"
+
+[node name="分辨率" type="HBoxContainer" parent="Setting_Window/设置选项/OptionScroll/视频"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Setting_Window/设置选项/OptionScroll/视频/分辨率"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "分辨率"
+
+[node name="OptionButton" type="OptionButton" parent="Setting_Window/设置选项/OptionScroll/视频/分辨率"]
+layout_mode = 2
+item_count = 1
+popup/item_0/text = "全屏"
+popup/item_0/id = 0
+
+[node name="缩放" type="HBoxContainer" parent="Setting_Window/设置选项/OptionScroll/视频"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Setting_Window/设置选项/OptionScroll/视频/缩放"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "缩放"
+
+[node name="Label2" type="Label" parent="Setting_Window/设置选项/OptionScroll/视频/缩放"]
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="Setting_Window/设置选项/OptionScroll/视频/缩放"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+min_value = 0.5
+max_value = 3.0
+step = 0.1
+value = 1.0
+
+[node name="帧率" type="HBoxContainer" parent="Setting_Window/设置选项/OptionScroll/视频"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Setting_Window/设置选项/OptionScroll/视频/帧率"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "帧率显示"
+
+[node name="CheckButton" type="CheckButton" parent="Setting_Window/设置选项/OptionScroll/视频/帧率"]
+layout_mode = 2
+
+[node name="界面安全区偏移" type="HBoxContainer" parent="Setting_Window/设置选项/OptionScroll/视频"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Setting_Window/设置选项/OptionScroll/视频/界面安全区偏移"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "界面安全区偏移"
+
+[node name="Button" type="Button" parent="Setting_Window/设置选项/OptionScroll/视频/界面安全区偏移"]
+layout_mode = 2
+text = "更改"
+
+[node name="语言" type="VBoxContainer" parent="Setting_Window/设置选项/OptionScroll"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="zh" type="VBoxContainer" parent="Setting_Window/设置选项/OptionScroll/语言"]
+layout_mode = 2
+
+[node name="text" type="Label" parent="Setting_Window/设置选项/OptionScroll/语言/zh"]
+layout_mode = 2
+text = "汉语"
+
+[node name="zh" type="GridContainer" parent="Setting_Window/设置选项/OptionScroll/语言/zh"]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 2
+
+[node name="zh_sc" type="Button" parent="Setting_Window/设置选项/OptionScroll/语言/zh/zh"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "中国大陆"
+mouse_filter = 1
+text = "简体中文（中国大陆）"
+
+[node name="zh_tc" type="Button" parent="Setting_Window/设置选项/OptionScroll/语言/zh/zh"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "中国台湾"
+mouse_filter = 1
+text = "繁體中文（中國臺灣）"
+
+[node name="other" type="VBoxContainer" parent="Setting_Window/设置选项/OptionScroll/语言"]
+layout_mode = 2
+
+[node name="text" type="Label" parent="Setting_Window/设置选项/OptionScroll/语言/other"]
+layout_mode = 2
+text = "测试"
+
+[node name="test" type="GridContainer" parent="Setting_Window/设置选项/OptionScroll/语言/other"]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 2
+
+[node name="Button" type="Button" parent="Setting_Window/设置选项/OptionScroll/语言/other/test"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "测试"
+
+[node name="Button2" type="Button" parent="Setting_Window/设置选项/OptionScroll/语言/other/test"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "测试"
+
+[node name="Button3" type="Button" parent="Setting_Window/设置选项/OptionScroll/语言/other/test"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "测试"
+
+[node name="Button4" type="Button" parent="Setting_Window/设置选项/OptionScroll/语言/other/test"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "测试"
+
+[node name="Button5" type="Button" parent="Setting_Window/设置选项/OptionScroll/语言/other/test"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "测试"
+
+[node name="Button6" type="Button" parent="Setting_Window/设置选项/OptionScroll/语言/other/test"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "测试"
+
+[node name="Button7" type="Button" parent="Setting_Window/设置选项/OptionScroll/语言/other/test"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "测试"
+
+[node name="Button8" type="Button" parent="Setting_Window/设置选项/OptionScroll/语言/other/test"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "测试"
+
+[node name="Button9" type="Button" parent="Setting_Window/设置选项/OptionScroll/语言/other/test"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "测试"
+
+[node name="Button10" type="Button" parent="Setting_Window/设置选项/OptionScroll/语言/other/test"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "测试"
+
+[node name="Button11" type="Button" parent="Setting_Window/设置选项/OptionScroll/语言/other/test"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "测试"
+
+[node name="Button12" type="Button" parent="Setting_Window/设置选项/OptionScroll/语言/other/test"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "测试"
+
+[node name="Button13" type="Button" parent="Setting_Window/设置选项/OptionScroll/语言/other/test"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "测试"
+
+[node name="Button14" type="Button" parent="Setting_Window/设置选项/OptionScroll/语言/other/test"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "测试"
+
+[node name="Button15" type="Button" parent="Setting_Window/设置选项/OptionScroll/语言/other/test"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "测试"
+
+[node name="Button16" type="Button" parent="Setting_Window/设置选项/OptionScroll/语言/other/test"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "测试"
+
+[node name="Button17" type="Button" parent="Setting_Window/设置选项/OptionScroll/语言/other/test"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "测试"
+
+[node name="Button18" type="Button" parent="Setting_Window/设置选项/OptionScroll/语言/other/test"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "测试"
+
+[node name="Button19" type="Button" parent="Setting_Window/设置选项/OptionScroll/语言/other/test"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "测试"
+
+[node name="Button20" type="Button" parent="Setting_Window/设置选项/OptionScroll/语言/other/test"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "测试"
+
+[node name="Button21" type="Button" parent="Setting_Window/设置选项/OptionScroll/语言/other/test"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "测试"
+
+[node name="Button22" type="Button" parent="Setting_Window/设置选项/OptionScroll/语言/other/test"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "测试"
+
+[node name="Button23" type="Button" parent="Setting_Window/设置选项/OptionScroll/语言/other/test"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "测试"
+
+[node name="Button24" type="Button" parent="Setting_Window/设置选项/OptionScroll/语言/other/test"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "测试"
+
+[node name="Button25" type="Button" parent="Setting_Window/设置选项/OptionScroll/语言/other/test"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "测试"
+
+[node name="Button26" type="Button" parent="Setting_Window/设置选项/OptionScroll/语言/other/test"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "测试"
+
+[node name="Button27" type="Button" parent="Setting_Window/设置选项/OptionScroll/语言/other/test"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "测试"
+
+[node name="Button28" type="Button" parent="Setting_Window/设置选项/OptionScroll/语言/other/test"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "测试"
+
+[node name="Button29" type="Button" parent="Setting_Window/设置选项/OptionScroll/语言/other/test"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "测试"
+
+[node name="Button30" type="Button" parent="Setting_Window/设置选项/OptionScroll/语言/other/test"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "测试"
+
+[node name="Button31" type="Button" parent="Setting_Window/设置选项/OptionScroll/语言/other/test"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "测试"
+
+[node name="Button32" type="Button" parent="Setting_Window/设置选项/OptionScroll/语言/other/test"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "测试"
+
+[node name="窗口" type="Node" parent="."]
+
+[node name="界面安全区偏移" type="Window" parent="窗口"]
+title = "界面安全区偏移"
+initial_position = 2
+size = Vector2i(410, 240)
+visible = false
+exclusive = true
+transparent = true
+min_size = Vector2i(300, 240)
+theme = ExtResource("1_cxgoy")
+
+[node name="Panel" type="Panel" parent="窗口/界面安全区偏移"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_13b4a")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="窗口/界面安全区偏移"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="窗口/界面安全区偏移/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "观察屏幕边角标识的位置，设置合适的界面安全区域。"
+horizontal_alignment = 1
+autowrap_mode = 1
+
+[node name="水平调整" type="HBoxContainer" parent="窗口/界面安全区偏移/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="窗口/界面安全区偏移/VBoxContainer/水平调整"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "水平调整"
+
+[node name="Label2" type="Label" parent="窗口/界面安全区偏移/VBoxContainer/水平调整"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "0
+"
+
+[node name="HSlider" type="HSlider" parent="窗口/界面安全区偏移/VBoxContainer/水平调整"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+min_value = -30.0
+max_value = 30.0
+
+[node name="垂直调整" type="HBoxContainer" parent="窗口/界面安全区偏移/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="窗口/界面安全区偏移/VBoxContainer/垂直调整"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "垂直调整"
+
+[node name="Label2" type="Label" parent="窗口/界面安全区偏移/VBoxContainer/垂直调整"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "0
+"
+
+[node name="HSlider" type="HSlider" parent="窗口/界面安全区偏移/VBoxContainer/垂直调整"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+min_value = -30.0
+max_value = 30.0
+
+[node name="水平缩放" type="HBoxContainer" parent="窗口/界面安全区偏移/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="窗口/界面安全区偏移/VBoxContainer/水平缩放"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "水平缩放"
+
+[node name="Label2" type="Label" parent="窗口/界面安全区偏移/VBoxContainer/水平缩放"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "0
+"
+
+[node name="HSlider" type="HSlider" parent="窗口/界面安全区偏移/VBoxContainer/水平缩放"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 30.0
+
+[node name="垂直缩放" type="HBoxContainer" parent="窗口/界面安全区偏移/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="窗口/界面安全区偏移/VBoxContainer/垂直缩放"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "垂直缩放"
+
+[node name="Label2" type="Label" parent="窗口/界面安全区偏移/VBoxContainer/垂直缩放"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "0
+"
+
+[node name="HSlider" type="HSlider" parent="窗口/界面安全区偏移/VBoxContainer/垂直缩放"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 30.0
+
+[node name="Button" type="Button" parent="窗口/界面安全区偏移/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+text = "确定"
+
+[node name="游戏退出" type="Window" parent="窗口"]
+transparent_bg = true
+title = "退出"
+initial_position = 1
+size = Vector2i(410, 200)
+visible = false
+wrap_controls = true
+exclusive = true
+transparent = true
+min_size = Vector2i(200, 150)
+keep_title_visible = true
+theme = ExtResource("1_cxgoy")
+
+[node name="Panel" type="Panel" parent="窗口/游戏退出"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_13b4a")
+
+[node name="BoxContainer" type="VBoxContainer" parent="窗口/游戏退出"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="窗口/游戏退出/BoxContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "你确定要退出游戏？"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="窗口/游戏退出/BoxContainer"]
+layout_mode = 2
+
+[node name="Exit" type="Button" parent="窗口/游戏退出/BoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "退出"
+icon_alignment = 1
+expand_icon = true
+
+[node name="Continue" type="Button" parent="窗口/游戏退出/BoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "继续"
+
+[node name="KeysTips" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -30.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="KeysTips"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="KeysTips/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "A 确定"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="KeysTips/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "B 返回"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FPS" type="Label" parent="."]
+layout_direction = 2
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -30.0
+offset_right = 40.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "帧率"
+
+[node name="粒子效果" type="GPUParticles2D" parent="."]
+visible = false
+position = Vector2(167, 70)
+rotation = 3.14159
+amount = 16
+process_material = SubResource("ParticleProcessMaterial_h3a0u")
+texture = ExtResource("18_t4c6x")
+
+[node name="粒子效果动画" type="AnimationPlayer" parent="粒子效果"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_xph37")
+}
+
+[node name="AnimationGUI" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_hutix")
+}
+
+[node name="UID" type="Label" parent="."]
+layout_direction = 2
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -90.0
+offset_top = -30.0
+offset_right = -10.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "UID:Test"
+
+[connection signal="pressed" from="MainMenu/StartGames" to="." method="_on_start_games_pressed"]
+[connection signal="button_down" from="MainMenu/Settings_Button" to="." method="_on_settings_button_button_down"]
+[connection signal="button_down" from="MainMenu/Exit_Button" to="." method="ExitWindowFunc"]
+[connection signal="button_down" from="MainMenu/播放器" to="播放器" method="_on_播放器_button_down"]
+[connection signal="button_down" from="GameMenu/Settings_Bar/MenuBar" to="GameMenu" method="_on_menu_bar_button_down"]
+[connection signal="button_down" from="GameMenu/Settings_Bar/Settings" to="." method="_on_settings_button_button_down"]
+[connection signal="button_down" from="GameMenu/Settings_Bar/左栏滚动/左栏/播放器" to="播放器" method="_on_播放器_button_down"]
+[connection signal="text_changed" from="GameMenu/界面左列表/VBoxContainer/HBoxContainer/LineEdit" to="GameMenu" method="_on_line_edit_text_changed"]
+[connection signal="text_submitted" from="GameMenu/界面左列表/VBoxContainer/HBoxContainer/LineEdit" to="GameMenu" method="_on_line_edit_text_changed"]
+[connection signal="button_down" from="GameMenu/界面左列表/VBoxContainer/HBoxContainer/Search" to="GameMenu" method="_on_line_edit_text_changed"]
+[connection signal="button_down" from="GameMenu/SongInfo/SongInfo/VBoxContainer/使用倾斜轨道/CheckBox" to="." method="_on_倾斜轨道_down"]
+[connection signal="button_down" from="GameMenu/SongInfo/Label/Button" to="GameMenu" method="_on_button_button_down"]
+[connection signal="button_down" from="播放器" to="播放器" method="_on_button_down"]
+[connection signal="timeout" from="播放器/Panel/VBoxContainer/HBoxContainer2/Timer" to="播放器" method="_on_timer_timeout"]
+[connection signal="button_down" from="加载画面/Button" to="GameMenu" method="_on_test_down"]
+[connection signal="button_down" from="GameGUI/游戏界面暂停键" to="GameGUI" method="_on_pause_button_down"]
+[connection signal="close_requested" from="GameGUI/暂停窗口" to="GameGUI" method="_on_继续_button_down"]
+[connection signal="button_down" from="GameGUI/暂停窗口/Label2/GridContainer2/继续" to="GameGUI" method="_on_继续_button_down"]
+[connection signal="button_down" from="GameGUI/暂停窗口/Label2/GridContainer2/重试" to="GameGUI" method="_on_重试_button_down"]
+[connection signal="button_down" from="GameGUI/暂停窗口/Label2/GridContainer2/退出" to="GameGUI" method="_on_退出_button_down"]
+[connection signal="button_down" from="GameGUI/暂停窗口/Label2/GridContainer2/设置" to="GameGUI" method="_on_设置_button_down"]
+[connection signal="button_down" from="结算画面/左列表/HBoxContainer/Control/返回" to="GameGUI" method="_on_返回_button_down"]
+[connection signal="button_down" from="结算画面/左列表/HBoxContainer/Control/设置" to="GameGUI" method="_on_设置_button_down"]
+[connection signal="button_down" from="结算画面/左列表/结算/HBoxContainer2/重试" to="GameGUI" method="_on_重试_button_down"]
+[connection signal="pressed" from="Setting_Window/顶栏/MenuBar" to="." method="_on_menu_bar_pressed"]
+[connection signal="button_down" from="Setting_Window/设置选项/OptionScroll/视频/Button" to="Setting_Window" method="_on_button_button_down"]
+[connection signal="button_down" from="Setting_Window/设置选项/OptionScroll/视频/Button2" to="Setting_Window" method="_on_button_2_button_down"]
+[connection signal="drag_ended" from="Setting_Window/设置选项/OptionScroll/视频/缩放/HSlider" to="Setting_Window" method="_on_h_slider_drag_ended"]
+[connection signal="value_changed" from="Setting_Window/设置选项/OptionScroll/视频/缩放/HSlider" to="Setting_Window" method="_on_h_slider_value_changed"]
+[connection signal="button_down" from="Setting_Window/设置选项/OptionScroll/视频/帧率/CheckButton" to="Setting_Window" method="_on_check_button_button_down"]
+[connection signal="close_requested" from="窗口/游戏退出" to="." method="_on_continue_button_up"]
+[connection signal="button_up" from="窗口/游戏退出/BoxContainer/HBoxContainer/Exit" to="." method="_on_exit_button_up"]
+[connection signal="button_up" from="窗口/游戏退出/BoxContainer/HBoxContainer/Continue" to="." method="_on_continue_button_up"]

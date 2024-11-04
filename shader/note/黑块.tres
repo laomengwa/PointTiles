@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://d2f73pwetcdup"]
+
+[ext_resource type="Shader" path="res://shader/物件边框.gdshader" id="1_iq7q1"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b6toa"]
+render_priority = 0
+shader = ExtResource("1_iq7q1")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_width = 2.0
+shader_parameter/alpha = 1.0
+
+[resource]
+next_pass = SubResource("ShaderMaterial_b6toa")
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0, 0, 0, 1)

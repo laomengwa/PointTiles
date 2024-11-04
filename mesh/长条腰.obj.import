@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cdxxrma2f7uj3"
+path="res://.godot/imported/长条腰.obj-8c5430f7c349b93f5c82f0c50fd31561.mesh"
+
+[deps]
+
+files=["res://.godot/imported/长条腰.obj-8c5430f7c349b93f5c82f0c50fd31561.mesh"]
+
+source_file="res://mesh/长条腰.obj"
+dest_files=["res://.godot/imported/长条腰.obj-8c5430f7c349b93f5c82f0c50fd31561.mesh", "res://.godot/imported/长条腰.obj-8c5430f7c349b93f5c82f0c50fd31561.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

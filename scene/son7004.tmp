@@ -1,0 +1,128 @@
+[gd_scene load_steps=10 format=3 uid="uid://dy7mbqs6iiym0"]
+
+[ext_resource type="Theme" uid="uid://dn5wl33wjkk6m" path="res://scene/gui.tres" id="1_hykr7"]
+[ext_resource type="Texture2D" uid="uid://8d6jx8t00ahd" path="res://texture/song.svg" id="1_th71i"]
+[ext_resource type="Texture2D" uid="uid://yt2imbe173v1" path="res://texture/start_full.svg" id="2_qexp5"]
+[ext_resource type="FontFile" uid="uid://w0oxygfawslj" path="res://fonts/Futura-Condensed.otf" id="3_l1k5e"]
+[ext_resource type="Texture2D" uid="uid://dr0ccxyc467u4" path="res://texture/search.svg" id="4_v7qe6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rfqqj"]
+bg_color = Color(0.933333, 0.933333, 0.933333, 1)
+border_color = Color(0.533333, 0.533333, 0.533333, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="GDScript" id="GDScript_qdssd"]
+script/source = "extends Label
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+"
+
+[sub_resource type="Theme" id="Theme_48di1"]
+CheckBox/icons/checked = ExtResource("4_v7qe6")
+CheckBox/icons/unchecked = ExtResource("4_v7qe6")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n582x"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="SongListLabel" type="Label"]
+custom_minimum_size = Vector2(320, 120)
+offset_top = 6.0
+offset_right = 400.0
+offset_bottom = 126.0
+size_flags_vertical = 1
+theme = ExtResource("1_hykr7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_rfqqj")
+script = SubResource("GDScript_qdssd")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="卡片头" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_th71i")
+expand_mode = 3
+
+[node name="编号" type="Label" parent="HBoxContainer/卡片头"]
+layout_mode = 1
+offset_left = 4.0
+offset_right = 44.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_l1k5e")
+theme_override_font_sizes/font_size = 26
+text = "000"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SongName" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.333333, 0.333333, 0.333333, 1)
+theme_override_font_sizes/font_size = 24
+text = "歌曲选项测试"
+
+[node name="ArtistName" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.4, 0.4, 1)
+text = "艺术家测试"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_qexp5")
+
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_qexp5")
+
+[node name="TextureRect3" type="TextureRect" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_qexp5")
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_alignment = 1
+vertical_alignment = 3
+
+[node name="Button2" type="CheckBox" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_48di1")
+text = "收藏"
+expand_icon = true
+
+[node name="Song" type="Label" parent="."]
+layout_mode = 0
+size_flags_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_n582x")
+text = "
+
+
+
+"

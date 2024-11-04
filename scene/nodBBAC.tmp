@@ -1,0 +1,284 @@
+[gd_scene load_steps=27 format=3 uid="uid://cwiv244cmjyvk"]
+
+[ext_resource type="Script" path="res://script/Camera.gd" id="1_hpcb2"]
+[ext_resource type="Script" path="res://script/CameraLight.gd" id="1_oobag"]
+[ext_resource type="AudioStream" uid="uid://c8xiottwd1k33" path="res://music/audio.mp3" id="1_r4bec"]
+[ext_resource type="ArrayMesh" uid="uid://dw6nldunxjk2t" path="res://mesh/line.obj" id="2_anhrn"]
+[ext_resource type="Script" path="res://script/Node3D.gd" id="2_vrm1b"]
+[ext_resource type="Script" path="res://script/Audio.gd" id="4_qxgrx"]
+[ext_resource type="Texture2D" uid="uid://dbxf5uyf5ws0r" path="res://texture/[Yeonwa]芭芭拉(原神)-VG93178.jpg" id="5_ro1o7"]
+[ext_resource type="PackedScene" uid="uid://s667etyqdixl" path="res://scene/gui.tscn" id="8_ivvj7"]
+[ext_resource type="PackedScene" uid="uid://c2j8qvxbbf11b" path="res://scene/miss.tscn" id="10_dvp8e"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6dyor"]
+sky_top_color = Color(0.384314, 0.00784314, 0.54902, 1)
+sky_horizon_color = Color(0.647059, 0.654902, 0, 1)
+sky_curve = 0.1
+ground_bottom_color = Color(0.164706, 0.113725, 0.321569, 1)
+ground_horizon_color = Color(0.937255, 0.352941, 0.290196, 1)
+ground_curve = 0.1
+
+[sub_resource type="Sky" id="Sky_55u4e"]
+sky_material = SubResource("ProceduralSkyMaterial_6dyor")
+
+[sub_resource type="Environment" id="Environment_s5itv"]
+background_mode = 2
+sky = SubResource("Sky_55u4e")
+
+[sub_resource type="QuadMesh" id="QuadMesh_ycx6v"]
+size = Vector2(16, 9)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_2s4ji"]
+viewport_path = NodePath("CameraLight/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ecxjr"]
+resource_local_to_scene = true
+transparency = 1
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_2s4ji")
+
+[sub_resource type="Animation" id="Animation_vua7h"]
+resource_name = "Back"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera:projection")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -3, 0), Vector3(0, -6, -5)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0.785398, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_fkx0q"]
+resource_name = "RESET"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera:projection")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -6, -5)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.785398, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_mn35k"]
+resource_name = "Start"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera:projection")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -6, -5), Vector3(0, -3, 0), Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.785398, 0, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dojwd"]
+_data = {
+"Back": SubResource("Animation_vua7h"),
+"RESET": SubResource("Animation_fkx0q"),
+"Start": SubResource("Animation_mn35k")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0eurc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_535wc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rjlb4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tipbp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_66ac8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2l1gq"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_di82g"]
+size = Vector3(8, 40, 0.5)
+
+[node name="MainSpatial" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6, -5)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_s5itv")
+
+[node name="CameraLight" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, 0, -6, -5)
+script = ExtResource("1_oobag")
+
+[node name="Camera" type="Camera3D" parent="CameraLight"]
+current = true
+size = 15.0
+script = ExtResource("1_hpcb2")
+
+[node name="RayCast3D" type="RayCast3D" parent="CameraLight"]
+transform = Transform3D(1, 0, 0, 0, 0.707106, 0.707106, 0, -0.707106, 0.707106, -0.848482, -0.666763, -1.55249)
+target_position = Vector3(0, 0, -100)
+collide_with_areas = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="CameraLight"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer3D" parent="CameraLight"]
+stream = ExtResource("1_r4bec")
+volume_db = 24.0
+doppler_tracking = 2
+script = ExtResource("4_qxgrx")
+
+[node name="SubViewport" type="SubViewport" parent="CameraLight"]
+size = Vector2i(2160, 1215)
+render_target_update_mode = 4
+
+[node name="TextureRect" type="TextureRect" parent="CameraLight/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("5_ro1o7")
+
+[node name="VideoWall" type="MeshInstance3D" parent="CameraLight"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20)
+mesh = SubResource("QuadMesh_ycx6v")
+surface_material_override/0 = SubResource("StandardMaterial3D_ecxjr")
+
+[node name="三维动画节点" type="AnimationPlayer" parent="CameraLight"]
+libraries = {
+"": SubResource("AnimationLibrary_dojwd")
+}
+autoplay = "RESET"
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -10.247)
+script = ExtResource("2_vrm1b")
+
+[node name="miss" parent="Node3D" instance=ExtResource("10_dvp8e")]
+
+[node name="Line3D4" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
+mesh = ExtResource("2_anhrn")
+skeleton = NodePath("../Line3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_0eurc")
+
+[node name="Line3D3" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+mesh = ExtResource("2_anhrn")
+skeleton = NodePath("../Line3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_535wc")
+
+[node name="Line3D2" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = ExtResource("2_anhrn")
+skeleton = NodePath("../Line3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_rjlb4")
+
+[node name="Line3D" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+mesh = ExtResource("2_anhrn")
+surface_material_override/0 = SubResource("StandardMaterial3D_tipbp")
+
+[node name="Line3D6" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+mesh = ExtResource("2_anhrn")
+skeleton = NodePath("../Line3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_66ac8")
+
+[node name="JudgeLine" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, -4, 0)
+mesh = ExtResource("2_anhrn")
+surface_material_override/0 = SubResource("StandardMaterial3D_2l1gq")
+
+[node name="Area3D" type="Area3D" parent="Node3D"]
+
+[node name="物件区域" type="Node3D" parent="Node3D/Area3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 10, 0)
+shape = SubResource("BoxShape3D_di82g")
+
+[node name="Timer" type="Timer" parent="Node3D"]
+wait_time = 0.25
+autostart = true
+
+[node name="MainControl" parent="." instance=ExtResource("8_ivvj7")]
+
+[connection signal="input_event" from="Node3D/Area3D" to="Node3D" method="_on_area_3d_input_event"]
+[connection signal="timeout" from="Node3D/Timer" to="Node3D" method="_on_timer_timeout"]

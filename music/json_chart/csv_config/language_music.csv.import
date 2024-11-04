@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://c1lt1jcr8q00k"
+
+[deps]
+
+files=["res://music/json_chart/csv_config/language_music.zh_CN.translation", "res://music/json_chart/csv_config/language_music.zh_TW.translation", "res://music/json_chart/csv_config/language_music.EN.translation", "res://music/json_chart/csv_config/language_music.ES.translation", "res://music/json_chart/csv_config/language_music.RU.translation", "res://music/json_chart/csv_config/language_music.PO.translation", "res://music/json_chart/csv_config/language_music.DE.translation", "res://music/json_chart/csv_config/language_music.KR.translation", "res://music/json_chart/csv_config/language_music.JP.translation", "res://music/json_chart/csv_config/language_music.FR.translation", "res://music/json_chart/csv_config/language_music.IT.translation", "res://music/json_chart/csv_config/language_music.AR.translation", "res://music/json_chart/csv_config/language_music.TR.translation", "res://music/json_chart/csv_config/language_music.IN.translation"]
+
+source_file="res://music/json_chart/csv_config/language_music.csv"
+dest_files=["res://music/json_chart/csv_config/language_music.zh_CN.translation", "res://music/json_chart/csv_config/language_music.zh_TW.translation", "res://music/json_chart/csv_config/language_music.EN.translation", "res://music/json_chart/csv_config/language_music.ES.translation", "res://music/json_chart/csv_config/language_music.RU.translation", "res://music/json_chart/csv_config/language_music.PO.translation", "res://music/json_chart/csv_config/language_music.DE.translation", "res://music/json_chart/csv_config/language_music.KR.translation", "res://music/json_chart/csv_config/language_music.JP.translation", "res://music/json_chart/csv_config/language_music.FR.translation", "res://music/json_chart/csv_config/language_music.IT.translation", "res://music/json_chart/csv_config/language_music.AR.translation", "res://music/json_chart/csv_config/language_music.TR.translation", "res://music/json_chart/csv_config/language_music.IN.translation"]
+
+[params]
+
+compress=true
+delimiter=0

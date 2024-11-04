@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="10mm"
+   height="10mm"
+   viewBox="0 0 10 10"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   sodipodi:docname="search.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="6.9700337"
+     inkscape:cx="4.4476112"
+     inkscape:cy="20.659871"
+     inkscape:window-width="1300"
+     inkscape:window-height="702"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="图层 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(2.7999999,1)">
+    <rect
+       style="fill:#3366cc;fill-rule:evenodd;stroke-width:2;paint-order:stroke fill markers"
+       id="rect1"
+       width="10"
+       height="10"
+       x="-2.8"
+       y="-1"
+       rx="1"
+       ry="1" />
+    <circle
+       style="fill:#deffff;stroke-width:0.247;paint-order:markers stroke fill"
+       id="path1"
+       cx="3"
+       cy="3"
+       r="2"
+       inkscape:label="path1" />
+    <circle
+       style="fill:#1285e3;fill-opacity:1;stroke-width:0.247;paint-order:markers stroke fill"
+       id="path2"
+       cx="3"
+       cy="3"
+       r="1.8" />
+    <rect
+       style="fill:#deffff;fill-opacity:1;stroke-width:0.364765;paint-order:markers stroke fill"
+       id="rect10"
+       width="0.53984815"
+       height="1.8963125"
+       x="3.8632197"
+       y="2.176369"
+       ry="0.2"
+       transform="matrix(0.75586335,0.65472941,-0.69580333,0.71823236,0,0)" />
+    <rect
+       style="fill:#deffff;fill-opacity:1;stroke-width:0.226661;paint-order:markers stroke fill"
+       id="rect11"
+       width="1.1042796"
+       height="2.190464"
+       x="3.7238894"
+       y="2.2927039"
+       ry="0.3959417"
+       transform="matrix(0.63170872,0.77520584,-0.73826801,0.67450748,0,0)" />
+  </g>
+</svg>

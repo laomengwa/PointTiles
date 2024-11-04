@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://xav7dklk57w3"]
+
+[ext_resource type="ArrayMesh" uid="uid://iohlh43x18ph" path="res://mesh/黑块.obj" id="1_jwspy"]
+[ext_resource type="Script" path="res://script/note/狂戳打击显示.gd" id="2_0460q"]
+[ext_resource type="FontFile" uid="uid://w0oxygfawslj" path="res://fonts/Futura-Condensed.otf" id="3_hcqwb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m1oqv"]
+no_depth_test = true
+shading_mode = 0
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.996078, 0, 0.266667, 1)
+
+[node name="打击显示" type="MeshInstance3D"]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.5, 0)
+mesh = ExtResource("1_jwspy")
+surface_material_override/0 = SubResource("StandardMaterial3D_m1oqv")
+script = ExtResource("2_0460q")
+
+[node name="标签" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+pixel_size = 0.01
+billboard = 1
+no_depth_test = true
+text = "000"
+font = ExtResource("3_hcqwb")
+font_size = 100
+outline_size = 127

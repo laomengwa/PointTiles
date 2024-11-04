@@ -1,0 +1,80 @@
+[gd_scene load_steps=6 format=3 uid="uid://c2j8qvxbbf11b"]
+
+[ext_resource type="ArrayMesh" uid="uid://iohlh43x18ph" path="res://mesh/block.obj" id="2_qpq4y"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r7oak"]
+transparency = 1
+albedo_color = Color(1, 0.133333, 0.133333, 1)
+
+[sub_resource type="Animation" id="Animation_nnm4f"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("block2:surface_material_override/0:albedo_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.133333, 0.133333, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_2qne5"]
+resource_name = "miss"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("block2:surface_material_override/0:albedo_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0.133333, 0.133333, 1), Color(1, 0.133333, 0.133333, 0), Color(1, 0.133333, 0.133333, 1), Color(1, 0.133333, 0.133333, 0), Color(1, 0.133333, 0.133333, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_krk5g"]
+_data = {
+"RESET": SubResource("Animation_nnm4f"),
+"miss": SubResource("Animation_2qne5")
+}
+
+[node name="miss" type="Node3D"]
+visible = false
+
+[node name="block2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+mesh = ExtResource("2_qpq4y")
+surface_material_override/0 = SubResource("StandardMaterial3D_r7oak")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_krk5g")
+}

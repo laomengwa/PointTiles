@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://cgfa54sltxhyy"]
+
+[ext_resource type="Script" path="res://script/白块死区.gd" id="1_k8l4d"]
+[ext_resource type="PackedScene" uid="uid://c2j8qvxbbf11b" path="res://scene/失误显示.tscn" id="2_17yr5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ju82r"]
+size = Vector3(200, 200, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qs6sx"]
+size = Vector3(0.05, 160, 0.05)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5jllm"]
+shading_mode = 0
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="Curve3D" id="Curve3D_rkm3j"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 100, 0, 0, 0, 0, 0, 0, 0, 0, -100, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[node name="无轨根节点" type="Node3D"]
+script = ExtResource("1_k8l4d")
+
+[node name="白块死区" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="白块死区形状" type="CollisionShape3D" parent="白块死区"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 10, 0)
+shape = SubResource("BoxShape3D_ju82r")
+
+[node name="失误显示" parent="." instance=ExtResource("2_17yr5")]
+
+[node name="物件区" type="Node3D" parent="."]
+
+[node name="判定线" type="MeshInstance3D" parent="."]
+transform = Transform3D(-8.74228e-08, -2, 0, 2, -8.74228e-08, 0, 0, 0, 2, 0, -4, 0)
+mesh = SubResource("BoxMesh_qs6sx")
+surface_material_override/0 = SubResource("StandardMaterial3D_5jllm")
+
+[node name="曲线" type="Path3D" parent="判定线"]
+curve = SubResource("Curve3D_rkm3j")
+
+[connection signal="input_event" from="白块死区" to="." method="白块死区"]

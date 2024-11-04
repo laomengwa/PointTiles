@@ -1,0 +1,1554 @@
+[gd_scene load_steps=45 format=3 uid="uid://cag7616kwjoaa"]
+
+[ext_resource type="Texture2D" uid="uid://clag3pw84fn8a" path="res://texture/bg/1.jpg" id="1_6kcu4"]
+[ext_resource type="FontFile" uid="uid://urh5xsrel1gx" path="res://fonts/NotoSansCJK-Medium.ttc" id="2_su14f"]
+[ext_resource type="Texture2D" uid="uid://blmox2tndf1lh" path="res://mesh/滑块腰.png" id="3_yacd5"]
+[ext_resource type="ArrayMesh" uid="uid://1aphyy4c1vna" path="res://mesh/长条尾.obj" id="4_psdew"]
+[ext_resource type="ArrayMesh" uid="uid://cdxxrma2f7uj3" path="res://mesh/长条腰.obj" id="5_8rwjh"]
+[ext_resource type="ArrayMesh" uid="uid://b03ggimjeg2qc" path="res://mesh/长条头.obj" id="6_jru7i"]
+[ext_resource type="ArrayMesh" uid="uid://iohlh43x18ph" path="res://mesh/黑块.obj" id="7_kki1i"]
+[ext_resource type="Texture2D" uid="uid://5vojhyhg5lf1" path="res://mesh/长条尾.png" id="8_72dmr"]
+[ext_resource type="Texture2D" uid="uid://cwrw2wt4hlsov" path="res://mesh/长条腰.png" id="9_v0hho"]
+[ext_resource type="Texture2D" uid="uid://bh8mb6ulhfljq" path="res://mesh/长条头.png" id="10_egywa"]
+[ext_resource type="ArrayMesh" uid="uid://cagb06tfjrjy0" path="res://mesh/爆裂.obj" id="12_a3c8x"]
+[ext_resource type="Texture2D" uid="uid://x1b4ybwjrp1r" path="res://mesh/爆裂.png" id="13_jdda7"]
+[ext_resource type="ArrayMesh" uid="uid://kwmpfoagskrm" path="res://mesh/滑键.obj" id="14_if0ww"]
+[ext_resource type="ArrayMesh" uid="uid://dk5l4lc38802a" path="res://mesh/旋转.obj" id="15_g7ye4"]
+[ext_resource type="Script" path="res://script/2D/开屏动画节点.gd" id="17_4gbdp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ry1yy"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s1l7f"]
+cull_mode = 1
+shading_mode = 0
+grow = true
+grow_amount = 0.02
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y6vow"]
+next_pass = SubResource("StandardMaterial3D_s1l7f")
+shading_mode = 0
+albedo_texture = ExtResource("8_72dmr")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5h3kw"]
+cull_mode = 1
+shading_mode = 0
+grow = true
+grow_amount = 0.02
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nqthi"]
+next_pass = SubResource("StandardMaterial3D_5h3kw")
+shading_mode = 0
+albedo_texture = ExtResource("9_v0hho")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pc2dm"]
+cull_mode = 1
+shading_mode = 0
+grow = true
+grow_amount = 0.02
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7yvcm"]
+next_pass = SubResource("StandardMaterial3D_pc2dm")
+shading_mode = 0
+albedo_texture = ExtResource("10_egywa")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_80gf0"]
+cull_mode = 1
+shading_mode = 0
+grow = true
+grow_amount = 0.02
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1sets"]
+next_pass = SubResource("StandardMaterial3D_80gf0")
+shading_mode = 0
+albedo_texture = ExtResource("3_yacd5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ww56"]
+shading_mode = 0
+albedo_texture = ExtResource("3_yacd5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7u66c"]
+next_pass = SubResource("StandardMaterial3D_80gf0")
+shading_mode = 0
+albedo_texture = ExtResource("3_yacd5")
+grow_amount = -0.02
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0dedu"]
+size = Vector3(1, 10, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ulrnd"]
+shading_mode = 0
+albedo_texture = ExtResource("13_jdda7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fn31t"]
+shading_mode = 0
+albedo_color = Color(1, 0.533333, 0.533333, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p3m0i"]
+shading_mode = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ud4s"]
+transparency = 1
+cull_mode = 1
+shading_mode = 0
+grow = true
+grow_amount = 0.02
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kl8t7"]
+next_pass = SubResource("StandardMaterial3D_4ud4s")
+shading_mode = 0
+albedo_color = Color(0.4, 1, 0.4, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_maybr"]
+cull_mode = 1
+shading_mode = 0
+grow = true
+grow_amount = 0.02
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8gfld"]
+next_pass = SubResource("StandardMaterial3D_maybr")
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b17fc"]
+next_pass = SubResource("StandardMaterial3D_maybr")
+shading_mode = 0
+albedo_color = Color(0.611997, 0.164872, 0.764806, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ek55l"]
+next_pass = SubResource("StandardMaterial3D_maybr")
+shading_mode = 0
+albedo_color = Color(0.0705882, 0.521569, 0.890196, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rg66q"]
+next_pass = SubResource("StandardMaterial3D_maybr")
+shading_mode = 0
+albedo_color = Color(1, 0.533333, 0.533333, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o8bua"]
+cull_mode = 1
+shading_mode = 0
+grow = true
+grow_amount = 0.02
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ukyht"]
+next_pass = SubResource("StandardMaterial3D_o8bua")
+shading_mode = 0
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("3_yacd5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_41rxy"]
+shading_mode = 0
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("3_yacd5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5yl2b"]
+next_pass = SubResource("StandardMaterial3D_o8bua")
+shading_mode = 0
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("3_yacd5")
+grow_amount = -0.02
+
+[sub_resource type="Animation" id="Animation_b31dd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("开屏动画:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("开屏动画/头像:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("开屏动画/头像:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.2, 1.2)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("开屏动画/文字:theme_override_font_sizes/font_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [80]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("物件动画/摄像机:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("物件动画/摄像机:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("物件动画:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath(".:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath(".:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ie4sm"]
+resource_name = "动画"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("开屏动画:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(2, 2.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("开屏动画/头像:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-2.35619, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("开屏动画/头像:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.2, 0.2), Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("开屏动画/文字:theme_override_font_sizes/font_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1, 1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [80, 100, 80]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("物件动画/摄像机:position")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(2.4, 3.5, 5, 6, 8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-20, -10, -10), Vector3(0, -10, 0), Vector3(0, 0, 0), Vector3(0, -12, -10)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("物件动画/摄像机:rotation")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(2.4, 3.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -1.5708, 0.785398), Vector3(0.785398, 0, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("/root/根场景/根界面:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(7.6),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("/root/根场景/根界面:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(7.6, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_brqra"]
+_data = {
+"RESET": SubResource("Animation_b31dd"),
+"动画": SubResource("Animation_ie4sm")
+}
+
+[node name="游戏启动" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="开屏动画" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="背景" type="Panel" parent="开屏动画"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ry1yy")
+
+[node name="头像" type="TextureRect" parent="开屏动画"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -448.0
+offset_right = 125.0
+offset_bottom = -198.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("1_6kcu4")
+expand_mode = 1
+
+[node name="文字" type="Label" parent="开屏动画"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_su14f")
+theme_override_font_sizes/font_size = 80
+text = "萌娃是条咸鱼"
+horizontal_alignment = 1
+
+[node name="物件动画" type="Node3D" parent="."]
+
+[node name="摄像机" type="Camera3D" parent="物件动画"]
+current = true
+size = 12.0
+
+[node name="图标" type="Node3D" parent="物件动画"]
+transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, -27, 70, -50)
+visible = false
+
+[node name="1" type="Node3D" parent="物件动画/图标"]
+
+[node name="长块" type="Node3D" parent="物件动画/图标/1"]
+rotation_edit_mode = 2
+
+[node name="长条尾" type="MeshInstance3D" parent="物件动画/图标/1/长块"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0)
+material_override = SubResource("StandardMaterial3D_y6vow")
+mesh = ExtResource("4_psdew")
+skeleton = NodePath("../../../..")
+
+[node name="长条腰" type="MeshInstance3D" parent="物件动画/图标/1/长块"]
+transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_nqthi")
+mesh = ExtResource("5_8rwjh")
+
+[node name="模型" type="Node3D" parent="物件动画/图标/1/长块"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="长条头" type="MeshInstance3D" parent="物件动画/图标/1/长块/模型"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
+material_override = SubResource("StandardMaterial3D_7yvcm")
+mesh = ExtResource("6_jru7i")
+skeleton = NodePath("../..")
+
+[node name="滑块" type="Node3D" parent="物件动画/图标/1"]
+transform = Transform3D(1, 0, -3.55271e-15, 0, 0.5, 0, 3.55271e-15, 0, 1, 3, 4, 0)
+
+[node name="根节点4" type="Node3D" parent="物件动画/图标/1/滑块"]
+transform = Transform3D(1, -0.667, 0, 0, 1, 0, 0, 0, 1, 1, 6, 0)
+rotation_edit_mode = 2
+
+[node name="骨骼" type="Skeleton3D" parent="物件动画/图标/1/滑块/根节点4"]
+
+[node name="长条尾" type="MeshInstance3D" parent="物件动画/图标/1/滑块/根节点4/骨骼"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+material_override = SubResource("StandardMaterial3D_1sets")
+mesh = ExtResource("4_psdew")
+skeleton = NodePath("../..")
+
+[node name="长条腰" type="MeshInstance3D" parent="物件动画/图标/1/滑块/根节点4/骨骼"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+visible = false
+material_override = SubResource("StandardMaterial3D_2ww56")
+mesh = ExtResource("5_8rwjh")
+skeleton = NodePath("../..")
+
+[node name="长条头" type="MeshInstance3D" parent="物件动画/图标/1/滑块/根节点4/骨骼"]
+material_override = SubResource("StandardMaterial3D_7u66c")
+mesh = ExtResource("6_jru7i")
+skeleton = NodePath("../..")
+
+[node name="区域" type="Area3D" parent="物件动画/图标/1/滑块/根节点4"]
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="物件动画/图标/1/滑块/根节点4/区域"]
+shape = SubResource("BoxShape3D_0dedu")
+
+[node name="根节点5" type="Node3D" parent="物件动画/图标/1/滑块"]
+transform = Transform3D(1, 0.667, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+rotation_edit_mode = 2
+
+[node name="骨骼" type="Skeleton3D" parent="物件动画/图标/1/滑块/根节点5"]
+
+[node name="长条尾" type="MeshInstance3D" parent="物件动画/图标/1/滑块/根节点5/骨骼"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+material_override = SubResource("StandardMaterial3D_1sets")
+mesh = ExtResource("4_psdew")
+skeleton = NodePath("../..")
+
+[node name="长条腰" type="MeshInstance3D" parent="物件动画/图标/1/滑块/根节点5/骨骼"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+visible = false
+material_override = SubResource("StandardMaterial3D_2ww56")
+mesh = ExtResource("5_8rwjh")
+skeleton = NodePath("../..")
+
+[node name="长条头" type="MeshInstance3D" parent="物件动画/图标/1/滑块/根节点5/骨骼"]
+material_override = SubResource("StandardMaterial3D_7u66c")
+mesh = ExtResource("6_jru7i")
+skeleton = NodePath("../..")
+
+[node name="区域" type="Area3D" parent="物件动画/图标/1/滑块/根节点5"]
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="物件动画/图标/1/滑块/根节点5/区域"]
+shape = SubResource("BoxShape3D_0dedu")
+
+[node name="2" type="Node3D" parent="物件动画/图标"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 0)
+
+[node name="爆裂" type="MeshInstance3D" parent="物件动画/图标/2"]
+transform = Transform3D(2, 0, -7.10543e-15, 0, 2, 0, 7.10543e-15, 0, 2, 0, 4, 0)
+mesh = ExtResource("12_a3c8x")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_ulrnd")
+
+[node name="3" type="Node3D" parent="物件动画/图标"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 0)
+
+[node name="长块" type="Node3D" parent="物件动画/图标/3"]
+rotation_edit_mode = 2
+
+[node name="长条尾" type="MeshInstance3D" parent="物件动画/图标/3/长块"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+material_override = SubResource("StandardMaterial3D_y6vow")
+mesh = ExtResource("4_psdew")
+skeleton = NodePath("../../../..")
+
+[node name="长条腰" type="MeshInstance3D" parent="物件动画/图标/3/长块"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_nqthi")
+mesh = ExtResource("5_8rwjh")
+
+[node name="模型" type="Node3D" parent="物件动画/图标/3/长块"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="长条头" type="MeshInstance3D" parent="物件动画/图标/3/长块/模型"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
+material_override = SubResource("StandardMaterial3D_7yvcm")
+mesh = ExtResource("6_jru7i")
+skeleton = NodePath("../..")
+
+[node name="滑键" type="MeshInstance3D" parent="物件动画/图标/3"]
+transform = Transform3D(1, -3.55271e-15, 0, 0, -4.37114e-08, -1, 3.55271e-15, 1, -4.37114e-08, 0, 8, 0)
+mesh = ExtResource("14_if0ww")
+skeleton = NodePath("../../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_fn31t")
+surface_material_override/1 = SubResource("StandardMaterial3D_p3m0i")
+
+[node name="4" type="Node3D" parent="物件动画/图标"]
+transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 20, 0, 0)
+
+[node name="滑条" type="Node3D" parent="物件动画/图标/4"]
+rotation_edit_mode = 2
+
+[node name="骨骼" type="Skeleton3D" parent="物件动画/图标/4/滑条"]
+
+[node name="长条尾" type="MeshInstance3D" parent="物件动画/图标/4/滑条/骨骼"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+material_override = SubResource("StandardMaterial3D_1sets")
+mesh = ExtResource("4_psdew")
+skeleton = NodePath("../..")
+
+[node name="长条腰" type="MeshInstance3D" parent="物件动画/图标/4/滑条/骨骼"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+visible = false
+material_override = SubResource("StandardMaterial3D_2ww56")
+mesh = ExtResource("5_8rwjh")
+skeleton = NodePath("../..")
+
+[node name="长条头" type="MeshInstance3D" parent="物件动画/图标/4/滑条/骨骼"]
+material_override = SubResource("StandardMaterial3D_7u66c")
+mesh = ExtResource("6_jru7i")
+skeleton = NodePath("../..")
+
+[node name="区域" type="Area3D" parent="物件动画/图标/4/滑条"]
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="物件动画/图标/4/滑条/区域"]
+shape = SubResource("BoxShape3D_0dedu")
+
+[node name="滑条2" type="Node3D" parent="物件动画/图标/4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+rotation_edit_mode = 2
+
+[node name="骨骼" type="Skeleton3D" parent="物件动画/图标/4/滑条2"]
+
+[node name="长条尾" type="MeshInstance3D" parent="物件动画/图标/4/滑条2/骨骼"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+material_override = SubResource("StandardMaterial3D_1sets")
+mesh = ExtResource("4_psdew")
+skeleton = NodePath("../..")
+
+[node name="长条腰" type="MeshInstance3D" parent="物件动画/图标/4/滑条2/骨骼"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+visible = false
+material_override = SubResource("StandardMaterial3D_2ww56")
+mesh = ExtResource("5_8rwjh")
+skeleton = NodePath("../..")
+
+[node name="长条头" type="MeshInstance3D" parent="物件动画/图标/4/滑条2/骨骼"]
+material_override = SubResource("StandardMaterial3D_7u66c")
+mesh = ExtResource("6_jru7i")
+skeleton = NodePath("../..")
+
+[node name="区域" type="Area3D" parent="物件动画/图标/4/滑条2"]
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="物件动画/图标/4/滑条2/区域"]
+shape = SubResource("BoxShape3D_0dedu")
+
+[node name="宽键" type="Node3D" parent="物件动画/图标/4"]
+transform = Transform3D(2, -5.32907e-15, 9.31764e-22, 0, -2.18557e-08, -2, 2.13163e-14, 0.5, -8.74228e-08, 1, 7, -1)
+
+[node name="模型" type="MeshInstance3D" parent="物件动画/图标/4/宽键"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_kl8t7")
+mesh = ExtResource("7_kki1i")
+
+[node name="5" type="Node3D" parent="物件动画/图标"]
+transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 29, 0, 0)
+
+[node name="狂戳" type="Node3D" parent="物件动画/图标/5"]
+transform = Transform3D(1, 0, 0, 0, 3, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="模型" type="MeshInstance3D" parent="物件动画/图标/5/狂戳"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_8gfld")
+mesh = ExtResource("7_kki1i")
+
+[node name="狂戳2" type="Node3D" parent="物件动画/图标/5"]
+transform = Transform3D(-4.37114e-08, -2, -1.06581e-14, 1, -8.74228e-08, 0, -4.23516e-22, -2.13163e-14, 1, 3, 6.5, 0)
+
+[node name="模型" type="MeshInstance3D" parent="物件动画/图标/5/狂戳2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_8gfld")
+mesh = ExtResource("7_kki1i")
+
+[node name="狂戳3" type="Node3D" parent="物件动画/图标/5"]
+transform = Transform3D(-4.37114e-08, -1, -1.06581e-14, 1, -4.37114e-08, -4.23657e-23, -4.23517e-22, -1.06581e-14, 1, 3, 1, 0)
+
+[node name="模型" type="MeshInstance3D" parent="物件动画/图标/5/狂戳3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_8gfld")
+mesh = ExtResource("7_kki1i")
+
+[node name="6" type="Node3D" parent="物件动画/图标"]
+transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 36, 0, 0)
+
+[node name="长块" type="Node3D" parent="物件动画/图标/6"]
+rotation_edit_mode = 2
+
+[node name="长条尾" type="MeshInstance3D" parent="物件动画/图标/6/长块"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0)
+material_override = SubResource("StandardMaterial3D_y6vow")
+mesh = ExtResource("4_psdew")
+skeleton = NodePath("../../../..")
+
+[node name="长条腰" type="MeshInstance3D" parent="物件动画/图标/6/长块"]
+transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_nqthi")
+mesh = ExtResource("5_8rwjh")
+
+[node name="模型" type="Node3D" parent="物件动画/图标/6/长块"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="长条头" type="MeshInstance3D" parent="物件动画/图标/6/长块/模型"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
+material_override = SubResource("StandardMaterial3D_7yvcm")
+mesh = ExtResource("6_jru7i")
+skeleton = NodePath("../..")
+
+[node name="宽键" type="Node3D" parent="物件动画/图标/6"]
+transform = Transform3D(3, -8.88178e-15, 1.27055e-21, 0, -2.18557e-08, -2, 4.26326e-14, 0.5, -8.74228e-08, 0, 9, -1)
+
+[node name="模型" type="MeshInstance3D" parent="物件动画/图标/6/宽键"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_kl8t7")
+mesh = ExtResource("7_kki1i")
+
+[node name="7" type="Node3D" parent="物件动画/图标"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0, 0)
+
+[node name="狂戳" type="Node3D" parent="物件动画/图标/7"]
+transform = Transform3D(1, 0, 0, 0, 2.3, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="模型" type="MeshInstance3D" parent="物件动画/图标/7/狂戳"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_8gfld")
+mesh = ExtResource("7_kki1i")
+
+[node name="旋转" type="MeshInstance3D" parent="物件动画/图标/7"]
+transform = Transform3D(-1.31134e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.31134e-08, 0, 8, 0)
+mesh = ExtResource("15_g7ye4")
+skeleton = NodePath("../../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_b17fc")
+surface_material_override/1 = SubResource("StandardMaterial3D_ek55l")
+surface_material_override/2 = SubResource("StandardMaterial3D_rg66q")
+
+[node name="8" type="Node3D" parent="物件动画/图标"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46, 0, 0)
+
+[node name="滑条" type="Node3D" parent="物件动画/图标/8"]
+transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0)
+rotation_edit_mode = 2
+
+[node name="骨骼" type="Skeleton3D" parent="物件动画/图标/8/滑条"]
+
+[node name="长条尾" type="MeshInstance3D" parent="物件动画/图标/8/滑条/骨骼"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+material_override = SubResource("StandardMaterial3D_1sets")
+mesh = ExtResource("4_psdew")
+skeleton = NodePath("../..")
+
+[node name="长条腰" type="MeshInstance3D" parent="物件动画/图标/8/滑条/骨骼"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+visible = false
+material_override = SubResource("StandardMaterial3D_2ww56")
+mesh = ExtResource("5_8rwjh")
+skeleton = NodePath("../..")
+
+[node name="长条头" type="MeshInstance3D" parent="物件动画/图标/8/滑条/骨骼"]
+material_override = SubResource("StandardMaterial3D_7u66c")
+mesh = ExtResource("6_jru7i")
+skeleton = NodePath("../..")
+
+[node name="区域" type="Area3D" parent="物件动画/图标/8/滑条"]
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="物件动画/图标/8/滑条/区域"]
+shape = SubResource("BoxShape3D_0dedu")
+
+[node name="宽键" type="Node3D" parent="物件动画/图标/8"]
+transform = Transform3D(1.5, -8.88178e-15, 1.27055e-21, 0, -2.18557e-08, -2, 2.13163e-14, 0.5, -8.74228e-08, 1, 1, 0)
+
+[node name="模型" type="MeshInstance3D" parent="物件动画/图标/8/宽键"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_kl8t7")
+mesh = ExtResource("7_kki1i")
+
+[node name="9" type="Node3D" parent="物件动画/图标"]
+transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 53, 0, 0)
+
+[node name="长块" type="Node3D" parent="物件动画/图标/9"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -3, 4, 0)
+
+[node name="长条尾" type="MeshInstance3D" parent="物件动画/图标/9/长块"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+material_override = SubResource("StandardMaterial3D_y6vow")
+mesh = ExtResource("4_psdew")
+skeleton = NodePath("../../../..")
+
+[node name="长条腰" type="MeshInstance3D" parent="物件动画/图标/9/长块"]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 0.5, 0, 1.5, 0)
+visible = false
+material_override = SubResource("StandardMaterial3D_nqthi")
+mesh = ExtResource("5_8rwjh")
+
+[node name="模型" type="Node3D" parent="物件动画/图标/9/长块"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="长条头" type="MeshInstance3D" parent="物件动画/图标/9/长块/模型"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
+material_override = SubResource("StandardMaterial3D_7yvcm")
+mesh = ExtResource("6_jru7i")
+skeleton = NodePath("../..")
+
+[node name="长块2" type="Node3D" parent="物件动画/图标/9"]
+transform = Transform3D(0.667, -0.333, 0, 0, 0.5, 0, 0, 0, 1, -0.333, 0, 0)
+rotation_edit_mode = 2
+
+[node name="长条尾" type="MeshInstance3D" parent="物件动画/图标/9/长块2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+material_override = SubResource("StandardMaterial3D_y6vow")
+mesh = ExtResource("4_psdew")
+skeleton = NodePath("../../../..")
+
+[node name="长条腰" type="MeshInstance3D" parent="物件动画/图标/9/长块2"]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 0.5, 0, 1.5, 0)
+visible = false
+material_override = SubResource("StandardMaterial3D_nqthi")
+mesh = ExtResource("5_8rwjh")
+
+[node name="模型" type="Node3D" parent="物件动画/图标/9/长块2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="长条头" type="MeshInstance3D" parent="物件动画/图标/9/长块2/模型"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
+material_override = SubResource("StandardMaterial3D_7yvcm")
+mesh = ExtResource("6_jru7i")
+skeleton = NodePath("../..")
+
+[node name="长块3" type="Node3D" parent="物件动画/图标/9"]
+transform = Transform3D(0, 1, -1.77636e-14, -1, 0, 0, 0, 1.77636e-14, 1, -1.8, 0.5, 0)
+rotation_edit_mode = 2
+
+[node name="长条尾" type="MeshInstance3D" parent="物件动画/图标/9/长块3"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, -1.77636e-15, 0, 1.77636e-15, 0.5, 0, 3, 0)
+material_override = SubResource("StandardMaterial3D_y6vow")
+mesh = ExtResource("4_psdew")
+skeleton = NodePath("../../../..")
+
+[node name="长条腰" type="MeshInstance3D" parent="物件动画/图标/9/长块3"]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 0.5, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_nqthi")
+mesh = ExtResource("5_8rwjh")
+
+[node name="长条头" type="MeshInstance3D" parent="物件动画/图标/9/长块3"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.75, 0)
+material_override = SubResource("StandardMaterial3D_7yvcm")
+mesh = ExtResource("6_jru7i")
+
+[node name="长块4" type="Node3D" parent="物件动画/图标/9"]
+transform = Transform3D(0.667, -0.333, -1.06581e-14, 0, 0.5, 0, 0, 0, 1, 2.3, 5, 0)
+rotation_edit_mode = 2
+
+[node name="长条尾" type="MeshInstance3D" parent="物件动画/图标/9/长块4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+material_override = SubResource("StandardMaterial3D_y6vow")
+mesh = ExtResource("4_psdew")
+skeleton = NodePath("../../../..")
+
+[node name="长条腰" type="MeshInstance3D" parent="物件动画/图标/9/长块4"]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 0.5, 0, 1.5, 0)
+visible = false
+material_override = SubResource("StandardMaterial3D_nqthi")
+mesh = ExtResource("5_8rwjh")
+
+[node name="模型" type="Node3D" parent="物件动画/图标/9/长块4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="长条头" type="MeshInstance3D" parent="物件动画/图标/9/长块4/模型"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
+material_override = SubResource("StandardMaterial3D_7yvcm")
+mesh = ExtResource("6_jru7i")
+skeleton = NodePath("../..")
+
+[node name="长块5" type="Node3D" parent="物件动画/图标/9"]
+transform = Transform3D(0.667, 0.333, 0, 0, 0.5, 0, 0, 0, 1, -2.24664, 5, 0)
+rotation_edit_mode = 2
+
+[node name="长条尾" type="MeshInstance3D" parent="物件动画/图标/9/长块5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+material_override = SubResource("StandardMaterial3D_y6vow")
+mesh = ExtResource("4_psdew")
+skeleton = NodePath("../../../..")
+
+[node name="长条腰" type="MeshInstance3D" parent="物件动画/图标/9/长块5"]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 0.5, 0, 1.5, 0)
+visible = false
+material_override = SubResource("StandardMaterial3D_nqthi")
+mesh = ExtResource("5_8rwjh")
+
+[node name="模型" type="Node3D" parent="物件动画/图标/9/长块5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="长条头" type="MeshInstance3D" parent="物件动画/图标/9/长块5/模型"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
+material_override = SubResource("StandardMaterial3D_7yvcm")
+mesh = ExtResource("6_jru7i")
+skeleton = NodePath("../..")
+
+[node name="0" type="Node3D" parent="物件动画/图标"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, 0)
+
+[node name="滑块" type="Node3D" parent="物件动画/图标/0"]
+transform = Transform3D(-2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0, 0, 0, 1, 3, 7, 0)
+
+[node name="根节点4" type="Node3D" parent="物件动画/图标/0/滑块"]
+transform = Transform3D(1, -0.667, 0, 0, 1, 0, 0, 0, 1, 1, 6, 0)
+rotation_edit_mode = 2
+
+[node name="骨骼" type="Skeleton3D" parent="物件动画/图标/0/滑块/根节点4"]
+
+[node name="长条尾" type="MeshInstance3D" parent="物件动画/图标/0/滑块/根节点4/骨骼"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+material_override = SubResource("StandardMaterial3D_1sets")
+mesh = ExtResource("4_psdew")
+skeleton = NodePath("../..")
+
+[node name="长条腰" type="MeshInstance3D" parent="物件动画/图标/0/滑块/根节点4/骨骼"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+visible = false
+material_override = SubResource("StandardMaterial3D_2ww56")
+mesh = ExtResource("5_8rwjh")
+skeleton = NodePath("../..")
+
+[node name="长条头" type="MeshInstance3D" parent="物件动画/图标/0/滑块/根节点4/骨骼"]
+material_override = SubResource("StandardMaterial3D_7u66c")
+mesh = ExtResource("6_jru7i")
+skeleton = NodePath("../..")
+
+[node name="区域" type="Area3D" parent="物件动画/图标/0/滑块/根节点4"]
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="物件动画/图标/0/滑块/根节点4/区域"]
+shape = SubResource("BoxShape3D_0dedu")
+
+[node name="根节点5" type="Node3D" parent="物件动画/图标/0/滑块"]
+transform = Transform3D(1, 0.667, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+rotation_edit_mode = 2
+
+[node name="骨骼" type="Skeleton3D" parent="物件动画/图标/0/滑块/根节点5"]
+
+[node name="长条尾" type="MeshInstance3D" parent="物件动画/图标/0/滑块/根节点5/骨骼"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+material_override = SubResource("StandardMaterial3D_1sets")
+mesh = ExtResource("4_psdew")
+skeleton = NodePath("../..")
+
+[node name="长条腰" type="MeshInstance3D" parent="物件动画/图标/0/滑块/根节点5/骨骼"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+visible = false
+material_override = SubResource("StandardMaterial3D_2ww56")
+mesh = ExtResource("5_8rwjh")
+skeleton = NodePath("../..")
+
+[node name="长条头" type="MeshInstance3D" parent="物件动画/图标/0/滑块/根节点5/骨骼"]
+material_override = SubResource("StandardMaterial3D_7u66c")
+mesh = ExtResource("6_jru7i")
+skeleton = NodePath("../..")
+
+[node name="区域" type="Area3D" parent="物件动画/图标/0/滑块/根节点5"]
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="物件动画/图标/0/滑块/根节点5/区域"]
+shape = SubResource("BoxShape3D_0dedu")
+
+[node name="滑块2" type="Node3D" parent="物件动画/图标/0"]
+transform = Transform3D(-2.18557e-08, 0.5, -3.55271e-15, -0.5, -2.18557e-08, 0, 0, 1.77636e-15, 1, -3, 1, 0)
+
+[node name="根节点4" type="Node3D" parent="物件动画/图标/0/滑块2"]
+transform = Transform3D(1, -0.667, 0, 0, 1, 0, 0, 0, 1, 1, 6, 0)
+rotation_edit_mode = 2
+
+[node name="骨骼" type="Skeleton3D" parent="物件动画/图标/0/滑块2/根节点4"]
+
+[node name="长条尾" type="MeshInstance3D" parent="物件动画/图标/0/滑块2/根节点4/骨骼"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+material_override = SubResource("StandardMaterial3D_1sets")
+mesh = ExtResource("4_psdew")
+skeleton = NodePath("../..")
+
+[node name="长条腰" type="MeshInstance3D" parent="物件动画/图标/0/滑块2/根节点4/骨骼"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+visible = false
+material_override = SubResource("StandardMaterial3D_2ww56")
+mesh = ExtResource("5_8rwjh")
+skeleton = NodePath("../..")
+
+[node name="长条头" type="MeshInstance3D" parent="物件动画/图标/0/滑块2/根节点4/骨骼"]
+material_override = SubResource("StandardMaterial3D_7u66c")
+mesh = ExtResource("6_jru7i")
+skeleton = NodePath("../..")
+
+[node name="区域" type="Area3D" parent="物件动画/图标/0/滑块2/根节点4"]
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="物件动画/图标/0/滑块2/根节点4/区域"]
+shape = SubResource("BoxShape3D_0dedu")
+
+[node name="根节点5" type="Node3D" parent="物件动画/图标/0/滑块2"]
+transform = Transform3D(1, 0.667, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+rotation_edit_mode = 2
+
+[node name="骨骼" type="Skeleton3D" parent="物件动画/图标/0/滑块2/根节点5"]
+
+[node name="长条尾" type="MeshInstance3D" parent="物件动画/图标/0/滑块2/根节点5/骨骼"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+material_override = SubResource("StandardMaterial3D_1sets")
+mesh = ExtResource("4_psdew")
+skeleton = NodePath("../..")
+
+[node name="长条腰" type="MeshInstance3D" parent="物件动画/图标/0/滑块2/根节点5/骨骼"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+visible = false
+material_override = SubResource("StandardMaterial3D_2ww56")
+mesh = ExtResource("5_8rwjh")
+skeleton = NodePath("../..")
+
+[node name="长条头" type="MeshInstance3D" parent="物件动画/图标/0/滑块2/根节点5/骨骼"]
+material_override = SubResource("StandardMaterial3D_7u66c")
+mesh = ExtResource("6_jru7i")
+skeleton = NodePath("../..")
+
+[node name="区域" type="Area3D" parent="物件动画/图标/0/滑块2/根节点5"]
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="物件动画/图标/0/滑块2/根节点5/区域"]
+shape = SubResource("BoxShape3D_0dedu")
+
+[node name="根节点4" type="Node3D" parent="物件动画/图标/0"]
+transform = Transform3D(0.25, -0.866025, 0, 0.433013, 0.5, 0, 0, 0, 1, 2.5, 2.5, 0)
+
+[node name="骨骼" type="Skeleton3D" parent="物件动画/图标/0/根节点4"]
+
+[node name="长条尾" type="MeshInstance3D" parent="物件动画/图标/0/根节点4/骨骼"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+material_override = SubResource("StandardMaterial3D_1sets")
+mesh = ExtResource("4_psdew")
+skeleton = NodePath("../..")
+
+[node name="长条腰" type="MeshInstance3D" parent="物件动画/图标/0/根节点4/骨骼"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+visible = false
+material_override = SubResource("StandardMaterial3D_2ww56")
+mesh = ExtResource("5_8rwjh")
+skeleton = NodePath("../..")
+
+[node name="长条头" type="MeshInstance3D" parent="物件动画/图标/0/根节点4/骨骼"]
+material_override = SubResource("StandardMaterial3D_7u66c")
+mesh = ExtResource("6_jru7i")
+skeleton = NodePath("../..")
+
+[node name="区域" type="Area3D" parent="物件动画/图标/0/根节点4"]
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="物件动画/图标/0/根节点4/区域"]
+shape = SubResource("BoxShape3D_0dedu")
+
+[node name="图标2" type="Node3D" parent="物件动画"]
+transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, -27, 70, -50)
+
+[node name="指" type="Node3D" parent="物件动画/图标2"]
+
+[node name="长块" type="Node3D" parent="物件动画/图标2/指"]
+rotation_edit_mode = 2
+
+[node name="长条尾" type="MeshInstance3D" parent="物件动画/图标2/指/长块"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13, 0)
+material_override = SubResource("StandardMaterial3D_y6vow")
+mesh = ExtResource("4_psdew")
+skeleton = NodePath("../../../..")
+
+[node name="长条腰" type="MeshInstance3D" parent="物件动画/图标2/指/长块"]
+transform = Transform3D(1, 0, 0, 0, 4, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_nqthi")
+mesh = ExtResource("5_8rwjh")
+
+[node name="模型" type="Node3D" parent="物件动画/图标2/指/长块"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="长条头" type="MeshInstance3D" parent="物件动画/图标2/指/长块/模型"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
+material_override = SubResource("StandardMaterial3D_7yvcm")
+mesh = ExtResource("6_jru7i")
+skeleton = NodePath("../..")
+
+[node name="狂戳" type="Node3D" parent="物件动画/图标2/指"]
+transform = Transform3D(-4.37114e-08, -2, -1.06581e-14, 1, -8.74228e-08, 0, -4.23516e-22, -2.13163e-14, 1, 3, 12, 0)
+
+[node name="模型" type="MeshInstance3D" parent="物件动画/图标2/指/狂戳"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_8gfld")
+mesh = ExtResource("7_kki1i")
+
+[node name="滑块" type="Node3D" parent="物件动画/图标2/指"]
+transform = Transform3D(1.5, 1, 0, 0, 0.5, 0, 0, 0, 1, -3, 5, 0)
+rotation_edit_mode = 2
+
+[node name="长条尾" type="MeshInstance3D" parent="物件动画/图标2/指/滑块"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+material_override = SubResource("StandardMaterial3D_ukyht")
+mesh = ExtResource("4_psdew")
+skeleton = NodePath("../..")
+
+[node name="长条腰" type="MeshInstance3D" parent="物件动画/图标2/指/滑块"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+visible = false
+material_override = SubResource("StandardMaterial3D_41rxy")
+mesh = ExtResource("5_8rwjh")
+skeleton = NodePath("../..")
+
+[node name="长条头" type="MeshInstance3D" parent="物件动画/图标2/指/滑块"]
+material_override = SubResource("StandardMaterial3D_5yl2b")
+mesh = ExtResource("6_jru7i")
+skeleton = NodePath("../..")
+
+[node name="狂戳2" type="Node3D" parent="物件动画/图标2/指"]
+transform = Transform3D(-4.37114e-08, -1, -1.06581e-14, 1, -4.37114e-08, -4.65882e-22, 1.51461e-28, -1.06581e-14, 1, 0, 1, 0)
+
+[node name="模型" type="MeshInstance3D" parent="物件动画/图标2/指/狂戳2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_8gfld")
+mesh = ExtResource("7_kki1i")
+
+[node name="长块2" type="Node3D" parent="物件动画/图标2/指"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 9, 0)
+rotation_edit_mode = 2
+
+[node name="长条尾" type="MeshInstance3D" parent="物件动画/图标2/指/长块2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+material_override = SubResource("StandardMaterial3D_y6vow")
+mesh = ExtResource("4_psdew")
+skeleton = NodePath("../../../..")
+
+[node name="长条腰" type="MeshInstance3D" parent="物件动画/图标2/指/长块2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+visible = false
+material_override = SubResource("StandardMaterial3D_nqthi")
+mesh = ExtResource("5_8rwjh")
+
+[node name="模型" type="Node3D" parent="物件动画/图标2/指/长块2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
+
+[node name="长条头" type="MeshInstance3D" parent="物件动画/图标2/指/长块2/模型"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
+material_override = SubResource("StandardMaterial3D_7yvcm")
+mesh = ExtResource("6_jru7i")
+skeleton = NodePath("../..")
+
+[node name="长块3" type="Node3D" parent="物件动画/图标2/指"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 5, 11, 0)
+
+[node name="长条尾" type="MeshInstance3D" parent="物件动画/图标2/指/长块3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+material_override = SubResource("StandardMaterial3D_y6vow")
+mesh = ExtResource("4_psdew")
+skeleton = NodePath("../../../..")
+
+[node name="长条腰" type="MeshInstance3D" parent="物件动画/图标2/指/长块3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+visible = false
+material_override = SubResource("StandardMaterial3D_nqthi")
+mesh = ExtResource("5_8rwjh")
+
+[node name="模型" type="Node3D" parent="物件动画/图标2/指/长块3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
+
+[node name="长条头" type="MeshInstance3D" parent="物件动画/图标2/指/长块3/模型"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
+material_override = SubResource("StandardMaterial3D_7yvcm")
+mesh = ExtResource("6_jru7i")
+skeleton = NodePath("../..")
+
+[node name="滑块2" type="Node3D" parent="物件动画/图标2/指"]
+transform = Transform3D(0.34202, 0.939693, 0, -0.939693, 0.34202, 0, 0, 0, 1, 5, 13, 0)
+
+[node name="长条尾" type="MeshInstance3D" parent="物件动画/图标2/指/滑块2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+material_override = SubResource("StandardMaterial3D_ukyht")
+mesh = ExtResource("4_psdew")
+skeleton = NodePath("../..")
+
+[node name="长条腰" type="MeshInstance3D" parent="物件动画/图标2/指/滑块2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+visible = false
+material_override = SubResource("StandardMaterial3D_41rxy")
+mesh = ExtResource("5_8rwjh")
+skeleton = NodePath("../..")
+
+[node name="长条头" type="MeshInstance3D" parent="物件动画/图标2/指/滑块2"]
+material_override = SubResource("StandardMaterial3D_5yl2b")
+mesh = ExtResource("6_jru7i")
+skeleton = NodePath("../..")
+
+[node name="狂戳3" type="Node3D" parent="物件动画/图标2/指"]
+transform = Transform3D(4, 0, 0, 0, 3, 0, 0, 0, 1, 8, 0, 0)
+
+[node name="模型" type="MeshInstance3D" parent="物件动画/图标2/指/狂戳3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_8gfld")
+mesh = ExtResource("7_kki1i")
+
+[node name="滑键" type="MeshInstance3D" parent="物件动画/图标2/指"]
+transform = Transform3D(-6.55671e-08, -1.5, 0, -6.55671e-08, 2.86603e-15, -1.5, 1.5, -6.55671e-08, -6.55671e-08, 8, 6.5, 0)
+mesh = ExtResource("14_if0ww")
+skeleton = NodePath("../../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_fn31t")
+surface_material_override/1 = SubResource("StandardMaterial3D_p3m0i")
+
+[node name="滑键2" type="MeshInstance3D" parent="物件动画/图标2/指"]
+transform = Transform3D(-6.55671e-08, -1.5, 0, -6.55671e-08, 2.86603e-15, -1.5, 1.5, -6.55671e-08, -6.55671e-08, 8, 3, 0)
+mesh = ExtResource("14_if0ww")
+skeleton = NodePath("../../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_fn31t")
+surface_material_override/1 = SubResource("StandardMaterial3D_p3m0i")
+
+[node name="向" type="Node3D" parent="物件动画/图标2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 0)
+
+[node name="长块" type="Node3D" parent="物件动画/图标2/向"]
+rotation_edit_mode = 2
+
+[node name="长条尾" type="MeshInstance3D" parent="物件动画/图标2/向/长块"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
+material_override = SubResource("StandardMaterial3D_y6vow")
+mesh = ExtResource("4_psdew")
+skeleton = NodePath("../../../..")
+
+[node name="长条腰" type="MeshInstance3D" parent="物件动画/图标2/向/长块"]
+transform = Transform3D(1, 0, 0, 0, 3, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_nqthi")
+mesh = ExtResource("5_8rwjh")
+
+[node name="模型" type="Node3D" parent="物件动画/图标2/向/长块"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="长条头" type="MeshInstance3D" parent="物件动画/图标2/向/长块/模型"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
+material_override = SubResource("StandardMaterial3D_7yvcm")
+mesh = ExtResource("6_jru7i")
+skeleton = NodePath("../..")
+
+[node name="长块2" type="Node3D" parent="物件动画/图标2/向"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
+rotation_edit_mode = 2
+
+[node name="长条尾" type="MeshInstance3D" parent="物件动画/图标2/向/长块2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
+material_override = SubResource("StandardMaterial3D_y6vow")
+mesh = ExtResource("4_psdew")
+skeleton = NodePath("../../../..")
+
+[node name="长条腰" type="MeshInstance3D" parent="物件动画/图标2/向/长块2"]
+transform = Transform3D(1, 0, 0, 0, 3, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_nqthi")
+mesh = ExtResource("5_8rwjh")
+
+[node name="模型" type="Node3D" parent="物件动画/图标2/向/长块2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="长条头" type="MeshInstance3D" parent="物件动画/图标2/向/长块2/模型"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
+material_override = SubResource("StandardMaterial3D_7yvcm")
+mesh = ExtResource("6_jru7i")
+skeleton = NodePath("../..")
+
+[node name="滑块2" type="Node3D" parent="物件动画/图标2/向"]
+transform = Transform3D(-4.37114e-08, 1.333, 0, -1, -5.82673e-08, 0, 0, 0, 1, 1, 12, 0)
+
+[node name="长条尾" type="MeshInstance3D" parent="物件动画/图标2/向/滑块2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+material_override = SubResource("StandardMaterial3D_ukyht")
+mesh = ExtResource("4_psdew")
+skeleton = NodePath("../..")
+
+[node name="长条腰" type="MeshInstance3D" parent="物件动画/图标2/向/滑块2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+visible = false
+material_override = SubResource("StandardMaterial3D_41rxy")
+mesh = ExtResource("5_8rwjh")
+skeleton = NodePath("../..")
+
+[node name="长条头" type="MeshInstance3D" parent="物件动画/图标2/向/滑块2"]
+material_override = SubResource("StandardMaterial3D_5yl2b")
+mesh = ExtResource("6_jru7i")
+skeleton = NodePath("../..")
+
+[node name="爆裂" type="MeshInstance3D" parent="物件动画/图标2/向"]
+transform = Transform3D(2, 0, -7.10543e-15, 0, 2, 0, 7.10543e-15, 0, 2, 5, 6, 0)
+mesh = ExtResource("12_a3c8x")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_ulrnd")
+
+[node name="滑块3" type="Node3D" parent="物件动画/图标2/向"]
+transform = Transform3D(0.707107, 0.47164, 0, -0.707107, 0.47164, 0, 0, 0, 1, 1, 12, 0)
+
+[node name="长条尾" type="MeshInstance3D" parent="物件动画/图标2/向/滑块3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+material_override = SubResource("StandardMaterial3D_ukyht")
+mesh = ExtResource("4_psdew")
+skeleton = NodePath("../..")
+
+[node name="长条腰" type="MeshInstance3D" parent="物件动画/图标2/向/滑块3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+visible = false
+material_override = SubResource("StandardMaterial3D_41rxy")
+mesh = ExtResource("5_8rwjh")
+skeleton = NodePath("../..")
+
+[node name="长条头" type="MeshInstance3D" parent="物件动画/图标2/向/滑块3"]
+material_override = SubResource("StandardMaterial3D_5yl2b")
+mesh = ExtResource("6_jru7i")
+skeleton = NodePath("../..")
+
+[node name="黑" type="Node3D" parent="物件动画/图标2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 0)
+
+[node name="狂戳" type="Node3D" parent="物件动画/图标2/黑"]
+transform = Transform3D(-4.37114e-08, 4, 0, -1, -1.74846e-07, 0, 0, 0, 1, -3, 15, 0)
+
+[node name="模型" type="MeshInstance3D" parent="物件动画/图标2/黑/狂戳"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_8gfld")
+mesh = ExtResource("7_kki1i")
+
+[node name="狂戳2" type="Node3D" parent="物件动画/图标2/黑"]
+transform = Transform3D(-4.37114e-08, 4, 0, -1, -1.74846e-07, 0, 0, 0, 1, -3, 10, 0)
+
+[node name="模型" type="MeshInstance3D" parent="物件动画/图标2/黑/狂戳2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_8gfld")
+mesh = ExtResource("7_kki1i")
+
+[node name="狂戳3" type="Node3D" parent="物件动画/图标2/黑"]
+transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, -2, 10, 0)
+
+[node name="模型" type="MeshInstance3D" parent="物件动画/图标2/黑/狂戳3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_8gfld")
+mesh = ExtResource("7_kki1i")
+
+[node name="狂戳4" type="Node3D" parent="物件动画/图标2/黑"]
+transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 8, 10, 0)
+
+[node name="模型" type="MeshInstance3D" parent="物件动画/图标2/黑/狂戳4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_8gfld")
+mesh = ExtResource("7_kki1i")
+
+[node name="狂戳5" type="Node3D" parent="物件动画/图标2/黑"]
+transform = Transform3D(1, 0, 0, 0, 4, 0, 0, 0, 1, 3, 4, 0)
+
+[node name="模型" type="MeshInstance3D" parent="物件动画/图标2/黑/狂戳5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_8gfld")
+mesh = ExtResource("7_kki1i")
+
+[node name="狂戳6" type="Node3D" parent="物件动画/图标2/黑"]
+transform = Transform3D(-4.37114e-08, 4, 0, -1, -1.74846e-07, 0, 0, 0, 1, -3, 4, 0)
+
+[node name="模型" type="MeshInstance3D" parent="物件动画/图标2/黑/狂戳6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_8gfld")
+mesh = ExtResource("7_kki1i")
+
+[node name="狂戳7" type="Node3D" parent="物件动画/图标2/黑"]
+transform = Transform3D(-4.37114e-08, 3, 0, -1, -1.31134e-07, 0, 0, 0, 1, -1.5, 7, 0)
+
+[node name="模型" type="MeshInstance3D" parent="物件动画/图标2/黑/狂戳7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_8gfld")
+mesh = ExtResource("7_kki1i")
+
+[node name="狂戳8" type="Node3D" parent="物件动画/图标2/黑"]
+transform = Transform3D(0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0, 1, 1.5, 11.5, 0)
+
+[node name="模型" type="MeshInstance3D" parent="物件动画/图标2/黑/狂戳8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_8gfld")
+mesh = ExtResource("7_kki1i")
+
+[node name="狂戳9" type="Node3D" parent="物件动画/图标2/黑"]
+transform = Transform3D(0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0, 1, 4.5, 11.5, 0)
+
+[node name="模型" type="MeshInstance3D" parent="物件动画/图标2/黑/狂戳9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_8gfld")
+mesh = ExtResource("7_kki1i")
+
+[node name="狂戳10" type="Node3D" parent="物件动画/图标2/黑"]
+transform = Transform3D(0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0, 1, -3, 0, 0)
+
+[node name="模型" type="MeshInstance3D" parent="物件动画/图标2/黑/狂戳10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_8gfld")
+mesh = ExtResource("7_kki1i")
+
+[node name="狂戳11" type="Node3D" parent="物件动画/图标2/黑"]
+transform = Transform3D(0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="模型" type="MeshInstance3D" parent="物件动画/图标2/黑/狂戳11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_8gfld")
+mesh = ExtResource("7_kki1i")
+
+[node name="狂戳12" type="Node3D" parent="物件动画/图标2/黑"]
+transform = Transform3D(0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="模型" type="MeshInstance3D" parent="物件动画/图标2/黑/狂戳12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_8gfld")
+mesh = ExtResource("7_kki1i")
+
+[node name="狂戳13" type="Node3D" parent="物件动画/图标2/黑"]
+transform = Transform3D(0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0, 1, 9, 0, 0)
+
+[node name="模型" type="MeshInstance3D" parent="物件动画/图标2/黑/狂戳13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_8gfld")
+mesh = ExtResource("7_kki1i")
+
+[node name="块" type="Node3D" parent="物件动画/图标2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 0, 0)
+
+[node name="长块" type="Node3D" parent="物件动画/图标2/块"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 3, 0)
+rotation_edit_mode = 2
+
+[node name="长条尾" type="MeshInstance3D" parent="物件动画/图标2/块/长块"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
+material_override = SubResource("StandardMaterial3D_y6vow")
+mesh = ExtResource("4_psdew")
+skeleton = NodePath("../../../..")
+
+[node name="长条腰" type="MeshInstance3D" parent="物件动画/图标2/块/长块"]
+transform = Transform3D(1, 0, 0, 0, 3, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_nqthi")
+mesh = ExtResource("5_8rwjh")
+
+[node name="模型" type="Node3D" parent="物件动画/图标2/块/长块"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="长条头" type="MeshInstance3D" parent="物件动画/图标2/块/长块/模型"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
+material_override = SubResource("StandardMaterial3D_7yvcm")
+mesh = ExtResource("6_jru7i")
+skeleton = NodePath("../..")
+
+[node name="狂戳" type="Node3D" parent="物件动画/图标2/块"]
+transform = Transform3D(-4.37114e-08, 2, 0, -1, -8.74228e-08, 0, 0, 0, 1, 0, 12, 0)
+
+[node name="模型" type="MeshInstance3D" parent="物件动画/图标2/块/狂戳"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_8gfld")
+mesh = ExtResource("7_kki1i")
+
+[node name="狂戳2" type="Node3D" parent="物件动画/图标2/块"]
+transform = Transform3D(0.5, 1.73205, 0, -0.866025, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="模型" type="MeshInstance3D" parent="物件动画/图标2/块/狂戳2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_8gfld")
+mesh = ExtResource("7_kki1i")
+
+[node name="滑块" type="Node3D" parent="物件动画/图标2/块"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 7, 12, 0)
+
+[node name="长条尾" type="MeshInstance3D" parent="物件动画/图标2/块/滑块"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+material_override = SubResource("StandardMaterial3D_ukyht")
+mesh = ExtResource("4_psdew")
+skeleton = NodePath("../..")
+
+[node name="长条腰" type="MeshInstance3D" parent="物件动画/图标2/块/滑块"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+visible = false
+material_override = SubResource("StandardMaterial3D_41rxy")
+mesh = ExtResource("5_8rwjh")
+skeleton = NodePath("../..")
+
+[node name="长条头" type="MeshInstance3D" parent="物件动画/图标2/块/滑块"]
+material_override = SubResource("StandardMaterial3D_5yl2b")
+mesh = ExtResource("6_jru7i")
+skeleton = NodePath("../..")
+
+[node name="滑块2" type="Node3D" parent="物件动画/图标2/块"]
+transform = Transform3D(-4.37114e-08, 1.333, 0, -1, -5.82673e-08, 0, 0, 0, 1, 7, 7, 0)
+
+[node name="长条尾" type="MeshInstance3D" parent="物件动画/图标2/块/滑块2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+material_override = SubResource("StandardMaterial3D_ukyht")
+mesh = ExtResource("4_psdew")
+skeleton = NodePath("../..")
+
+[node name="长条腰" type="MeshInstance3D" parent="物件动画/图标2/块/滑块2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+visible = false
+material_override = SubResource("StandardMaterial3D_41rxy")
+mesh = ExtResource("5_8rwjh")
+skeleton = NodePath("../..")
+
+[node name="长条头" type="MeshInstance3D" parent="物件动画/图标2/块/滑块2"]
+material_override = SubResource("StandardMaterial3D_5yl2b")
+mesh = ExtResource("6_jru7i")
+skeleton = NodePath("../..")
+
+[node name="滑块3" type="Node3D" parent="物件动画/图标2/块"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 7, 0)
+
+[node name="长条尾" type="MeshInstance3D" parent="物件动画/图标2/块/滑块3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+material_override = SubResource("StandardMaterial3D_ukyht")
+mesh = ExtResource("4_psdew")
+skeleton = NodePath("../..")
+
+[node name="长条腰" type="MeshInstance3D" parent="物件动画/图标2/块/滑块3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+visible = false
+material_override = SubResource("StandardMaterial3D_41rxy")
+mesh = ExtResource("5_8rwjh")
+skeleton = NodePath("../..")
+
+[node name="长条头" type="MeshInstance3D" parent="物件动画/图标2/块/滑块3"]
+material_override = SubResource("StandardMaterial3D_5yl2b")
+mesh = ExtResource("6_jru7i")
+skeleton = NodePath("../..")
+
+[node name="长块2" type="Node3D" parent="物件动画/图标2/块"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 6, 0)
+
+[node name="长条尾" type="MeshInstance3D" parent="物件动画/图标2/块/长块2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.5, 0)
+material_override = SubResource("StandardMaterial3D_y6vow")
+mesh = ExtResource("4_psdew")
+skeleton = NodePath("../../../..")
+
+[node name="长条腰" type="MeshInstance3D" parent="物件动画/图标2/块/长块2"]
+transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_nqthi")
+mesh = ExtResource("5_8rwjh")
+
+[node name="模型" type="Node3D" parent="物件动画/图标2/块/长块2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="长条头" type="MeshInstance3D" parent="物件动画/图标2/块/长块2/模型"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
+material_override = SubResource("StandardMaterial3D_7yvcm")
+mesh = ExtResource("6_jru7i")
+skeleton = NodePath("../..")
+
+[node name="宽键" type="Node3D" parent="物件动画/图标2/块"]
+transform = Transform3D(2, -0.577639, 0, 3.4641, 0.3335, 0, 0, 0, 1, 9, 3, 0)
+
+[node name="模型" type="MeshInstance3D" parent="物件动画/图标2/块/宽键"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_kl8t7")
+mesh = ExtResource("7_kki1i")
+
+[node name="宽键2" type="Node3D" parent="物件动画/图标2/块"]
+transform = Transform3D(2.5, 0.577639, 0, -4.33013, 0.3335, 0, 0, 0, 1, 11, 3, 0)
+
+[node name="模型" type="MeshInstance3D" parent="物件动画/图标2/块/宽键2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_kl8t7")
+mesh = ExtResource("7_kki1i")
+
+[node name="动画节点" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_brqra")
+}
+autoplay = "动画"
+script = ExtResource("17_4gbdp")
+
+[connection signal="animation_finished" from="动画节点" to="动画节点" method="动画播放结束"]

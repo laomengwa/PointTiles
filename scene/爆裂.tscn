@@ -1,0 +1,181 @@
+[gd_scene load_steps=16 format=3 uid="uid://dvtrr46x3h2r6"]
+
+[ext_resource type="Script" path="res://script/note/黑块.gd" id="1_0f4bl"]
+[ext_resource type="FontFile" uid="uid://w0oxygfawslj" path="res://fonts/Futura-Condensed.otf" id="2_7hioy"]
+[ext_resource type="ArrayMesh" uid="uid://cagb06tfjrjy0" path="res://mesh/爆裂.obj" id="3_wpc7j"]
+[ext_resource type="Texture2D" uid="uid://x1b4ybwjrp1r" path="res://mesh/爆裂.png" id="4_r3htn"]
+[ext_resource type="Shader" path="res://shader/物件边框.gdshader" id="5_am2qp"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e2748"]
+render_priority = 0
+shader = ExtResource("5_am2qp")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_width = 2.0
+shader_parameter/alpha = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yy06w"]
+next_pass = SubResource("ShaderMaterial_e2748")
+shading_mode = 0
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("4_r3htn")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6swmc"]
+render_priority = 0
+shader = ExtResource("5_am2qp")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_width = 2.0
+shader_parameter/alpha = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2rqax"]
+next_pass = SubResource("ShaderMaterial_6swmc")
+shading_mode = 0
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.972549, 0.603922, 0.25098, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_23xc7"]
+material = SubResource("StandardMaterial3D_2rqax")
+size = Vector3(0.5, 0.75, 0.25)
+
+[sub_resource type="Curve" id="Curve_e4hmg"]
+min_value = -360.0
+max_value = 360.0
+_data = [Vector2(0, -292.076), 0.0, 0.0, 0, 0, Vector2(0.602459, 273.057), 0.0, 0.0, 0, 0, Vector2(0.995902, 120.906), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_sehc6"]
+points = PackedVector3Array(-2, -3, 0, 2, -3, 0, -2, 3, 1, -2, 3, -1, 2, 3, 1, 2, 3, -1)
+
+[sub_resource type="Animation" id="Animation_iq54n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("模型/爆裂粒子:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("模型:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("模型:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_fythb"]
+resource_name = "音符消除"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("模型/爆裂粒子:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("模型:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(1, 1, 1), Vector3(1.2, 1.2, 1.2), Vector3(1, 1, 1), Vector3(0.8, 0.8, 0.8)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("模型:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5kqnw"]
+_data = {
+"RESET": SubResource("Animation_iq54n"),
+"音符消除": SubResource("Animation_fythb")
+}
+
+[node name="根节点" type="Node3D"]
+script = ExtResource("1_0f4bl")
+
+[node name="标签" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+visible = false
+pixel_size = 0.01
+billboard = 1
+no_depth_test = true
+text = "000"
+font = ExtResource("2_7hioy")
+font_size = 100
+outline_size = 0
+
+[node name="模型" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+mesh = ExtResource("3_wpc7j")
+surface_material_override/0 = SubResource("StandardMaterial3D_yy06w")
+
+[node name="爆裂粒子" type="CPUParticles3D" parent="模型"]
+emitting = false
+one_shot = true
+explosiveness = 1.0
+randomness = 1.0
+mesh = SubResource("BoxMesh_23xc7")
+direction = Vector3(0, 1, 0)
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 5.0
+initial_velocity_max = 10.0
+angular_velocity_curve = SubResource("Curve_e4hmg")
+damping_min = 10.0
+damping_max = 10.0
+
+[node name="触摸区域" type="Area3D" parent="模型" groups=["物件区域"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
+
+[node name="形状" type="CollisionShape3D" parent="模型/触摸区域"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+shape = SubResource("ConvexPolygonShape3D_sehc6")
+
+[node name="动画" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_5kqnw")
+}
+
+[connection signal="input_event" from="模型/触摸区域" to="." method="点击事件"]
+[connection signal="animation_finished" from="动画" to="." method="动画播放结束"]

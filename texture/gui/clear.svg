@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="10mm"
+   height="10mm"
+   viewBox="0 0 10 10"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   sodipodi:docname="clear.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#e252e5"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#e6bcbc"
+     inkscape:document-units="mm"
+     inkscape:zoom="3.7350497"
+     inkscape:cx="4.5514789"
+     inkscape:cy="16.064043"
+     inkscape:window-width="1300"
+     inkscape:window-height="702"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect2"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect1"
+       is_visible="true"
+       lpeversion="1" />
+  </defs>
+  <g
+     inkscape:label="图层 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(2.7999999,1)">
+    <rect
+       style="fill:#1285e3;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.64582;paint-order:stroke fill markers"
+       id="rect2"
+       width="10"
+       height="10"
+       x="-2.8"
+       y="-1"
+       ry="2"
+       rx="2" />
+    <rect
+       style="fill:#edf6fe;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:8.504;paint-order:stroke fill markers"
+       id="rect1"
+       width="10.25516"
+       height="2.0510321"
+       x="-3.8547881"
+       y="-5.4095783"
+       rx="0.8104654"
+       ry="0.89229769"
+       transform="rotate(135)" />
+    <rect
+       style="fill:#edf6fe;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:8.50394;paint-order:stroke fill markers"
+       id="rect1-5"
+       width="10.25516"
+       height="2.0510321"
+       x="-9.5116415"
+       y="-2.2983081"
+       rx="0.81046534"
+       ry="0.89229774"
+       transform="rotate(-135)" />
+  </g>
+</svg>

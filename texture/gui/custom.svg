@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="512"
+   height="512"
+   viewBox="0 0 512 512"
+   sodipodi:docname="custom.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect21"
+       is_visible="true"
+       lpeversion="1" />
+    <linearGradient
+       id="linearGradient20"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop20" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0;"
+         offset="1"
+         id="stop21" />
+    </linearGradient>
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect20"
+       is_visible="true"
+       lpeversion="1" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient20"
+       id="linearGradient21"
+       x1="450.96417"
+       y1="319.1395"
+       x2="460.96417"
+       y2="319.1395"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.86328174"
+     inkscape:cx="213.14015"
+     inkscape:cy="268.74193"
+     inkscape:window-width="1300"
+     inkscape:window-height="702"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer2" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="唱片"
+     transform="scale(10.24)">
+    <circle
+       style="fill:#30212e;fill-opacity:1;fill-rule:evenodd;stroke-width:7.55906;paint-order:stroke fill markers"
+       id="path1"
+       cx="25"
+       cy="25"
+       r="25" />
+    <circle
+       style="fill:#0e0916;fill-opacity:1;fill-rule:evenodd;stroke-width:7.55906;paint-order:stroke fill markers"
+       id="path2-3"
+       cx="25"
+       cy="25"
+       r="18" />
+    <circle
+       style="fill:#bb5d40;fill-opacity:1;fill-rule:evenodd;stroke-width:7.55906;paint-order:stroke fill markers"
+       id="path2"
+       cx="25"
+       cy="25"
+       r="16" />
+    <circle
+       style="fill:#e8a58c;fill-opacity:1;fill-rule:evenodd;stroke-width:7.55906;paint-order:stroke fill markers"
+       id="path3"
+       cx="25"
+       cy="25"
+       r="6" />
+    <path
+       style="fill:#c8afc5;fill-opacity:0.74;fill-rule:evenodd;stroke-width:7.55906;paint-order:stroke fill markers"
+       id="path5"
+       sodipodi:type="arc"
+       sodipodi:cx="-9.2057714"
+       sodipodi:cy="34.356407"
+       sodipodi:rx="25"
+       sodipodi:ry="25"
+       sodipodi:start="0"
+       sodipodi:end="0.52359878"
+       sodipodi:arc-type="slice"
+       d="m 15.794229,34.356407 a 25,25 0 0 1 -3.349365,12.5 l -21.6506354,-12.5 z"
+       transform="rotate(-60)" />
+    <path
+       style="fill:#c8afc5;fill-opacity:0.74;fill-rule:evenodd;stroke-width:7.55906;paint-order:stroke fill markers"
+       id="path5-1"
+       sodipodi:type="arc"
+       sodipodi:cx="9.2057714"
+       sodipodi:cy="-34.356407"
+       sodipodi:rx="25"
+       sodipodi:ry="25"
+       sodipodi:start="0"
+       sodipodi:end="0.52359878"
+       sodipodi:arc-type="slice"
+       d="m 34.205771,-34.356407 a 25,25 0 0 1 -3.349365,12.5 l -21.6506346,-12.5 z"
+       transform="rotate(120)"
+       inkscape:transform-center-x="-3.8652423"
+       inkscape:transform-center-y="-1.5386866" />
+    <circle
+       style="fill:#0d0815;fill-opacity:1;fill-rule:evenodd;stroke-width:7.55906;paint-order:stroke fill markers"
+       id="path4"
+       cx="25"
+       cy="25"
+       r="2" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="文件">
+    <path
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:10;paint-order:stroke fill markers;stroke-dasharray:none;stroke:#797979;stroke-opacity:1"
+       d="m 360,300 c -5.53998,0 -10,4.46002 -10,10 v 180 c 0,5.53998 4.46002,10 10,10 h 130 c 5.53998,0 10,-4.46002 10,-10 V 338.99219 C 489.44217,329.43087 478.82034,319.93986 468.32422,310.31055 464.6039,306.91919 460.92927,303.48139 457.29492,300 Z"
+       id="rect1" />
+    <path
+       style="fill:url(#linearGradient21);fill-opacity:1;fill-rule:evenodd;stroke:#797979;stroke-width:6;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       d="m 455.96417,298.69388 v 40.89124"
+       id="path20"
+       inkscape:path-effect="#path-effect20"
+       inkscape:original-d="m 455.96417,298.69388 v 40.89124" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#797979;stroke-width:6;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       d="M 501.7483,338.10879 454.15371,337.7173"
+       id="path21"
+       inkscape:path-effect="#path-effect21"
+       inkscape:original-d="M 501.7483,338.10879 454.15371,337.7173"
+       transform="matrix(1.0252388,0,0,0.99888545,-12.660551,0.37662088)" />
+  </g>
+</svg>

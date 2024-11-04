@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://4guyg5piat7q"
+
+[deps]
+
+files=["res://music/json_chart/csv_config/music_json.Mid.translation", "res://music/json_chart/csv_config/music_json.BPM.translation", "res://music/json_chart/csv_config/music_json.BaseBeats.translation", "res://music/json_chart/csv_config/music_json.Ratio.translation", "res://music/json_chart/csv_config/music_json.MusicJson.translation", "res://music/json_chart/csv_config/music_json.Musician.translation", "res://music/json_chart/csv_config/music_json.Acceleration.translation", "res://music/json_chart/csv_config/music_json.AniID.translation", "res://music/json_chart/csv_config/music_json.BridgeAniID.translation"]
+
+source_file="res://music/json_chart/csv_config/music_json.csv"
+dest_files=["res://music/json_chart/csv_config/music_json.Mid.translation", "res://music/json_chart/csv_config/music_json.BPM.translation", "res://music/json_chart/csv_config/music_json.BaseBeats.translation", "res://music/json_chart/csv_config/music_json.Ratio.translation", "res://music/json_chart/csv_config/music_json.MusicJson.translation", "res://music/json_chart/csv_config/music_json.Musician.translation", "res://music/json_chart/csv_config/music_json.Acceleration.translation", "res://music/json_chart/csv_config/music_json.AniID.translation", "res://music/json_chart/csv_config/music_json.BridgeAniID.translation"]
+
+[params]
+
+compress=true
+delimiter=0

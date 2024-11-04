@@ -1,0 +1,119 @@
+[gd_scene load_steps=12 format=3 uid="uid://bmmlaqxwgrjxa"]
+
+[ext_resource type="Script" path="res://script/note/黑块.gd" id="1_oxrrq"]
+[ext_resource type="FontFile" uid="uid://w0oxygfawslj" path="res://fonts/Futura-Condensed.otf" id="2_o46q1"]
+[ext_resource type="ArrayMesh" uid="uid://iohlh43x18ph" path="res://mesh/黑块.obj" id="2_qewpy"]
+[ext_resource type="Shader" path="res://shader/黑块消除.gdshader" id="4_vnp0a"]
+[ext_resource type="Shader" path="res://shader/物件边框.gdshader" id="4_x01ko"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ikr3n"]
+render_priority = 0
+shader = ExtResource("4_x01ko")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_width = 2.0
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ejscq"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_ikr3n")
+shader = ExtResource("4_vnp0a")
+shader_parameter/alpha = 1.0
+shader_parameter/color = Color(0, 0, 0, 1)
+shader_parameter/time = 0.01
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_sehc6"]
+points = PackedVector3Array(-1, -3, 0, 1, -3, 0, -1, 3, 1, -1, 3, -1, 1, 3, 1, 1, 3, -1)
+
+[sub_resource type="Animation" id="Animation_iq54n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("模型:surface_material_override/0:shader_parameter/alpha")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("模型:surface_material_override/0:shader_parameter/time")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.01]
+}
+
+[sub_resource type="Animation" id="Animation_fythb"]
+resource_name = "音符消除"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("模型:surface_material_override/0:shader_parameter/alpha")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("模型:surface_material_override/0:shader_parameter/time")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.01, -0.1, 0.01]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5kqnw"]
+_data = {
+"RESET": SubResource("Animation_iq54n"),
+"音符消除": SubResource("Animation_fythb")
+}
+
+[node name="根节点" type="Node3D"]
+script = ExtResource("1_oxrrq")
+
+[node name="标签" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+visible = false
+pixel_size = 0.01
+billboard = 1
+no_depth_test = true
+text = "000"
+font = ExtResource("2_o46q1")
+font_size = 100
+outline_size = 0
+
+[node name="模型" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+mesh = ExtResource("2_qewpy")
+surface_material_override/0 = SubResource("ShaderMaterial_ejscq")
+
+[node name="触摸区域" type="Area3D" parent="模型" groups=["物件区域"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
+
+[node name="形状" type="CollisionShape3D" parent="模型/触摸区域"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+shape = SubResource("ConvexPolygonShape3D_sehc6")
+
+[node name="动画" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_5kqnw")
+}
+
+[connection signal="input_event" from="模型/触摸区域" to="." method="点击事件"]
