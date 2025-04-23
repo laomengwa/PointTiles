@@ -1,9 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cgs55e41h4t06"]
-
-[ext_resource type="Texture2D" uid="uid://blmox2tndf1lh" path="res://mesh/滑块腰.png" id="1_pu3yn"]
-
-[resource]
-shading_mode = 0
-diffuse_mode = 3
-specular_mode = 1
-albedo_texture = ExtResource("1_pu3yn")

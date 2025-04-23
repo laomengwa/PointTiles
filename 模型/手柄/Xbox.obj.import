@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://butii5uhaudav"
+path="res://.godot/imported/Xbox.obj-639f694254db55476a1f90eb8eaa5a88.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Xbox.obj-639f694254db55476a1f90eb8eaa5a88.mesh"]
+
+source_file="res://模型/手柄/Xbox.obj"
+dest_files=["res://.godot/imported/Xbox.obj-639f694254db55476a1f90eb8eaa5a88.mesh", "res://.godot/imported/Xbox.obj-639f694254db55476a1f90eb8eaa5a88.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

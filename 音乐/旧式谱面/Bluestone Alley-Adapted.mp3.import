@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bfqfbd03jk5lx"
+path="res://.godot/imported/Bluestone Alley-Adapted.mp3-e4cb4150ce3f865803e4cb41a7c96ecd.mp3str"
+
+[deps]
+
+source_file="res://音乐/旧式谱面/Bluestone Alley-Adapted.mp3"
+dest_files=["res://.godot/imported/Bluestone Alley-Adapted.mp3-e4cb4150ce3f865803e4cb41a7c96ecd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

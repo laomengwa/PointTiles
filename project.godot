@@ -16,11 +16,11 @@ config/name_localized={
 "zh_TW": "指向黑塊"
 }
 config/description="三维版的别踩白块模拟器"
-config/version="0.0.1"
-run/main_scene="res://scene/根场景.tscn"
+config/version="0.0.2"
+run/main_scene="res://场景/根场景.tscn"
 config/auto_accept_quit=false
 config/quit_on_go_back=false
-config/features=PackedStringArray("4.3", "GL Compatibility")
+config/features=PackedStringArray("4.4", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 config/icon="res://icon.svg"
 config/macos_native_icon="res://icon.svg"
@@ -34,11 +34,10 @@ driver/enable_input=true
 
 [autoload]
 
-GlobalScript="*res://script/Global.gd"
+"全局脚本"="*res://脚本/全局脚本.gd"
 
 [display]
 
-window/size/mode=3
 window/size/initial_position_type=2
 window/size/extend_to_title=true
 window/handheld/orientation=6
@@ -98,12 +97,17 @@ ui_menu={
 
 [input_devices]
 
-pointing/emulate_touch_from_mouse=true
 pointing/android/enable_pan_and_scale_gestures=true
+sensors/enable_accelerometer=true
+sensors/enable_gravity=true
+sensors/enable_gyroscope=true
+sensors/enable_magnetometer=true
+pen_tablet/driver.windows="auto"
+pointing/emulate_touch_from_mouse=true
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://text/language.zh.translation", "res://text/language.zh_CN.translation", "res://text/language.zh_TW.translation", "res://music/json_chart/csv_config/language_music.zh_CN.translation", "res://music/json_chart/csv_config/language_music.zh_TW.translation")
+locale/translations=PackedStringArray("res://文字/语言.zh.translation", "res://文字/语言.zh_CN.translation", "res://文字/语言.zh_TW.translation", "res://音乐/旧式谱面/表格配置/language_music.zh_CN.translation", "res://音乐/旧式谱面/表格配置/language_music.zh_TW.translation")
 locale/include_text_server_data=true
 locale/test="zh_CN"
 locale/fallback="zh_CN"

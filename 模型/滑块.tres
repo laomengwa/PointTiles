@@ -1,0 +1,27 @@
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://cgs55e41h4t06"]
+
+[ext_resource type="Texture2D" uid="uid://blmox2tndf1lh" path="res://模型/滑块.png" id="1_rs70v"]
+[ext_resource type="Shader" uid="uid://bogjabh4i665w" path="res://着色/物件边框.gdshader" id="2_46u02"]
+[ext_resource type="Shader" uid="uid://cr4681ks07fiw" path="res://着色/长块按下.gdshader" id="2_rs70v"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jllx6"]
+render_priority = 0
+shader = ExtResource("2_rs70v")
+shader_parameter/time = 0.0
+shader_parameter/color = Vector3(0.4, 0.7, 1)
+shader_parameter/state = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rs70v"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_jllx6")
+shader = ExtResource("2_46u02")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_width = 2.0
+shader_parameter/alpha = 1.0
+
+[resource]
+next_pass = SubResource("ShaderMaterial_rs70v")
+shading_mode = 0
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("1_rs70v")

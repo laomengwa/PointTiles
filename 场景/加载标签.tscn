@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c8qkowinglhwx"]
+
+[node name="加载提示标签" type="ProgressBar"]
+custom_minimum_size = Vector2(0, 30)
+value = 50.0
+show_percentage = false
+
+[node name="加载提示标签" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 200.0
+grow_vertical = 2
+size_flags_horizontal = 3
+text = "歌曲列表正在加载……"
+
+[node name="进度" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -31.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "0/0"

@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://rn1demmrcav1"]
+
+[ext_resource type="Script" uid="uid://cvffaeo1ia368" path="res://脚本/音符/黑块.gd" id="1_bjey1"]
+[ext_resource type="ArrayMesh" uid="uid://iohlh43x18ph" path="res://模型/黑块.obj" id="2_tioro"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ud4s"]
+transparency = 1
+cull_mode = 1
+shading_mode = 0
+grow = true
+grow_amount = 0.02
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kl8t7"]
+next_pass = SubResource("StandardMaterial3D_4ud4s")
+shading_mode = 0
+albedo_color = Color(0.4, 1, 0.4, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qvneu"]
+size = Vector3(2, 3, 2)
+
+[node name="根节点" type="Node3D"]
+script = ExtResource("1_bjey1")
+
+[node name="模型" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_kl8t7")
+mesh = ExtResource("2_tioro")
+
+[node name="触摸区域" type="Area3D" parent="模型" groups=["物件区域"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
+
+[node name="形状" type="CollisionShape3D" parent="模型/触摸区域"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+shape = SubResource("BoxShape3D_qvneu")
+
+[node name="音符调试编号" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+visible = false
+pixel_size = 0.01
+billboard = 1
+no_depth_test = true
+text = "0"
+font_size = 160
+outline_size = 0
+
+[connection signal="input_event" from="模型/触摸区域" to="." method="_on_area_3d_input_event"]

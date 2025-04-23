@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16mm"
+   height="8mm"
+   viewBox="0 0 16 8"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   sodipodi:docname="鼠标左右移动.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="3.9340067"
+     inkscape:cx="25.673571"
+     inkscape:cy="38.383259"
+     inkscape:window-width="1243"
+     inkscape:window-height="767"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1-2" />
+  <defs
+     id="defs1">
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect3"
+       is_visible="true"
+       lpeversion="1"
+       nodesatellites_param="F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1"
+       radius="0"
+       unit="px"
+       method="auto"
+       mode="F"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect2"
+       is_visible="true"
+       lpeversion="1"
+       nodesatellites_param="F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1"
+       radius="0"
+       unit="px"
+       method="auto"
+       mode="F"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+  </defs>
+  <g
+     inkscape:groupmode="layer"
+     id="layer1-2"
+     inkscape:label="Layer 1"
+     transform="matrix(0,-1,1.0001333,0,-2.6747386e-4,7.9934805)">
+    <rect
+       style="fill:#2288ff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;paint-order:stroke fill markers"
+       id="rect1-9"
+       width="4.6201487"
+       height="0.77002478"
+       x="-3.2339237"
+       y="4.1450815"
+       rx="0.37675464"
+       ry="0.37675464"
+       transform="rotate(-45)" />
+    <rect
+       style="fill:#2288ff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;paint-order:stroke fill markers"
+       id="rect1-5-1"
+       width="4.6201487"
+       height="0.77002478"
+       x="-8.8108473"
+       y="0.81245857"
+       rx="0.37675464"
+       ry="0.37675464"
+       transform="rotate(-135)" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="Layer 1"
+     transform="rotate(90,7.8035002,7.8035004)">
+    <rect
+       style="fill:#2288ff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;paint-order:stroke fill markers"
+       id="rect1"
+       width="4.6201487"
+       height="0.77002478"
+       x="-3.2577028"
+       y="4.1116467"
+       rx="0.37675464"
+       ry="0.37675464"
+       transform="rotate(-45)" />
+    <rect
+       style="fill:#2288ff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;paint-order:stroke fill markers"
+       id="rect1-5"
+       width="4.6201487"
+       height="0.77002478"
+       x="-8.7774134"
+       y="0.7886796"
+       rx="0.37675464"
+       ry="0.37675464"
+       transform="rotate(-135)" />
+  </g>
+  <rect
+     style="fill:#2288ff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;paint-order:stroke fill markers"
+     id="rect2"
+     width="1"
+     height="11"
+     x="3.4999998"
+     y="-13.207883"
+     rx="0.30000001"
+     ry="0.33000001"
+     transform="rotate(90)" />
+</svg>

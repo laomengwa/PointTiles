@@ -1,0 +1,43 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="3"
+run/main_scene="res://node_3d.tscn"
+config/features=PackedStringArray("4.2", "C#", "GL Compatibility")
+boot_splash/bg_color=Color(1, 0.533333, 0.533333, 1)
+boot_splash/show_image=false
+config/icon="res://icon.svg"
+
+[display]
+
+window/size/extend_to_title=true
+
+[dotnet]
+
+project/assembly_name="3"
+
+[filesystem]
+
+import/blender/enabled.android=true
+import/fbx/enabled.android=true
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+pointing/android/enable_long_press_as_right_click=true
+pointing/android/enable_pan_and_scale_gestures=true
+
+[rendering]
+
+gl_compatibility/nvidia_disable_threaded_optimization=false
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16mm"
+   height="16mm"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   sodipodi:docname="手柄摇杆.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="5.5635256"
+     inkscape:cx="45.834246"
+     inkscape:cy="41.610305"
+     inkscape:window-width="1243"
+     inkscape:window-height="784"
+     inkscape:window-x="26"
+     inkscape:window-y="23"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg1" />
+  <defs
+     id="defs1">
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect3"
+       is_visible="true"
+       lpeversion="1"
+       nodesatellites_param="F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1"
+       radius="0"
+       unit="px"
+       method="auto"
+       mode="F"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect2"
+       is_visible="true"
+       lpeversion="1"
+       nodesatellites_param="F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1"
+       radius="0"
+       unit="px"
+       method="auto"
+       mode="F"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+  </defs>
+  <ellipse
+     style="fill:#ffbbbb;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;paint-order:stroke fill markers"
+     id="path1"
+     cx="8.000001"
+     cy="4.5"
+     rx="4"
+     ry="2.5" />
+  <ellipse
+     style="fill:#ffbbbb;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;paint-order:stroke fill markers"
+     id="path1-9"
+     cx="8"
+     cy="11.5"
+     rx="6"
+     ry="2.5" />
+  <path
+     style="fill:#ffbbbb;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;paint-order:stroke fill markers"
+     id="path2"
+     d="m 5,5.0000004 c 0,0 3.9785448,-0.013317 0,4.9955234 6.043684,0.016585 0.00459,-0.019724 6,0 -3.9727172,-4.9905527 0,-4.9955234 0,-4.9955234 z"
+     sodipodi:nodetypes="ccccc" />
+  <ellipse
+     style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;paint-order:stroke fill markers"
+     id="path3"
+     cx="8"
+     cy="4.25"
+     rx="3"
+     ry="1.75" />
+</svg>

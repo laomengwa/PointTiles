@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="10mm"
+   height="10mm"
+   viewBox="0 0 10 10"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   sodipodi:docname="文字编辑.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="4.9285581"
+     inkscape:cx="5.3768261"
+     inkscape:cy="12.579744"
+     inkscape:window-width="1243"
+     inkscape:window-height="767"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <defs
+     id="defs1">
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect2"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect1"
+       is_visible="true"
+       lpeversion="1" />
+  </defs>
+  <rect
+     style="fill:#1285e3;fill-rule:evenodd;stroke:#1285e3;stroke-width:0;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers;fill-opacity:1"
+     id="rect1"
+     width="10"
+     height="10"
+     x="0"
+     y="0"
+     rx="2" />
+  <rect
+     style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+     id="rect2"
+     width="1.5"
+     height="6"
+     x="5.5992608"
+     y="-3.0017948"
+     transform="rotate(30)" />
+  <rect
+     style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+     id="rect2-2"
+     width="1"
+     height="8"
+     x="-8.5"
+     y="1"
+     transform="rotate(-90)" />
+  <path
+     sodipodi:type="star"
+     style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+     id="path2"
+     inkscape:flatsided="true"
+     sodipodi:sides="3"
+     sodipodi:cx="2.6192484"
+     sodipodi:cy="1.1767638"
+     sodipodi:r1="2.0346768"
+     sodipodi:r2="1.0173384"
+     sodipodi:arg1="1.7206088"
+     sodipodi:arg2="2.7678063"
+     inkscape:rounded="0"
+     inkscape:randomized="0"
+     d="M 2.3155674,3.1886503 1.028744,-0.09217498 4.5134338,0.43381598 Z"
+     inkscape:transform-center-x="-0.20120918"
+     inkscape:transform-center-y="0.011783664"
+     transform="matrix(0.39933638,0.15069849,-0.18397643,0.44148008,2.8619462,5.3856632)" />
+</svg>

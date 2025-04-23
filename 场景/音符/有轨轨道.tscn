@@ -1,0 +1,115 @@
+[gd_scene load_steps=15 format=3 uid="uid://df0b8mvkwx46q"]
+
+[ext_resource type="Script" uid="uid://d3ihk6hb6kpm1" path="res://脚本/白块死区.gd" id="2_4lhnu"]
+[ext_resource type="PackedScene" uid="uid://c2j8qvxbbf11b" path="res://场景/音符/失误显示.tscn" id="2_eg3c2"]
+[ext_resource type="Script" uid="uid://daqqnbp1unrub" path="res://脚本/音符/轨道线条外观.gd" id="3_o4t2g"]
+[ext_resource type="FontFile" uid="uid://dr7fcql13tm0" path="res://字体/NotoSans-Medium.ttf" id="4_eg7k6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qs1e6"]
+transparency = 1
+shading_mode = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_dbrex"]
+size = Vector3(0.1, 200, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1v5ji"]
+transparency = 1
+shading_mode = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_f1517"]
+size = Vector3(0.1, 200, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qq1na"]
+size = Vector3(2, 40, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yy5ay"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ckflp"]
+size = Vector3(0.05, 1, 0.05)
+
+[sub_resource type="QuadMesh" id="QuadMesh_ldjb7"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_r315d"]
+viewport_path = NodePath("判定线/按键提示/幕布")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t0215"]
+resource_local_to_scene = true
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.501961)
+albedo_texture = SubResource("ViewportTexture_r315d")
+
+[node name="轨道根节点" type="Node3D"]
+script = ExtResource("2_4lhnu")
+
+[node name="分隔线" type="Node3D" parent="."]
+
+[node name="左分隔线" type="MeshInstance3D" parent="分隔线"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+material_override = SubResource("StandardMaterial3D_qs1e6")
+mesh = SubResource("BoxMesh_dbrex")
+skeleton = NodePath("../..")
+script = ExtResource("3_o4t2g")
+
+[node name="右分隔线" type="MeshInstance3D" parent="分隔线"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+material_override = SubResource("StandardMaterial3D_1v5ji")
+mesh = SubResource("BoxMesh_f1517")
+skeleton = NodePath("../..")
+script = ExtResource("3_o4t2g")
+
+[node name="白块死区" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="白块死区形状" type="CollisionShape3D" parent="白块死区"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 10, 0)
+shape = SubResource("BoxShape3D_qq1na")
+
+[node name="物件区" type="Node3D" parent="."]
+
+[node name="消除显示区" type="Node3D" parent="."]
+
+[node name="失误显示" parent="." instance=ExtResource("2_eg3c2")]
+
+[node name="判定线" type="MeshInstance3D" parent="."]
+transform = Transform3D(-8.74228e-08, -2, 0, 2, -8.74228e-08, 0, 0, 0, 2, 0, -4, 0)
+material_override = SubResource("StandardMaterial3D_yy5ay")
+mesh = SubResource("BoxMesh_ckflp")
+script = ExtResource("3_o4t2g")
+
+[node name="按键提示" type="MeshInstance3D" parent="判定线"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -0.5, 0, 0)
+visible = false
+mesh = SubResource("QuadMesh_ldjb7")
+surface_material_override/0 = SubResource("StandardMaterial3D_t0215")
+
+[node name="幕布" type="SubViewport" parent="判定线/按键提示"]
+size = Vector2i(100, 100)
+
+[node name="标签" type="Label" parent="判定线/按键提示/幕布"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_eg7k6")
+theme_override_font_sizes/font_size = 50
+text = "测试"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="音符调试编号" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 0)
+visible = false
+pixel_size = 0.01
+billboard = 1
+no_depth_test = true
+text = "0"
+font_size = 320
+outline_size = 0
+
+[connection signal="input_event" from="白块死区" to="." method="白块死区"]

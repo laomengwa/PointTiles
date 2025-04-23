@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://cbuow041pdy8k"]
+
+[ext_resource type="Shader" uid="uid://c4lefqmv5ue1k" path="res://着色/音符/滑块.gdshader" id="1_7uu5b"]
+[ext_resource type="Texture2D" uid="uid://blmox2tndf1lh" path="res://模型/滑块.png" id="2_wtdpk"]
+[ext_resource type="Script" uid="uid://d1ylorwku0ryl" path="res://脚本/音符/弯曲滑块.gd" id="3_w7v5k"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qpfdm"]
+render_priority = 0
+shader = ExtResource("1_7uu5b")
+shader_parameter/Texture = ExtResource("2_wtdpk")
+shader_parameter/state = false
+shader_parameter/color = Vector3(1, 0, 0.4)
+
+[node name="弯曲滑块" type="Node3D"]
+
+[node name="触摸区域" type="Area3D" parent="."]
+
+[node name="碰撞箱" type="CollisionPolygon3D" parent="触摸区域"]
+depth = 2.0
+polygon = PackedVector2Array(-1, 0, -1, 1, 1, 1, 1, 0)
+
+[node name="变形模型前" type="CSGPolygon3D" parent="."]
+polygon = PackedVector2Array(-1, 0, -1, 1, 1, 1, 1, 0)
+material = SubResource("ShaderMaterial_qpfdm")
+script = ExtResource("3_w7v5k")
+
+[node name="变形模型后" type="CSGPolygon3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+polygon = PackedVector2Array(-1, 0, -1, 1, 1, 1, 1, 0)
+material = SubResource("ShaderMaterial_qpfdm")

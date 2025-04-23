@@ -1,0 +1,87 @@
+[gd_scene load_steps=14 format=3 uid="uid://c16a46p5tl558"]
+
+[ext_resource type="Script" uid="uid://cvffaeo1ia368" path="res://脚本/音符/黑块.gd" id="1_dlrsi"]
+[ext_resource type="ArrayMesh" uid="uid://c2efeqxp2e2db" path="res://模型/滑块.obj" id="2_225sq"]
+[ext_resource type="Shader" uid="uid://cr4681ks07fiw" path="res://着色/长块按下.gdshader" id="4_0dni6"]
+[ext_resource type="Shader" uid="uid://c4lefqmv5ue1k" path="res://着色/音符/滑块.gdshader" id="4_ead5k"]
+[ext_resource type="Shader" uid="uid://bogjabh4i665w" path="res://着色/物件边框.gdshader" id="4_hs1fa"]
+[ext_resource type="FontFile" uid="uid://w0oxygfawslj" path="res://字体/Futura-Condensed.otf" id="4_jjndo"]
+[ext_resource type="Texture2D" uid="uid://blmox2tndf1lh" path="res://模型/滑块.png" id="5_78w2g"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_885qr"]
+render_priority = 0
+shader = ExtResource("4_0dni6")
+shader_parameter/time = 0.0
+shader_parameter/color = Vector3(0.4, 0.7, 1)
+shader_parameter/state = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0dni6"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_885qr")
+shader = ExtResource("4_hs1fa")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_width = 2.0
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qpfdm"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_0dni6")
+shader = ExtResource("4_ead5k")
+shader_parameter/Texture = ExtResource("5_78w2g")
+shader_parameter/state = false
+shader_parameter/color = Vector3(1, 0, 0.4)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_0456t"]
+points = PackedVector3Array(2, 0, 1, 2, 0, -1, -2, 0, -1, -2, 0, 1, 2, 3, 1, 2, 3, -1, -2, 3, 1, -2, 3, -1)
+
+[sub_resource type="Animation" id="Animation_jjhs7"]
+resource_name = "音符消除"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5pgmd"]
+_data = {
+&"音符消除": SubResource("Animation_jjhs7")
+}
+
+[node name="根节点" type="Node3D"]
+rotation_edit_mode = 2
+script = ExtResource("1_dlrsi")
+
+[node name="标签" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+pixel_size = 0.01
+billboard = 1
+no_depth_test = true
+modulate = Color(0.94, 0.1128, 0.126586, 1)
+text = "+0"
+font = ExtResource("4_jjndo")
+font_size = 150
+outline_size = 0
+
+[node name="模型" type="MeshInstance3D" parent="."]
+rotation_edit_mode = 2
+mesh = ExtResource("2_225sq")
+surface_material_override/0 = SubResource("ShaderMaterial_qpfdm")
+
+[node name="触摸区域" type="Area3D" parent="模型"]
+
+[node name="形状" type="CollisionShape3D" parent="模型/触摸区域"]
+shape = SubResource("ConvexPolygonShape3D_0456t")
+
+[node name="折叠滑条" type="Node3D" parent="."]
+
+[node name="动画" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_5pgmd")
+}
+
+[node name="音符调试编号" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+visible = false
+pixel_size = 0.01
+billboard = 1
+no_depth_test = true
+text = "0"
+font_size = 160
+outline_size = 0
+
+[connection signal="input_event" from="模型/触摸区域" to="." method="点击事件"]

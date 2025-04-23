@@ -1,0 +1,167 @@
+[gd_scene load_steps=19 format=3 uid="uid://c01imu2tweafm"]
+
+[ext_resource type="Script" uid="uid://cvffaeo1ia368" path="res://脚本/音符/黑块.gd" id="1_k4yog"]
+[ext_resource type="FontFile" uid="uid://w0oxygfawslj" path="res://字体/Futura-Condensed.otf" id="2_dufj5"]
+[ext_resource type="ArrayMesh" uid="uid://c2efeqxp2e2db" path="res://模型/滑块.obj" id="2_ticaw"]
+[ext_resource type="Theme" uid="uid://dn5wl33wjkk6m" path="res://场景/主题/界面主题.tres" id="4_x126r"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ogpbe"]
+shading_mode = 0
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_f386f"]
+size = Vector3(10, 0.05, 0.05)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7mdwu"]
+no_depth_test = true
+shading_mode = 0
+diffuse_mode = 3
+specular_mode = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6foc6"]
+no_depth_test = true
+shading_mode = 0
+diffuse_mode = 3
+specular_mode = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_4mthb"]
+size = Vector3(0.05, 1, 0.05)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j4nli"]
+no_depth_test = true
+shading_mode = 0
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ri5x4"]
+no_depth_test = true
+shading_mode = 0
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_sehc6"]
+points = PackedVector3Array(-1, -3, 0, 1, -3, 0, -1, 3, 1, -1, 3, -1, 1, 3, 1, 1, 3, -1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_g7268"]
+size = Vector2(4, 0.5)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_llijb"]
+viewport_path = NodePath("进度条/幕布")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kx3po"]
+resource_local_to_scene = true
+cull_mode = 2
+no_depth_test = true
+shading_mode = 0
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = SubResource("ViewportTexture_llijb")
+
+[sub_resource type="Animation" id="Animation_iq54n"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_fythb"]
+resource_name = "音符消除"
+length = 0.2
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5kqnw"]
+_data = {
+&"RESET": SubResource("Animation_iq54n"),
+&"音符消除": SubResource("Animation_fythb")
+}
+
+[node name="根节点" type="Node3D"]
+script = ExtResource("1_k4yog")
+
+[node name="模型" type="MeshInstance3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+mesh = ExtResource("2_ticaw")
+surface_material_override/0 = SubResource("StandardMaterial3D_ogpbe")
+
+[node name="打击判定轨道" type="Node3D" parent="模型"]
+
+[node name="节奏打击提示轨道" type="Node3D" parent="模型/打击判定轨道"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+
+[node name="分隔线" type="Node3D" parent="模型/打击判定轨道"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+
+[node name="下分隔线" type="MeshInstance3D" parent="模型/打击判定轨道/分隔线"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+mesh = SubResource("BoxMesh_f386f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_7mdwu")
+
+[node name="上分隔线" type="MeshInstance3D" parent="模型/打击判定轨道/分隔线"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+mesh = SubResource("BoxMesh_f386f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_6foc6")
+
+[node name="左打击提示线" type="MeshInstance3D" parent="模型/打击判定轨道/分隔线"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0.5, 0)
+layers = 3
+mesh = SubResource("BoxMesh_4mthb")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_j4nli")
+
+[node name="右打击提示线" type="MeshInstance3D" parent="模型/打击判定轨道/分隔线"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0.5, 0)
+layers = 3
+mesh = SubResource("BoxMesh_4mthb")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_ri5x4")
+
+[node name="标签" type="Label3D" parent="模型"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+pixel_size = 0.01
+billboard = 1
+no_depth_test = true
+text = "000"
+font = ExtResource("2_dufj5")
+font_size = 100
+outline_size = 0
+
+[node name="触摸区域" type="Area3D" parent="模型" groups=["物件区域"]]
+
+[node name="形状" type="CollisionShape3D" parent="模型/触摸区域"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+shape = SubResource("ConvexPolygonShape3D_sehc6")
+
+[node name="进度条" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0)
+mesh = SubResource("QuadMesh_g7268")
+surface_material_override/0 = SubResource("StandardMaterial3D_kx3po")
+
+[node name="幕布" type="SubViewport" parent="进度条"]
+size = Vector2i(200, 25)
+render_target_update_mode = 4
+
+[node name="进度条" type="ProgressBar" parent="进度条/幕布"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 25.0
+grow_horizontal = 2
+theme = ExtResource("4_x126r")
+theme_override_fonts/font = ExtResource("2_dufj5")
+
+[node name="动画" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_5kqnw")
+}
+
+[node name="音符调试编号" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+visible = false
+pixel_size = 0.01
+billboard = 1
+no_depth_test = true
+text = "0"
+font_size = 160
+outline_size = 0
+
+[connection signal="input_event" from="模型/触摸区域" to="." method="点击事件"]

@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://c0be1ue0833a8"]
+
+[ext_resource type="ArrayMesh" uid="uid://c2efeqxp2e2db" path="res://模型/滑块.obj" id="1_be1fs"]
+[ext_resource type="Material" uid="uid://cgs55e41h4t06" path="res://模型/滑块.tres" id="2_u2d14"]
+[ext_resource type="Script" uid="uid://bapcsxgj3un32" path="res://脚本/音符/折叠滑块触摸.gd" id="3_he4xc"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_c36va"]
+points = PackedVector3Array(2, 0, 1, 2, 0, -1, -2, 0, -1, -2, 0, 1, 2, 3, 1, 2, 3, -1, -2, 3, 1, -2, 3, -1)
+
+[node name="模型" type="MeshInstance3D"]
+rotation_edit_mode = 2
+mesh = ExtResource("1_be1fs")
+surface_material_override/0 = ExtResource("2_u2d14")
+script = ExtResource("3_he4xc")
+
+[node name="区域" type="Area3D" parent="."]
+
+[node name="形状" type="CollisionShape3D" parent="区域"]
+shape = SubResource("ConvexPolygonShape3D_c36va")
+
+[node name="音符调试编号" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+visible = false
+pixel_size = 0.01
+billboard = 1
+no_depth_test = true
+text = "0"
+font_size = 160
+outline_size = 0
+
+[connection signal="input_event" from="区域" to="." method="触摸事件"]

@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://c1lt1jcr8q00k"
+
+[deps]
+
+files=["res://音乐/旧式谱面/表格配置/language_music.zh_CN.translation", "res://音乐/旧式谱面/表格配置/language_music.zh_TW.translation", "res://音乐/旧式谱面/表格配置/language_music.EN.translation", "res://音乐/旧式谱面/表格配置/language_music.ES.translation", "res://音乐/旧式谱面/表格配置/language_music.RU.translation", "res://音乐/旧式谱面/表格配置/language_music.PO.translation", "res://音乐/旧式谱面/表格配置/language_music.DE.translation", "res://音乐/旧式谱面/表格配置/language_music.KR.translation", "res://音乐/旧式谱面/表格配置/language_music.JP.translation", "res://音乐/旧式谱面/表格配置/language_music.FR.translation", "res://音乐/旧式谱面/表格配置/language_music.IT.translation", "res://音乐/旧式谱面/表格配置/language_music.AR.translation", "res://音乐/旧式谱面/表格配置/language_music.TR.translation", "res://音乐/旧式谱面/表格配置/language_music.IN.translation"]
+
+source_file="res://音乐/旧式谱面/表格配置/language_music.csv"
+dest_files=["res://音乐/旧式谱面/表格配置/language_music.zh_CN.translation", "res://音乐/旧式谱面/表格配置/language_music.zh_TW.translation", "res://音乐/旧式谱面/表格配置/language_music.EN.translation", "res://音乐/旧式谱面/表格配置/language_music.ES.translation", "res://音乐/旧式谱面/表格配置/language_music.RU.translation", "res://音乐/旧式谱面/表格配置/language_music.PO.translation", "res://音乐/旧式谱面/表格配置/language_music.DE.translation", "res://音乐/旧式谱面/表格配置/language_music.KR.translation", "res://音乐/旧式谱面/表格配置/language_music.JP.translation", "res://音乐/旧式谱面/表格配置/language_music.FR.translation", "res://音乐/旧式谱面/表格配置/language_music.IT.translation", "res://音乐/旧式谱面/表格配置/language_music.AR.translation", "res://音乐/旧式谱面/表格配置/language_music.TR.translation", "res://音乐/旧式谱面/表格配置/language_music.IN.translation"]
+
+[params]
+
+compress=true
+delimiter=0
