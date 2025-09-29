@@ -1,26 +1,26 @@
-[gd_scene load_steps=36 format=3 uid="uid://cwiv244cmjyvk"]
+[gd_scene load_steps=42 format=3 uid="uid://cwiv244cmjyvk"]
 
-[ext_resource type="Shader" uid="uid://n5ulbb3xpe17" path="res://着色/天空盒.gdshader" id="1_5e2sd"]
+[ext_resource type="Shader" uid="uid://bsv8vdrwna1im" path="res://着色/天空盒.tres" id="1_fffwl"]
 [ext_resource type="Script" uid="uid://c8rryqc8q4ot6" path="res://脚本/杂项/视角节点.gd" id="1_ydgob"]
-[ext_resource type="Texture2D" uid="uid://udyxgt54jfuo" path="res://纹理/背景/天空盒.dds" id="2_m4rou"]
 [ext_resource type="Script" uid="uid://b1xa4xfdwgqil" path="res://脚本/主场景.gd" id="2_vrm1b"]
-[ext_resource type="Script" uid="uid://b2hpwiu545q6t" path="res://插件/addons/midi/MidiPlayer.gd" id="3_1n0i6"]
+[ext_resource type="Script" uid="uid://b2hpwiu545q6t" path="res://插件/midi/MidiPlayer.gd" id="3_1n0i6"]
 [ext_resource type="Script" uid="uid://c6bjayji3kp8c" path="res://脚本/音频节点脚本.gd" id="4_wkx78"]
-[ext_resource type="Texture2D" uid="uid://dbxf5uyf5ws0r" path="res://纹理/界面/[Yeonwa]芭芭拉(原神)-VG93178.jpg" id="5_ro1o7"]
-[ext_resource type="PackedScene" uid="uid://cgfa54sltxhyy" path="res://场景/音符/无轨轨道.tscn" id="8_4mtk2"]
+[ext_resource type="Script" uid="uid://d3ihk6hb6kpm1" path="res://脚本/白块死区.gd" id="7_dxdmq"]
+[ext_resource type="Script" uid="uid://dqyr4c3faul7r" path="res://脚本/轨道.gd" id="8_fffwl"]
 [ext_resource type="PackedScene" uid="uid://s667etyqdixl" path="res://场景/游戏界面.tscn" id="8_ivvj7"]
+[ext_resource type="PackedScene" uid="uid://c2j8qvxbbf11b" path="res://场景/音符/失误显示.tscn" id="8_svefc"]
 [ext_resource type="ArrayMesh" uid="uid://iohlh43x18ph" path="res://模型/黑块.obj" id="8_tr0ib"]
+[ext_resource type="Script" uid="uid://daqqnbp1unrub" path="res://脚本/音符/轨道线条外观.gd" id="9_anl7n"]
 [ext_resource type="Shader" uid="uid://bogjabh4i665w" path="res://着色/物件边框.gdshader" id="9_vvqwn"]
 [ext_resource type="PackedScene" uid="uid://df0b8mvkwx46q" path="res://场景/音符/有轨轨道.tscn" id="9_xlesj"]
 [ext_resource type="Script" uid="uid://d4jb7j2k6mwx" path="res://脚本/音符/游戏事件控制.gd" id="9_yf1rj"]
 [ext_resource type="PackedScene" uid="uid://cag7616kwjoaa" path="res://场景/开屏动画.tscn" id="12_qbfdk"]
 [ext_resource type="FontFile" uid="uid://dr7fcql13tm0" path="res://字体/NotoSans-Medium.ttf" id="13_tv8nn"]
 [ext_resource type="Theme" uid="uid://dn5wl33wjkk6m" path="res://场景/主题/界面主题.tres" id="15_4dso0"]
-[ext_resource type="Shader" uid="uid://bblivmnlqoq8b" path="res://着色/界面滤镜.tres" id="17_xp2jp"]
+[ext_resource type="Shader" uid="uid://da33gla7fyx8m" path="res://着色/色彩滤镜.tres" id="19_wqwj3"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kq0q2"]
-shader = ExtResource("1_5e2sd")
-shader_parameter/Texture = ExtResource("2_m4rou")
+shader = ExtResource("1_fffwl")
 
 [sub_resource type="Sky" id="Sky_n50iw"]
 sky_material = SubResource("ShaderMaterial_kq0q2")
@@ -30,10 +30,9 @@ process_mode = 3
 background_mode = 2
 sky = SubResource("Sky_n50iw")
 
-[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_61kaq"]
-dof_blur_far_enabled = true
-
 [sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_h6eit"]
+
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_wqwj3"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_ycx6v"]
 size = Vector2(16, 9)
@@ -172,12 +171,23 @@ _data = {
 &"返回": SubResource("Animation_vua7h")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ju82r"]
+size = Vector3(4000, 4000, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lovnm"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3js2u"]
+size = Vector3(0.05, 80, 0.05)
+
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6n7kw"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5ef3d"]
 render_priority = 0
 shader = ExtResource("9_vvqwn")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0, 0, 0, 1)
 shader_parameter/outline_width = 2.0
 shader_parameter/alpha = 1.0
 
@@ -191,25 +201,35 @@ albedo_color = Color(0, 0.666667, 1, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_cfc1a"]
 size = Vector3(4, 5, 3)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_itlpr"]
-shader = ExtResource("17_xp2jp")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fffwl"]
+albedo_color = Color(0.4, 0.8, 1, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_fffwl"]
+material = SubResource("StandardMaterial3D_fffwl")
+text = "指向黑块"
+font = ExtResource("13_tv8nn")
+pixel_size = 0.1
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wqwj3"]
+shader = ExtResource("19_wqwj3")
 shader_parameter/type = 0
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_xp2jp"]
 
 [node name="根场景" type="Node3D"]
+auto_translate_mode = 1
 
 [node name="天空盒" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_av850")
-camera_attributes = SubResource("CameraAttributesPractical_61kaq")
 
-[node name="视角节点" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707106, 0.707107, 0, -6, -5)
-rotation_edit_mode = 1
+[node name="视角节点" type="XROrigin3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.7071066, -0.7071068, 0, 0.70710635, 0.70710707, 0, -6, -5)
+current = true
 script = ExtResource("1_ydgob")
 
-[node name="摄像机" type="Camera3D" parent="视角节点"]
+[node name="摄像机" type="XRCamera3D" parent="视角节点"]
 doppler_tracking = 2
+current = true
 size = 0.1
 
 [node name="光照" type="DirectionalLight3D" parent="视角节点"]
@@ -222,17 +242,17 @@ doppler_tracking = 2
 script = ExtResource("4_wkx78")
 
 [node name="幕布" type="SubViewport" parent="视角节点"]
-size = Vector2i(2160, 1215)
+size = Vector2i(4320, 2430)
 render_target_update_mode = 4
 
-[node name="图片" type="TextureRect" parent="视角节点/幕布"]
-visible = false
-offset_right = 2160.0
-offset_bottom = 1215.0
-texture = ExtResource("5_ro1o7")
+[node name="图片" type="VideoStreamPlayer" parent="视角节点/幕布"]
+offset_right = 4320.0
+offset_bottom = 2430.0
+stream = SubResource("VideoStreamTheora_wqwj3")
 
 [node name="视频墙" type="MeshInstance3D" parent="视角节点"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20)
+rotation_edit_mode = 1
 visible = false
 mesh = SubResource("QuadMesh_ycx6v")
 surface_material_override/0 = SubResource("StandardMaterial3D_ecxjr")
@@ -249,6 +269,40 @@ max_polyphony = 88
 volume_db = 0.0
 loop = true
 
+[node name="摄像机白块死区" type="Node3D" parent="视角节点"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -200)
+script = ExtResource("7_dxdmq")
+
+[node name="白块死区" type="Area3D" parent="视角节点/摄像机白块死区"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="白块死区形状" type="CollisionShape3D" parent="视角节点/摄像机白块死区/白块死区"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 10, 0)
+shape = SubResource("BoxShape3D_ju82r")
+
+[node name="失误显示" parent="视角节点/摄像机白块死区" instance=ExtResource("8_svefc")]
+
+[node name="物件区" type="Node3D" parent="视角节点/摄像机白块死区"]
+visible = false
+
+[node name="判定线" type="MeshInstance3D" parent="视角节点/摄像机白块死区"]
+transform = Transform3D(-8.74228e-08, -2, 0, 2, -8.74228e-08, 0, 0, 0, 2, 0, -4, 0)
+visible = false
+material_override = SubResource("StandardMaterial3D_lovnm")
+mesh = SubResource("BoxMesh_3js2u")
+script = ExtResource("9_anl7n")
+
+[node name="音符调试编号" type="Label3D" parent="视角节点/摄像机白块死区"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 0)
+visible = false
+pixel_size = 0.01
+billboard = 1
+no_depth_test = true
+modulate = Color(1, 0.533333, 0, 1)
+text = "-1"
+font_size = 120
+outline_size = 0
+
 [node name="主场景" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -10)
 script = ExtResource("2_vrm1b")
@@ -260,6 +314,7 @@ pixel_size = 0.03
 texture = SubResource("CompressedTexture2D_6n7kw")
 
 [node name="轨道" type="Node3D" parent="主场景"]
+script = ExtResource("8_fffwl")
 
 [node name="轨道根节点1" parent="主场景/轨道" instance=ExtResource("9_xlesj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
@@ -297,10 +352,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 0)
 visible = false
 
 [node name="无轨" type="Node3D" parent="主场景"]
+rotation_edit_mode = 1
 visible = false
 script = ExtResource("9_yf1rj")
-
-[node name="无轨根节点1" parent="主场景/无轨" instance=ExtResource("8_4mtk2")]
 
 [node name="开始按键" type="MeshInstance3D" parent="主场景"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -2, 0)
@@ -340,10 +394,15 @@ wait_time = 0.05
 [node name="计时器" type="Timer" parent="主场景"]
 autostart = true
 
+[node name="三维文字显示" type="Node3D" parent="主场景"]
+visible = false
+
+[node name="测试" type="MeshInstance3D" parent="主场景/三维文字显示"]
+mesh = SubResource("TextMesh_fffwl")
+
 [node name="根界面" parent="." instance=ExtResource("8_ivvj7")]
 
 [node name="玩家编号" type="HBoxContainer" parent="."]
-layout_direction = 2
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -382,7 +441,8 @@ text = "开发测试"
 theme = ExtResource("15_4dso0")
 
 [node name="色彩滤镜" type="TextureRect" parent="."]
-material = SubResource("ShaderMaterial_itlpr")
+visible = false
+material = SubResource("ShaderMaterial_wqwj3")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -391,6 +451,21 @@ grow_vertical = 2
 mouse_filter = 2
 texture = SubResource("NoiseTexture2D_xp2jp")
 
+[node name="网络请求" type="HTTPRequest" parent="."]
+
+[node name="外置波表输出" type="外置波表输出" parent="."]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
+script = null
+
+[connection signal="input_event" from="视角节点/摄像机白块死区/白块死区" to="视角节点/摄像机白块死区" method="白块死区"]
 [connection signal="input_event" from="主场景/开始按键/按键区域" to="主场景" method="开始按钮点击事件"]
 [connection signal="timeout" from="主场景/开始按键/背景音乐计时器" to="视角节点/背景音乐播放节点" method="背景音乐计时器"]
 [connection signal="timeout" from="主场景/计时器" to="主场景" method="背景板装饰计时器"]

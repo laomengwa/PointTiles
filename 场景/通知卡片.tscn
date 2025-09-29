@@ -139,21 +139,16 @@ _data = {
 &"推送通知关闭": SubResource("Animation_r7cxq")
 }
 
-[node name="通知" type="Panel"]
+[node name="通知" type="PanelContainer"]
 custom_minimum_size = Vector2(200, 80)
 offset_right = 320.0
-offset_bottom = 100.0
+offset_bottom = 120.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_5hdec")
 script = ExtResource("2_afso3")
 
 [node name="控件" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 10.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 2
+theme_override_constants/separation = 0
 
 [node name="标题" type="RichTextLabel" parent="控件"]
 layout_mode = 2

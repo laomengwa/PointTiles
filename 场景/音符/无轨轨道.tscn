@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://daqqnbp1unrub" path="res://脚本/音符/轨道线条外观.gd" id="3_fqx0i"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ju82r"]
-size = Vector3(200, 200, 0.1)
+size = Vector3(4000, 4000, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lovnm"]
 transparency = 1
@@ -73,8 +73,9 @@ visible = false
 pixel_size = 0.01
 billboard = 1
 no_depth_test = true
+modulate = Color(1, 0.533333, 0, 1)
 text = "0"
-font_size = 320
+font_size = 120
 outline_size = 0
 
 [connection signal="input_event" from="白块死区" to="." method="白块死区"]

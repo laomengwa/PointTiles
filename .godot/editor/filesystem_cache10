@@ -1,0 +1,1202 @@
+72322a848ab928aa5c89f0cb78209805
+::res://::1759057904
+export_presets.cfg::TextFile/TextFile::-1::1757430345::0::1::::<><><>0<>0<><>::
+icon.svg::CompressedTexture2D/CompressedTexture2D::6784677995908776747::1730652186::1745071562::1::::<><><>0<>0<>81420cca348dd7800922278b161d6592<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+openxr_action_map.tres::OpenXRActionMap::2128605699229184251::1759057904::0::1::::<><><>0<>0<><>::
+README.md::TextFile/TextFile::-1::1745422522::0::1::::<><><>0<>0<><>::
+::res://场景/::1759078320
+加载标签.tscn::PackedScene/PackedScene::7122736591019818615::1745126152::0::1::::<><><>0<>0<><>::
+图标.tscn::PackedScene/PackedScene::1638066101932490227::1752299547::0::1::::<><><>0<>0<><>::uid://bnxlkg2raspwk::::res://脚本/杂项/游戏图标.gd<>uid://5vojhyhg5lf1::::res://模型/长条尾.png<>uid://1aphyy4c1vna::::res://模型/长条尾.obj<>uid://cwrw2wt4hlsov::::res://模型/长条腰.png<>uid://cdxxrma2f7uj3::::res://模型/长条腰.obj<>uid://bh8mb6ulhfljq::::res://模型/长条头.png<>uid://b03ggimjeg2qc::::res://模型/长条头.obj<>uid://iohlh43x18ph::::res://模型/黑块.obj<>uid://blmox2tndf1lh::::res://模型/滑块.png<>uid://kwmpfoagskrm::::res://模型/滑键.obj<>uid://cagb06tfjrjy0::::res://模型/爆裂.obj<>uid://x1b4ybwjrp1r::::res://模型/爆裂.png<>uid://dk5l4lc38802a::::res://模型/旋转.obj
+天空环境.tres::Environment/Environment::8971062619181647770::1744469587::0::1::::<><><>0<>0<><>::
+开屏动画.tscn::PackedScene/PackedScene::4787227351270303584::1752299546::0::1::::<><><>0<>0<><>::uid://clag3pw84fn8a::::res://纹理/背景/1.jpg<>uid://dr7fcql13tm0::::res://字体/NotoSans-Medium.ttf<>uid://xlqyebirr3i2::::res://场景/图标.tscn<>uid://blmox2tndf1lh::::res://模型/滑块.png<>uid://1aphyy4c1vna::::res://模型/长条尾.obj<>uid://cdxxrma2f7uj3::::res://模型/长条腰.obj<>uid://b03ggimjeg2qc::::res://模型/长条头.obj<>uid://iohlh43x18ph::::res://模型/黑块.obj<>uid://5vojhyhg5lf1::::res://模型/长条尾.png<>uid://cwrw2wt4hlsov::::res://模型/长条腰.png<>uid://bh8mb6ulhfljq::::res://模型/长条头.png<>uid://cagb06tfjrjy0::::res://模型/爆裂.obj<>uid://x1b4ybwjrp1r::::res://模型/爆裂.png<>uid://kwmpfoagskrm::::res://模型/滑键.obj<>uid://dk5l4lc38802a::::res://模型/旋转.obj<>uid://4p4qarg7uacu::::res://脚本/二维/开屏动画节点.gd
+数码乐谱轨道.tscn::PackedScene::3634254170192721853::1758902313::0::1::::<><><>0<>0<><>::uid://bmbhdd7mkvrj1::::res://纹理/界面/钢琴键盘.svg
+根场景.tscn::PackedScene::6334835790822692028::1758989761::0::1::::<><><>0<>0<><>::uid://bsv8vdrwna1im::::res://着色/天空盒.tres<>uid://c8rryqc8q4ot6::::res://脚本/杂项/视角节点.gd<>uid://b1xa4xfdwgqil::::res://脚本/主场景.gd<>uid://b2hpwiu545q6t::::res://插件/midi/MidiPlayer.gd<>uid://c6bjayji3kp8c::::res://脚本/音频节点脚本.gd<>uid://d3ihk6hb6kpm1::::res://脚本/白块死区.gd<>uid://dqyr4c3faul7r::::res://脚本/轨道.gd<>uid://s667etyqdixl::::res://场景/游戏界面.tscn<>uid://c2j8qvxbbf11b::::res://场景/音符/失误显示.tscn<>uid://iohlh43x18ph::::res://模型/黑块.obj<>uid://daqqnbp1unrub::::res://脚本/音符/轨道线条外观.gd<>uid://bogjabh4i665w::::res://着色/物件边框.gdshader<>uid://df0b8mvkwx46q::::res://场景/音符/有轨轨道.tscn<>uid://d4jb7j2k6mwx::::res://脚本/音符/游戏事件控制.gd<>uid://cag7616kwjoaa::::res://场景/开屏动画.tscn<>uid://dr7fcql13tm0::::res://字体/NotoSans-Medium.ttf<>uid://dn5wl33wjkk6m::::res://场景/主题/界面主题.tres<>uid://da33gla7fyx8m::::res://着色/色彩滤镜.tres
+歌曲卡片.tscn::PackedScene/PackedScene::8910585645828708913::1752299547::0::1::::<><><>0<>0<><>::uid://dn5wl33wjkk6m::::res://场景/主题/界面主题.tres<>uid://8d6jx8t00ahd::::res://纹理/界面/卡片头.svg<>uid://w0oxygfawslj::::res://字体/Futura-Condensed.otf<>uid://yt2imbe173v1::::res://纹理/界面/满星.svg<>uid://k0cyjxi2q3ty::::res://纹理/界面/满心.svg<>uid://cyojrrgodjxg4::::res://纹理/界面/空心.svg
+游戏界面.tscn::PackedScene::1329334508597797009::1759078320::0::1::::<><><>0<>0<><>::uid://dn5wl33wjkk6m::::res://场景/主题/界面主题.tres<>uid://c61nyddduuj3a::::res://纹理/界面/icon.svg<>uid://sgi1mm2vs722::::res://纹理/界面/退出.svg<>uid://cp8aw4cxs5qu6::::res://脚本/杂项/主菜单.gd<>uid://dwkiqh5dl36ww::::res://脚本/杂项/设置界面.gd<>uid://b3tq16f1pt3nd::::res://纹理/界面/播放器图标.svg<>uid://d2vbbsx481biu::::res://纹理/界面/返回.svg<>uid://xlqyebirr3i2::::res://场景/图标.tscn<>uid://cn4jl08q322i3::::res://纹理/界面/菜单.svg<>uid://claawamxumfxs::::res://纹理/界面/自定义歌曲.svg<>uid://bmbhdd7mkvrj1::::res://纹理/界面/钢琴键盘.svg<>uid://di55c2lxysr4x::::res://脚本/杂项/封面自适应.gd<>uid://bgawbby3ubj4h::::res://脚本/杂项/游戏菜单.gd<>uid://dr0ccxyc467u4::::res://纹理/界面/搜索.svg<>uid://ci5y4nx7h7pdp::::res://脚本/调试/触摸测试谱.gd<>uid://bti1fqpsqqo3b::::res://场景/主题/滚动栏背景.tres<>uid://dydv648lvodct::::res://脚本/杂项/自定义歌曲网格.gd<>uid://8d6jx8t00ahd::::res://纹理/界面/卡片头.svg<>uid://c8qkowinglhwx::::res://场景/加载标签.tscn<>uid://d16tgaesqqg47::::res://脚本/杂项/播放器.gd<>uid://yt2imbe173v1::::res://纹理/界面/满星.svg<>uid://booljtcl5i8sa::::res://场景/翻页栏.tscn<>uid://k0cyjxi2q3ty::::res://纹理/界面/满心.svg<>uid://bhoalisuwrqga::::res://纹理/界面/设置.svg<>uid://3wjtwl85ykxb::::res://脚本/二维/判定粒子动画.gd<>uid://cw70ftr0f406m::::res://脚本/杂项/游戏界面.gd<>uid://w0oxygfawslj::::res://字体/Futura-Condensed.otf<>uid://cyojrrgodjxg4::::res://纹理/界面/空心.svg<>uid://3qly3e8mujwi::::res://纹理/判定粒子.svg<>uid://c7ci6hgn5uamj::::res://纹理/判定粒子背景.svg<>uid://dpm854v4isp81::::res://纹理/界面/唱片.svg<>uid://6uv65pqvdq1q::::res://脚本/设置/语言.gd<>uid://cxh8yoy2fbdq3::::res://脚本/杂项/安全区设置窗口.gd<>uid://cobuk1w3l1jfq::::res://脚本/设置/音频.gd<>uid://bpxqsjuu8rlv::::res://脚本/设置/调试.gd<>uid://boxcba7evud1i::::res://脚本/设置/控制.gd<>uid://c3wswjto1jqs6::::res://icon.svg<>uid://bslkd02jlvpqe::::res://脚本/设置/视频.gd<>uid://dvwu8etgumkh7::::res://纹理/界面/绘图.svg<>uid://brtqf4jsy8k0h::::res://脚本/杂项/自定义选歌列表按钮.gd<>uid://clag3pw84fn8a::::res://纹理/背景/1.jpg<>uid://coearltqix6fu::::res://纹理/界面/触屏摇杆圆环.svg<>uid://bdoknubeq65t::::res://脚本/杂项/触摸屏视角操作.gd<>uid://4jg8lcp6krv0::::res://纹理/界面/触屏摇杆.svg<>uid://cighlhddrox0o::::res://场景/主题/退出按钮样式.tres<>uid://cr7yj7uh8jx5o::::res://纹理/界面/上升按钮.svg<>uid://xboodagq7f4n::::res://纹理/界面/上升按钮按下.svg<>uid://f35s0ak36m36::::res://纹理/界面/下降按钮.svg<>uid://cvhp0id647ccm::::res://纹理/界面/下降按钮按下.svg<>uid://vp1ml54jbg6s::::res://纹理/界面/左翻滚按钮.svg<>uid://cplk2hmfqj4q4::::res://脚本/调试/调试窗口.gd<>uid://dfchd4bn78f3d::::res://纹理/界面/左翻滚按钮按下.svg<>uid://ieudo1p52x3g::::res://纹理/界面/右翻滚按钮.svg<>uid://bj6bmlwcxxkjf::::res://纹理/界面/右翻滚按钮按下.svg<>uid://butii5uhaudav::::res://模型/手柄/Xbox.obj<>uid://bbdelaedhj81g::::res://脚本/杂项/画布自适应.gd<>uid://ckc1p6iqmsb0r::::res://纹理/界面/鼠标.svg<>uid://ntfg3i8ohyiv::::res://纹理/界面/手柄摇杆.svg<>uid://b22s4vg63stnu::::res://脚本/杂项/谱面编辑器.gd<>uid://byarsaeruifwu::::res://纹理/界面/文字编辑.svg<>uid://cl4r43obv3yrt::::res://脚本/设置/无障碍.gd<>uid://dd0c7055xmghx::::res://脚本/杂项/人声消除.gd<>uid://c4qa3wnn0mrxa::::res://脚本/设置/界面.gd<>uid://d03jiblnlaffa::::res://音乐/28189640-192-7293336a995d1b10926c5be0bf3e4174.mp3
+玩家排名.tscn::PackedScene::4291875757571348257::1758174885::0::1::::<><><>0<>0<><>::uid://clag3pw84fn8a::::res://纹理/背景/1.jpg<>uid://tlht4qlfwydg::::res://脚本/杂项/玩家排名卡片.gd<>uid://w0oxygfawslj::::res://字体/Futura-Condensed.otf
+翻页栏.tscn::PackedScene::3398650743821460968::1758175508::0::1::::<><><>0<>0<><>::uid://2eui8o7m0bkb::::res://脚本/杂项/翻页栏.gd
+自定义歌曲卡片.tscn::PackedScene/PackedScene::542056798089268091::1743823096::0::1::::<><><>0<>0<><>::uid://dpm854v4isp81::::res://纹理/界面/唱片.svg<>uid://bjgm4vj1asdqd::::res://场景/主题/网格卡片未聚焦样式.tres
+通知卡片.tscn::PackedScene::5367246607232633840::1758817173::0::1::::<><><>0<>0<><>::uid://yiryjmcxwcff::::res://脚本/杂项/通知卡片.gd
+::res://场景/主题/::1759078320
+根场景.tres::StyleBoxFlat/StyleBoxFlat::5487826748909929869::1714146312::0::1::::<><><>0<>0<><>::
+滚动栏背景.tres::StyleBoxFlat::3738112170015180657::1759078320::0::1::::<><><>0<>0<><>::
+界面主题.tres::Theme::8135005283489673202::1759057904::0::1::::<><><>0<>0<><>::uid://da7cxo03n7bty::::res://纹理/界面/复选框_已选择.svg<>uid://ckglx7yntgdwv::::res://场景/主题/根场景.tres<>uid://bf0xavt0a0u2w::::res://纹理/界面/复选框_已选择_已禁用.svg<>uid://b6227brs0m7r1::::res://纹理/界面/单选框_已选择.svg<>uid://yu8ovc6b0boj::::res://纹理/界面/单选框_已选择_已禁用.svg<>uid://btv1wx4lqb2as::::res://纹理/界面/单选框_未选择.svg<>uid://dq1ho741gho58::::res://纹理/界面/单选框_未选择_已禁用.svg<>uid://bfb8a76rmutsv::::res://纹理/界面/复选框_未选择.svg<>uid://cvicnp1o2qm82::::res://纹理/界面/复选框_未选择_已禁用.svg<>uid://desfytu60nau2::::res://纹理/界面/选项开关_已选择.svg<>uid://b14oy1kowmgvm::::res://纹理/界面/选项开关_已选择_已禁用.svg<>uid://f0lj3yw43ahc::::res://纹理/界面/选项开关_已选择_已禁用_镜像.svg<>uid://ba76h5prwual3::::res://纹理/界面/选项开关_已选择_镜像.svg<>uid://d0ikusm6q7wye::::res://纹理/界面/选项开关_未选择.svg<>uid://bowg11m5l1y55::::res://纹理/界面/选项开关_未选择_已禁用.svg<>uid://f7rwmrmr2ct8::::res://纹理/界面/选项开关_未选择_已禁用_镜像.svg<>uid://c8w08i4bhrerv::::res://纹理/界面/选项开关_未选择_镜像.svg<>uid://g53p2634a1y7::::res://纹理/界面/选项箭头左.svg<>uid://bd6ekvcpd61q1::::res://纹理/界面/选项箭头右.svg<>uid://cm76qwkc4c1u1::::res://纹理/界面/滑杆.svg<>uid://d30acb4qkcl62::::res://纹理/界面/清除.svg<>uid://412nwofddvp::::res://纹理/界面/选项箭头.svg<>uid://d0ctwrexuidpf::::res://纹理/界面/上下选项.svg<>uid://dr7fcql13tm0::::res://字体/NotoSans-Medium.ttf<>uid://c2ktpbmx52ht6::::res://纹理/界面/复选框_未确定.svg<>uid://ci1iwrip8m3s2::::res://纹理/界面/滑杆_已禁用.svg<>uid://dkasdb6i4jty0::::res://纹理/界面/滑杆_高亮.svg
+网格卡片未聚焦样式.tres::StyleBoxFlat/StyleBoxFlat::3031288052971815999::1726465560::0::1::::<><><>0<>0<><>::
+网格卡片聚焦样式.tres::StyleBoxFlat/StyleBoxFlat::3528321666722142661::1728125626::0::1::::<><><>0<>0<><>::
+退出按钮样式.tres::StyleBoxFlat/StyleBoxFlat::5347183418154604892::1728125626::0::1::::<><><>0<>0<><>::
+键位设置界面样式.tres::StyleBoxFlat/StyleBoxFlat::4088553592272730119::1728125626::0::1::::<><><>0<>0<><>::
+键位设置界面样式标签.tres::StyleBoxFlat/StyleBoxFlat::4409017152483825417::1720088711::0::1::::<><><>0<>0<><>::
+::res://场景/音符/::1758959541
+失误显示.tscn::PackedScene/PackedScene::6688552917431239925::1757339737::0::1::::<><><>0<>0<><>::uid://iohlh43x18ph::::res://模型/黑块.obj
+弯曲滑块.tscn::PackedScene::4885208450554662740::1758185719::0::1::::<><><>0<>0<><>::uid://c4lefqmv5ue1k::::res://着色/音符/滑块.gdshader<>uid://cvffaeo1ia368::::res://脚本/音符/黑块.gd<>uid://cr4681ks07fiw::::res://着色/长块按下.gdshader<>uid://bogjabh4i665w::::res://着色/物件边框.gdshader<>uid://blmox2tndf1lh::::res://模型/滑块.png<>uid://d1ylorwku0ryl::::res://脚本/音符/弯曲滑块.gd
+折叠滑块.tscn::PackedScene/PackedScene::6529917192531002785::1757345300::0::1::::<><><>0<>0<><>::uid://c2efeqxp2e2db::::res://模型/滑块.obj<>uid://cgs55e41h4t06::::res://模型/滑块.tres<>uid://bapcsxgj3un32::::res://脚本/音符/折叠滑块触摸.gd
+旋转.tscn::PackedScene/PackedScene::182308703438468903::1757345315::0::1::::<><><>0<>0<><>::uid://cvffaeo1ia368::::res://脚本/音符/黑块.gd<>uid://dk5l4lc38802a::::res://模型/旋转.obj
+无轨轨道.tscn::PackedScene::5204351443311568812::1758185720::0::1::::<><><>0<>0<><>::uid://d3ihk6hb6kpm1::::res://脚本/白块死区.gd<>uid://c2j8qvxbbf11b::::res://场景/音符/失误显示.tscn<>uid://daqqnbp1unrub::::res://脚本/音符/轨道线条外观.gd
+有轨轨道.tscn::PackedScene::7561936024518374202::1758959541::0::1::::<><><>0<>0<><>::uid://d3ihk6hb6kpm1::::res://脚本/白块死区.gd<>uid://c2j8qvxbbf11b::::res://场景/音符/失误显示.tscn<>uid://daqqnbp1unrub::::res://脚本/音符/轨道线条外观.gd<>uid://dr7fcql13tm0::::res://字体/NotoSans-Medium.ttf
+滑块.tscn::PackedScene/PackedScene::6661800453158981021::1757345331::0::1::::<><><>0<>0<><>::uid://cvffaeo1ia368::::res://脚本/音符/黑块.gd<>uid://c2efeqxp2e2db::::res://模型/滑块.obj<>uid://cr4681ks07fiw::::res://着色/长块按下.gdshader<>uid://c4lefqmv5ue1k::::res://着色/音符/滑块.gdshader<>uid://bogjabh4i665w::::res://着色/物件边框.gdshader<>uid://w0oxygfawslj::::res://字体/Futura-Condensed.otf<>uid://blmox2tndf1lh::::res://模型/滑块.png
+滑键.tscn::PackedScene/PackedScene::3094485513720136321::1757345343::0::1::::<><><>0<>0<><>::uid://cvffaeo1ia368::::res://脚本/音符/黑块.gd<>uid://kwmpfoagskrm::::res://模型/滑键.obj<>uid://ycp2560yfl18::::res://模型/滑按方向提示.svg
+爆裂.tscn::PackedScene::8673515064327362277::1758185719::0::1::::<><><>0<>0<><>::uid://cvffaeo1ia368::::res://脚本/音符/黑块.gd<>uid://w0oxygfawslj::::res://字体/Futura-Condensed.otf<>uid://cagb06tfjrjy0::::res://模型/爆裂.obj<>uid://x1b4ybwjrp1r::::res://模型/爆裂.png<>uid://bogjabh4i665w::::res://着色/物件边框.gdshader
+狂戳.tscn::PackedScene/PackedScene::6581744538481108310::1757345372::0::1::::<><><>0<>0<><>::uid://cvffaeo1ia368::::res://脚本/音符/黑块.gd<>uid://w0oxygfawslj::::res://字体/Futura-Condensed.otf<>uid://c2efeqxp2e2db::::res://模型/滑块.obj<>uid://dn5wl33wjkk6m::::res://场景/主题/界面主题.tres
+狂戳打击显示.tscn::PackedScene/PackedScene::1615675779460261752::1752299545::0::1::::<><><>0<>0<><>::uid://iohlh43x18ph::::res://模型/黑块.obj<>uid://c5535o6rh0csg::::res://脚本/音符/狂戳打击显示.gd<>uid://w0oxygfawslj::::res://字体/Futura-Condensed.otf
+狂戳轨道显示.tscn::PackedScene/PackedScene::138002179942201200::1746421227::0::1::::<><><>0<>0<><>::
+绿键.tscn::PackedScene/PackedScene::1221631481042046084::1757345388::0::1::::<><><>0<>0<><>::uid://cvffaeo1ia368::::res://脚本/音符/黑块.gd<>uid://iohlh43x18ph::::res://模型/黑块.obj
+长块.tscn::PackedScene::2863392228545956882::1758185720::0::1::::<><><>0<>0<><>::uid://cvffaeo1ia368::::res://脚本/音符/黑块.gd<>uid://1aphyy4c1vna::::res://模型/长条尾.obj<>uid://w0oxygfawslj::::res://字体/Futura-Condensed.otf<>uid://cvr5j2im8p1wm::::res://着色/音符/长条尾.tres<>uid://cdxxrma2f7uj3::::res://模型/长条腰.obj<>uid://b03ggimjeg2qc::::res://模型/长条头.obj<>uid://bvs8yl85ladsk::::res://着色/音符/长条腰.tres<>uid://bltgxu1ueverp::::res://着色/音符/长条头.tres
+黑块.tscn::PackedScene::3254128104231018650::1758185720::0::1::::<><><>0<>0<><>::uid://cvffaeo1ia368::::res://脚本/音符/黑块.gd<>uid://w0oxygfawslj::::res://字体/Futura-Condensed.otf<>uid://iohlh43x18ph::::res://模型/黑块.obj<>uid://c2qo1xbv22bva::::res://着色/黑块消除.gdshader<>uid://bogjabh4i665w::::res://着色/物件边框.gdshader
+::res://字体/::1746771789
+Futura-Condensed.otf::FontFile/FontFile::1596656385104042903::1712302894::1743822008::1::::<><><>0<>0<>0341dd8b7c8371835dfb11e6ea05dfe1<>res://.godot/imported/Futura-Condensed.otf-c7dcfa97f8e2d93f0d632504a9b5d521.fontdata::
+NotoSans-Medium.ttf::FontFile/FontFile::247612955770392925::1741170260::1743822008::1::::<><><>0<>0<>b636a3e7af5f76805b32caaf0ea9bf57<>res://.godot/imported/NotoSans-Medium.ttf-9f207cbee3a6cd30c1f6b4c85070d103.fontdata::
+::res://扩展/::1752085837
+::res://扩展/二进制/::1752081925
+::res://扩展/自定义插件/::1752081920
+::res://插件/::1757519671
+icon.png::CompressedTexture2D/CompressedTexture2D::1021450655062431680::1746212023::1746212026::1::::<><><>0<>0<>661d3f1ef5622f1bb68f09ec4811f407<>res://.godot/imported/icon.png-f1944f29c98d8e49f5636cb25d900ad7.ctex::
+LICENSE.txt::TextFile/TextFile::-1::1716029748::0::1::::<><><>0<>0<><>::
+readme.md::TextFile/TextFile::-1::1750069578::0::1::::<><><>0<>0<><>::
+::res://插件/gd-gbk-decode-35ca03b881a65957e87e01179810af2c64dd41a7/::1757520141
+::res://插件/gd-gbk-decode-35ca03b881a65957e87e01179810af2c64dd41a7/gbk_decode/::1757519672
+gbk_decode.gd::GDScript/GDScript::234518402805854723::1757519671::0::1::::<>EditorPlugin<><>0<>1<><>::
+gbk_decode_util.gd::GDScript/GDScript::7441199985376833458::1757519671::0::1::::GbkDecode<>Node<><>0<>1<><>::
+plugin.cfg::TextFile/TextFile::-1::1757519671::0::1::::<><><>0<>0<><>::
+::res://插件/midi/::1757931564
+ADSR.gd::GDScript/GDScript::2597010824854868785::1750439349::0::1::::AudioStreamPlayerADSR<>AudioStreamPlayer<><>0<>0<><>::
+ADSR.tscn::PackedScene/PackedScene::2640952828637262918::1750912415::0::1::::<><><>0<>0<><>::uid://bdaanhrwbwaov::::res://插件/midi/ADSR.gd
+Bank.gd::GDScript/GDScript::821895585466857767::1750439874::0::1::::Bank<>RefCounted<><>0<>0<><>::
+GMP.gd::GDScript/GDScript::1942471446272718006::1716029748::0::1::::<>EditorPlugin<><>0<>1<><>::
+icon.png::CompressedTexture2D/CompressedTexture2D::855638538019953716::1716029749::1746212602::1::::<><><>0<>0<>03c7ea079b3cfa5244e2a5ce425f2a47<>res://.godot/imported/icon.png-c144cc1337c65da3d5e931044adf255f.ctex::
+MidiPlayer.gd::GDScript/GDScript::4296920601041703153::1757931564::0::1::::MidiPlayer<>Node<>res://插件/midi/icon.png<>0<>0<><>::
+MidiPlayer.tscn::PackedScene/PackedScene::6226392761835080006::1746294081::0::1::::<><><>0<>0<><>::uid://b2hpwiu545q6t::::res://插件/midi/MidiPlayer.gd
+plugin.cfg::TextFile/TextFile::-1::1716029749::0::1::::<><><>0<>0<><>::
+SMF.gd::GDScript/GDScript::8258028273018569260::1757530363::0::1::::SMF<>RefCounted<><>0<>0<><>::
+SoundFont.gd::GDScript/GDScript::6824572985406317248::1750439094::0::1::::SoundFont<>RefCounted<><>0<>0<><>::
+Utility.gd::GDScript/GDScript::551011280631746710::1716029749::0::1::::<>RefCounted<><>0<>0<><>::
+::res://插件/NotificationSchedulerPlugin/::1746267983
+icon.png::CompressedTexture2D/CompressedTexture2D::4809824676853794224::1746212043::1746267983::1::::<><><>0<>0<>6ba1fc40be0ce156b843608a90d048cd<>res://.godot/imported/icon.png-f2b372217e5d7b9ba86f939b64a5c8cd.ctex::
+NotificationScheduler.gd::GDScript/GDScript::9140434728843158718::1746212043::0::1::::NotificationScheduler<>Node<><>0<>1<><>::
+NotificationSchedulerPlugin.gd::GDScript/GDScript::8944773990203375250::1746212043::0::1::::<>EditorPlugin<><>0<>1<><>::
+plugin.cfg::TextFile/TextFile::-1::1746212043::0::1::::<><><>0<>0<><>::
+README.md::TextFile/TextFile::-1::1746212043::0::1::::<><><>0<>0<><>::
+::res://插件/NotificationSchedulerPlugin/bin/::1746212043
+::res://插件/NotificationSchedulerPlugin/bin/debug/::1746212043
+::res://插件/NotificationSchedulerPlugin/bin/release/::1746212043
+::res://插件/NotificationSchedulerPlugin/model/::1746212043
+NotificationChannel.gd::GDScript/GDScript::2559537829477726527::1746212043::0::1::::NotificationChannel<>RefCounted<><>0<>0<><>::
+NotificationData.gd::GDScript/GDScript::8042073529976705514::1746212043::0::1::::NotificationData<>RefCounted<><>0<>0<><>::
+::res://文字/::1749228095
+语言.csv::Translation/Translation::996190028009043615::1746689351::1746769439::1::::<><><>0<>0<>2845fff8aaafffec4f0de0ca6f1b2589<>res://文字/语言.zh.translation<*>res://文字/语言.zh_CN.translation<*>res://文字/语言.zh_TW.translation::
+语言.zh.translation::OptimizedTranslation/OptimizedTranslation::7860029823863830903::1746769439::0::1::::<><><>0<>0<><>::
+语言.zh_CN.translation::OptimizedTranslation/OptimizedTranslation::7170754348012459789::1746769439::0::1::::<><><>0<>0<><>::
+语言.zh_TW.translation::OptimizedTranslation/OptimizedTranslation::2389457084877895835::1746769439::0::1::::<><><>0<>0<><>::
+::res://文字/游戏引擎文本/::1746362235
+::res://文字/游戏引擎文本/菜单文本/::1746367460
+af.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+ar.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+bg.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+bn.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+ca.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+cs.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+cy.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+da.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+de.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+el.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+eo.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+es.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+es_AR.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+et.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+eu.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+fa.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+fi.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+fr.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+gl.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+he.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+hi.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+hr.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+hu.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+id.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+it.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+ja.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+ka.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+ko.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+lv.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+ms.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+nb.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+nl.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+pl.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+pt.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+pt_BR.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+ro.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+ru.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+sk.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+sl.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+sq.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+sr_Cyrl.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+sv.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+th.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+tl.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+tr.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+uk.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+vi.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+zh_CN.po::Translation/Translation::-1::1746367014::0::1::::<><><>0<>0<><>::
+zh_HK.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+zh_TW.po::Translation/Translation::-1::1742326978::0::1::::<><><>0<>0<><>::
+::res://模型/::1759057904
+旋转.obj::Mesh/Mesh::7923802077189171602::1713359596::1743822057::1::::<><><>0<>0<>654e8f9eb358076deba8cbd99b907952<>res://.godot/imported/旋转.obj-0bead2b54e226568e9ce2169d5d88a22.mesh<*>res://.godot/imported/旋转.obj-0bead2b54e226568e9ce2169d5d88a22.mesh::
+滑块.obj::Mesh/Mesh::6676509261390672323::1719832219::1743822058::1::::<><><>0<>0<>1cc8dc11fd8e2787d923e5d3b38f5cdd<>res://.godot/imported/滑块.obj-93770840bc532a70f854b167484bfed1.mesh<*>res://.godot/imported/滑块.obj-93770840bc532a70f854b167484bfed1.mesh::
+滑块.png::CompressedTexture2D/CompressedTexture2D::3184163055995351965::1715508686::1744439211::1::::<><><>0<>0<>02b5d8ccc36b257e22935eb6749cca6e<>res://.godot/imported/滑块.png-acfb8c86c058455cf9e093b0131fc79d.s3tc.ctex<*>res://.godot/imported/滑块.png-acfb8c86c058455cf9e093b0131fc79d.etc2.ctex::
+滑块.tres::StandardMaterial3D::5233008568472179861::1759057904::0::1::::<><><>0<>0<><>::uid://blmox2tndf1lh::::res://模型/滑块.png<>uid://bogjabh4i665w::::res://着色/物件边框.gdshader<>uid://cr4681ks07fiw::::res://着色/长块按下.gdshader
+滑按方向提示.svg::CompressedTexture2D/CompressedTexture2D::1689621598905434953::1730569043::1743822055::1::::<><><>0<>0<>50abc62101b61690e51f592a10450ebe<>res://.godot/imported/滑按方向提示.svg-d44c2bebced20fe5e79e585e1f531372.s3tc.ctex<*>res://.godot/imported/滑按方向提示.svg-d44c2bebced20fe5e79e585e1f531372.etc2.ctex::
+滑键.obj::Mesh/Mesh::748060422044160102::1713359596::1743822058::1::::<><><>0<>0<>6e67d102cb7bc31cec5d8b1c0565e287<>res://.godot/imported/滑键.obj-288c4a1fbb80739dcf43f748567a50c7.mesh<*>res://.godot/imported/滑键.obj-288c4a1fbb80739dcf43f748567a50c7.mesh::
+爆裂.obj::Mesh/Mesh::4785334653565971557::1713359596::1743822058::1::::<><><>0<>0<>e4ee35f296f3f2cb3f28e796b760fd3d<>res://.godot/imported/爆裂.obj-e14a4daa37bd6d75a70b6f9f321f8072.mesh<*>res://.godot/imported/爆裂.obj-e14a4daa37bd6d75a70b6f9f321f8072.mesh::
+爆裂.png::CompressedTexture2D/CompressedTexture2D::1668130993413808089::1713359596::1743822055::1::::<><><>0<>0<>e6b0bb199819328925c4011a437b7bea<>res://.godot/imported/爆裂.png-898b526bf2196ee7c0ccdf9736e24359.s3tc.ctex<*>res://.godot/imported/爆裂.png-898b526bf2196ee7c0ccdf9736e24359.etc2.ctex::
+线条.obj::Mesh/Mesh::8768221475218687785::1713359596::1743822058::1::::<><><>0<>0<>bf1e6aacd4317cc52051aa3eb3329d60<>res://.godot/imported/线条.obj-433fbc4ceadcfc9de10fd94945db1556.mesh<*>res://.godot/imported/线条.obj-433fbc4ceadcfc9de10fd94945db1556.mesh::
+长条头.obj::Mesh/Mesh::4199319807616598430::1715503689::1743822058::1::::<><><>0<>0<>e75892ea12e25e01a066b7bb57c8f160<>res://.godot/imported/长条头.obj-43d84135cb5a0c937ce9482bfce089fa.mesh<*>res://.godot/imported/长条头.obj-43d84135cb5a0c937ce9482bfce089fa.mesh::
+长条头.png::CompressedTexture2D/CompressedTexture2D::2946599104379699174::1713093384::1743822056::1::::<><><>0<>0<>a6d186cfb578eaff76701148169352ab<>res://.godot/imported/长条头.png-3d5f45ced0ef333f691e19581035e9e9.s3tc.ctex<*>res://.godot/imported/长条头.png-3d5f45ced0ef333f691e19581035e9e9.etc2.ctex::
+长条尾.obj::Mesh/Mesh::1825834488994729246::1715503885::1743822058::1::::<><><>0<>0<>9f96355ff148059e863e23bbb3dcfdf7<>res://.godot/imported/长条尾.obj-6323aeea3257e3ad173f4497597be53b.mesh<*>res://.godot/imported/长条尾.obj-6323aeea3257e3ad173f4497597be53b.mesh::
+长条尾.png::CompressedTexture2D/CompressedTexture2D::2149883757086116384::1712843213::1743822056::1::::<><><>0<>0<>0c099a8c2e57249a8cc4c226361ab93c<>res://.godot/imported/长条尾.png-71d2508b9195a74f7bec1c5394fb45c6.s3tc.ctex<*>res://.godot/imported/长条尾.png-71d2508b9195a74f7bec1c5394fb45c6.etc2.ctex::
+长条腰.obj::Mesh/Mesh::5032316067488607054::1715506140::1743822058::1::::<><><>0<>0<>ea20118660d2706bb2e33b403848f321<>res://.godot/imported/长条腰.obj-bc79c2fa400e0364e04b2421a8408d16.mesh<*>res://.godot/imported/长条腰.obj-bc79c2fa400e0364e04b2421a8408d16.mesh::
+长条腰.png::CompressedTexture2D/CompressedTexture2D::6353475525710647521::1715507073::1743822056::1::::<><><>0<>0<>e2eb71547051db3c9d5420feae98bf2c<>res://.godot/imported/长条腰.png-202552d5f45d33258a75fecca6689d8b.s3tc.ctex<*>res://.godot/imported/长条腰.png-202552d5f45d33258a75fecca6689d8b.etc2.ctex::
+黑块.obj::Mesh/Mesh::590857114110182281::1713359596::1743822058::1::::<><><>0<>0<>cb7cdf30dd1f8853557a23a43691cf62<>res://.godot/imported/黑块.obj-d69615abea1dc285d1f86c9eae79ce98.mesh<*>res://.godot/imported/黑块.obj-d69615abea1dc285d1f86c9eae79ce98.mesh::
+::res://模型/手柄/::1745250206
+Xbox.obj::Mesh/Mesh::3829922362989685537::1732427993::1745250206::1::::<><><>0<>0<>33071f73fcc7932e91cc8c6ec6cf6b87<>res://.godot/imported/Xbox.obj-639f694254db55476a1f90eb8eaa5a88.mesh<*>res://.godot/imported/Xbox.obj-639f694254db55476a1f90eb8eaa5a88.mesh::
+::res://测试/::1758339734
+游玩记录.cfg::TextFile::-1::1759078008::0::1::::<><><>0<>0<><>::
+设置.cfg::TextFile::-1::1759060387::0::1::::<><><>0<>0<><>::
+::res://着色/::1759057904
+天空盒.tres::VisualShader::3695213149294942932::1759057904::0::1::::<><><>0<>0<><>::uid://udyxgt54jfuo::::res://纹理/背景/天空盒.dds
+物件边框.gdshader::Shader::3381997278751365606::1759057904::0::1::::<><><>0<>0<><>::
+色彩滤镜.tres::VisualShader::7218775997972305114::1759057904::0::1::::<><><>0<>0<><>::
+长块按下.gdshader::Shader::6027861203982765834::1759057904::0::1::::<><><>0<>0<><>::
+黑块消除.gdshader::Shader::6701867868791436470::1759057904::0::1::::<><><>0<>0<><>::
+::res://着色/音符/::1759057904
+滑块.gdshader::Shader::6831278645030669998::1759057904::0::1::::<><><>0<>0<><>::
+长条头.tres::StandardMaterial3D::3198127607801806537::1759057904::0::1::::<><><>0<>0<><>::uid://bh8mb6ulhfljq::::res://模型/长条头.png<>uid://bogjabh4i665w::::res://着色/物件边框.gdshader
+长条尾.tres::StandardMaterial3D::6283740518610870120::1759057904::0::1::::<><><>0<>0<><>::uid://5vojhyhg5lf1::::res://模型/长条尾.png<>uid://bogjabh4i665w::::res://着色/物件边框.gdshader
+长条腰.tres::StandardMaterial3D::3899592349593031722::1759057904::0::1::::<><><>0<>0<><>::uid://cwrw2wt4hlsov::::res://模型/长条腰.png<>uid://bogjabh4i665w::::res://着色/物件边框.gdshader
+黑块.tres::StandardMaterial3D/StandardMaterial3D::9066676486117504515::1743822426::0::1::::<><><>0<>0<><>::uid://bogjabh4i665w::::res://着色/物件边框.gdshader
+::res://纹理/::1743823096
+判定粒子.svg::CompressedTexture2D/CompressedTexture2D::1999029890253235736::1715740109::1743822224::1::::<><><>0<>0<>3b5b1b88faa75ea2d811ab12c7bc9148<>res://.godot/imported/判定粒子.svg-8da654f71c5b8bbe9df3dd3c61c86456.ctex::
+判定粒子背景.svg::CompressedTexture2D/CompressedTexture2D::7023554592428356033::1715746602::1743822225::1::::<><><>0<>0<>032ec1458602b766b669dbe16695562e<>res://.godot/imported/判定粒子背景.svg-c0ca351dca4d3ba09e061426465242dc.ctex::
+::res://纹理/界面/::1758713278
+icon.svg::CompressedTexture2D/CompressedTexture2D::7003201684098735836::1713360077::1743823106::1::::<><><>0<>0<>c852807d4a47b4e8ad0cef3213ca7806<>res://.godot/imported/icon.svg-998c695b3c532b835438da13c225eb2c.s3tc.ctex<*>res://.godot/imported/icon.svg-998c695b3c532b835438da13c225eb2c.etc2.ctex::
+上下选项.svg::CompressedTexture2D/CompressedTexture2D::8919305708014932847::1710839188::1743823687::1::::<><><>0<>0<>6940ad494f5499e02cee8af178a8e852<>res://.godot/imported/上下选项.svg-0332e8cc9e2bd6c738729be299b25307.ctex::
+上升按钮.svg::CompressedTexture2D/CompressedTexture2D::6033586789340026014::1728394772::1743823106::1::::<><><>0<>0<>e27e3cbf452e12562048980497b886ed<>res://.godot/imported/上升按钮.svg-771f36eceba000f3ed7f64187ad73ada.s3tc.ctex<*>res://.godot/imported/上升按钮.svg-771f36eceba000f3ed7f64187ad73ada.etc2.ctex::
+上升按钮按下.svg::CompressedTexture2D/CompressedTexture2D::1617282978307512507::1728394805::1743823106::1::::<><><>0<>0<>f96afff5bb36270c0a2a67fc5ced8a80<>res://.godot/imported/上升按钮按下.svg-196b9a84316a7ca73abf68671d3aa2de.ctex::
+下降按钮.svg::CompressedTexture2D/CompressedTexture2D::410601762953876223::1728394895::1743823106::1::::<><><>0<>0<>6f6452f56adf1ebd48fcaba5e0a60478<>res://.godot/imported/下降按钮.svg-ae4915a5ce3b5b40a28bf9c336160c31.ctex::
+下降按钮按下.svg::CompressedTexture2D/CompressedTexture2D::6262213554072146376::1728394878::1743823106::1::::<><><>0<>0<>9f8e3c58c1e1c004028663fca377814e<>res://.godot/imported/下降按钮按下.svg-c957a16ea3f404ee357a967003972651.ctex::
+单选框_已选择.svg::CompressedTexture2D/CompressedTexture2D::4619709619678150604::1718029746::1743824824::1::::<><><>0<>0<>f55f949831337609f4cc517771a2dd84<>res://.godot/imported/单选框_已选择.svg-424411ba5ce75fdee8c7725ba6892f89.ctex::
+单选框_已选择_已禁用.svg::CompressedTexture2D/CompressedTexture2D::1727849571760715169::1718029544::1743824855::1::::<><><>0<>0<>be972f21f3bc5d9cf437e6bb75aaa756<>res://.godot/imported/单选框_已选择_已禁用.svg-96ba2ada1a51a34362c3701b1947fd45.ctex::
+单选框_未选择.svg::CompressedTexture2D/CompressedTexture2D::3764979828286430374::1718029650::1743824876::1::::<><><>0<>0<>9ad0c2828c31f361e2010f710ab7955c<>res://.godot/imported/单选框_未选择.svg-3ed0fcb57650e39426c9f2c04539e3be.ctex::
+单选框_未选择_已禁用.svg::CompressedTexture2D/CompressedTexture2D::8336409117693573357::1718029583::1743824896::1::::<><><>0<>0<>795dc9ee58fdc87feb29dc00a0c2e98e<>res://.godot/imported/单选框_未选择_已禁用.svg-bdb44f60062d6b994b6fd0f5687cef56.ctex::
+卡片头.svg::CompressedTexture2D/CompressedTexture2D::2324324532151415785::1713804207::1743823837::1::::<><><>0<>0<>4a08a580b85ba35009edf30246064f1a<>res://.godot/imported/卡片头.svg-c14503c81e973da6ccf4fc0c46fec878.ctex::
+右翻滚按钮.svg::CompressedTexture2D/CompressedTexture2D::570988733572069170::1744970853::1744970955::1::::<><><>0<>0<>34298b35ac3fcddd45a6208af49d6dc0<>res://.godot/imported/右翻滚按钮.svg-f01391760fd3de4f3439dc6953dfdb36.ctex::
+右翻滚按钮按下.svg::CompressedTexture2D/CompressedTexture2D::3082198745195941959::1744970921::1744970955::1::::<><><>0<>0<>eb1d242a7a676d1b6d145673038aa9e8<>res://.godot/imported/右翻滚按钮按下.svg-9d23956b54fb28c0401340a47e66f634.ctex::
+唱片.svg::CompressedTexture2D/CompressedTexture2D::8238926030224037288::1719922785::1743823106::1::::<><><>0<>0<>793f3d5889aeb88d62a61e723fe97d8a<>res://.godot/imported/唱片.svg-06d92ab8b8ddb39d9e95af4c5e074a25.ctex::
+复选框_已选择.svg::CompressedTexture2D/CompressedTexture2D::7225485421692397746::1718029026::1743824696::1::::<><><>0<>0<>13f196a30951e121a9e3b59291f98787<>res://.godot/imported/复选框_已选择.svg-0f5804c354f9d2aa1d1ca03b213f129d.ctex::
+复选框_已选择_已禁用.svg::CompressedTexture2D/CompressedTexture2D::2790371970046915236::1718028951::1743824707::1::::<><><>0<>0<>cc0982f440cc39b9e8bde1afea8d2a30<>res://.godot/imported/复选框_已选择_已禁用.svg-3b5fd685f7a1c7f46f3e579e684ad770.ctex::
+复选框_未确定.svg::CompressedTexture2D/CompressedTexture2D::6689764405071988441::1718029983::1743824718::1::::<><><>0<>0<>ddac580df887f6e5307c0d7cdf83e916<>res://.godot/imported/复选框_未确定.svg-4a2a5fcfbae4e0cf8bd090e814ea54d4.ctex::
+复选框_未选择.svg::CompressedTexture2D/CompressedTexture2D::2741434669824004485::1718029085::1743824744::1::::<><><>0<>0<>f643415585526f43a2b921a5b768194a<>res://.godot/imported/复选框_未选择.svg-e6ff619106eddfbf084f85f729c90d39.ctex::
+复选框_未选择_已禁用.svg::CompressedTexture2D/CompressedTexture2D::6263467583811644829::1718029187::1743824769::1::::<><><>0<>0<>1eeca9d188d4c438dda9b77bcaa3f109<>res://.godot/imported/复选框_未选择_已禁用.svg-1ff7bdd96f071efc56945972c2518513.ctex::
+左翻滚按钮.svg::CompressedTexture2D/CompressedTexture2D::1506532079479049216::1744970828::1744970955::1::::<><><>0<>0<>33a671e099eb8ab3202cfeb21743f35a<>res://.godot/imported/左翻滚按钮.svg-05d5cd915a68d95ca6b6378db65e3ee2.ctex::
+左翻滚按钮按下.svg::CompressedTexture2D/CompressedTexture2D::7514766926465350199::1744970944::1744970955::1::::<><><>0<>0<>3db31ae48c159a4dd7982bdef00d4018<>res://.godot/imported/左翻滚按钮按下.svg-fcac348303026078f793ee45ecf124a9.ctex::
+手柄摇杆.svg::CompressedTexture2D/CompressedTexture2D::951993928879438653::1745150160::1745150163::1::::<><><>0<>0<>078d957356109fed058bb03f1a332d5a<>res://.godot/imported/手柄摇杆.svg-240d41493ade948028fd774bbf995e41.ctex::
+搜索.svg::CompressedTexture2D/CompressedTexture2D::8404208087593930829::1718886649::1743823962::1::::<><><>0<>0<>f8f17910a05a703a01d5626dde4c216d<>res://.godot/imported/搜索.svg-c4b90bd7ed028c5a181626921280958c.ctex::
+播放器图标.svg::CompressedTexture2D/CompressedTexture2D::4391951022560956469::1718021177::1743824010::1::::<><><>0<>0<>141123166b1182d8df349323490ee859<>res://.godot/imported/播放器图标.svg-158953ae5d66077c4885f403bf3fd91e.ctex::
+文字编辑.svg::CompressedTexture2D/CompressedTexture2D::4072017271151863860::1744382196::1744382198::1::::<><><>0<>0<>199bfa06ba7bae37bc4a9e77e179c6ff<>res://.godot/imported/文字编辑.svg-90223aaa3b5a09d15ee42b4a3352ff53.ctex::
+清除.svg::CompressedTexture2D/CompressedTexture2D::9176162786446614869::1727436112::1743824028::1::::<><><>0<>0<>4ac22c6dea9a462d0a615ecdb0cf08fa<>res://.godot/imported/清除.svg-9ebbbc3d877de799fd5fadd98099d08e.ctex::
+滑杆.svg::CompressedTexture2D/CompressedTexture2D::5683079549742223562::1743825997::1743826024::1::::<><><>0<>0<>7bfef73eae3bf8cd3c9ce4ec561371eb<>res://.godot/imported/滑杆.svg-b8f6a0a4051f254f339de83c3c371e56.ctex::
+滑杆_已禁用.svg::CompressedTexture2D/CompressedTexture2D::5388551867485577663::1743825851::1743825855::1::::<><><>0<>0<>3863dfa80f4be2115cef774c604be062<>res://.godot/imported/滑杆_已禁用.svg-57541c0ed5010c44919f0af8e2f1beae.ctex::
+滑杆_高亮.svg::CompressedTexture2D/CompressedTexture2D::7862248851526038765::1743827699::1743827775::1::::<><><>0<>0<>98adea25b95d858e6c1cba692f662c59<>res://.godot/imported/滑杆_高亮.svg-08fb1cd961cf0a471d9fc824689ad2bb.ctex::
+满冠.svg::CompressedTexture2D/CompressedTexture2D::1523786217215008583::1718277559::1743824143::1::::<><><>0<>0<>2c7604bc4362e9a63e8ff52737304693<>res://.godot/imported/满冠.svg-2924f6e67bc5b17df673da6abc8f3154.ctex::
+满心.svg::CompressedTexture2D/CompressedTexture2D::753662681911947902::1718025242::1743823881::1::::<><><>0<>0<>57b975c5f2e51cfc92b2b16453b4a223<>res://.godot/imported/满心.svg-18ef7b322dd45e6f836635a76d97487f.ctex::
+满星.svg::CompressedTexture2D/CompressedTexture2D::1725409701838630068::1710853648::1743823724::1::::<><><>0<>0<>00dfd0fc4e15b59c471a15ae327867cd<>res://.godot/imported/满星.svg-7ade4d25506d3792a421c6ae6c0475a6.ctex::
+空冠.svg::CompressedTexture2D/CompressedTexture2D::3072132287606560066::1718277621::1743824155::1::::<><><>0<>0<>c451c02daa5bc5edf1fe45a9318df8b4<>res://.godot/imported/空冠.svg-031dee2cc5fcb9456a7f948bb18da6eb.ctex::
+空心.svg::CompressedTexture2D/CompressedTexture2D::6486852617493362045::1718025272::1743823900::1::::<><><>0<>0<>07c66dd104e834483ffe01f3ac535f49<>res://.godot/imported/空心.svg-30d8ef4f61438574c27deea25e5a8dbd.ctex::
+空星.svg::CompressedTexture2D/CompressedTexture2D::3566112579330849017::1710853683::1743823803::1::::<><><>0<>0<>c036d0c67082a6bbf22b4ba1e7820ebc<>res://.godot/imported/空星.svg-93746de7491cf11b00c4ae3077f5ed99.ctex::
+绘图.svg::CompressedTexture2D::8679917588865996374::1758713255::1758713278::1::::<><><>0<>0<>fd4a574cad6804281b589cfc95db5610<>res://.godot/imported/绘图.svg-8c03b8ed45d23aaae7ce59d95f332876.ctex::
+自定义歌曲.svg::CompressedTexture2D/CompressedTexture2D::5544957954480338740::1726388579::1743824075::1::::<><><>0<>0<>5430f536effab029aadcdb7ce2627b36<>res://.godot/imported/自定义歌曲.svg-180070fadcc81af9856585b00c31f499.ctex::
+菜单.svg::CompressedTexture2D/CompressedTexture2D::5745730751043984880::1714895100::1743823945::1::::<><><>0<>0<>9527eaee61d63d0d2720369a573f4a82<>res://.godot/imported/菜单.svg-fc239ad06dc50c09434389b5317c04ed.ctex::
+触屏摇杆.svg::CompressedTexture2D/CompressedTexture2D::2054479680014769095::1728315875::1743823106::1::::<><><>0<>0<>192f2a21d243df319f4ab389dd516c02<>res://.godot/imported/触屏摇杆.svg-b175ee287aefe0c84d4dfa1e81cb5ad7.ctex::
+触屏摇杆圆环.svg::CompressedTexture2D/CompressedTexture2D::5763773655678010802::1728315777::1743823106::1::::<><><>0<>0<>6c5e0cbd9b517377f9979af59cf00d7a<>res://.godot/imported/触屏摇杆圆环.svg-f653bbcac590c5bae070f2b1c1d63504.ctex::
+触屏摇杆按下.svg::CompressedTexture2D/CompressedTexture2D::7630472539891897542::1728315944::1743823106::1::::<><><>0<>0<>743726d209151b850957c2c57e5f5438<>res://.godot/imported/触屏摇杆按下.svg-886e0eeecd33b333b1faf661cc84f12d.ctex::
+触屏显示.svg::CompressedTexture2D/CompressedTexture2D::2702473458840487676::1743520141::1743823106::1::::<><><>0<>0<>54373aac91162a3336a7374d460c8ee7<>res://.godot/imported/触屏显示.svg-935ac4b19cbd7837bb5949210c7618e2.ctex::
+设置.svg::CompressedTexture2D/CompressedTexture2D::2906663970381193844::1714896472::1743823976::1::::<><><>0<>0<>8d1fa874b5aa9b08eb8e1b18fd07bbf2<>res://.godot/imported/设置.svg-cf413760a9f729d4ef66154714a1ee5b.ctex::
+返回.svg::CompressedTexture2D/CompressedTexture2D::9097776247241658088::1718020408::1743824179::1::::<><><>0<>0<>1ab700f1a4df00e55375543468a2734e<>res://.godot/imported/返回.svg-bed428fa0ca097106ba13ccdef1725a2.ctex::
+退出.svg::CompressedTexture2D/CompressedTexture2D::1276318268666020209::1718020392::1743823925::1::::<><><>0<>0<>f760c5fc93c387ffc8ef6403ac5670ee<>res://.godot/imported/退出.svg-c65c1f43b556b1fdff8822cb803db96c.ctex::
+选项开关_已选择.svg::CompressedTexture2D/CompressedTexture2D::7477523699504217755::1718027575::1743824931::1::::<><><>0<>0<>f2f7a1b1c94def72d6edc65756f2cde5<>res://.godot/imported/选项开关_已选择.svg-0a1c24fd26c3a9a3165358c126898ef4.ctex::
+选项开关_已选择_已禁用.svg::CompressedTexture2D/CompressedTexture2D::4272091851823247086::1718027531::1743824981::1::::<><><>0<>0<>8edb14b82c903dd2ce4b20cca6e4d768<>res://.godot/imported/选项开关_已选择_已禁用.svg-1cc990dee228bf129d9e0142dab5acc5.ctex::
+选项开关_已选择_已禁用_镜像.svg::CompressedTexture2D/CompressedTexture2D::403239129875775328::1718028173::1743824995::1::::<><><>0<>0<>d5c70197c392b88f3adb88525ec49734<>res://.godot/imported/选项开关_已选择_已禁用_镜像.svg-559e36b80e53ed1498c38f416c6b49ea.ctex::
+选项开关_已选择_镜像.svg::CompressedTexture2D/CompressedTexture2D::2454377098831267186::1718028028::1743824953::1::::<><><>0<>0<>b83fa7b1e8fa908beb76db866be75e29<>res://.godot/imported/选项开关_已选择_镜像.svg-36c380189ba5a03d6c91111aebf2a37a.ctex::
+选项开关_未选择.svg::CompressedTexture2D/CompressedTexture2D::8931142015257472620::1718027774::1743825010::1::::<><><>0<>0<>a53872784861b411fa5ac9c3f3067b3e<>res://.godot/imported/选项开关_未选择.svg-c4f772b20a70a62f1ff77edd493e93ff.ctex::
+选项开关_未选择_已禁用.svg::CompressedTexture2D/CompressedTexture2D::3414892923336565434::1718027831::1743825034::1::::<><><>0<>0<>8c3623b65c23bfe3141334da4086e5e8<>res://.godot/imported/选项开关_未选择_已禁用.svg-9c92840b84bbeaef718eecf16f53f098.ctex::
+选项开关_未选择_已禁用_镜像.svg::CompressedTexture2D/CompressedTexture2D::418076439773896151::1718028004::1743825097::1::::<><><>0<>0<>fc74f4713ca347a7202c663f65064405<>res://.godot/imported/选项开关_未选择_已禁用_镜像.svg-19b44bc4a064d2cec72f4a5275d34466.ctex::
+选项开关_未选择_镜像.svg::CompressedTexture2D/CompressedTexture2D::7136066839090201407::1718028069::1743825156::1::::<><><>0<>0<>feaa2b056e8bd6810576e54f36f9b1ae<>res://.godot/imported/选项开关_未选择_镜像.svg-40d632f3d7f26ebe51acdfe3c6555db7.ctex::
+选项箭头.svg::CompressedTexture2D/CompressedTexture2D::61494530547242509::1718030863::1743824309::1::::<><><>0<>0<>c37a526b93413c4fe6e7f0273a480e39<>res://.godot/imported/选项箭头.svg-9c963c3861aa9616602c3a0a128b1863.ctex::
+选项箭头右.svg::CompressedTexture2D/CompressedTexture2D::2661244757659917354::1718030853::1743824335::1::::<><><>0<>0<>ec55f9c8d7ebe76b704174e11ec6ee6f<>res://.godot/imported/选项箭头右.svg-60f7bdb78eb037e5e7966f720fc5d5ce.ctex::
+选项箭头左.svg::CompressedTexture2D/CompressedTexture2D::484792724486389320::1718030833::1743824349::1::::<><><>0<>0<>cfe5c9a1ccf5d010952e91885c322418<>res://.godot/imported/选项箭头左.svg-a517dd0bf7a8208d3b70745041198c55.ctex::
+钢琴键盘.svg::CompressedTexture2D/CompressedTexture2D::3231181768997854936::1726390222::1743824122::1::::<><><>0<>0<>09191c2095608f9c0b242dcfde2df414<>res://.godot/imported/钢琴键盘.svg-8870b6cc6c0d59c1f6ccda5be1901e6c.ctex::
+鼠标.svg::CompressedTexture2D/CompressedTexture2D::5480465629321149111::1745142514::1745143273::1::::<><><>0<>0<>8af7ecef21e89089bd42f7f291b9bb21<>res://.godot/imported/鼠标.svg-aec2c32a30ed26e43e0005358ad0d9a0.ctex::
+鼠标上下移动.svg::CompressedTexture2D/CompressedTexture2D::8974923494273921564::1745143101::1745143273::1::::<><><>0<>0<>9a6992363f3d680791fb2dec9d5a8905<>res://.godot/imported/鼠标上下移动.svg-bdc801f1c0683c26b8ff93e773253ebf.ctex::
+鼠标左右移动.svg::CompressedTexture2D/CompressedTexture2D::2573753967503746291::1745143174::1745143273::1::::<><><>0<>0<>745ca1a958fa6f70a137548341258f02<>res://.godot/imported/鼠标左右移动.svg-5afdc9c8eba4fbbbabdbf1fc7c95ad7c.ctex::
+::res://纹理/背景/::1743823071
+1.jpg::CompressedTexture2D/CompressedTexture2D::5545333774964778926::1716300215::1743823047::1::::<><><>0<>0<>80f7467c38144f11b23277986c6cfae5<>res://.godot/imported/1.jpg-4dd75277763ddfddb22bbcc0e73ffdc7.s3tc.ctex<*>res://.godot/imported/1.jpg-4dd75277763ddfddb22bbcc0e73ffdc7.etc2.ctex::
+天空盒.dds::Texture/Texture::1411468633002596194::1690285074::0::1::::<><><>0<>0<><>::
+::res://脚本/::1759076602
+主场景.gd::GDScript::4258864310575595531::1759076602::0::1::::<>Node3D<><>0<>0<><>::
+全局脚本.gd::GDScript::6194650875671024415::1759067807::0::1::::<>Node3D<><>0<>0<><>::
+白块死区.gd::GDScript::9141509210989860366::1758802569::0::1::::轨道类<>Node3D<><>0<>0<><>::
+轨道.gd::GDScript/GDScript::8332912740814728765::1757334481::0::1::::<>Node3D<><>0<>0<><>::
+音频节点脚本.gd::GDScript::6951307625719119472::1759067246::0::1::::<>AudioStreamPlayer3D<><>0<>0<><>::
+::res://脚本/二维/::1743947424
+判定粒子动画.gd::GDScript/GDScript::2011285489520279479::1715747252::0::1::::<>Node2D<><>0<>0<><>::
+开屏动画节点.gd::GDScript/GDScript::2068231523884378104::1727331460::0::1::::<>AnimationPlayer<><>0<>0<><>::
+::res://脚本/杂项/::1759078321
+主菜单.gd::GDScript::5893839302643598327::1759066473::0::1::::<>Control<><>0<>0<><>::
+人声消除.gd::GDScript::7421617966057547693::1758194752::0::1::::<>AudioStreamPlayer<><>0<>0<><>::
+安全区设置窗口.gd::GDScript/GDScript::6403682708790065664::1717259624::0::1::::<>Node<><>0<>0<><>::
+封面自适应.gd::GDScript::7784530650377276645::1759066498::0::1::::<>AspectRatioContainer<><>0<>0<><>::
+播放器.gd::GDScript::9049332040689063890::1759066587::0::1::::<>BaseButton<><>0<>0<><>::
+游戏图标.gd::GDScript/GDScript::3347042441813324834::1747837845::0::1::::<>Node3D<><>0<>0<><>::
+游戏界面.gd::GDScript::6384583894690578342::1759066633::0::1::::<>Control<><>0<>0<><>::
+游戏菜单.gd::GDScript::2808891396053687885::1759078321::0::1::::<>Control<><>0<>0<><>::
+玩家排名卡片.gd::GDScript/GDScript::1356756681852219820::1747406723::0::1::::<>PanelContainer<><>0<>0<><>::
+画布自适应.gd::GDScript::2463065178622603542::1759066937::0::1::::<>SubViewport<><>0<>0<><>::
+翻页栏.gd::GDScript/GDScript::1904586671818452193::1746593405::0::1::::<>HBoxContainer<><>0<>0<><>::
+自定义歌曲网格.gd::GDScript::8851319422797513667::1759067031::0::1::::<>ScrollContainer<><>0<>0<><>::
+自定义选歌列表按钮.gd::GDScript/GDScript::3619836141652188297::1746592124::0::1::::<>Button<><>0<>0<><>::
+视角节点.gd::GDScript::7125243522176152549::1759067032::0::1::::<>XROrigin3D<><>0<>0<><>::
+触摸屏视角操作.gd::GDScript::77250586489077867::1759067033::0::1::::<>Control<><>0<>0<><>::
+设置界面.gd::GDScript::8724575111460949998::1759067062::0::1::::<>Control<><>0<>0<><>::
+谱面编辑器.gd::GDScript::4338403468878452682::1758452367::0::1::::<>Control<><>0<>0<><>::
+通知卡片.gd::GDScript::1702122808646280855::1759067206::0::1::::<>PanelContainer<><>0<>0<><>::
+::res://脚本/设置/::1759067155
+控制.gd::GDScript::3416668452392703608::1759066563::0::1::::<>ScrollContainer<><>0<>0<><>::
+无障碍.gd::GDScript::5605871071528256901::1759066598::0::1::::<>ScrollContainer<><>0<>0<><>::
+界面.gd::GDScript::6841399055404156322::1759066970::0::1::::<>ScrollContainer<><>0<>0<><>::
+视频.gd::GDScript::3673141906999655448::1758338777::0::1::::<>ScrollContainer<><>0<>0<><>::
+语言.gd::GDScript::2218473723947084652::1759067111::0::1::::<>VBoxContainer<><>0<>0<><>::
+调试.gd::GDScript::102580533745330647::1759067155::0::1::::<>ScrollContainer<><>0<>0<><>::
+音频.gd::GDScript/GDScript::5758783154747818462::1748235852::0::1::::<>ScrollContainer<><>0<>0<><>::
+::res://脚本/调试/::1759068461
+触摸测试谱.gd::GDScript::5397793164760508129::1759067033::0::1::::<>Label<><>0<>0<><>::
+调试窗口.gd::GDScript::5849037950064492569::1759068461::0::1::::<>Window<><>0<>0<><>::
+::res://脚本/音符/::1759067273
+弯曲滑块.gd::GDScript/GDScript::9034410867165413063::1746272199::0::1::::<>MeshInstance3D<><>0<>0<><>::
+折叠滑块触摸.gd::GDScript::2417541146032836871::1759066523::0::1::::<>MeshInstance3D<><>0<>0<><>::
+游戏事件控制.gd::GDScript::270983420402430955::1758989761::0::1::::<>Node3D<><>0<>0<><>::
+狂戳打击显示.gd::GDScript::6942192442762155786::1759066719::0::1::::<>MeshInstance3D<><>0<>0<><>::
+轨道线条外观.gd::GDScript::7193286859253282069::1759067156::0::1::::<>MeshInstance3D<><>0<>0<><>::
+黑块.gd::GDScript::6257432790431720943::1759067273::0::1::::物件类<>Node3D<><>0<>0<><>::
+::res://音乐/::1758626690
+28189640-192-7293336a995d1b10926c5be0bf3e4174.mp3::AudioStreamMP3::8972346528551488718::1693932600::1758626690::1::::<><><>0<>0<>9125dca65aa91a0d87a284db851251a1<>res://.godot/imported/28189640-192-7293336a995d1b10926c5be0bf3e4174.mp3-86d2105735902395368989f099a7a24c.mp3str::
+audio.mp3::AudioStreamMP3/AudioStreamMP3::7137065661141005308::1713968140::1743947503::1::::<><><>0<>0<>71d2f408ad50dc24e6af33d3de199e91<>res://.godot/imported/audio.mp3-3993dcb7a0aee63c060d05ee2b3caabb.mp3str::
+README.md::TextFile/TextFile::-1::1745420958::0::1::::<><><>0<>0<><>::
+ういこうせん.mp3::AudioStreamMP3::2649655924572151135::1755745123::1758348901::1::::<><><>0<>0<>d54842e8f873647e744cf749d9475b20<>res://.godot/imported/ういこうせん.mp3-25aaf81478a95a84be74ee0dfe69e720.mp3str::
+::res://音乐/二进制谱面/::1759123731
+::res://音乐/传统玩法关卡/::1756189910
+歌曲列表.cfg::TextFile/TextFile::-1::1756189910::0::1::::<><><>0<>0<><>::
+::res://音乐/旧式谱面/::1746546965
+3 Ecossaises Op.72 No.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+3 Poetic Polkas Op.8 No.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+3 Polkas de salon Op.7 No.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+6 Ecossaises WoO 83.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+7 Landler WoO 11 No.2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+7 Landler WoO 11 No.6.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+7 Landler WoO 11 No.7.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+11 Bagatelles Op.119 No.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+11 Bagatelles Op.119 No.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+12 German Dances WoO8 No.9.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+26.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+A Breeze From Alabama.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+A Concert Waltz.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+A La Claire Fontaine.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+A Real Slow Drag.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+A Tear.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Accompaniment tile.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Admission chorus.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Adventure Of Tiger.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Aida-Grand March.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Ajax Polka.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Album Leaf.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Album-leaf Op.12 No.7.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+All About Us.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+All Seasons Red.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Allegretto Op.126 No.2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Allemande in A Major WoO 81.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Allemande.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Alles fuhlt der Liebe Freuden.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Aloha 'Oe.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Alone World.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Alone.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Amazing Grace.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+American Patrol.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Ancient eighteenth century.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Andante from Concerto No.21.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Andante from Orfeo ed Euridice.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Andante in G minor. BWV 969.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Angels we have heard on high.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Anita's Dance.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Appassionata Mvt.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Arabesque No.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Arabesque Op.76 No.9.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Arirang.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Arrival of the Queen of Sheba.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+As always.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Au clair de la lune.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Auf dem Wasser zu singen.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Auf der Jagd Op.373.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Auf Flugeln Des Gesanges.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Auld Lang Syne.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Aurora.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Autumn dance.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Ayo Mama.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Bach Piano Concerto No.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Bacon song.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Bad Day.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Bagatelle in C minor WoO54.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Bagatelles Op.33 II.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Bagatelles Op.33 IV.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Bagatelles Op.33. III Allegretto.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Bagatelles Op.119 No.4.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Bagatelles Op.126 No.5.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Bagpipe Dance.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Bagpipe Waltz.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Bahay Kubo.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Ballade Op.100 No.15.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Ballet Music No.2 in G major.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Barcarolle d'Hoffmann.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Battle Of Waterloo.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Bear Kang Kang.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Beginner Challenge.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Beliebte Annen-Polka Op.137.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Bella Ciao.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Bella Figlia Dell'Amore.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Bella Riva Op.87 - Mazurka.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Beo dat may troi.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Berceuse.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Berenice.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Best Of Me.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Between the lines.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Beyer No.8.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Bink's Waltz.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Birds Worship Phoenix.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Birthday Song.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Bluestone Alley-Adapted.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Bluestone Alley-Adapted.mp3::AudioStreamMP3/AudioStreamMP3::2770700514180764453::267269504::1743826334::1::::<><><>0<>0<>01fe9192a2ec6fe585b3e91cdbd49013<>res://.godot/imported/Bluestone Alley-Adapted.mp3-e4cb4150ce3f865803e4cb41a7c96ecd.mp3str::
+Bluestone Alley.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Bolero.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Bourree in G Major Op.1 No.5.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Bow Wow Wow.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Brandenburg Concerto No.2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Breeze.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Bridal Chorus.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Bright Line.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+British Hunters.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Build The Dream.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Butterfly flaps wings.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+By the Fireside Op.15 No.8.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+By your side.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Cabaletta Op.83.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Cancan.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Canon ( Rock ).json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Canon-Adapted.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Canon.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Cantata No.147.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Cantate BWV 68-2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Canzonetta.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Carmen - Votre Toast.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Carmen Overture.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Carnaval Op.9 No.14.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Carol of the Bells.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Cello Suite No.1 in G.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Champagne Bridge.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Chances Are.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Chanson Boheme From Carmen.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Chanson De Matin Op.15 No.2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Chanson Triste Op.40 No.2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Childhood.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Chinese New Year Theme.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Christ The Lord Is Risen Today.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Christmas Day.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Christmas Rhapsody.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Christmas Silent Night.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Christmas Snow.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Christmas Zoo.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Clair de lune Op.46 No.2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Clair de Lune.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Clarinet Polka.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Classic1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Classic2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Classic3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Classic4.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Classic5.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Classic6.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Classic7.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Classic8.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Classic9.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Classic10.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Classic11.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Classic12.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Classic13.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Click Go The Shears.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Clouds Chasing The Moon.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Colonel Bogey March.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Colourful Clouds Chasing The Moon.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Combo tile.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Con Amore.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Concerto Grosso No.3 in A major.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Concerto Grosso No.9 in F major.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Concerto Grosso Op.6 No.9 Allemanda.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Concerto Grosso Op.6 No.9 IV.Gavotte.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Concerto Op.61a Mvt.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Coppelia-Waltz.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Country Dances.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Courante HWV 440.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Craving for the Spring Wind.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Crazy pharaoh.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Csardas.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Csikos Post.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Cuckoo Waltz.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Daisy Bell.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Dance Of Fireflies.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Dance of Reed.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Dance Of The Golden Snake 2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Dance Of The Hours.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Dance of the Little Swans.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Dance of the Marionettes.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Dance of the Sugar Fairy.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Dance.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Danse Chinoise.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Danse Espagnole.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Danse Macabre.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Danse Russe Op.68 No.4.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Dark Side.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Days in a Green Hill.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Dayung Sampan.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+December - Christmas.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Deck the Halls.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Defend the Yellow River.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Der Vogelfaenger bin ich ja.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Derniere Pensee Musicale.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Despacito-Remix.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Despacito-Remix.mp3::AudioStreamMP3/AudioStreamMP3::1200095666123486211::267269504::1743826334::1::::<><><>0<>0<>76b46ce86c922c70ff8e29f88a54b6c4<>res://.godot/imported/Despacito-Remix.mp3-282f01e342610f676ea489751af96352.mp3str::
+Despacito.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Di Spagna sono la bella.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Die Forelle D550.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Die Forelle S.564.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Die Forelle.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Distance from Tian'an Mountain.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Divertimento K.334 Menuetto.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Doctor Gradus ad Parnassum.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Dolls and Bear Dancing-Adapted.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Dolls and Bear Dancing.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Dolly's Dreaming and Awakening.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Don Juan Paraphrase Part.2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Don't be shy.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Don't stay.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Doraji.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Double tile.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Douze Etudes de Salon Op.5 No.11.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Dreaming of Home and Mother.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Drei Intermezzi.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Drunten Im Unterland.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Ecossaise D.735.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Eine Kleine Nachtmusik.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+El Reencuentro.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Elegie Op.3 No.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Elite Syncopations.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Elves of Night.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Emperor Waltz Op.437.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Endure.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Entr'acte-Gavotte Op.13.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Entry Of The Gladiators.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Espana Cani.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Etincelles Etude Op.36 No.6.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Etude de Virtuosite in E.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Etude No.2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Etude No.23.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Etude Op.6 No.8.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Etude Op.10 No.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Etude Op.10 No.2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Etude Op.10 No.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Etude Op.10 No.4.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Etude Op.10 No.5.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Etude Op.10 No.8.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Etude Op.10 No.9.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Etude Op.10 No.12.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Etude Op.13 No.2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Etude Op.25 No.9.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Etude Op.34 No.10.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Etude Op.37 No.29.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Etude Op.100 No.2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Etude Op.109 No.10.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Etude Op.299 No.6.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Etude Op.299 No.11.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Etude Op.299 No.39.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Etude Op.599 No.55.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Etude Op.740 No.19.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Etude Op.740 No.31.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Etude Op.740 No.42.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Etude Op.740 No.44.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Etude Op.849 No.6.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Etude Op.849 No.16.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Etude Op.849 No.21.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Evening song of the Fisherman.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Everyone says.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Everything.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Faded.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Fairy Waltz.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Fall.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Falling Falling.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Fantaisie - Impromptu.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Fantaisies Op.16 No.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Fantasia TWV 33-8.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Farandole-Excerpts.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Farewell March.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Farewell of Slavianka.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Feeling A Moment.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Feux Follets.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+First Noel.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Fleurette-Romance Op.75 No.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Flight of the Bumblebee.json::JSON/JSON::-1::1719323479::0::1::::<><><>0<>0<><>::
+Flower and Youth.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Flowers and Fishes.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Foodie who has tasted food from all over the world.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Foodie who tastes all over the world.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Forest Of Blocks.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Forest Polka.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Forget Me Not.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Four Pieces Op.68 No.4.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Four Seasons - Autumn.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Four Seasons - Spring.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Free Loop.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+French Suite No.4-Gigue.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+freq.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Frohlicher Jagersmann.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Fugue No.16 in G minor.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Fur Elise-Adapted.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Fur Elise.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+G minor Bach.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Galop D.735.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Galuppi Sonata.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Game kids.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Garland Waltz.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Gavotte1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Gavotte en Rondeau.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Gavotte from Mignon.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Gavotte from Op.183 No.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Gavotte.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Gertrude's dream waltz.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Gnomenreigen.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Goldberg Variations.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Golden Snake Dance.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Gone away.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Graduation Song.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Gran Vals.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Green Sleeves.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Gypsies Op.138 No.19.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Gypsy Dance.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Gypsy Rondo.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Habanera.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Halloween 1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Halloween 2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Halloween 3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Halloween 4.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Halloween 5.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Halloween 6.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Halloween 7.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Halloween 8.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Halloween 9.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Halloween 10.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Hands Across The Sea.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Hanschen Klein.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Happy Birthday to You.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Happy Chinese New Year.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Happy New Year.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Hark! The Herald Angels Sing.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Harmonious Blacksmith.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Harpsichord Sonata in A major.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Hasche-Mann Op.15 No.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Heather Rose.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Heidenroslein.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Hexentanz Op.17 No.2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Home, Sweet home.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Horse Racing.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Horseman.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+How are you doing today.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+How is your day.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Humoresque No.7.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Hungarian Dance No.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Hungarian Dance No.5.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Hungarian Dance No.6.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Hungarian Dance No.7.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Hungarian Rhapsody No.2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Hungarian Rhapsody No.6.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Hunter's Chorus.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Hunting Song.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+I Do.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Ievan Polkka-Adapted.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Ievan Polkka.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+If You Were By My Side.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Impromptu Op.142 No.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Indian Dreams.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Interplanetary Wandering.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Invention No.2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Invention No.13.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Inventions No.15.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Invitation to the Dance.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Italian Song Op.39 No.15.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Jasmine-Adapted.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Jasmine.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Je te veux.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Jesus Christ is risen today.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Jingle Bells Christmas Edition.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Jingle Bells-Adapted.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Jingle Bells.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Jocus Polka Op.216.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Johnny Has Gone for a Soldier.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Jokey Polka Op.278.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Joy to the World.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Joyce's theme.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Joyful In The Risen Day.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Jumping hands.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+King Cotton.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Kiss The Rain.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Kitten Cleo.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Knecht Ruprecht.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Korobeiniki.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+L'adieu Op.100 No.12.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+L'Arlesienne Suite No.1 Minuetto.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+L'Arlesienne Suite No.1 Prelude.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+L'Arlesienne.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+L'enjouee Op.109 No.6.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+La Campanella.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+La Candeur Op.100 No.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+La Chevaleresque.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+La Cinquantaine.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+La Cucaracha.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+La Czarine-Mazurka.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+La donna e mobile.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+La Fille aux cheveux de lin.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+La Jongleuse Op.52 No.4.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+La Paloma.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+La Ronde de Lutins.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+La Serenata.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+La Styrienne.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+La Traviata Excerpts.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Land of Hope and Glory.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Largo From Xerxes HWV 40.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Lascia chio pianga.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Le Coucou.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Le Nozze di Figaro.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Le Petit Rien.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Le Rappel des oiseaux.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Leave.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Les Sylphes.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Liebestraum No.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Lied ohne Worte Op.30 No.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Lieder Op.52 No.7.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Little New Year Greetings.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Little Prince.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Little Red Riding Hood.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Little Star 12Var K265.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Little Star Guide.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Little Star-Adapted.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Little Star.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Lively Spring Festival.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+London Bridge Is Falling Down.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Londonderry Air.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Long, Long Ago.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Longing for Spring K596.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Lost in the memories.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Loure.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Love Song.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Love's Dream After the Ball.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Lyric Waltz.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Mad World.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Madding Wind.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Magic Flute Op.9.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Magic Flute Trio.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Magnetic Rag.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Mama Kin.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Manual of Youth.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Maple Leaf Rag.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+March from Norma.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+March of the Dwarfs.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Marche Militaire.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Market.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Mary had A little lamb.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Master Challenge.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Maxbay Went Away.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+May I.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Maybe see you after four years.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Maybe see you after four years.mp3::AudioStreamMP3/AudioStreamMP3::5331472696698750657::267269504::1743826334::1::::<><><>0<>0<>e277d83fb797ab56f9ddceaace356968<>res://.godot/imported/Maybe see you after four years.mp3-3ee31900fb009184e39f7d7ef89f258d.mp3str::
+Mazourka Brillante Op.191.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Mazurka in B flat Op.7 No.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Mazurka in D Op.33 No.2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Mazurka Op.39 No.11.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Meditation from Thais.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Melody in F Op.3 No.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Melody of the Night No.5.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Melody.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Menuet celebre Op.14 No.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Merry Christmas.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Minuet BWV Anh.115.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Minuet in G Major.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Minuet in G.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Minuet K.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Minuet No.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Minuet.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Minuetto.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Miss Fox.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Modlitwa Dziewicy.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Moment Musical Op.94 No.4.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Moments Musicaux.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Monochrome filter.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Moon In Breezy Night.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Moonlight Sonata Mvt.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Moonlight Sonata Mvt.2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Moonlight Sonata Mvt.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Morceau de Salon Op.55 No.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Morceau de Salon Op.55 No.2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Morceau de Salon Op.55 No.5.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Morning Mood.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Murmuring Brook.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Murmuring Zephyrs P.190.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Musette BWV Anh.126.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Musette.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+My Heart At Thy Sweet Voice.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Narrate.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Nel cor piu non mi sento.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Neopolitan Dance.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Nessun Dorma.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+New World Symphony Mvt.4.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Nillili.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Nocturne In B Flat Major H.37.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Nocturne in B Op.32 No.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Nocturne Op.9 No.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Nocturne Op.9 No.2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Nocturne Op.55 No.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Non Piu Andrai.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Norwegian Dance Op.35 No.2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Nostalgia.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Nutcracker Op.71.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+O sole mio.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Ode An Die Freude.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Oh My Beloved Father.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Oh! Susanna.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Ohne Sorgen Polka Op.271.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Old Black Joe.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Old Folks at Home.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Old French Song Op.39 No.16.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Old King Cole.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Old MacDonald Had a Farm.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Old town.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Original Rags.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Paganini Caprice No.9.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Paganini Rhapsody Var.18.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Palm Leaf Rag.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Papillon.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Partita No.3 Gavotte et Rondo.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Partita No.6.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Passacaglia.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Pastoral.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Pastourelle.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Pavane Op.50.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Peach Blossom.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Peacherine Rag.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Peer Gynt Suite Op.46-4.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Penguin's Game.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Pepita Polka Op.138.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Petite Valse Op.10 No.2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Piano Concerto No.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Piano Sonata No.2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Piano Sonata No.4 Op.7.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Piano Tiles.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Pick Tea and Catch Butterflies.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Piece in F Major K.33b.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Pizzicato Polka Op.234.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Polish Dance Op.3 No.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Polka in A major JB157.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Polka in D minor.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Polka Italienne.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Polka Op.39 No.14.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Polka.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Polonaise in A Flat Major B.5.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Polonaise Op.40 No.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Polonaise Op.53.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Pomp and Circumstance March No.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Por Una Cabeza.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Poupee valsante.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Pour Chopin.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Preambule From Carnaval.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Prelude in C Major No.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Prelude in E Major BWV 937.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Prelude in g minor BWV930.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Prelude No.11 in B Major.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Prelude Op.12 No.7.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Prisoners Dream.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Puerta de tierra Op.71 No.5.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Quartet in C Major WoO 36 No.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Queen of the Night.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Radetzky March.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Rage In Joyful C.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Rain Crowns.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Rainy Night Flower.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Rakoczy March.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Red Berries in Blossom.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Red Carmation.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Red River Valley.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Remembrance Op.68 No.28.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Requiem in D minor.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Restless Galop.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Reverie.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+River Flows In You.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Riverside Bicycling.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Romance De Amor.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Romance Op.5.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Romance.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Romanian Folk Dances No.6.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Romeo and Juliet.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Rondo A Capriccio Op.129.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Rondo A Major.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Rondo alla Turca Op.68 No.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Rondo allegretto Op.168 No.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Rondo Brillante Op.62.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Rondo in A Major WoO 49.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Rondo in C Major Op.51 No.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Rondo in C Major WoO 48.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Rondo in D K.485.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Rondo Op.30.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Rondo Op.88 No.1 Mvt.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Rondo Toccata Op.60 No.4.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Rondo.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Rosamunde D797 Entr'acte No.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Rosita Polka.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Russian Dance.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sakura Sakura.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Salty Rag.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Salut d' Amour.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Santa Lucia.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sarinande.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Scar.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Schattentanz.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Scherzo No.2 Op.31.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Schmetterling.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Schon Rosmarin Op.55 No.4.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Scottish Dances.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Searchlight Rag.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Seguidilla.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Serenade No.13 K.525 Mvt.4.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Serenade num.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Serenade Op.19 No.2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Serenade.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Serenata Op.15 No.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sheep May Safely Graze BWV 208.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Siciliano.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Silent Night.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Silhouettes Op.8 No.8 B Minor.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Simple Gift.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Simple Gift.mp3::AudioStreamMP3/AudioStreamMP3::1364497021439345803::267269504::1743826334::1::::<><><>0<>0<>0601a89ebaf676312831b4eb62132732<>res://.godot/imported/Simple Gift.mp3-e59d7ba2446c46acaaa13035682abd56.mp3str::
+Simple Gifts.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Singing I go.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Single tile.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sitting Next To You.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Skilled Challenge.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Slavonic Dances Op.46 No.7.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Slider tile.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Smatroll.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Smile Smile Smile.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Soldaten Marsch.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Solfeggietto.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Solitary Awakening.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Something Doing.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonata for Two Pianos K448.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonata Hob.27 Mvt.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonata in A Major K331.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonata in A Major Mvt.2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonata in B-flat Major Mvt.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonata in C Major K279.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonata in C Major K309 Mvt.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonata in C Major K330 Mvt.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonata in C Major K545.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonata in C major KV 545-3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonata in C Major Mvt.2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonata in D Major K284 Mvt.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonata in D Major K284.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonata in D Major K311.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonata in D Major.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonata in d minor K.9.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonata in E Major K.20.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonata in E minor Mvt.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonata in F Major Hob.23 Mvt.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonata in F Major Mvt.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonata in Flat B Major K570 Mvt.2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonata in G Major K283.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonata in G-dur Op.79 No.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonata K570 Mvt.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonata No.13 D.664 Mvt.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonata No.25 Mvt.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonata No.34 - Finale.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonata Op.1 No.3-2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonata Op.24 No.5 Mvt.4.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonata Pathetique Mvt.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonata Pathetique Mvt.2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonata Pathetique Mvt.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonata WoO 47 No.3 Mvt.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonate No.5 Mvt.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonatina in B flat Op.168 No.4.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonatina in D Op.168 No.5.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonatina in F Major Anh.5.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonatina in G Major.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonatina in G Op.144.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonatina Op.20 No.1 Mvt.2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonatina Op.20 No.1 Mvt.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonatina Op.36 No.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonatina Op.36 No.5 Mvt.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonatina Op.36 No.6 Mvt.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonatina Op.36-1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonatina Op.36-2 Mvt.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonatina Op.36-2 Mvt.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonatina Op.36-3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonatina Op.55 No.2 Mvt.2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonatina Op.55 No.2 Mvt.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonatina Op.55 No.3 Mvt.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonatina Op.88 No.3 Mvt.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonatina Op.88 No.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonatina Op.168 No.2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sonatina.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Song of harvest.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Song of Seikilos.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Song of selling newspapers.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Song Of The Stream.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Songs Without Words Op.19 No.2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Souvenir de Porto Rico.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Souvenir Op.4 No.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Spanish Dances Op.12 No.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Spanish Dances Op.12 No.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Spanish Dances.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Spinner.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Spinning Song.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Spirits Of The Wetlands.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Spring rain.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Spring Song.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Standchen von Shakespeare.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Star Clock.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Star dreams.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Starlight Waltz.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Stephanie-Gavotte Op.312.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Stepping On The Rainy Street.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+String Quartet No.13 D.804.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Study in D Minor Op.65 No.40.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Suite Bergamasque No.4.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Suite BWV 1009 Bourree.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Suite BWV 1012-3.Courante.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Suite HWV 442 G major Chaconne.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Suite in D minor HWV 448 Courante.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sunflower Slow Drag.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Swan Lake.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sweet Bye and Bye-Adapted.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sweet Bye and Bye-Adapted.mp3::AudioStreamMP3/AudioStreamMP3::8212950472485590677::267269504::1743826334::1::::<><><>0<>0<>69963691e69c014660743bd1228fa02d<>res://.godot/imported/Sweet Bye and Bye-Adapted.mp3-abf1c2a0fc08576a1bde389736815498.mp3str::
+Sweet Bye and Bye.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Swipesy Cakewalk.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Sylvia-Pizzicato.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Symphony No.5 Mvt.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Symphony No.6 in F Major.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Symphony No.8 in G Major Mvt.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Symphony No.40 in g.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Symphony No.94 Mvt.2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Szla Dzieweczka.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Tarantella Napoletana.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Tarantella.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Tarantula Dance.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Tears.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Tempest Sonata Mov.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Tempo di Ballo.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Ten Little Indians.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Thanks to god.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Bear Went Over The Mountain.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Blue Danube.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Chatterbox Op.100 No.17.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Chinese Serenade.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Chrysanthemum.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The day of resurrection.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Doll's Complaint.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Dying Poet.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Easy Winners.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Ending.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Entertainer.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Faithful Shepherd.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Farmer in the Dell.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The First Noel.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Fountain.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Happy Farmer.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Hebrides Overture.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Holy City.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Last Rose of Summer.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Laughing Song.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The man regards me as the king.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The More We Get Together.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Muffin Man.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Music Box Op.32.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The music box.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Nightingale.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Nutcracker Overture.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Painter.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Parade Of The Tin Soldiers.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Planets - Jupiter.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Plum Blossom on Snow.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Policeman's Song.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Ragtime Dance.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Ruins of Athens No.4.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Seasons Op.37.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Second Waltz.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Shepherd Boy.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Shepherd's Return Op.109 No.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Skater's Waltz.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Song of the Robin.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The spectre.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Steadfast Palm Grass.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Swan.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Time We Spent Together.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Truth That You Leave.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Tuileries Gardens.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Turkish Patrol Op.83.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Way To Get You.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Wayside Rose.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Whisper Of West Wind.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Wild Horseman.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Yellow River in Anger.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+The Yellow Rose Of Texas.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Thief In The Night.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Thine Alone Op.54.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Thine is the Glory.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+This Old Man He Played One.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Three Bears.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Thunder in the Dry Season.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Tico-Tico no Fuba.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Tiger's Family.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+To a Wild Rose Op.51 No.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Toccatta in D minor.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Toot - toot Song.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Torna a Surriento.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Traceless Star.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Traum der Sennerin Op.45.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Traumerei Op.15 No.7.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Tritsch Tratsch Polka.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Troika E Major.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Troika.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Trompeter Op.33 No.2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Trumpet Concerto Mvt.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Try.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Turkey in the Straw.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Turkish March.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Two Caprices No.2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Two Minute Rhapsody.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Two Part Invention No.8.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Two Tigers.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Tzigane Dance.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Unfinished.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Va pensiero.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Vals del Recuerdo.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Valse Ballet.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Valse Bleue.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Valse Brillante Op.34 No.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Valse Brillante Op.34 No.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Valse Op.83 No.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Variations of Paganini.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Venetian Boat Song.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Victoria Polka Op.228.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Vltava.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Voices Of Spring Waltz.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Waltz in A minor.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Waltz in E flat Op.18 No.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Waltz in E minor.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Waltz No.16.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Waltz of the Flowers.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Waltz Op.39 No.15.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Waltz Op.64 No.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Waltz Op.64 No.2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Waltz Op.64 No.3 in A Flat.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Waltz Op.69 No.2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Waltz Op.70 No.1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Waltz Op.70 No.3 in D flat.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Waltz Op. 54 No. 1.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Waltzes Op.39 No.6.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Walzer Op.12 No.2.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Walzer Op.325.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Walzer.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Warblings At Eve.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Water Flows Streamer.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Waves Of The Ocean.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Way For Home.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+We Wish You a Merry Christmas.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Wedding March.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Wedding.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+When He cometh.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Wiegenlied Op.49 No.4.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Wiener Leben Polka Op.218.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Wiener March.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Wilde Jagd.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+William Tell Overture.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Wind in a Dream.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Wind,leave.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Winter is not cold.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Wish You a Christmas.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Witches and strange cat.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+WTC1 No.3.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Xinjiang Suite.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Yankee Doodle.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Youth.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+Zigeunerweisen Op.20.json::JSON/JSON::-1::1713447315::0::1::::<><><>0<>0<><>::
+歌曲列表.cfg::TextFile/TextFile::-1::1751531335::0::1::::<><><>0<>0<><>::
+::res://音乐/旧式谱面/卡片头图片/::1743826475
+1.png::CompressedTexture2D/CompressedTexture2D::5426054502006207156::315504000::1743826475::1::::<><><>0<>0<>c50c8c60b248027af95032702b313364<>res://.godot/imported/1.png-3322b55d37bce635b801aaf98a960396.ctex::
+2.png::CompressedTexture2D/CompressedTexture2D::6425357001016914954::315504000::1743826475::1::::<><><>0<>0<>954ac103585e509cf8d671a04508f9cf<>res://.godot/imported/2.png-7872342de11b650342fc5e2f3e277b6d.ctex::
+3.png::CompressedTexture2D/CompressedTexture2D::5135520065603863631::315504000::1743826475::1::::<><><>0<>0<>f81cbc769294f18ed68abe7ca0490ad3<>res://.godot/imported/3.png-edaba70162d9146e5bbfcd7a0fc59431.ctex::
+4.png::CompressedTexture2D/CompressedTexture2D::8831473372899598180::315504000::1743826475::1::::<><><>0<>0<>cca32227522cc8eee9c64f209b0b7f2f<>res://.godot/imported/4.png-ed4b4089f16b1ded0e367f50cd8aab53.ctex::
+5.png::CompressedTexture2D/CompressedTexture2D::8572945513217389355::315504000::1743826475::1::::<><><>0<>0<>f72de72f80c533574d5805ffc59abd9a<>res://.godot/imported/5.png-c2f4042e78486898cb46e24601a37fad.ctex::
+6.png::CompressedTexture2D/CompressedTexture2D::2951955395747944338::315504000::1743826475::1::::<><><>0<>0<>caaa6ce60fe3e5d6b6e88425c2d9e9b7<>res://.godot/imported/6.png-b4f09d8c45eda38638ec402f7c2382d2.ctex::
+7.png::CompressedTexture2D/CompressedTexture2D::6075776356501475323::315504000::1743826475::1::::<><><>0<>0<>e4b624b6113bb1e18f9b444084edf977<>res://.godot/imported/7.png-c032dbd4027592c2670628545d40fa7b.ctex::
+8.png::CompressedTexture2D/CompressedTexture2D::6483605723990947412::315504000::1743826475::1::::<><><>0<>0<>d99344463d9e3d4c4137e2d11b691260<>res://.godot/imported/8.png-9d02aac5063970e642b9abb5d432b3f4.ctex::
+9.png::CompressedTexture2D/CompressedTexture2D::2051567582952262799::315504000::1743826475::1::::<><><>0<>0<>936eadf33557cf0555e38bec446ca30e<>res://.godot/imported/9.png-661f32a5a7cdb286f1f89be5f9174415.ctex::
+10.png::CompressedTexture2D/CompressedTexture2D::4379017471638717866::315504000::1743826475::1::::<><><>0<>0<>92e60f5298af4c2fd7d1bdd0dfbef74a<>res://.godot/imported/10.png-1c6e60af08f726876d9d69afd8638422.ctex::
+11.png::CompressedTexture2D/CompressedTexture2D::2474721867923817544::315504000::1743826475::1::::<><><>0<>0<>b6916448375af2b241226491a31dde19<>res://.godot/imported/11.png-932f325b893e5aefb0007959f5e30aac.ctex::
+12.png::CompressedTexture2D/CompressedTexture2D::1761598203292703587::315504000::1743826475::1::::<><><>0<>0<>86b4418c42ec326e63af5381b1dea82e<>res://.godot/imported/12.png-81f3d65175e4e509608a33273fc0921c.ctex::
+13.png::CompressedTexture2D/CompressedTexture2D::4900100934585358629::315504000::1743826475::1::::<><><>0<>0<>b95b1298aa2305d7d8100e76ca9112f7<>res://.godot/imported/13.png-b6481b933439190472fbe50e6ef86962.ctex::
+14.png::CompressedTexture2D/CompressedTexture2D::6969123016869927880::315504000::1743826475::1::::<><><>0<>0<>d28c78804a8959ffbb9a4a4b71c8d290<>res://.godot/imported/14.png-d0203e5c7589d126db67e92a9614698e.ctex::
+15.png::CompressedTexture2D/CompressedTexture2D::4635400589601778213::315504000::1743826475::1::::<><><>0<>0<>2fcec5066d2328cfbb0bcfb0628eb613<>res://.godot/imported/15.png-6c15d18d5e21abc9d8e8f67bf8e98949.ctex::
+16.png::CompressedTexture2D/CompressedTexture2D::52655211599839797::315504000::1743826475::1::::<><><>0<>0<>fab198c0814acd982aab18f90c35d4ef<>res://.godot/imported/16.png-b6d6ac79945270f310a88fc07551d647.ctex::
+17.png::CompressedTexture2D/CompressedTexture2D::1525256762168983934::315504000::1743826475::1::::<><><>0<>0<>f8ae82dec8b333129ed1c15fea0ecf92<>res://.godot/imported/17.png-0a66742a22e4398f4c6cd9f079ffe62e.ctex::
+18.png::CompressedTexture2D/CompressedTexture2D::1155294640688732133::315504000::1743826475::1::::<><><>0<>0<>9172ba27ceab6f51a0e479c9b6ac7d05<>res://.godot/imported/18.png-8641cbbe8e9d304d7cfb062801e55bb1.ctex::
+19.png::CompressedTexture2D/CompressedTexture2D::7995351953312577093::315504000::1743826475::1::::<><><>0<>0<>8609189dc4b060f135ad0f9987341e33<>res://.godot/imported/19.png-b5ff874385a12230081fb81a82c6081b.ctex::
+20.png::CompressedTexture2D/CompressedTexture2D::6141066813669363688::315504000::1743826475::1::::<><><>0<>0<>514ddcfe5fbcef44a51f6a60b77a39c6<>res://.godot/imported/20.png-d24dc4d69b17d5f7c4500ad5032757d1.ctex::
+::res://音乐/旧式谱面/表格配置/::1746551259
+language_music.AR.translation::OptimizedTranslation/OptimizedTranslation::83966537796300257::1743826491::0::1::::<><><>0<>0<><>::
+language_music.CN.translation::OptimizedTranslation/OptimizedTranslation::3004585744145204480::1713447429::0::1::::<><><>0<>0<><>::
+language_music.csv::Translation/Translation::6621659987390711792::1713713587::1743826491::1::::<><><>0<>0<>37a812b94b6e19adaab8aa9ab0fb158e<>res://音乐/旧式谱面/表格配置/language_music.zh_CN.translation<*>res://音乐/旧式谱面/表格配置/language_music.zh_TW.translation<*>res://音乐/旧式谱面/表格配置/language_music.EN.translation<*>res://音乐/旧式谱面/表格配置/language_music.ES.translation<*>res://音乐/旧式谱面/表格配置/language_music.RU.translation<*>res://音乐/旧式谱面/表格配置/language_music.PO.translation<*>res://音乐/旧式谱面/表格配置/language_music.DE.translation<*>res://音乐/旧式谱面/表格配置/language_music.KR.translation<*>res://音乐/旧式谱面/表格配置/language_music.JP.translation<*>res://音乐/旧式谱面/表格配置/language_music.FR.translation<*>res://音乐/旧式谱面/表格配置/language_music.IT.translation<*>res://音乐/旧式谱面/表格配置/language_music.AR.translation<*>res://音乐/旧式谱面/表格配置/language_music.TR.translation<*>res://音乐/旧式谱面/表格配置/language_music.IN.translation::
+language_music.DE.translation::OptimizedTranslation/OptimizedTranslation::5926333905728617300::1743826491::0::1::::<><><>0<>0<><>::
+language_music.EN.translation::OptimizedTranslation/OptimizedTranslation::6222552423989975070::1743826491::0::1::::<><><>0<>0<><>::
+language_music.ES.translation::OptimizedTranslation/OptimizedTranslation::8196356266127880362::1743826491::0::1::::<><><>0<>0<><>::
+language_music.FR.translation::OptimizedTranslation/OptimizedTranslation::3388723051154986944::1743826491::0::1::::<><><>0<>0<><>::
+language_music.id.translation::OptimizedTranslation/OptimizedTranslation::7315908085862491586::1713713435::0::1::::<><><>0<>0<><>::
+language_music.IN.translation::OptimizedTranslation/OptimizedTranslation::8680106542428732504::1743826491::0::1::::<><><>0<>0<><>::
+language_music.IT.translation::OptimizedTranslation/OptimizedTranslation::8832955063056848555::1743826491::0::1::::<><><>0<>0<><>::
+language_music.JP.translation::OptimizedTranslation/OptimizedTranslation::8501426032449530922::1743826491::0::1::::<><><>0<>0<><>::
+language_music.KR.translation::OptimizedTranslation/OptimizedTranslation::1338419126836852822::1743826491::0::1::::<><><>0<>0<><>::
+language_music.PO.translation::OptimizedTranslation/OptimizedTranslation::2689664854012167364::1743826491::0::1::::<><><>0<>0<><>::
+language_music.RU.translation::OptimizedTranslation/OptimizedTranslation::7468862494765562742::1743826491::0::1::::<><><>0<>0<><>::
+language_music.TID.translation::OptimizedTranslation/OptimizedTranslation::961354049280715059::1713447429::0::1::::<><><>0<>0<><>::
+language_music.TR.translation::OptimizedTranslation/OptimizedTranslation::2190918992217501477::1743826491::0::1::::<><><>0<>0<><>::
+language_music.TW.translation::OptimizedTranslation/OptimizedTranslation::342631562340068726::1713447429::0::1::::<><><>0<>0<><>::
+language_music.zh_CN.translation::OptimizedTranslation/OptimizedTranslation::3809939347609040793::1743826491::0::1::::<><><>0<>0<><>::
+language_music.zh_TW.translation::OptimizedTranslation/OptimizedTranslation::5120555955287306390::1743826491::0::1::::<><><>0<>0<><>::
+::res://音乐/音效/::1754578575
+p1.mp3::AudioStreamMP3/AudioStreamMP3::8540215577181847283::312739200::1754578253::1::::<><><>0<>0<>8e09df681c40728fb297bb93fbe11c69<>res://.godot/imported/p1.mp3-117056bba0acef80c8361a95c49bb74d.mp3str::
+p2.mp3::AudioStreamMP3/AudioStreamMP3::7061071226569580147::312739200::1754578253::1::::<><><>0<>0<>f59613aa6c1f9828db3ea8070839185d<>res://.godot/imported/p2.mp3-01afe2536c03839228b150c1bd9bea90.mp3str::
+p3.mp3::AudioStreamMP3/AudioStreamMP3::2559486548557317621::312739200::1754578253::1::::<><><>0<>0<>3288b46cc5c314c97ea4d3b300f95d71<>res://.godot/imported/p3.mp3-c9f442e67834f14de433631a9a55e8d1.mp3str::
+p4.mp3::AudioStreamMP3/AudioStreamMP3::4674521265957730599::312739200::1754578253::1::::<><><>0<>0<>1d1c468d9465151a4c190b76e0ffd949<>res://.godot/imported/p4.mp3-bc6e6ab7e7cdc159fc717b295e471b29.mp3str::
+p5.mp3::AudioStreamMP3/AudioStreamMP3::1948261521580230838::312739200::1754578253::1::::<><><>0<>0<>9a49c0664a3b9517ba9c2edecfd9468b<>res://.godot/imported/p5.mp3-ec14d970d0a5e2f3012e0194a7ff7099.mp3str::
+p6.mp3::AudioStreamMP3/AudioStreamMP3::3764545718532492357::312739200::1754578253::1::::<><><>0<>0<>49a71e7acca6e0695707b2a5eec3067a<>res://.godot/imported/p6.mp3-98693669a859369ac31c4b21fac5100e.mp3str::
+失败.wav::AudioStreamWAV/AudioStreamWAV::5732817418123657397::1754549634::1754578541::1::::<><><>0<>0<>0ebd022c16048302e0fbad418484b7ab<>res://.godot/imported/失败.wav-0d1fa24f14b77db318fe3d2b0af29c43.sample::
+打印机.wav::AudioStreamWAV/AudioStreamWAV::402403415617896736::312739200::1754578575::1::::<><><>0<>0<>74d6206eae92c4e0c44f6e83770e5b0f<>res://.godot/imported/打印机.wav-c8c070b76c2811d42f977311c53299c4.sample::
+打印机失败.wav::AudioStreamWAV/AudioStreamWAV::9033668749504274943::1754549658::1754578555::1::::<><><>0<>0<>3e2600617f80f800fe603c4f87b7f4d5<>res://.godot/imported/打印机失败.wav-5206839d848e0111eba17d318be1f4c5.sample::
+点击.wav::AudioStreamWAV/AudioStreamWAV::2875724181048531233::1754549658::1754578566::1::::<><><>0<>0<>6d7ab55311c7937c7e4c98e42e9172ec<>res://.godot/imported/点击.wav-5b578179e25b0ce9657d094a29a05735.sample::

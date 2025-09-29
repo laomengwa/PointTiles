@@ -1,0 +1,156 @@
+[gd_scene load_steps=7 format=3 uid="uid://b2fatjcv7fpin"]
+
+[ext_resource type="Texture2D" uid="uid://clag3pw84fn8a" path="res://纹理/背景/1.jpg" id="1_fk1ym"]
+[ext_resource type="Script" uid="uid://tlht4qlfwydg" path="res://脚本/杂项/玩家排名卡片.gd" id="1_pvr8g"]
+[ext_resource type="FontFile" uid="uid://w0oxygfawslj" path="res://字体/Futura-Condensed.otf" id="2_pvr8g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nydbd"]
+bg_color = Color(0.933333, 0.933333, 0.933333, 0.498039)
+border_width_left = 10
+border_color = Color(1, 1, 0.533333, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_col4s"]
+bg_color = Color(0, 0.266667, 0.733333, 0.733333)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_fk1ym"]
+color = Color(1, 0.733333, 0.501961, 1)
+vertical = true
+
+[node name="玩家排名" type="PanelContainer"]
+layout_direction = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_nydbd")
+script = ExtResource("1_pvr8g")
+
+[node name="卡片" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+
+[node name="排名" type="Label" parent="卡片"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_pvr8g")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_col4s")
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="头像" type="TextureButton" parent="卡片"]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("1_fk1ym")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="左列表" type="VBoxContainer" parent="卡片"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="玩家名称" type="Label" parent="卡片/左列表"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "测试用户"
+
+[node name="分数和手速" type="HBoxContainer" parent="卡片/左列表"]
+layout_mode = 2
+
+[node name="分数" type="Label" parent="卡片/左列表/分数和手速"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "0"
+
+[node name="单位1" type="Label" parent="卡片/左列表/分数和手速"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "分"
+
+[node name="分隔" type="VSeparator" parent="卡片/左列表/分数和手速"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_fk1ym")
+
+[node name="精确度" type="Label" parent="卡片/左列表/分数和手速"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "0.00"
+horizontal_alignment = 2
+
+[node name="单位" type="Label" parent="卡片/左列表/分数和手速"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "%"
+horizontal_alignment = 2
+
+[node name="分隔2" type="VSeparator" parent="卡片/左列表/分数和手速"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_fk1ym")
+
+[node name="手速" type="Label" parent="卡片/左列表/分数和手速"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "0.000"
+horizontal_alignment = 2
+
+[node name="单位2" type="Label" parent="卡片/左列表/分数和手速"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "块"
+horizontal_alignment = 2
+
+[node name="单位3" type="Label" parent="卡片/左列表/分数和手速"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "/"
+horizontal_alignment = 2
+
+[node name="单位4" type="Label" parent="卡片/左列表/分数和手速"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "秒"
+horizontal_alignment = 2
+
+[node name="右列表" type="VBoxContainer" parent="卡片"]
+layout_mode = 2
+
+[node name="评价" type="Label" parent="卡片/右列表"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.25098, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "甲级"
+horizontal_alignment = 2
+
+[node name="游玩时间" type="Label" parent="卡片/右列表"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "xxxx-xx-xx"
+horizontal_alignment = 2
+
+[node name="选择框" type="CheckBox" parent="卡片"]
+visible = false
+layout_mode = 2
+
+[connection signal="button_down" from="卡片/头像" to="." method="查看历史记录"]
+[connection signal="button_down" from="卡片/选择框" to="." method="删除选择"]

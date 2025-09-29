@@ -20,7 +20,7 @@ func _input(事件: InputEvent) -> void:
 					下一页()
 	pass
 func 刷新状态():
-	$"总页面".text=var_to_str(总页面)
+	$"文字".text="第%d页/共%d页"%[当前页面,总页面]
 	if 当前页面<=1:
 		$上一页.set_disabled(true)
 	else:
@@ -34,7 +34,7 @@ func 刷新状态():
 func 上一页() -> void:
 	if 当前页面>1:
 		当前页面-=1
-		$当前页.text=var_to_str(当前页面)
+		$"文字".text="第%d页/共%d页"%[当前页面,总页面]
 		if 自定义歌曲网格节点!=null:
 			if 自定义歌曲网格节点.歌曲加载状态==false:
 				if 自定义歌曲引用==false:
@@ -50,7 +50,7 @@ func 上一页() -> void:
 func 下一页() -> void:
 	if 当前页面<总页面:
 		当前页面+=1
-		$当前页.text=var_to_str(当前页面)
+		$"文字".text="第%d页/共%d页"%[当前页面,总页面]
 		if 自定义歌曲网格节点!=null:
 			if 自定义歌曲网格节点.歌曲加载状态==false:
 				if 自定义歌曲引用==false:

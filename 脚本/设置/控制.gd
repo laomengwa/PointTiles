@@ -1,5 +1,4 @@
 extends ScrollContainer
-var 通知节点=preload("res://场景/通知卡片.tscn")
 var 有轨键盘按键布局:Dictionary={
 	1:[KEY_SPACE],
 	2:[KEY_F,KEY_J],
@@ -59,10 +58,7 @@ func _input(事件):
 				else:
 					键位设置参数.节点.text="键位冲突"
 					键位设置状态=false
-					var 通知=通知节点.instantiate()
-					通知.get_node("控件/标题").text="键位冲突"
-					通知.get_node("控件/内容").text="请重新设置你的键位"
-					$'/root/根场景/根界面/通知栏'.add_child(通知)
+					全局脚本.发送通知("键位冲突","请重新设置你的键位")
 				pass
 		elif 键位设置参数.设备==1:
 			if 事件 is InputEventJoypadButton:
@@ -281,6 +277,6 @@ func 轨道键位监听(设备类型,设置项,按钮节点):
 	按钮节点.text="正在监听"
 	键位设置状态=true
 	pass
-func 手柄种类选择(编号):
+func 手柄种类选择(_编号):
 	手柄下拉项($控制/手柄/容器/键位布局/设置下拉项.selected)
 	pass

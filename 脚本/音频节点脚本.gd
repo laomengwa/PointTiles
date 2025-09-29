@@ -3,8 +3,8 @@ extends AudioStreamPlayer3D
 var 播放时间:float = 0.0
 var 自动位置偏差:float=0.0
 #忽略缩放因素(单位微秒)
-var 真实播放时间:int=0.0
-func _process(delta):
+var 真实播放时间:float=0.0
+func _process(_帧处理):
 	if $'/root/根场景/根界面/游戏界面'.自动演奏拖拽状态==false:
 		$'/root/根场景/根界面/游戏界面/自动演奏时间轴'.value=播放时间
 	if is_playing()==true:

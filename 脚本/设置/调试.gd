@@ -1,13 +1,13 @@
 extends ScrollContainer
 
-func _process(帧处理):
+func _process(_帧处理):
 	#帧率显示
 	if $'/root/根场景/根界面/主菜单'.visible == false && $'调试/其他/容器/帧率显示/勾选盒'.button_pressed || $'/root/根场景/根界面/设置'.visible == true && $'调试/其他/容器/帧率显示/勾选盒'.button_pressed:
 		$"../../../调试信息/帧率文字".show()
 		$"../../../调试信息/分隔1".show()
 		$"../../../调试信息/帧率显示".show()
 		$"../../../调试信息/分隔2".show()
-		$'/root/根场景/根界面/调试信息/帧率显示'.text=var_to_str(Performance.get_monitor(Performance.TIME_FPS));
+		$'/root/根场景/根界面/调试信息/帧率显示'.text="%d" %Performance.get_monitor(Performance.TIME_FPS);
 	else:
 		$"../../../调试信息/帧率文字".hide()
 		$"../../../调试信息/分隔1".hide()
@@ -16,16 +16,7 @@ func _process(帧处理):
 	#内存显示
 	if $'/root/根场景/根界面/主菜单'.visible == false && $"调试/其他/容器/内存显示/勾选盒".button_pressed || $'/root/根场景/根界面/设置'.visible == true && $"调试/其他/容器/内存显示/勾选盒".button_pressed:
 		var 内存大小=Performance.get_monitor(Performance.MEMORY_STATIC)
-		if 内存大小/1024 > pow(1024,3):
-			$'/root/根场景/根界面/调试信息/内存显示'.text = ("%.2f" %(float(内存大小)/pow(1024,3)))+"TiB"
-		elif 内存大小/1024 > pow(1024,2):
-			$'/root/根场景/根界面/调试信息/内存显示'.text = ("%.2f" %(float(内存大小)/pow(1024,3)))+"GiB"
-		elif 内存大小/1024 > pow(1024,1):
-			$'/root/根场景/根界面/调试信息/内存显示'.text = ("%.2f" %(float(内存大小)/pow(1024,2)))+"MiB"
-		elif 内存大小/1024 > pow(1024,0):
-			$'/root/根场景/根界面/调试信息/内存显示'.text = ("%.2f" %(float(内存大小)/1024.0))+"KiB"
-		else:
-			$'/root/根场景/根界面/调试信息/内存显示'.text = var_to_str(内存大小)+"B"
+		$'/root/根场景/根界面/调试信息/内存显示'.text = 全局脚本.存储单位转换(内存大小)
 		$"../../../调试信息/内存文字".show()
 		$"../../../调试信息/分隔3".show()
 		$"../../../调试信息/内存显示".show()
@@ -49,6 +40,7 @@ func 钢琴键盘滑动(按钮):
 	按钮.grab_focus()
 	pass
 func 钢琴键盘按下(半音):
+	#$"/root/根场景/外置波表输出".输出音符(MIDI_MESSAGE_NOTE_ON,乐器通道,乐器音色,半音,127,0,0,0)
 	var 输入事件=InputEventMIDI.new()
 	输入事件.channel=乐器通道
 	输入事件.pitch=半音
@@ -59,6 +51,7 @@ func 钢琴键盘按下(半音):
 	pass
 	
 func 钢琴键盘松开(半音):
+	#$"/root/根场景/外置波表输出".输出音符(MIDI_MESSAGE_NOTE_OFF,乐器通道,乐器音色,半音,127,0,0,0)
 	#print(instance_from_id(2647058814669).get_script().resource_path)
 	var 输入事件=InputEventMIDI.new()
 	输入事件.channel=乐器通道
@@ -108,49 +101,15 @@ func 内存显示选项() -> void:
 func 触摸位置显示() -> void:
 	$"../../../".触摸显示=!$"调试/其他/容器/触摸位置显示/勾选盒".button_pressed
 	pass
-func _on_测试_button_down():
-	GDExtension
-	test_java()
+func 显示调试编号() -> void:
+	全局脚本.物件轨道编号显示=!$"调试/其他/容器/显示物件与轨道编号/勾选盒".button_pressed
+	pass
+
+func 存储单位变更() -> void:
+	全局脚本.存储单位判断=!$"调试/其他/容器/使用以十进位存储单位/勾选盒".button_pressed
 	pass # Replace with function body.
-
-
-
-var singleton = null
-var rixnet = null;
-
-
-func test_java_singleton():
-	var c_java = JavaClassWrapper.wrap("com/godot/game/testJava");
-	print("c_java==", c_java)
-	var c_test  = c_java.initialize();
-	print("c_test=", c_test);
-	print("c_test kk^=", c_test.myFunction("in GD"))
 	
-func test_singleton():
-	rixnet = Engine.get_singleton("RixNet")
-	print("rixnet=", rixnet);
-	rixnet.connect("test.net", 5000, 1);
-	var test_packet = rixnet.getPacket();
-	print("test_packet= ", test_packet)
-	print("test_packet cmd=", test_packet.getCmd());
-	print("test_packet buf", test_packet.getBuf());
-	singleton = Engine.get_singleton("MySingleton")
-	print(singleton.myFunction("Hello"))
-	singleton.getInstanceId(get_instance_id())
-	
-func test_java():
-	test_singleton()
-	var java_c = JavaClassWrapper.wrap("com/godot/game/testJava2")
-	var java_packet = JavaClassWrapper.wrap("com/rix/lib/socket/Packet")
-	print("java_c = ", java_c)
-	var new_java = java_c.new()
-	print("new_java=", new_java)
-	print("new_java myFunction=", new_java.myFunction("GDTEST"))
-	print("new_java testString=", new_java.testString())
-	print("new_java testStringWithArgs=", new_java.testStringWithArgs("fff", 123))
-	var p = java_packet.new(10, 2, PackedByteArray([0xF,0xE,0xD,0xC,0xB,0xA,9,8,7,6,5,4,3,2,1,0]), 2)
-	print("packet=",p)
-	print("new_java testPacket", new_java.testPacket(3, p))
-	print("new_java testPacket 2", new_java.testPacket(2, p))
-	print("packet2=",p)
-	print("rix_net send=", rixnet.sendmessage(p))
+func 外置输入测试() -> void:
+	#if 执行后进程==-1:
+		#执行后进程=(OS.create_process("fluidsynth", ["-a","alsa","-m","alsa_seq","-g","1.0","/home/mengwa/Documents/3/音乐/TimGM6mb.sf2"]))
+	pass # Replace with function body.

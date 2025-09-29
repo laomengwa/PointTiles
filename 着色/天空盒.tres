@@ -1,0 +1,89 @@
+[gd_resource type="VisualShader" load_steps=9 format=3 uid="uid://bsv8vdrwna1im"]
+
+[ext_resource type="Texture2D" uid="uid://udyxgt54jfuo" path="res://纹理/背景/天空盒.dds" id="1_pqq2f"]
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_ceuck"]
+texture = ExtResource("1_pqq2f")
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_xuebe"]
+input_name = "time"
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_8hou0"]
+expanded_output_ports = [0]
+input_name = "sky_coords"
+
+[sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_bw4b7"]
+
+[sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_pe1co"]
+operator = 3
+
+[sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_eacn6"]
+constant = 100.0
+
+[sub_resource type="VisualShaderNodeVectorCompose" id="VisualShaderNodeVectorCompose_pqq2f"]
+op_type = 0
+
+[resource]
+code = "shader_type sky;
+uniform sampler2D tex_sky_2;
+
+
+
+void sky() {
+// Input:3
+	float n_out3p0 = TIME;
+
+
+// FloatConstant:8
+	float n_out8p0 = 100.000000;
+
+
+// FloatOp:7
+	float n_out7p0 = n_out3p0 / n_out8p0;
+
+
+// Input:5
+	vec2 n_out5p0 = SKY_COORDS;
+	float n_out5p1 = n_out5p0.r;
+	float n_out5p2 = n_out5p0.g;
+
+
+// FloatOp:6
+	float n_out6p0 = n_out7p0 + n_out5p1;
+
+
+// VectorCompose:9
+	vec2 n_out9p0 = vec2(n_out6p0, n_out5p2);
+
+
+// Texture2D:2
+	vec4 n_out2p0 = texture(tex_sky_2, n_out9p0);
+
+
+// Output:0
+	COLOR = vec3(n_out2p0.xyz);
+
+
+}
+"
+mode = 3
+flags/use_half_res_pass = false
+flags/use_quarter_res_pass = false
+flags/disable_fog = false
+flags/use_debanding = false
+nodes/sky/0/position = Vector2(740, 220)
+nodes/sky/2/node = SubResource("VisualShaderNodeTexture_ceuck")
+nodes/sky/2/position = Vector2(520, 200)
+nodes/sky/3/node = SubResource("VisualShaderNodeInput_xuebe")
+nodes/sky/3/position = Vector2(-180, 20)
+nodes/sky/5/node = SubResource("VisualShaderNodeInput_8hou0")
+nodes/sky/5/position = Vector2(-220, 180)
+nodes/sky/6/node = SubResource("VisualShaderNodeFloatOp_bw4b7")
+nodes/sky/6/position = Vector2(180, 140)
+nodes/sky/7/node = SubResource("VisualShaderNodeFloatOp_pe1co")
+nodes/sky/7/position = Vector2(20, 40)
+nodes/sky/8/node = SubResource("VisualShaderNodeFloatConstant_eacn6")
+nodes/sky/8/position = Vector2(-160, 100)
+nodes/sky/9/node = SubResource("VisualShaderNodeVectorCompose_pqq2f")
+nodes/sky/9/position = Vector2(340, 220)
+nodes/sky/connections = PackedInt32Array(5, 1, 6, 1, 3, 0, 7, 0, 8, 0, 7, 1, 7, 0, 6, 0, 6, 0, 9, 0, 5, 2, 9, 1, 9, 0, 2, 0, 2, 0, 0, 0)

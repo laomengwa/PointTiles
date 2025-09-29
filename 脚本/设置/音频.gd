@@ -31,6 +31,8 @@ func 读取设置数据(配置文件路径):
 				背景音乐数据=设置数据.get_value("音频","背景音乐音量")
 			if 设置数据.has_section_key("音频","声音字体文件"):
 				声音字体文件路径=设置数据.get_value("音频","声音字体文件")
+				if FileAccess.file_exists(声音字体文件路径)==false:
+					声音字体文件路径="res://音乐/TimGM6mb.sf2"
 func 保存设置数据(设置数据):
 	设置数据.set_value("音频","演奏模式",$"/root/根场景/主场景".音符演奏方式)
 	设置数据.set_value("音频","音频延迟",全局脚本.音频延迟)
@@ -91,9 +93,28 @@ func 声音字体文件选择():
 	pass
 
 func 打开声音字体文件对话框(路径):
-	$'/root/根场景/视角节点/MidiPlayer'.soundfont=路径
-	声音字体文件路径=路径
-	$'/root/根场景/根界面/设置/设置选项/音频/音频/其他/容器/音源字体文件/文件名'.text=路径
+	var 读取结果: = FileAccess.open(路径, FileAccess.READ )
+	if 读取结果.get_error() == OK:
+		var 文件流:StreamPeerBuffer = StreamPeerBuffer.new( )
+		文件流.set_data_array(读取结果.get_buffer( 读取结果.get_length( ) ) )
+		文件流.big_endian = false
+		var 数据块 = SoundFont.SoundFontChunk.new( )
+		数据块.header = 文件流.get_string(4)
+		if 数据块.header=="RIFF":
+			#从流中获取有符号 32 位值
+			文件流.get_32()
+			#二次确认
+			if 文件流.get_string(4)=="sfbk":
+				$'/root/根场景/视角节点/MidiPlayer'.soundfont=路径
+				声音字体文件路径=路径
+				$'/root/根场景/根界面/设置/设置选项/音频/音频/其他/容器/音源字体文件/文件名'.text=路径
+				全局脚本.发送通知("声音字体已加载","音色已成功切换。\n文件路径：%s"%路径)
+			else:
+				全局脚本.发送通知("声音字体未加载","文件解析失败。\n文件路径：%s"%路径)
+		else:
+			全局脚本.发送通知("声音字体未加载","文件解析失败。\n文件路径：%s"%路径)
+	else:
+		全局脚本.发送通知("声音字体未加载","文件解析失败。\n文件路径：%s"%路径)
 	$'/root/根场景/根界面/窗口/打开声音字体文件'.hide()
 	$'/root/根场景/根界面/界面动画'.play("模态窗口遮挡关闭")
 	pass
@@ -123,3 +144,8 @@ func 物件演奏方式(选项):
 func 语音音量(值: float) -> void:
 	$音频/音量/容器/语音/数值.text=var_to_str(值)+"%"
 	pass
+
+
+func 波表合成器切换(选项: int) -> void:
+	$'/root/根场景/视角节点/MidiPlayer'.波表合成器=选项
+	pass # Replace with function body.

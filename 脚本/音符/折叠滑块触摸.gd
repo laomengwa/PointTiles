@@ -13,13 +13,13 @@ func _ready():
 	self.get_active_material(0).next_pass.next_pass.set_shader_parameter("color",Vector3(1.0,0.5,0.5))
 	pass
 
-func _process(帧处理):
+func _process(_帧处理):
 	if $"../../".触摸输入事件 is InputEventScreenTouch&&$"../../".音符消除状态==false:
 		if $"../../".触摸输入事件.pressed==true:
 			滑条视觉效果($"../../".长条触摸位置[1]-4.5)
 	pass
 
-func 触摸事件(摄像机, 事件, 触摸点, 法向量, 网格编号):
+func 触摸事件(_摄像机, 事件, 触摸点, _法向量, _网格编号):
 	if 全局脚本.游戏开始状态==true:
 		if 事件 is InputEventScreenDrag:
 			滑条视觉效果(触摸点[1]-4.5)

@@ -42,6 +42,7 @@ albedo_color = Color(1, 1, 1, 0.501961)
 albedo_texture = SubResource("ViewportTexture_r315d")
 
 [node name="轨道根节点" type="Node3D"]
+rotation_edit_mode = 1
 script = ExtResource("2_4lhnu")
 
 [node name="分隔线" type="Node3D" parent="."]
@@ -98,7 +99,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_eg7k6")
 theme_override_font_sizes/font_size = 50
-text = "测试"
+text = "-"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -108,8 +109,9 @@ visible = false
 pixel_size = 0.01
 billboard = 1
 no_depth_test = true
+modulate = Color(1, 0.533333, 0, 1)
 text = "0"
-font_size = 320
+font_size = 120
 outline_size = 0
 
 [connection signal="input_event" from="白块死区" to="." method="白块死区"]

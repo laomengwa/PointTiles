@@ -12,9 +12,9 @@ uniform float alpha = 1.0;
 //片段着色器
 void fragment() {
 	//屏幕纹理
-	vec4 test1=texture(SCREEN_TEXTURE,SCREEN_UV);
+	vec4 WenLi=texture(SCREEN_TEXTURE,SCREEN_UV);
 	vec2 pixel_size = 1.0 / VIEWPORT_SIZE;
-	ALBEDO = test1.rgb;
+	ALBEDO = WenLi.rgb;
 	for(int y = -1 * int(outline_width);y <= 1 * int(outline_width); y++){
 		for(int x = -1 * int(outline_width);x <= 1 * int(outline_width); x++){
 			vec4 tex = texture(SCREEN_TEXTURE,SCREEN_UV+vec2(float(y),float(x))*pixel_size);

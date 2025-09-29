@@ -68,16 +68,28 @@ clip_text = true
 [node name="成绩段位" type="HBoxContainer" parent="容器/容器"]
 layout_mode = 2
 
-[node name="星星" type="TextureRect" parent="容器/容器/成绩段位"]
+[node name="段位" type="Control" parent="容器/容器/成绩段位"]
 layout_mode = 2
+
+[node name="星星" type="TextureRect" parent="容器/容器/成绩段位/段位"]
+layout_mode = 2
+offset_left = 4.0
+offset_right = 34.0
+offset_bottom = 46.0
 texture = ExtResource("4_sj05k")
 
-[node name="星星2" type="TextureRect" parent="容器/容器/成绩段位"]
+[node name="星星2" type="TextureRect" parent="容器/容器/成绩段位/段位"]
 layout_mode = 2
+offset_left = 38.0
+offset_right = 68.0
+offset_bottom = 46.0
 texture = ExtResource("4_sj05k")
 
-[node name="星星3" type="TextureRect" parent="容器/容器/成绩段位"]
+[node name="星星3" type="TextureRect" parent="容器/容器/成绩段位/段位"]
 layout_mode = 2
+offset_left = 72.0
+offset_right = 102.0
+offset_bottom = 46.0
 texture = ExtResource("4_sj05k")
 
 [node name="分隔" type="Label" parent="容器/容器/成绩段位"]

@@ -1,30 +1,62 @@
-[gd_scene load_steps=5 format=3 uid="uid://cbuow041pdy8k"]
+[gd_scene load_steps=12 format=3 uid="uid://cbuow041pdy8k"]
 
 [ext_resource type="Shader" uid="uid://c4lefqmv5ue1k" path="res://着色/音符/滑块.gdshader" id="1_7uu5b"]
+[ext_resource type="Script" uid="uid://cvffaeo1ia368" path="res://脚本/音符/黑块.gd" id="1_hcm3t"]
+[ext_resource type="Shader" uid="uid://cr4681ks07fiw" path="res://着色/长块按下.gdshader" id="1_yln4n"]
+[ext_resource type="Shader" uid="uid://bogjabh4i665w" path="res://着色/物件边框.gdshader" id="2_hcm3t"]
 [ext_resource type="Texture2D" uid="uid://blmox2tndf1lh" path="res://模型/滑块.png" id="2_wtdpk"]
 [ext_resource type="Script" uid="uid://d1ylorwku0ryl" path="res://脚本/音符/弯曲滑块.gd" id="3_w7v5k"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_qpfdm"]
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_hcm3t"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_885qr"]
 render_priority = 0
+shader = ExtResource("1_yln4n")
+shader_parameter/time = 0.0
+shader_parameter/color = Vector3(0.4, 0.7, 1)
+shader_parameter/state = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0dni6"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_885qr")
+shader = ExtResource("2_hcm3t")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_width = 2.0
+shader_parameter/alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xsgd8"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_0dni6")
 shader = ExtResource("1_7uu5b")
 shader_parameter/Texture = ExtResource("2_wtdpk")
 shader_parameter/state = false
 shader_parameter/color = Vector3(1, 0, 0.4)
 
+[sub_resource type="ArrayMesh" id="ArrayMesh_yln4n"]
+
 [node name="弯曲滑块" type="Node3D"]
+script = ExtResource("1_hcm3t")
 
 [node name="触摸区域" type="Area3D" parent="."]
 
-[node name="碰撞箱" type="CollisionPolygon3D" parent="触摸区域"]
-depth = 2.0
-polygon = PackedVector2Array(-1, 0, -1, 1, 1, 1, 1, 0)
+[node name="碰撞箱" type="CollisionShape3D" parent="触摸区域"]
+shape = SubResource("ConcavePolygonShape3D_hcm3t")
+debug_color = Color(0.99, 0, 0.2805, 1)
 
-[node name="变形模型前" type="CSGPolygon3D" parent="."]
-polygon = PackedVector2Array(-1, 0, -1, 1, 1, 1, 1, 0)
-material = SubResource("ShaderMaterial_qpfdm")
+[node name="模型" type="MeshInstance3D" parent="."]
+material_override = SubResource("ShaderMaterial_xsgd8")
+mesh = SubResource("ArrayMesh_yln4n")
 script = ExtResource("3_w7v5k")
 
-[node name="变形模型后" type="CSGPolygon3D" parent="."]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
-polygon = PackedVector2Array(-1, 0, -1, 1, 1, 1, 1, 0)
-material = SubResource("ShaderMaterial_qpfdm")
+[node name="音符调试编号" type="Label3D" parent="."]
+visible = false
+pixel_size = 0.01
+billboard = 1
+no_depth_test = true
+text = "0"
+font_size = 120
+outline_size = 0
+
+[node name="弯曲滑块" type="Node" parent="."]
+
+[connection signal="input_event" from="触摸区域" to="." method="点击事件"]

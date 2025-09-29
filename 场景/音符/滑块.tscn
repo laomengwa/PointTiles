@@ -13,13 +13,13 @@ render_priority = 0
 shader = ExtResource("4_0dni6")
 shader_parameter/time = 0.0
 shader_parameter/color = Vector3(0.4, 0.7, 1)
-shader_parameter/state = false
+shader_parameter/state = true
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0dni6"]
 render_priority = 0
 next_pass = SubResource("ShaderMaterial_885qr")
 shader = ExtResource("4_hs1fa")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0, 0, 0, 1)
 shader_parameter/outline_width = 2.0
 shader_parameter/alpha = 1.0
 
@@ -81,7 +81,7 @@ pixel_size = 0.01
 billboard = 1
 no_depth_test = true
 text = "0"
-font_size = 160
+font_size = 120
 outline_size = 0
 
 [connection signal="input_event" from="模型/触摸区域" to="." method="点击事件"]

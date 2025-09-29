@@ -9,13 +9,13 @@ render_priority = 0
 shader = ExtResource("2_rs70v")
 shader_parameter/time = 0.0
 shader_parameter/color = Vector3(0.4, 0.7, 1)
-shader_parameter/state = true
+shader_parameter/state = false
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rs70v"]
 render_priority = 0
 next_pass = SubResource("ShaderMaterial_jllx6")
 shader = ExtResource("2_46u02")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0, 0, 0, 1)
 shader_parameter/outline_width = 2.0
 shader_parameter/alpha = 1.0
 

@@ -15,14 +15,15 @@ func _ready():
 	$'翻滚按键/左翻滚'.position=Vector2(20,self.size[1]-350)
 	$'翻滚按键/右翻滚'.position=self.size-Vector2(70,350)
 	pass
-func _process(处理帧):
+func _process(_处理帧):
 	$'摇杆外圈'.position=Vector2(140,self.size[1]-140)
 	$'按键区'.position=self.size-Vector2(140,210)
 	$'翻滚按键/左翻滚'.position=Vector2(20,self.size[1]-350)
 	$'翻滚按键/右翻滚'.position=self.size-Vector2(70,350)
+	$"../详细信息/游戏界面计时".text="%.3f"%$'/root/根场景/视角节点/背景音乐播放节点'.播放时间
 	if $'/root/根场景/视角节点'.控制状态==true:
-		$"../坐标轴".show()
-		$"../坐标轴".text="(%.1f"%($'/root/根场景/视角节点'.position[0])+",%.1f"%($'/root/根场景/视角节点'.position[1])+",%.1f)"%($'/root/根场景/视角节点'.position[2])
+		$"../调试信息/坐标轴".show()
+		$"../调试信息/坐标轴".text="(%.1f"%($'/root/根场景/视角节点'.position[0])+",%.1f"%($'/root/根场景/视角节点'.position[1])+",%.1f)"%($'/root/根场景/视角节点'.position[2])
 		$'/root/根场景/视角节点'.translate_object_local(Vector3(控制输出[0]*$'/root/根场景/视角节点'.移动速度,((移动状态判定[0] as float)-(移动状态判定[1] as float))*$'/root/根场景/视角节点'.移动速度,控制输出[1]*$'/root/根场景/视角节点'.移动速度))
 		if $'/root/根场景/视角节点'.控制模式==1:
 			self.show()
@@ -30,7 +31,7 @@ func _process(处理帧):
 			self.hide()
 	else:
 		self.hide()
-		$"../坐标轴".hide()
+		$"../调试信息/坐标轴".hide()
 	if $'/root/根场景/视角节点'.控制状态==true&&$'/root/根场景/视角节点'.控制模式==1:
 		var 视角移动向量:Vector3=Vector3(触摸位移差[1],触摸位移差[0],(移动状态判定[3] as float)-(移动状态判定[2] as float))
 		var 视角旋转四元数:Quaternion = Quaternion()

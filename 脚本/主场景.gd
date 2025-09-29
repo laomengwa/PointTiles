@@ -25,14 +25,18 @@ var 游戏界面连击数:int = 0
 var 最大连击数:int = 0
 var 游戏界面分数:int = 0
 var 物件连续:bool=false
+var 开始按钮位置:int=0
 #该变量用于确定物件的唯一编号
 var 物件编号:int=0
-#该变量用于确定物件的唯一编号
-#var 轨道编号:int=0
 #0代表空，1代表有方块，2代表伴奏块
+#例如在四排有轨谱下，状态为[1,0,0,2]时，第一排是正常的黑块，第二、第三排不存在黑块，第四排是附加的黑块
 var 物件位置占位:Array=[0,0,0,0]
 #这个数组记录玩家打击的物件的精确度值
 var 精确度判定组:Array=[]
+var 精确度判定:float=0.0
+var 无瑕度判定组:Array=[]
+var 无瑕度:float=0.0
+var 最快手速:float=0.0
 #这个变量记载音频节点流的位置，所对应的当前json的星段位置
 var 谱面阶段:int=0
 var 音频延迟:float
@@ -171,23 +175,21 @@ var 谱面段落时间差:float=0.0
 var 轨道数量变更:int=0
 #这个变量记载音频节点流的位置所对应的物件编号
 var 物件摆放历史:int=0
+var 轨道摆放指针:int=0
 var 玩法模式状态:bool=false
 var 狂戳节奏模式:bool=false
-var 精确度判定:float=0.0
 var 声音数据集合:Array=[]
 var 音符演奏方式:int=0
 #MIDI乐谱定义
 var 微秒每拍:int=60000000
 var 每节节拍:int=4
-var 物件生成微秒每拍:int=60000000
-var 物件生成每节节拍:int=4
 var 数码乐谱音色:Array=[]
 var 数码文件指针:Array=[]
-var 音符生成指针:Array=[]
+var 数码事件指针:int=0
 var 数码乐谱播放时间:float=0.0
-var 数码音符生成时间:float=0.0
 var 数码文件通道状态:Array = []
 func _ready():
+	$"开始按键".position[0]=randi_range(-2,物件位置占位.size()-3)*2
 	for 循环 in range( 16 ):
 		var 鼓轨道:bool = ( 循环==9 )
 		var 音色库:int = 0
@@ -195,7 +197,7 @@ func _ready():
 			音色库 = Bank.drum_track_bank
 		self.数码文件通道状态.append( $'/root/根场景/视角节点/MidiPlayer'.GodotMIDIPlayerChannelStatus.new( 循环, 音色库, 鼓轨道 ) )
 	pass
-func _process(delta):
+func _process(_帧处理):
 	#检测轨道数量的改变状态,如果改变则执行下列代码
 	if 物件位置占位.size()!=轨道数量变更:
 		轨道数量变更=物件位置占位.size()
@@ -213,196 +215,301 @@ func _process(delta):
 			手柄按键事件.button_index=手柄按键组[循环]
 			InputMap.action_add_event(var_to_str(循环+1)+"轨道",按键事件)
 			InputMap.action_add_event(var_to_str(循环+1)+"轨道",手柄按键事件)
-			#(var_to_str(循环+1)+"轨道")
-	#InputMap.add_action(var_to_str(KEY_D)+"按键")
-	#InputMap.add_action(var_to_str(KEY_F)+"按键")
-	#InputMap.add_action(var_to_str(KEY_J)+"按键")
-	#InputMap.add_action(var_to_str(KEY_K)+"按键")
-	#var 测试1=InputEventKey.new()
-	#测试1.keycode=KEY_D
-	#var 测试2=InputEventKey.new()
-	#测试2.keycode=KEY_F
-	#var 测试3=InputEventKey.new()
-	#测试3.keycode=KEY_J
-	#var 测试4=InputEventKey.new()
-	#测试4.keycode=KEY_K
-	#InputMap.action_add_event(var_to_str(KEY_D)+"按键",测试1)
-	#InputMap.action_add_event(var_to_str(KEY_F)+"按键",测试2)
-	#InputMap.action_add_event(var_to_str(KEY_J)+"按键",测试3)
-	#InputMap.action_add_event(var_to_str(KEY_K)+"按键",测试4)
 	物件连续=$'/root/根场景/根界面/游戏菜单/歌曲信息/歌曲信息/容器/物件连续/选项勾选盒'.button_pressed
 	match 歌曲类型格式:
 		0:
 			if 全局脚本.游戏开始状态==true:
 				if $'../视角节点/背景音乐播放节点'.playing==true:
-					音频延迟=(1.5-(20*(4/物件生成每节节拍)*(-4.5))/(60000000.0/float(物件生成微秒每拍)))+全局脚本.音频延迟
-					数码音符生成时间=(($'../视角节点/背景音乐播放节点'.播放时间+(谱面段落时间差/$'../视角节点/背景音乐播放节点'.get_pitch_scale()))*(1000000.0*全局脚本.数码乐谱文件数据.timebase))*$'../视角节点/背景音乐播放节点'.get_pitch_scale()/float(微秒每拍)
-					数码乐谱播放时间=(($'../视角节点/背景音乐播放节点'.播放时间+((谱面段落时间差-音频延迟)/$'../视角节点/背景音乐播放节点'.get_pitch_scale()))*(1000000.0*全局脚本.数码乐谱文件数据.timebase))*$'../视角节点/背景音乐播放节点'.get_pitch_scale()/float(微秒每拍)
-					#print(数码音符生成时间,",",数码乐谱播放时间,",",音频延迟)
-					#数码乐谱播放时间+=float(全局脚本.数码乐谱文件数据.timebase) * delta * (1000000.0/(float(微秒每拍)) * $'../视角节点/背景音乐播放节点'.get_pitch_scale())
-				#print(float(微秒每拍)/float(全局脚本.数码乐谱文件数据.timebase)/1000)
-				for 轨道循环 in 全局脚本.数码乐谱文件数据.tracks.size():
-					var 轨道 = 全局脚本.数码乐谱文件数据.tracks[轨道循环]
-					if 轨道.events == null:
-						return 0
-					var 长度:int = len( 轨道.events )
-					#物件生成
-					while 音符生成指针[轨道循环] < 长度:
-						var 事件块 = 轨道.events[音符生成指针[轨道循环]]
-						if 数码音符生成时间<=float(事件块.time):
+					$'/root/根场景/根界面/游戏界面/详细信息/游戏界面速度/每分钟节拍速'.text="%.2f"%((60000000.0/float(微秒每拍))*$'../视角节点/背景音乐播放节点'.get_pitch_scale())
+					if 最快手速<(60000000.0/float(微秒每拍))*$'../视角节点/背景音乐播放节点'.get_pitch_scale():
+						最快手速=(60000000.0/float(微秒每拍))*$'../视角节点/背景音乐播放节点'.get_pitch_scale()
+						$'/root/根场景/根界面/游戏界面/详细信息/游戏界面速度/速度'.text="%.3f" %(((60000000.0/float(微秒每拍))/(240.0/float(每节节拍)))*$'../视角节点/背景音乐播放节点'.get_pitch_scale())
+					数码乐谱播放时间=(($'../视角节点/背景音乐播放节点'.播放时间+((谱面段落时间差-音频延迟-1.3)/$'../视角节点/背景音乐播放节点'.get_pitch_scale()))*(1000000.0*$'/root/根场景/视角节点/MidiPlayer'.smf_data.timebase))*$'../视角节点/背景音乐播放节点'.get_pitch_scale()/float(微秒每拍)
+					#添加物件
+					while 物件摆放历史<$"/root/根场景/主场景/无轨".物件编号表.size():
+						if $'../视角节点/背景音乐播放节点'.播放时间+5<$"/root/根场景/主场景/无轨".物件编号表[物件摆放历史].物件节点.音符出现时间:
 							break
-						#(数码乐谱播放时间*(float(微秒每拍)/(1000000.0*全局脚本.数码乐谱文件数据.timebase)))-谱面段落时间差=$'../视角节点/背景音乐播放节点'.播放时间
-						$'/root/根场景/根界面/游戏界面/游戏界面速度/每分钟节拍速'.text=var_to_str((60000000.0/float(微秒每拍))*$'../视角节点/背景音乐播放节点'.get_pitch_scale())
-						$'/root/根场景/根界面/游戏界面/游戏界面速度/速度'.text="%.3f" %(((60000000.0/float(微秒每拍))/(240.0/float(每节节拍)))*$'../视角节点/背景音乐播放节点'.get_pitch_scale())
-						音符生成指针[轨道循环] += 1
-						var 事件 = 事件块.event
-						match 事件.type:
-							SMF.MIDIEventType.note_off:
-								pass
-								#await get_tree().create_timer(音频延迟).timeout
-								#音符输入事件(事件.note,数码乐谱音色[轨道循环],事件.velocity,事件块.channel_number,MIDI_MESSAGE_NOTE_OFF)
-							SMF.MIDIEventType.note_on:
-								if 轨道循环==0:
-									var 黑块=黑块场景.instantiate()
-									黑块.position[1]=100.0
-									黑块.数码乐谱节拍速度=(60000000.0/float(微秒每拍))
-									黑块.数码乐谱基础节拍=(4.0/float(每节节拍))
-									黑块.音符出现时间=$'../视角节点/背景音乐播放节点'.播放时间
-									if $/root/根场景/根界面/游戏菜单/歌曲信息/歌曲信息/容器/无轨道模式/选项勾选盒.button_pressed==true:
-										var 轨道位置=(randf()-0.5)*float(get_node("/root/根场景/根界面/游戏菜单/歌曲信息/歌曲信息/容器/轨道数量/滑块").value)*2-1
-										黑块.position=Vector3(轨道位置,黑块.position[1],黑块.position[2])
-										print("/root/根场景/主场景/无轨/无轨根节点"+var_to_str(轨道循环)+"/物件区")
-										get_node("/root/根场景/主场景/无轨/无轨根节点"+var_to_str(轨道循环)+"/物件区").add_child(黑块)
-									else:
-										音符位置确定()
-										音符生成(黑块,0)
-										物件编号+=1
-										黑块.物件编号=物件编号
-										黑块.get_node("音符调试编号").text=var_to_str(物件编号)
-										黑块.get_node("音符调试编号").show()
-								#await get_tree().create_timer(音频延迟).timeout
-								#音符输入事件(事件.note,数码乐谱音色[轨道循环],事件.velocity,事件块.channel_number,MIDI_MESSAGE_NOTE_ON)
-							#控制器
-							SMF.MIDIEventType.control_change:
-								pass
-							#弯音轮
-							SMF.MIDIEventType.pitch_bend:
-								pass
-							#系统事件
-							SMF.MIDIEventType.system_event:
-								match 事件.args.type:
-									#获取BPM的值
-									SMF.MIDISystemEventType.set_tempo:
-										#谱面段落时间差=((事件.args.bpm/(1000000*全局脚本.数码乐谱文件数据.timebase))*事件块.time)-((微秒每拍/(1000000*全局脚本.数码乐谱文件数据.timebase))*事件块.time)+谱面段落时间差
-										#print((事件.args.bpm/(1000000*全局脚本.数码乐谱文件数据.timebase))*事件块.time)
-										物件生成微秒每拍=事件.args.bpm
-										#print(谱面段落时间差)
-									#获取基础节拍
-									SMF.MIDISystemEventType.beat:
-										物件生成每节节拍=事件.args.beat32
-					#音符播放
-					while 数码文件指针[轨道循环] < 长度:
-						var 事件块 = 轨道.events[数码文件指针[轨道循环]]
-						if 数码乐谱播放时间<=float(事件块.time):
+						if $"/root/根场景/主场景/无轨".物件编号表[物件摆放历史].物件节点.get_parent()==null:
+							可定物件放置($"/root/根场景/主场景/无轨".物件编号表[物件摆放历史].物件节点,$"/root/根场景/主场景/无轨".物件编号表[物件摆放历史].音高,0,$'/root/根场景/根界面/游戏菜单/歌曲信息/歌曲信息/容器/瀑布流形式/选项勾选盒'.button_pressed)
+						物件摆放历史+=1
+						pass
+					#添加轨道
+					while 轨道摆放指针<$"/root/根场景/主场景/无轨".轨道编号表.size():
+						if $'../视角节点/背景音乐播放节点'.播放时间+5<$"/root/根场景/主场景/无轨".轨道编号表[轨道摆放指针].出现时间:
 							break
-						#(数码乐谱播放时间*(float(微秒每拍)/(1000000.0*全局脚本.数码乐谱文件数据.timebase)))-谱面段落时间差=$'../视角节点/背景音乐播放节点'.播放时间
-						数码文件指针[轨道循环] += 1
-						var 事件 = 事件块.event
-						match 事件.type:
-							SMF.MIDIEventType.note_off:
-								match 全局脚本.数码乐谱文件数据.format_type:
-									0:
-										音符输入事件(事件.note,数码乐谱音色[事件块.channel_number],事件.velocity,事件块.channel_number,MIDI_MESSAGE_NOTE_OFF)
-									1,2:
-										音符输入事件(事件.note,数码乐谱音色[事件块.channel_number],事件.velocity,事件块.channel_number,MIDI_MESSAGE_NOTE_OFF)
-										#音符输入事件(事件.note,数码乐谱音色[轨道循环],事件.velocity,事件块.channel_number,MIDI_MESSAGE_NOTE_OFF)
-							SMF.MIDIEventType.note_on:
-								match 全局脚本.数码乐谱文件数据.format_type:
-									0:
-										音符输入事件(事件.note,数码乐谱音色[事件块.channel_number],事件.velocity,事件块.channel_number,MIDI_MESSAGE_NOTE_ON)
-									1,2:
-										#if 轨道循环==0:
-										#	print(事件块.channel_number)
-										音符输入事件(事件.note,数码乐谱音色[事件块.channel_number],事件.velocity,事件块.channel_number,MIDI_MESSAGE_NOTE_ON)
-										#音符输入事件(事件.note,数码乐谱音色[轨道循环],事件.velocity,事件块.channel_number,MIDI_MESSAGE_NOTE_ON)
-							#控制器
-							SMF.MIDIEventType.control_change:
-								var 输入事件=InputEventMIDI.new()
-								输入事件.message=MIDI_MESSAGE_CONTROL_CHANGE
-								输入事件.channel=事件块.channel_number
-								输入事件.controller_number=事件.number
-								输入事件.controller_value=事件.value
-								#await get_tree().create_timer(音频延迟).timeout
-								$'/root/根场景/视角节点/MidiPlayer'.receive_raw_midi_message(输入事件)
-							#音色改变
-							SMF.MIDIEventType.program_change:
-								match 全局脚本.数码乐谱文件数据.format_type:
-									0:
-										数码乐谱音色[事件块.channel_number]=事件.number
-									1,2:
-										数码乐谱音色[事件块.channel_number]=事件.number
-										#数码乐谱音色[轨道循环]=事件.number
-							#弯音轮
-							SMF.MIDIEventType.pitch_bend:
-								#print(事件.value)
-								#await get_tree().create_timer(音频延迟).timeout
-								音符输入事件(事件.value,0,0,事件块.channel_number,MIDI_MESSAGE_PITCH_BEND)
+						if $"/root/根场景/主场景/无轨".轨道编号表[轨道摆放指针].轨道节点.get_parent()==null:
+							$"/root/根场景/主场景/无轨".add_child($"/root/根场景/主场景/无轨".轨道编号表[轨道摆放指针].轨道节点)
+						轨道摆放指针+=1
+					#游戏事件控制
+					while 数码事件指针<$"/root/根场景/主场景/无轨".事件表.size():
+						if $'../视角节点/背景音乐播放节点'.播放时间+5<$"/root/根场景/主场景/无轨".事件表[数码事件指针].事件时间:
+							break
+						match $"/root/根场景/主场景/无轨".事件表[数码事件指针].事件类型:
+							0x08,0x09:
+								#摄像机停止移动/变更
+								#位移:Array=["0","0","0"],旋转:Array=["0","0","0"],欧拉角旋转顺序:float=1,投影模式:int=0,视距:Array=["s","s","s"],保持长宽比:int=1,视口偏移:Array=["s","s","s","s"]
+								#“T”表示摄像机投影模式，"P"表示轨道位置，“R”表示旋转（四个元素中第一个表示旋转方式，若第一个元素数值小于1则成为四元数的w值）,"K"表示投影长宽比，"O"表示其他参数（视野/投影大小，裁剪近视距，裁剪远视距），"E"表示投影偏移
+								#{"T":$滚动栏/容器/移动摄像机停止/投影模式.selected,"K":$滚动栏/容器/移动摄像机停止/长宽比.selected,"P":位置,"R":旋转,"O":视距,"E":视角偏移}
+								var 投影模式:int=0
+								var 欧拉角旋转顺序:float=0
+								var 长宽比:int=0
+								var 位置:Array=["s","s","s"]
+								var 旋转:Array=["s","s","s"]
+								var 视距:Array=["s","s","s"]
+								var 视角偏移:Array=["s","s","s","s"]
+								#投影模式
+								if $"/root/根场景/主场景/无轨".事件表[数码事件指针].has("T"):
+									投影模式=int($"/root/根场景/主场景/无轨".事件表[数码事件指针].T)
+								#视口长宽设置
+								if $"/root/根场景/主场景/无轨".事件表[数码事件指针].has("K"):
+									长宽比=int($"/root/根场景/主场景/无轨".事件表[数码事件指针].T)
+								#位移
+								if $"/root/根场景/主场景/无轨".事件表[数码事件指针].has("P"):
+									if $"/root/根场景/主场景/无轨".事件表[数码事件指针].P is Array:
+										var 合法性检测:bool=true
+										for 循环 in $"/root/根场景/主场景/无轨".事件表[数码事件指针].P.size():
+											if $"/root/根场景/主场景/无轨".事件表[数码事件指针].P.size()==3&&$"/root/根场景/主场景/无轨".事件表[数码事件指针].P[循环] is String:
+												pass
+											else:
+												合法性检测=false
+										if 合法性检测==true:
+											位置=$"/root/根场景/主场景/无轨".事件表[数码事件指针].P
+								#旋转
+								if $"/root/根场景/主场景/无轨".事件表[数码事件指针].has("R"):
+									if $"/root/根场景/主场景/无轨".事件表[数码事件指针].R is Array:
+										var 合法性检测:bool=true
+										for 循环 in $"/root/根场景/主场景/无轨".事件表[数码事件指针].R.size()-1:
+											if $"/root/根场景/主场景/无轨".事件表[数码事件指针].R.size()==4:
+												if $"/root/根场景/主场景/无轨".事件表[数码事件指针].R[循环] is String:
+													pass
+												else:
+													合法性检测=false
+										if 合法性检测==true:
+											旋转=[$"/root/根场景/主场景/无轨".事件表[数码事件指针].R[0],$"/root/根场景/主场景/无轨".事件表[数码事件指针].R[1],$"/root/根场景/主场景/无轨".事件表[数码事件指针].R[2]]
+											欧拉角旋转顺序=float($"/root/根场景/主场景/无轨".事件表[数码事件指针].R[3])
+								#视距
+								if $"/root/根场景/主场景/无轨".事件表[数码事件指针].has("O"):
+									if $"/root/根场景/主场景/无轨".事件表[数码事件指针].O is Array:
+										var 合法性检测:bool=true
+										for 循环 in $"/root/根场景/主场景/无轨".事件表[数码事件指针].O.size():
+											if $"/root/根场景/主场景/无轨".事件表[数码事件指针].O.size()==3&&$"/root/根场景/主场景/无轨".事件表[数码事件指针].O[循环] is String:
+												pass
+											else:
+												合法性检测=false
+										if 合法性检测==true:
+											视距=$"/root/根场景/主场景/无轨".事件表[数码事件指针].O
+								#视角偏移
+								if $"/root/根场景/主场景/无轨".事件表[数码事件指针].has("E"):
+									if $"/root/根场景/主场景/无轨".事件表[数码事件指针].E is Array:
+										var 合法性检测:bool=true
+										for 循环 in $"/root/根场景/主场景/无轨".事件表[数码事件指针].E.size():
+											if $"/root/根场景/主场景/无轨".事件表[数码事件指针].E.size()==4&&$"/root/根场景/主场景/无轨".事件表[数码事件指针].E[循环] is String:
+												pass
+											else:
+												合法性检测=false
+										if 合法性检测==true:
+											视角偏移=$"/root/根场景/主场景/无轨".事件表[数码事件指针].E
+								if $"/root/根场景/主场景/无轨".事件表[数码事件指针].事件类型==0x08:
+									$"/root/根场景/主场景/无轨".摄像机停止移动(位置,旋转,欧拉角旋转顺序,投影模式,视距,长宽比,视角偏移)
+								if $"/root/根场景/主场景/无轨".事件表[数码事件指针].事件类型==0x09:
+									$"/root/根场景/主场景/无轨".摄像机移动(位置,旋转,欧拉角旋转顺序,投影模式,视距,长宽比,视角偏移)
+							0x0A:
+								#更高游戏类型
+								var 类型:int=1
+								if $"/root/根场景/主场景/无轨".事件表[数码事件指针].has("T"):
+									if $"/root/根场景/主场景/无轨".事件表[数码事件指针].T is int ||$"/root/根场景/主场景/无轨".事件表[数码事件指针].T is float:
+										类型=int($"/root/根场景/主场景/无轨".事件表[数码事件指针].T)
+										$"/root/根场景/主场景/无轨".游戏模式(类型)
+							0x0B:
+								#添加轨道（前期已处理，可忽略）
 								pass
-							#系统事件
-							SMF.MIDIEventType.system_event:
-								match 事件.args.type:
-									#获取BPM的值
-									SMF.MIDISystemEventType.set_tempo:
-										谱面段落时间差=(数码乐谱播放时间*(float(事件.args.bpm)/(1000000.0*全局脚本.数码乐谱文件数据.timebase)))-(数码乐谱播放时间*(float(微秒每拍)/(1000000.0*全局脚本.数码乐谱文件数据.timebase)))+谱面段落时间差
-										微秒每拍=事件.args.bpm
-									#获取基础节拍
-									SMF.MIDISystemEventType.beat:
-										每节节拍=事件.args.beat32
-									#时间码偏移
-									SMF.MIDISystemEventType.smpte_offset:
-										print(事件.args)
-									#文本备注
-									SMF.MIDISystemEventType.text_event:
-										print(事件.args.text,"注释")
-										pass
-										#self.emit_signal( "appeared_text_event", event.args.text )
-									#版权信息
-									SMF.MIDISystemEventType.copyright:
-										pass
-										#self.emit_signal( "appeared_copyright", event.args.text )
-									#音轨信息
-									SMF.MIDISystemEventType.track_name:
-										pass
-										#self.emit_signal( "appeared_track_name", self._midi_channel_prefix, event.args.text )
-										#self.channel_status[self._midi_channel_prefix].track_name = event.args.text
-									#乐器名称
-									SMF.MIDISystemEventType.instrument_name:
-										pass
-										#self.emit_signal( "appeared_instrument_name", self._midi_channel_prefix, event.args.text )
-										#self.channel_status[self._midi_channel_prefix].instrument_name = event.args.text
-									#歌词
-									SMF.MIDISystemEventType.lyric:
-										print(事件.args.text,"歌词")
-										pass
-										#self.emit_signal( "appeared_lyric", event.args.text )
-									#标记
-									SMF.MIDISystemEventType.marker:
-										print(事件.args.text,"标记")
-										pass
-										#self.emit_signal( "appeared_marker", event.args.text )
-									#提示点
-									SMF.MIDISystemEventType.cue_point:
-										print(事件.args.text,"提示点")
-										pass
-										#self.emit_signal( "appeared_cue_point", event.args.text )
-									SMF.MIDISystemEventType.midi_channel_prefix:
-										pass
-										#self._midi_channel_prefix = event.args.channel
-									SMF.MIDISystemEventType.sys_ex:
-										pass
-										#self._process_track_sys_ex( channel, event.args )
-									SMF.MIDISystemEventType.divided_sys_ex:
-										pass
+							0x0C,0x0D:
+								#移动轨道，停止移动轨道
+								#{"I":$滚动栏/容器/添加轨道/编号.value,"P":平移,"R":旋转,"S":缩放}
+								var 编号:int=0
+								var 欧拉角旋转顺序:float=0
+								var 位置:Array=["0","0","0"]
+								var 旋转:Array=["0","0","0"]
+								var 缩放:Array=["0","0","0"]
+								var 物件区移动表达式:String="0"
+								if $"/root/根场景/主场景/无轨".事件表[数码事件指针].has("I"):
+									if $"/root/根场景/主场景/无轨".事件表[数码事件指针].I is int ||$"/root/根场景/主场景/无轨".事件表[数码事件指针].I is float:
+										编号=int($"/root/根场景/主场景/无轨".事件表[数码事件指针].I)
+								#位置
+								if $"/root/根场景/主场景/无轨".事件表[数码事件指针].has("P"):
+									if $"/root/根场景/主场景/无轨".事件表[数码事件指针].P is Array:
+										var 合法性检测:bool=true
+										for 循环 in $"/root/根场景/主场景/无轨".事件表[数码事件指针].P.size():
+											if $"/root/根场景/主场景/无轨".事件表[数码事件指针].P.size()==3&&$"/root/根场景/主场景/无轨".事件表[数码事件指针].P[循环] is String:
+												pass
+											else:
+												合法性检测=false
+										if 合法性检测==true:
+											位置=$"/root/根场景/主场景/无轨".事件表[数码事件指针].P
+								#旋转
+								if $"/root/根场景/主场景/无轨".事件表[数码事件指针].has("R"):
+									if $"/root/根场景/主场景/无轨".事件表[数码事件指针].R is Array:
+										var 合法性检测:bool=true
+										for 循环 in $"/root/根场景/主场景/无轨".事件表[数码事件指针].R.size()-1:
+											if $"/root/根场景/主场景/无轨".事件表[数码事件指针].R.size()==4:
+												if $"/root/根场景/主场景/无轨".事件表[数码事件指针].R[循环] is String:
+													pass
+												else:
+													合法性检测=false
+										if 合法性检测==true:
+											旋转=[$"/root/根场景/主场景/无轨".事件表[数码事件指针].R[0],$"/root/根场景/主场景/无轨".事件表[数码事件指针].R[1],$"/root/根场景/主场景/无轨".事件表[数码事件指针].R[2]]
+											欧拉角旋转顺序=float($"/root/根场景/主场景/无轨".事件表[数码事件指针].R[3])
+								#缩放
+								if $"/root/根场景/主场景/无轨".事件表[数码事件指针].has("S"):
+									if $"/root/根场景/主场景/无轨".事件表[数码事件指针].S is Array:
+										var 合法性检测:bool=true
+										for 循环 in $"/root/根场景/主场景/无轨".事件表[数码事件指针].S.size():
+											if $"/root/根场景/主场景/无轨".事件表[数码事件指针].S.size()==3&&$"/root/根场景/主场景/无轨".事件表[数码事件指针].S[循环] is String:
+												pass
+											else:
+												合法性检测=false
+										if 合法性检测==true:
+											缩放=$"/root/根场景/主场景/无轨".事件表[数码事件指针].S
+								if $"/root/根场景/主场景/无轨".事件表[数码事件指针].has("N"):
+									if $"/root/根场景/主场景/无轨".事件表[数码事件指针].N is String:
+										物件区移动表达式=$"/root/根场景/主场景/无轨".事件表[数码事件指针].N
+								if $"/root/根场景/主场景/无轨".事件表[数码事件指针].事件类型==0x0C:
+									$"/root/根场景/主场景/无轨".轨道移动(编号,$"/root/根场景/主场景/无轨".事件表[数码事件指针].事件时间,位置,旋转,欧拉角旋转顺序,物件区移动表达式,缩放)
+								if $"/root/根场景/主场景/无轨".事件表[数码事件指针].事件类型==0x0D:
+									$"/root/根场景/主场景/无轨".轨道停止移动(编号,位置,旋转,欧拉角旋转顺序,物件区移动表达式,缩放)
+								pass
+							0x0E:
+								#轨道显隐
+								var 编号:int=0
+								var 可见性:bool=true
+								if $"/root/根场景/主场景/无轨".事件表[数码事件指针].has("I"):
+									if $"/root/根场景/主场景/无轨".事件表[数码事件指针].I is int ||$"/root/根场景/主场景/无轨".事件表[数码事件指针].I is float:
+										编号=int($"/root/根场景/主场景/无轨".事件表[数码事件指针].I)
+								if $"/root/根场景/主场景/无轨".事件表[数码事件指针].has("V"):
+									if $"/root/根场景/主场景/无轨".事件表[数码事件指针].V is int ||$"/root/根场景/主场景/无轨".事件表[数码事件指针].V is float || $"/root/根场景/主场景/无轨".事件表[数码事件指针].V is bool:
+										可见性=bool($"/root/根场景/主场景/无轨".事件表[数码事件指针].V)
+								$"/root/根场景/主场景/无轨".轨道显示隐藏(编号,可见性)
+							0x0F:
+								#更改点击轨道内白块的处理行为
+								var 编号:int=0
+								var 行为:int=1
+								if $"/root/根场景/主场景/无轨".事件表[数码事件指针].has("I"):
+									if $"/root/根场景/主场景/无轨".事件表[数码事件指针].I is int ||$"/root/根场景/主场景/无轨".事件表[数码事件指针].I is float:
+										编号=int($"/root/根场景/主场景/无轨".事件表[数码事件指针].I)
+								if $"/root/根场景/主场景/无轨".事件表[数码事件指针].has("T"):
+									if $"/root/根场景/主场景/无轨".事件表[数码事件指针].T is int ||$"/root/根场景/主场景/无轨".事件表[数码事件指针].T is float:
+										行为=bool($"/root/根场景/主场景/无轨".事件表[数码事件指针].T)
+								$"/root/根场景/主场景/无轨".轨道允许失误(编号,行为)
+								pass
+						数码事件指针+=1
+					for 轨道循环 in $'/root/根场景/视角节点/MidiPlayer'.smf_data.tracks.size():
+						var 轨道 = $'/root/根场景/视角节点/MidiPlayer'.smf_data.tracks[轨道循环]
+						if 轨道.events == null:
+							return 0
+						var 长度:int = len( 轨道.events )
+						#音符播放
+						while 数码文件指针[轨道循环] < 长度:
+							var 事件块 = 轨道.events[数码文件指针[轨道循环]]
+							if 数码乐谱播放时间<=float(事件块.time):
+								break
+							数码文件指针[轨道循环] += 1
+							var 事件 = 事件块.event
+							match 事件.type:
+								SMF.MIDIEventType.note_off:
+									match $'/root/根场景/视角节点/MidiPlayer'.smf_data.format_type:
+										0:
+											音符输入事件(事件.note,数码乐谱音色[事件块.channel_number],事件.velocity,事件块.channel_number,MIDI_MESSAGE_NOTE_OFF)
+										1,2:
+											音符输入事件(事件.note,数码乐谱音色[事件块.channel_number],事件.velocity,事件块.channel_number,MIDI_MESSAGE_NOTE_OFF)
+											#音符输入事件(事件.note,数码乐谱音色[轨道循环],事件.velocity,事件块.channel_number,MIDI_MESSAGE_NOTE_OFF)
+								SMF.MIDIEventType.note_on:
+									match $'/root/根场景/视角节点/MidiPlayer'.smf_data.format_type:
+										0:
+											音符输入事件(事件.note,数码乐谱音色[事件块.channel_number],事件.velocity,事件块.channel_number,MIDI_MESSAGE_NOTE_ON)
+										1,2:
+											#if 轨道循环==0:
+											#	print(事件块.channel_number)
+											音符输入事件(事件.note,数码乐谱音色[事件块.channel_number],事件.velocity,事件块.channel_number,MIDI_MESSAGE_NOTE_ON)
+											#音符输入事件(事件.note,数码乐谱音色[轨道循环],事件.velocity,事件块.channel_number,MIDI_MESSAGE_NOTE_ON)
+								#控制器
+								SMF.MIDIEventType.control_change:
+									var 输入事件=InputEventMIDI.new()
+									输入事件.message=MIDI_MESSAGE_CONTROL_CHANGE
+									输入事件.channel=事件块.channel_number
+									输入事件.controller_number=事件.number
+									输入事件.controller_value=事件.value
+									#await get_tree().create_timer(音频延迟).timeout
+									$'/root/根场景/视角节点/MidiPlayer'.receive_raw_midi_message(输入事件)
+								#音色改变
+								SMF.MIDIEventType.program_change:
+									match $'/root/根场景/视角节点/MidiPlayer'.smf_data.format_type:
+										0:
+											数码乐谱音色[事件块.channel_number]=事件.number
+										1,2:
+											数码乐谱音色[事件块.channel_number]=事件.number
+											#数码乐谱音色[轨道循环]=事件.number
+								#弯音轮
+								SMF.MIDIEventType.pitch_bend:
+									#print(事件.value)
+									#await get_tree().create_timer(音频延迟).timeout
+									音符输入事件(事件.value,0,0,事件块.channel_number,MIDI_MESSAGE_PITCH_BEND)
+									pass
+								#系统事件
+								SMF.MIDIEventType.system_event:
+									match 事件.args.type:
+										#获取BPM的值
+										SMF.MIDISystemEventType.set_tempo:
+											谱面段落时间差=(数码乐谱播放时间*(float(事件.args.bpm)/(1000000.0*$'/root/根场景/视角节点/MidiPlayer'.smf_data.timebase)))-(数码乐谱播放时间*(float(微秒每拍)/(1000000.0*$'/root/根场景/视角节点/MidiPlayer'.smf_data.timebase)))+谱面段落时间差
+											微秒每拍=事件.args.bpm
+											
+										#获取基础节拍
+										SMF.MIDISystemEventType.beat:
+											每节节拍=事件.args.beat32
+										#时间码偏移
+										SMF.MIDISystemEventType.smpte_offset:
+											pass
+											#print(事件.args)
+											#self.emit_signal( "appeared_text_event", event.args.text )
+										#版权信息
+										SMF.MIDISystemEventType.copyright:
+											print(事件.args.text)
+											pass
+											#self.emit_signal( "appeared_copyright", event.args.text )
+										#音轨信息
+										SMF.MIDISystemEventType.track_name:
+											print(事件.args.text)
+											pass
+											#self.emit_signal( "appeared_track_name", self._midi_channel_prefix, event.args.text )
+											#self.channel_status[self._midi_channel_prefix].track_name = event.args.text
+										#乐器名称
+										SMF.MIDISystemEventType.instrument_name:
+											print(事件.args.text)
+											pass
+											#self.emit_signal( "appeared_instrument_name", self._midi_channel_prefix, event.args.text )
+											#self.channel_status[self._midi_channel_prefix].instrument_name = event.args.text
+										#文本备注
+										SMF.MIDISystemEventType.text_event:
+											print(事件.args.text.left(4))
+											pass
+											#self.emit_signal( "appeared_lyric", event.args.text )
+										#标记
+										SMF.MIDISystemEventType.marker:
+											print(事件.args.text.left(4))
+											pass
+											#self.emit_signal( "appeared_marker", event.args.text )
+										#提示点
+										SMF.MIDISystemEventType.cue_point:
+											print(事件.args.text.left(4))
+											pass
+											#self.emit_signal( "appeared_cue_point", event.args.text )
+										SMF.MIDISystemEventType.midi_channel_prefix:
+											pass
+											#self._midi_channel_prefix = event.args.channel
+										SMF.MIDISystemEventType.sys_ex:
+											pass
+											#self._process_track_sys_ex( channel, event.args )
+										SMF.MIDISystemEventType.divided_sys_ex:
+											pass
 										#self._process_track_sys_ex( channel, event.args )
 								pass
 			else:
@@ -411,7 +518,7 @@ func _process(delta):
 			狂戳节奏模式=$"/root/根场景/根界面/游戏菜单/歌曲信息/歌曲信息/容器/狂戳块节奏模式/选项勾选盒".button_pressed
 			#检测游戏状态
 			if $"开始按键".visible==false && 全局脚本.游戏开始状态==true:
-				$'/root/根场景/根界面/游戏界面/游戏界面血量条'.value=生命值
+				$'/root/根场景/根界面/游戏界面/状态信息/游戏界面血量条'.value=生命值
 				#物件生成方式
 				音频延迟=(1-(20*全局脚本.谱面基础节拍[谱面阶段]*(-4.5))/全局脚本.谱面每分钟节拍[谱面阶段])+全局脚本.音频延迟
 				var 物件摆放:int=0
@@ -436,8 +543,10 @@ func _process(delta):
 				if $'../视角节点/背景音乐播放节点'.播放时间>=((全局脚本.物件总时间[0][物件摆放]-全局脚本.阶段时间位置[谱面阶段])*60/全局脚本.谱面每分钟节拍[谱面阶段]/32)+谱面段落时间差:
 					if 物件摆放历史==物件摆放-1:
 						var 物件:Node
-						$'/root/根场景/根界面/游戏界面/游戏界面速度/每分钟节拍速'.text="%.2f" %(全局脚本.谱面每分钟节拍[谱面阶段]*$'../视角节点/背景音乐播放节点'.get_pitch_scale())
-						$'/root/根场景/根界面/游戏界面/游戏界面速度/速度'.text="%.3f" %(float(全局脚本.谱面每分钟节拍[谱面阶段]/(全局脚本.谱面基础节拍[谱面阶段]*60))*$'../视角节点/背景音乐播放节点'.get_pitch_scale())
+						$'/root/根场景/根界面/游戏界面/详细信息/游戏界面速度/每分钟节拍速'.text="%.2f" %(全局脚本.谱面每分钟节拍[谱面阶段]*$'../视角节点/背景音乐播放节点'.get_pitch_scale())
+						$'/root/根场景/根界面/游戏界面/详细信息/游戏界面速度/速度'.text="%.3f" %(float(全局脚本.谱面每分钟节拍[谱面阶段]/(全局脚本.谱面基础节拍[谱面阶段]*60))*$'../视角节点/背景音乐播放节点'.get_pitch_scale())
+						if 最快手速<(全局脚本.谱面每分钟节拍[谱面阶段]/(全局脚本.谱面基础节拍[谱面阶段]*60))*$'../视角节点/背景音乐播放节点'.get_pitch_scale():
+							最快手速=(全局脚本.谱面每分钟节拍[谱面阶段]/(全局脚本.谱面基础节拍[谱面阶段]*60))*$'../视角节点/背景音乐播放节点'.get_pitch_scale()
 						#休止符替换
 						if 全局脚本.物件类型[0][物件摆放]=="0":
 							var 玩法模式时长=全局脚本.物件时长[0][物件摆放]
@@ -463,7 +572,7 @@ func _process(delta):
 									if 物件位置占位.size()>=4:
 										for 循环 in 物件位置占位.size():
 											物件位置占位[循环]=0
-										物件位置占位[((物件位置占位.size())/2)-1]=1
+										物件位置占位[int(物件位置占位.size()/2.0)-1]=1
 									else:
 										音符位置确定()
 								else:
@@ -528,7 +637,7 @@ func _process(delta):
 									物件.get_node("模型/长条腰").scale=Vector3(1,玩法模式时长/(全局脚本.谱面基础节拍[谱面阶段]*32.0)-1,1)
 									物件.get_node("模型/长条尾/标签").text="+"+var_to_str(int(玩法模式时长/(全局脚本.谱面基础节拍[谱面阶段]*32.0)+1))
 									物件.连击加分=int(玩法模式时长/(全局脚本.谱面基础节拍[谱面阶段]*32.0))
-									物件.音符结束时间=(全局脚本.物件总时间[0][物件摆放]+玩法模式时长-全局脚本.阶段时间位置[谱面阶段])*60/全局脚本.谱面每分钟节拍[谱面阶段]/32+谱面段落时间差
+									物件.音符长度=玩法模式时长*7.5/全局脚本.谱面每分钟节拍[谱面阶段]
 									if 玩法模式时长/(全局脚本.谱面基础节拍[谱面阶段]*32.0)-1>1:
 										物件.get_node("模型/长条腰").show()
 									if 全局脚本.物件类型[0][物件摆放].count('6')>0:
@@ -596,12 +705,10 @@ func _process(delta):
 															子物件.get_node("模型/长条腰").show()
 														子物件.谱面阶段=谱面阶段
 														子物件.音符出现时间=(全局脚本.物件总时间[轨道循环+1][音符循环]-全局脚本.阶段时间位置[谱面阶段])*60/全局脚本.谱面每分钟节拍[谱面阶段]/32+谱面段落时间差
-														子物件.音符结束时间=(全局脚本.物件总时间[轨道循环+1][音符循环]+ 全局脚本.物件时长[轨道循环+1][音符循环]-全局脚本.阶段时间位置[谱面阶段])*60/全局脚本.谱面每分钟节拍[谱面阶段]/32+谱面段落时间差
+														子物件.音符长度=全局脚本.物件时长[轨道循环+1][音符循环]*7.5/全局脚本.谱面每分钟节拍[谱面阶段]
 														音符生成(子物件,轨道循环+1)
 														物件编号+=1
 														子物件.物件编号=物件编号
-														子物件.get_node("音符调试编号").text=var_to_str(物件编号)
-														子物件.get_node("音符调试编号").show()
 													#其他类型一律按黑块处理
 													else:
 														var 子物件=黑块场景.instantiate()
@@ -611,8 +718,6 @@ func _process(delta):
 														音符生成(子物件,轨道循环+1)
 														物件编号+=1
 														子物件.物件编号=物件编号
-														子物件.get_node("音符调试编号").text=var_to_str(物件编号)
-														子物件.get_node("音符调试编号").show()
 								else:
 									玩法模式状态=false
 									var 通道=int(全局脚本.乐器音色[谱面阶段][0].split(",", false)[0])
@@ -639,7 +744,7 @@ func _process(delta):
 									物件.get_node("模型/长条腰").scale=Vector3(1,全局脚本.物件时长[0][物件摆放]/(全局脚本.谱面基础节拍[谱面阶段]*32.0)-1,1)
 									物件.get_node("模型/长条尾/标签").text="+"+var_to_str(int(全局脚本.物件时长[0][物件摆放]/(全局脚本.谱面基础节拍[谱面阶段]*32.0)+1))
 									物件.连击加分=int(全局脚本.物件时长[0][物件摆放]/(全局脚本.谱面基础节拍[谱面阶段]*32.0))
-									物件.音符结束时间=(全局脚本.物件总时间[0][物件摆放]+全局脚本.物件时长[0][物件摆放]-全局脚本.阶段时间位置[谱面阶段])*60/全局脚本.谱面每分钟节拍[谱面阶段]/32+谱面段落时间差
+									物件.音符长度=全局脚本.物件时长[0][物件摆放]*7.5/全局脚本.谱面每分钟节拍[谱面阶段]
 									if 全局脚本.物件时长[0][物件摆放]/(全局脚本.谱面基础节拍[谱面阶段]*32.0)-1>1:
 										物件.get_node("模型/长条腰").show()
 									if 全局脚本.物件类型[0][物件摆放].count('6')>0:
@@ -707,12 +812,10 @@ func _process(delta):
 															子物件.get_node("模型/长条腰").show()
 														子物件.谱面阶段=谱面阶段
 														子物件.音符出现时间=(全局脚本.物件总时间[轨道循环+1][音符循环]-全局脚本.阶段时间位置[谱面阶段])*60/全局脚本.谱面每分钟节拍[谱面阶段]/32+谱面段落时间差
-														子物件.音符结束时间=(全局脚本.物件总时间[轨道循环+1][音符循环]+全局脚本.物件时长[轨道循环+1][音符循环]-全局脚本.阶段时间位置[谱面阶段])*60/全局脚本.谱面每分钟节拍[谱面阶段]/32+谱面段落时间差
+														子物件.音符长度=全局脚本.物件时长[轨道循环+1][音符循环]*7.5/全局脚本.谱面每分钟节拍[谱面阶段]
 														音符生成(子物件,轨道循环+1)
 														物件编号+=1
 														子物件.物件编号=物件编号
-														子物件.get_node("音符调试编号").text=var_to_str(物件编号)
-														子物件.get_node("音符调试编号").show()
 													#其他类型一律按黑块处理
 													else:
 														var 子物件=黑块场景.instantiate()
@@ -722,8 +825,6 @@ func _process(delta):
 														音符生成(子物件,轨道循环+1)
 														物件编号+=1
 														子物件.物件编号=物件编号
-														子物件.get_node("音符调试编号").text=var_to_str(物件编号)
-														子物件.get_node("音符调试编号").show()
 							#双押
 							elif 全局脚本.物件类型[0][物件摆放].count('5')>0:
 								var 新位置占位:Array=[]
@@ -796,7 +897,7 @@ func _process(delta):
 										物件.get_node("模型/长条腰").scale=Vector3(1,玩法模式时长/(全局脚本.谱面基础节拍[谱面阶段]*32.0)-1,1)
 										物件.get_node("模型/长条尾/标签").text="+"+var_to_str(int(玩法模式时长/(全局脚本.谱面基础节拍[谱面阶段]*32.0)+1))
 										物件.连击加分=int(玩法模式时长/(全局脚本.谱面基础节拍[谱面阶段]*32.0))
-										物件.音符结束时间=(全局脚本.物件总时间[0][物件摆放]+玩法模式时长-全局脚本.阶段时间位置[谱面阶段])*60/全局脚本.谱面每分钟节拍[谱面阶段]/32+谱面段落时间差
+										物件.音符长度=玩法模式时长*7.5/全局脚本.谱面每分钟节拍[谱面阶段]
 										if 玩法模式时长/(全局脚本.谱面基础节拍[谱面阶段]*32.0)-1>1:
 											物件.get_node("模型/长条腰").show()
 										var 子物件=长块场景.instantiate()
@@ -809,12 +910,10 @@ func _process(delta):
 											子物件.get_node("模型/长条腰").show()
 										子物件.谱面阶段=谱面阶段
 										子物件.音符出现时间=(全局脚本.物件总时间[0][物件摆放]-全局脚本.阶段时间位置[谱面阶段])*60/全局脚本.谱面每分钟节拍[谱面阶段]/32+谱面段落时间差
-										子物件.音符结束时间=(全局脚本.物件总时间[0][物件摆放]+玩法模式时长-全局脚本.阶段时间位置[谱面阶段])*60/全局脚本.谱面每分钟节拍[谱面阶段]/32+谱面段落时间差
+										子物件.音符长度=全局脚本.物件时长[0][物件摆放]*7.5/全局脚本.谱面每分钟节拍[谱面阶段]
 										音符生成(子物件,1)
 										物件编号+=1
 										子物件.物件编号=物件编号
-										子物件.get_node("音符调试编号").text=var_to_str(物件编号)
-										子物件.get_node("音符调试编号").show()
 									else:
 										物件=黑块场景.instantiate()
 										var 子物件=黑块场景.instantiate()
@@ -824,8 +923,6 @@ func _process(delta):
 										音符生成(子物件,1)
 										物件编号+=1
 										子物件.物件编号=物件编号
-										子物件.get_node("音符调试编号").text=var_to_str(物件编号)
-										子物件.get_node("音符调试编号").show()
 									玩法模式音符摆放=0
 									玩法模式时长=全局脚本.物件时长[0][物件摆放]
 									#检测音符类型并合并正确的音符时长
@@ -859,7 +956,7 @@ func _process(delta):
 										物件.get_node("模型/长条腰").scale=Vector3(1,全局脚本.物件时长[0][物件摆放]/(全局脚本.谱面基础节拍[谱面阶段]*32.0)-1,1)
 										物件.get_node("模型/长条尾/标签").text="+"+var_to_str(int(全局脚本.物件时长[0][物件摆放]/(全局脚本.谱面基础节拍[谱面阶段]*32.0)+1))
 										物件.连击加分=int(全局脚本.物件时长[0][物件摆放]/(全局脚本.谱面基础节拍[谱面阶段]*32.0))
-										物件.音符结束时间=(全局脚本.物件总时间[0][物件摆放]+全局脚本.物件时长[0][物件摆放]-全局脚本.阶段时间位置[谱面阶段])*60/全局脚本.谱面每分钟节拍[谱面阶段]/32+谱面段落时间差
+										物件.音符长度=全局脚本.物件时长[0][物件摆放]*7.5/全局脚本.谱面每分钟节拍[谱面阶段]
 										if 全局脚本.物件时长[0][物件摆放]/(全局脚本.谱面基础节拍[谱面阶段]*32.0)-1>1:
 											物件.get_node("模型/长条腰").show()
 										var 子物件=长块场景.instantiate()
@@ -872,12 +969,10 @@ func _process(delta):
 											子物件.get_node("模型/长条腰").show()
 										子物件.谱面阶段=谱面阶段
 										子物件.音符出现时间=(全局脚本.物件总时间[0][物件摆放]-全局脚本.阶段时间位置[谱面阶段])*60/全局脚本.谱面每分钟节拍[谱面阶段]/32+谱面段落时间差
-										子物件.音符结束时间=(全局脚本.物件总时间[0][物件摆放]+全局脚本.物件时长[0][物件摆放]-全局脚本.阶段时间位置[谱面阶段])*60/全局脚本.谱面每分钟节拍[谱面阶段]/32+谱面段落时间差
+										子物件.音符长度=全局脚本.物件时长[0][物件摆放]*7.5/全局脚本.谱面每分钟节拍[谱面阶段]
 										音符生成(子物件,1)
 										物件编号+=1
 										子物件.物件编号=物件编号
-										子物件.get_node("音符调试编号").text=var_to_str(物件编号)
-										子物件.get_node("音符调试编号").show()
 									else:
 										物件=黑块场景.instantiate()
 										var 子物件=黑块场景.instantiate()
@@ -887,8 +982,6 @@ func _process(delta):
 										音符生成(子物件,1)
 										物件编号+=1
 										子物件.物件编号=物件编号
-										子物件.get_node("音符调试编号").text=var_to_str(物件编号)
-										子物件.get_node("音符调试编号").show()
 									var 通道=int(全局脚本.乐器音色[谱面阶段][0].split(",", false)[0])
 									var 乐器=int(全局脚本.乐器音色[谱面阶段][0].split(",", false)[1])
 									match 音符演奏方式:
@@ -1020,7 +1113,7 @@ func _process(delta):
 									if 物件位置占位.size()>=4:
 										for 循环 in 物件位置占位.size():
 											物件位置占位[循环]=0
-										物件位置占位[((物件位置占位.size())/2)-1]=1
+										物件位置占位[int(物件位置占位.size()/2.0)-1]=1
 									else:
 										音符位置确定()
 								else:
@@ -1112,14 +1205,12 @@ func _process(delta):
 							if 全局脚本.物件类型[0][物件摆放]!="0":
 								物件.谱面阶段=谱面阶段
 								物件.position=Vector3(物件.position[0],100,物件.position[2])
-								$'/root/根场景/根界面/游戏界面/游戏界面进度条'.value=(float(物件摆放)/float(全局脚本.物件总时间[0].size()))*100
+								$'/root/根场景/根界面/游戏界面/状态信息/游戏界面进度条'.value=(float(物件摆放)/float(全局脚本.物件总时间[0].size()))*100
 								物件.音符出现时间=(全局脚本.物件总时间[0][物件摆放]-全局脚本.阶段时间位置[谱面阶段])*60/全局脚本.谱面每分钟节拍[谱面阶段]/32+谱面段落时间差
 								if 物件摆放<全局脚本.物件总时间[0].size()-1:
 										音符生成(物件,0)
 										物件编号+=1
 										物件.物件编号=物件编号
-										物件.get_node("音符调试编号").text=var_to_str(物件编号)
-										物件.get_node("音符调试编号").show()
 								else:
 									#该结果是检测歌曲结束之后的情况
 									var 星星贴图=$'/root/根场景/根界面/游戏界面/星星皇冠显示'.get_child(谱面阶段)
@@ -1129,8 +1220,6 @@ func _process(delta):
 										音符生成(物件,0)
 										物件编号+=1
 										物件.物件编号=物件编号
-										物件.get_node("音符调试编号").text=var_to_str(物件编号)
-										物件.get_node("音符调试编号").show()
 						else:
 							if 全局脚本.物件类型[0][物件摆放]=='>':
 								玩法模式状态=false
@@ -1188,35 +1277,110 @@ func _process(delta):
 						var 通道休止=声音数据集合[声音数据集合循环].通道
 						var 状态休止=MIDI_MESSAGE_NOTE_OFF
 						音符输入事件(半音休止,乐器休止,力度休止,通道休止,状态休止)
+		2:
+			
+			pass
 	pass
 #开始游戏事件
 func _input(事件):
+	#开始按钮位置
+	var 键盘键值=0
+	var 手柄键值=0
+	if 物件位置占位.size()>开始按钮位置:
+		键盘键值=$'/root/根场景/根界面/设置/设置选项/控制'.有轨键盘按键布局.get(物件位置占位.size())[开始按钮位置]
+		手柄键值=$'/root/根场景/根界面/设置/设置选项/控制'.有轨手柄按键布局.get(物件位置占位.size())[开始按钮位置]
 	if 事件 is InputEventKey:
 		$"开始按键/键盘提示文字".show()
 		match 事件.keycode:
-			KEY_SPACE:
+			KEY_SPACE,键盘键值:
+				if $"开始按键".visible==true&&$'../根界面/加载画面'.visible==false&& not 事件.pressed:
+					开始按钮()
+	if 事件 is InputEventJoypadButton:
+		$"开始按键/键盘提示文字".show()
+		match 事件.button_index:
+			手柄键值:
 				if $"开始按键".visible==true&&$'../根界面/加载画面'.visible==false&& not 事件.pressed:
 					开始按钮()
 		pass
 	else:
 		$"开始按键/键盘提示文字".hide()
 	pass
+#该函数用于改变MIDI播放时间，用于自动播放和回放、谱面编辑器
+func 时间跳转(时间:float) -> void:
+	$'/root/根场景/视角节点/MidiPlayer'._stop_all_notes()
+	物件摆放历史=0
+	轨道摆放指针=0
+	for 轨道循环 in $'/root/根场景/视角节点/MidiPlayer'.smf_data.tracks.size():
+		数码文件指针[轨道循环]=0
+		var 轨道 = $'/root/根场景/视角节点/MidiPlayer'.smf_data.tracks[轨道循环]
+		for 事件块 in 轨道.events:
+			if $"/root/根场景/根界面/播放器".时间转播放帧(时间) <= 事件块.time:
+				break
+			var 通道 = $'/root/根场景/视角节点/MidiPlayer'.channel_status[事件块.channel_number]
+			var 事件:SMF.MIDIEvent = 事件块.event
+			match 事件.type:
+				#乐器改变
+				SMF.MIDIEventType.program_change:
+					数码乐谱音色[事件块.channel_number]=事件.number
+				#控制器改变
+				SMF.MIDIEventType.control_change:
+					var 控制器改变:SMF.MIDIEventControlChange = 事件 as SMF.MIDIEventControlChange
+					var 输入事件=InputEventMIDI.new()
+					输入事件.message=MIDI_MESSAGE_CONTROL_CHANGE
+					输入事件.channel=事件块.channel_number
+					输入事件.controller_number=控制器改变.number
+					输入事件.controller_value=控制器改变.value
+					$'/root/根场景/视角节点/MidiPlayer'.receive_raw_midi_message(输入事件)
+				#弯音
+				SMF.MIDIEventType.pitch_bend:
+					音符输入事件(事件.value,0,0,事件块.channel_number,MIDI_MESSAGE_PITCH_BEND)
+				#系统事件
+				SMF.MIDIEventType.system_event:
+					match 事件块.event.args.type:
+						#获取BPM的值
+						SMF.MIDISystemEventType.set_tempo:
+							#谱面段落时间差=((事件.args.bpm/(1000000*$'/root/根场景/视角节点/MidiPlayer'.smf_data.timebase))*事件块.time)-((微秒每拍/(1000000*$'/root/根场景/视角节点/MidiPlayer'.smf_data.timebase))*事件块.time)+谱面段落时间差
+							#print((事件.args.bpm/(1000000*$'/root/根场景/视角节点/MidiPlayer'.smf_data.timebase))*事件块.time)
+							微秒每拍=事件块.event.args.bpm
+						#获取基础节拍
+						SMF.MIDISystemEventType.beat:
+							每节节拍=事件块.event.args.beat32
+					$'/root/根场景/视角节点/MidiPlayer'._process_track_system_event( 通道, 事件 as SMF.MIDIEventSystemEvent )
+			数码文件指针[轨道循环]+=1
+	for 循环 in $"/root/根场景/主场景/无轨".物件编号表.size():
+		if 时间<$"/root/根场景/主场景/无轨".物件编号表[循环].物件节点.音符出现时间:
+			break
+		物件摆放历史+=1
+		$"/root/根场景/主场景/无轨".物件编号表[循环].物件节点.音符消除状态=false
+		$"/root/根场景/主场景/无轨".物件编号表[循环].物件节点.position[1]=100.0
+	for 循环 in $"/root/根场景/主场景/无轨".轨道编号表.size():
+		if 时间<$"/root/根场景/主场景/无轨".轨道编号表[循环].出现时间:
+			break
+		轨道摆放指针+=1
+	for 循环 in $"/root/根场景/主场景/无轨".事件表.size():
+		if 时间<$"/root/根场景/主场景/无轨".事件表[循环].事件时间:
+			break
+		数码事件指针+=1
+	pass
+
 func 清除物件():
-	if $/root/根场景/根界面/游戏菜单/歌曲信息/歌曲信息/容器/无轨道模式/选项勾选盒.button_pressed==false:
-		for 子节点循环 in $'/root/根场景/主场景/轨道'.get_child_count():
-			var 子节点 = $'/root/根场景/主场景/轨道'.get_child(子节点循环)
-			for 子节点二循环 in get_node('/root/根场景/主场景/轨道/'+子节点.name+'/物件区').get_child_count():
-				var 物件区子节点=get_node('/root/根场景/主场景/轨道/'+子节点.name+'/物件区').get_child(子节点二循环)
-				物件区子节点.queue_free()
-		pass
-	else:
-		for 子节点循环 in $'/root/根场景/主场景/无轨'.get_child_count():
-			var 子节点 = $'/root/根场景/主场景/无轨'.get_child(子节点循环)
-			for 子节点二循环 in get_node('/root/根场景/主场景/无轨/'+子节点.name+'/物件区').get_child_count():
-				var 物件区子节点=get_node('/root/根场景/主场景/无轨/'+子节点.name+'/物件区').get_child(子节点二循环)
-				物件区子节点.queue_free()
-		pass
-func 音符输入事件(半音,乐器,力度,通道,状态)->void:
+	var 垃圾收集:Array=[]
+	for 子节点循环 in $'/root/根场景/主场景/轨道'.get_child_count():
+		var 子节点 = $'/root/根场景/主场景/轨道'.get_child(子节点循环)
+		for 子节点二循环 in get_node('/root/根场景/主场景/轨道/'+子节点.name+'/物件区').get_child_count():
+			垃圾收集.push_back(get_node('/root/根场景/主场景/轨道/'+子节点.name+'/物件区').get_child(子节点二循环))
+	for 子节点循环 in $'/root/根场景/主场景/无轨'.get_child_count():
+		var 子节点 = $'/root/根场景/主场景/无轨'.get_child(子节点循环)
+		for 子节点二循环 in get_node('/root/根场景/主场景/无轨/'+子节点.name+'/物件区').get_child_count():
+			垃圾收集.push_back(get_node('/root/根场景/主场景/无轨/'+子节点.name+'/物件区').get_child(子节点二循环))
+	#清除物件
+	for 循环 in 垃圾收集.size():
+		if 垃圾收集[循环].物件暂存模式==false:
+			垃圾收集[循环].queue_free()
+		else:
+			垃圾收集[循环].get_parent().remove_child(垃圾收集[循环])
+	pass
+func 音符输入事件(半音:int,乐器:int,力度:int,通道:int,状态:MIDIMessage)->void:
 	var 输入事件=InputEventMIDI.new()
 	输入事件.channel=通道
 	输入事件.pitch=半音
@@ -1262,12 +1426,18 @@ func 背景板装饰计时器():
 		#如果菜单界面严重掉帧，则尝试清除随机装饰物
 		if Performance.get_monitor(Performance.TIME_FPS)<10.0:
 			清除物件()
-			
 	pass # Replace with function body.
+func 开始按钮位置变更():
+	$"开始按键".position[0]=randi_range(-2,物件位置占位.size()-3)*2
+	开始按钮位置=(int(($"开始按键".position[0]+4)/2))
+	pass
 func 开始按钮():
 	if $'/root/根场景/根界面/界面动画'.is_playing()==false:
 		生命值=100.0
 		物件编号=0
+		物件摆放历史=0
+		数码事件指针=0
+		开始按钮位置变更()
 		$'/root/根场景/视角节点/背景音乐播放节点'.自动位置偏差=0.0
 		if $'/root/根场景/根界面/游戏菜单/歌曲信息/歌曲信息/容器/无限模式/选项勾选盒'.button_pressed==true:
 			无限模式=true
@@ -1293,44 +1463,25 @@ func 开始按钮():
 			$'../视角节点/背景音乐播放节点'.set_pitch_scale(1)
 		$"开始按键".hide()
 		精确度判定=0.0
+		无瑕度=0.0
 		歌曲循环次数=1
 		精确度判定组=[]
+		无瑕度判定组=[]
 		谱面段落时间差=0.0
-		$/root/根场景/根界面/游戏界面/游戏界面精确度.text="%02.2f" %floor(精确度判定)+"%"
+		最快手速=0.0
+		$/root/根场景/根界面/游戏界面/详细信息/游戏界面精确度.text="%02.2f" %floor(精确度判定)+"%"
 		$'../视角节点/背景音乐播放节点'.真实播放时间=Time.get_ticks_usec()
 		match 歌曲类型格式:
 			0:
 				音频延迟=0.0
 				数码乐谱播放时间=0.0
-				数码音符生成时间=0.0
-				数码文件指针=[]
-				音符生成指针=[]
-				数码乐谱音色=[]
-				for 循环 in 全局脚本.数码乐谱文件数据.tracks.size():
-					数码文件指针.push_back(0)
-					音符生成指针.push_back(0)
-				#MIDI文件格式
-				match 全局脚本.数码乐谱文件数据.format_type:
-					0:
-						#16为通道数量
-						for 循环 in 16:
-							数码乐谱音色.push_back(0)
-					1,2:
-						for 循环 in 全局脚本.数码乐谱文件数据.tracks.size():
-							数码乐谱音色.push_back(0)
-				for 轨道布置 in 全局脚本.数码乐谱文件数据.tracks.size()-2:
-					if $/root/根场景/主场景/无轨.has_node("无轨根节点"+var_to_str(轨道布置+2))==false:
-						var 无轨轨道=无轨轨道场景.instantiate()
-						无轨轨道.name="无轨根节点"+var_to_str(轨道布置+2)
-						无轨轨道.position=Vector3(0,(轨道布置+1)*4,(轨道布置+1)*4)
-						无轨轨道.允许失误=false
-						$/root/根场景/主场景/无轨.add_child(无轨轨道)
-				if $/root/根场景/主场景/无轨.has_node("无轨根节点0")==false:
-						var 无轨轨道=无轨轨道场景.instantiate()
-						无轨轨道.name="无轨根节点0"
-						无轨轨道.position=Vector3(0,-4,-4)
-						无轨轨道.允许失误=false
-						$/root/根场景/主场景/无轨.add_child(无轨轨道)
+				#for 轨道布置 in $'/root/根场景/视角节点/MidiPlayer'.smf_data.tracks.size()-2:
+					#if $/root/根场景/主场景/无轨.has_node("无轨根节点"+var_to_str(轨道布置+2))==false:
+						#var 无轨轨道=无轨轨道场景.instantiate()
+						#无轨轨道.name="无轨根节点"+var_to_str(轨道布置+2)
+						#无轨轨道.position=Vector3(0,(轨道布置+1)*4,(轨道布置+1)*4)
+						#无轨轨道.允许失误=false
+						#$/root/根场景/主场景/无轨.add_child(无轨轨道)
 			1:
 				末尾音符=true
 				玩法模式状态=false
@@ -1368,7 +1519,7 @@ func 开始按钮():
 								声音处理(全局脚本.对象文件乐谱声音[音符轨道循环+1][循环],全局脚本.物件总时间[音符轨道循环+1][循环],全局脚本.物件时长[音符轨道循环+1][循环],通道,乐器,true)
 				#print(声音数据集合)
 			
-func 开始按钮点击事件(摄像机, 事件, 触摸点位置, 法向量, 形状):
+func 开始按钮点击事件(_摄像机, 事件, _触摸点位置, _法向量, _形状):
 	if 事件 is InputEventScreenTouch:
 		if 事件.pressed == true:
 			开始按钮()
@@ -1591,6 +1742,7 @@ func 声音处理(判断条件,初始时间,时长,通道,音色,演奏状态:bo
 				else:
 					音符序列.push_back(声音数据)
 	return 音符序列
+#该函数用于预处理黑块的位置，防止新生成的黑块与下行的黑块重叠（除非启用物件连续功能），并随机生成位置
 func 音符位置确定():
 	var 新位置占位:Array=[]
 	#确认数组大小
@@ -1613,7 +1765,8 @@ func 音符位置确定():
 		新位置占位[轨道位置]=1
 		物件位置占位=新位置占位
 	pass
-func 音符生成(物件,位置):
+#0代表空，1代表有方块，2代表伴奏块
+func 音符生成(物件:Node,位置:int):
 	var 同排物件占位计数=0
 	if $/root/根场景/主场景/无轨.visible==false:
 		for 循环 in 物件位置占位.size():
@@ -1621,25 +1774,57 @@ func 音符生成(物件,位置):
 				1:
 					if 位置==同排物件占位计数:
 						get_node("/root/根场景/主场景/轨道/轨道根节点"+var_to_str(循环+1)+"/物件区").add_child(物件)
+						#针对爆裂块、狂戳块这类的大体积物件所针对的相邻轨道的判定处理
+						if 物件.has_node("模型/打击判定轨道")==true || 物件.has_node("模型/爆裂粒子")==true:
+							if 物件.position[0]<0:
+								if 循环>0:
+									get_node("/root/根场景/主场景/轨道/轨道根节点"+var_to_str(循环)).大体积物件引用=物件
+							elif 物件.position[0]>0:
+								if 循环+2<=物件位置占位.size():
+									get_node("/root/根场景/主场景/轨道/轨道根节点"+var_to_str(循环+2)).大体积物件引用=物件
+								pass
+							else:
+								if 循环>0 && 循环+2<=物件位置占位.size():
+									get_node("/root/根场景/主场景/轨道/轨道根节点"+var_to_str(循环)).大体积物件引用=物件
+									get_node("/root/根场景/主场景/轨道/轨道根节点"+var_to_str(循环+2)).大体积物件引用=物件
 					同排物件占位计数+=1
 				2:
 					if 位置!=0:
 						get_node("/root/根场景/主场景/轨道/轨道根节点"+var_to_str(循环+1)+"/物件区").add_child(物件)
 	else:
-		var 轨道位置=(randf()-0.5)*float(get_node("/root/根场景/根界面/游戏菜单/歌曲信息/歌曲信息/容器/轨道数量/滑块").value)*2-1
+		var 轨道位置=randf_range(-10, 10)
 		物件.position=Vector3(轨道位置,物件.position[1],物件.position[2])
-		get_node("/root/根场景/主场景/无轨/无轨根节点1/物件区").add_child(物件)
+		get_node("/root/根场景/主场景/无轨/轨道0/物件区").add_child(物件)
 	pass
-
+#该函数用于固定生成黑块位置，在MIDI格式曲谱里使用
+func 可定物件放置(物件:Node,位置:int=1,轨道编号:int=0,按照音高排序:bool=false):
+	if $/root/根场景/主场景/无轨.visible==false:
+		get_node("/root/根场景/主场景/轨道/轨道根节点"+var_to_str(位置%轨道数量变更+1)+"/物件区").add_child(物件)
+	else:
+		if 按照音高排序==true:
+			物件.position=Vector3(位置*2-128,物件.position[1],物件.position[2])
+		else:
+			物件.position=Vector3(位置%12*2-24,物件.position[1],物件.position[2])
+		for 节点循环 in $"/root/根场景/主场景/无轨".轨道编号表.size():
+			if $"/root/根场景/主场景/无轨".轨道编号表[节点循环].轨道编号==轨道编号:
+				$"/root/根场景/主场景/无轨".轨道编号表[节点循环].轨道节点.get_node("物件区").add_child(物件)
+				break
+	pass
 func 丢失生命值():
-	生命值=生命值-10.0
-	#游戏结束
-	if 生命值<0.0:
-		生命值=0.0
+	if 自动模式==false:
+		生命值=生命值-10.0
+		#游戏结束
+		if 生命值<0.0:
+			生命值=0.0
+			$"/root/根场景/根界面/游戏界面/界面动画".play("游戏失败")
+			$'../视角节点/背景音乐播放节点'.stop()
+			音符输入事件(48,0,127,0,MIDI_MESSAGE_NOTE_ON)
+			音符输入事件(50,0,127,0,MIDI_MESSAGE_NOTE_ON)
+			音符输入事件(52,0,127,0,MIDI_MESSAGE_NOTE_ON)
 	pass
-func 添加生命值(血量值):
-	生命值=生命值+血量值
-	#游戏结束
-	if 生命值>100.0:
-		生命值=100.0
+func 添加生命值(血量值:float):
+	if 自动模式==false:
+		生命值=生命值+血量值
+		if 生命值>100.0:
+			生命值=100.0
 	pass

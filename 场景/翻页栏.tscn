@@ -17,56 +17,15 @@ script = ExtResource("1_ep56b")
 layout_mode = 2
 text = "上一页"
 
-[node name="文字1" type="Label" parent="."]
+[node name="文字" type="Label" parent="."]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 5
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_ep56b")
-text = "第"
-horizontal_alignment = 2
-vertical_alignment = 1
-
-[node name="当前页" type="Label" parent="."]
-layout_mode = 2
-size_flags_vertical = 5
-theme_override_styles/normal = SubResource("StyleBoxFlat_ep56b")
-text = "0"
-vertical_alignment = 1
-
-[node name="文字2" type="Label" parent="."]
-layout_mode = 2
-size_flags_vertical = 5
-theme_override_styles/normal = SubResource("StyleBoxFlat_ep56b")
-text = "页"
-vertical_alignment = 1
-
-[node name="分隔" type="Label" parent="."]
-layout_mode = 2
-size_flags_vertical = 5
-theme_override_styles/normal = SubResource("StyleBoxFlat_ep56b")
-text = "/"
-vertical_alignment = 1
-
-[node name="文字3" type="Label" parent="."]
-layout_mode = 2
-size_flags_vertical = 5
-theme_override_styles/normal = SubResource("StyleBoxFlat_ep56b")
-text = "共"
-vertical_alignment = 1
-
-[node name="总页面" type="Label" parent="."]
-layout_mode = 2
-size_flags_vertical = 5
-theme_override_styles/normal = SubResource("StyleBoxFlat_ep56b")
-text = "0"
-vertical_alignment = 1
-
-[node name="文字4" type="Label" parent="."]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 5
-theme_override_styles/normal = SubResource("StyleBoxFlat_ep56b")
-text = "页"
+text = "第0页/共0页"
+horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="下一页" type="Button" parent="."]

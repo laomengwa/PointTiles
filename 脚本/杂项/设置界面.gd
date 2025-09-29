@@ -1,6 +1,7 @@
 extends Control
 var 游戏暂停设置检测:Node
 var 设置配置文件:String
+var 屏幕宽度检测 = false
 #以下是默认的设置选项保存变量
 var 屏幕安全区数据=[0.0,0.0,0.0,0.0]
 var 语言区域设置数据=OS.get_locale_language()
@@ -8,7 +9,7 @@ var 语言区域设置数据=OS.get_locale_language()
 var 音频:Node
 var 视频:Node
 var 控制:Node
-var 外观:Node
+var 界面:Node
 var 语言:Node
 var 关于:Node
 var 账户:Node
@@ -19,7 +20,7 @@ func _ready():
 	音频=$'设置选项/音频'
 	视频=$'设置选项/视频'
 	控制=$'设置选项/控制'
-	外观=$'设置选项/外观'
+	界面=$'设置选项/界面'
 	语言=$'设置选项/语言'
 	关于=$'设置选项/关于'
 	账户=$'设置选项/账户'
@@ -46,15 +47,15 @@ func _ready():
 		#暂时没有iOS平台的文件路径
 		var 目录:DirAccess
 		if OS.get_name()!="Android":
-			设置配置文件="user://PointTiles/Settings.cfg"
+			设置配置文件="user://指向黑块/设置.cfg"
 			目录=DirAccess.open("user://")
 		else:
-			设置配置文件="/storage/self/primary/Android/data/org.mengwa.pointtiles/PointTiles/Settings.cfg"
+			设置配置文件="/storage/self/primary/Android/data/org.mengwa.pointtiles/指向黑块/设置.cfg"
 			目录=DirAccess.open("/storage/self/primary/Android/data/org.mengwa.pointtiles")
 		$'设置选项/调试/调试/其他/容器/存储位置信息/数据'.text=目录.get_current_dir(false)
 		#如果没有该文件夹，则就创建
-		if 目录.dir_exists("PointTiles")==false:
-			目录.make_dir("PointTiles")
+		if 目录.dir_exists("指向黑块")==false:
+			目录.make_dir("指向黑块")
 		#如果没有设置配置文件，则就创建
 		elif FileAccess.file_exists(设置配置文件)==false:
 			FileAccess.open(设置配置文件, FileAccess.WRITE)
@@ -64,9 +65,9 @@ func _ready():
 	设置应用()
 	音频.设置应用()
 	视频.设置应用()
+	界面.设置应用()
 	pass
-var 屏幕宽度检测 = false
-func _process(帧处理):
+func _process(_帧处理):
 	#UI自适应
 	#竖屏
 	if $'/root/根场景/根界面'.size[0] <= 600:
@@ -99,6 +100,7 @@ func 保存设置数据(配置文件路径):
 	设置数据.set_value("视频","屏幕安全区",屏幕安全区数据)
 	视频.保存设置数据(设置数据)
 	音频.保存设置数据(设置数据)
+	界面.保存设置数据(设置数据)
 	设置数据.set_value("语言","语言",语言区域设置数据)
 	设置数据.save(配置文件路径)
 	#var 设置数据文件=FileAccess.open(配置文件路径, FileAccess.WRITE)
@@ -117,6 +119,7 @@ func 读取设置数据(配置文件路径):
 	var 读取结果=设置数据.load(配置文件路径)
 	视频.读取设置数据(配置文件路径)
 	音频.读取设置数据(配置文件路径)
+	界面.读取设置数据(配置文件路径)
 	if 读取结果==OK:
 		屏幕安全区数据=设置数据.get_value("视频","屏幕安全区")
 		语言区域设置数据=设置数据.get_value("语言","语言")
@@ -131,10 +134,6 @@ func 设置应用():
 	$'../窗口/界面安全区偏移/表格/垂直调整/滑块'.value=屏幕安全区数据[3]
 	$'../窗口/界面安全区偏移/表格/水平缩放/滑块'.value=屏幕安全区数据[0]
 	$'../窗口/界面安全区偏移/表格/垂直缩放/滑块'.value=屏幕安全区数据[1]
-	pass
-
-func 安全区设置按钮更改():
-	$"界面动画".play("安全区设置打开")
 	pass
 
 func 安全区设置关闭():
@@ -172,7 +171,6 @@ func 视频选项():
 	$'设置选项/视频'.show()
 	pass
 
-
 func 语言选项():
 	选项打开()
 	$'顶栏/顶栏/文字框/选项文字'.text="语言"
@@ -184,10 +182,10 @@ func 音频选项():
 	$'顶栏/顶栏/文字框/选项文字'.text="音频"
 	$'设置选项/音频'.show()
 	pass
-func 外观选项():
+func 界面选项():
 	选项打开()
-	$'顶栏/顶栏/文字框/选项文字'.text="外观"
-	$'设置选项/外观'.show()
+	$'顶栏/顶栏/文字框/选项文字'.text="界面"
+	$'设置选项/界面'.show()
 	pass
 func 控制选项():
 	选项打开()

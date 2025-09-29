@@ -1,10 +1,16 @@
-extends Node3D
+extends XROrigin3D
 @export var 移动状态:bool=false
 @export var 位移表达式:Array=["0","0","0"]
 @export var 旋转表达式:Array=["0","0","0"]
+#视野/投影大小，裁剪近视距，裁剪远视距
+@export var 视距变更表达式:Array=["0","0","0"]
+#视口纵偏移，视口横偏移，视锥纵偏移，视锥横偏移
+@export var 视角偏移表达式:Array=["0","0","0","0"]
 var 静止时刻:float=0.0
-var 局部位置:Array=[0.0,0.0,0.0,0.0,0.0,0.0]
-var 脚本:Array=[Object.new(),Object.new(),Object.new(),Object.new(),Object.new(),Object.new()]
+#位置x,位置y,位置z,旋转x,旋转y,旋转z,视野,近视,远视,视角偏移x,视角偏移y,视锥偏移x,视锥偏移y
+var 局部位置:Array=[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]
+var 脚本:Array=[Object.new(),Object.new(),Object.new(),Object.new(),Object.new(),Object.new(),Object.new(),Object.new(),Object.new(),Object.new(),Object.new(),Object.new(),Object.new()]
+var 四元数旋转状态:bool=false
 var 状态变更:bool=false
 #前进 后退 左移 右移 上升 下降 z轴顺旋 z轴逆旋
 var 键盘移动按键:Array=[KEY_W,KEY_S,KEY_A,KEY_D,KEY_SPACE,KEY_SHIFT,KEY_Q,KEY_E]
@@ -59,18 +65,27 @@ func _input(事件):
 				JOY_BUTTON_RIGHT_STICK:
 					手柄按键状态[3]=事件.is_pressed()
 
-func _process(delta):
+func _process(_帧处理):
 	if 全局脚本.游戏开始状态==false:
 		静止时刻=0
 		移动状态=false
 	if 全局脚本.游戏开始状态==true&&控制状态==false:
 		if 移动状态==false:
 			静止时刻=$'/root/根场景/视角节点/背景音乐播放节点'.播放时间
+			var 视口大小:float
+			if $"摄像机".projection==0:
+				视口大小=$"摄像机".fov
+			else:
+				视口大小=$"摄像机".size
 			if 状态变更==true:
-				局部位置=[self.position[0],self.position[1],self.position[2],self.rotation[0],self.rotation[1],self.rotation[2],self.scale[0],self.scale[1],self.scale[2]]
+				if 四元数旋转状态==false:
+					局部位置=[self.position[0],self.position[1],self.position[2],self.rotation[0],self.rotation[1],self.rotation[2],视口大小,$"摄像机".near,$"摄像机".far,$"摄像机".h_offset,$"摄像机".v_offset,$"摄像机".frustum_offset[0],$"摄像机".frustum_offset[1]]
+				else:
+					局部位置=[self.position[0],self.position[1],self.position[2],self.quaternion.x,self.quaternion.y,self.quaternion.z,视口大小,$"摄像机".near,$"摄像机".far,$"摄像机".h_offset,$"摄像机".v_offset,$"摄像机".frustum_offset[0],$"摄像机".frustum_offset[1]]
 				状态变更=false
 		elif 移动状态==true:
 			var 运动时间=$'/root/根场景/视角节点/背景音乐播放节点'.播放时间-静止时刻
+			print(移动状态)
 			#位移
 			for 循环 in 位移表达式.size():
 				#检测表达式变更，以防止代码重复执行
@@ -83,7 +98,7 @@ func _process(delta):
 						#检测是否为空实例
 						脚本[循环].set_script(公式脚本)
 					else:
-						print("错误")
+						printerr("错误")
 				if 脚本[循环].get_script()!=null:
 					self.position[循环]=脚本[循环].函数(运动时间)
 				pass
@@ -98,10 +113,67 @@ func _process(delta):
 					if 公式错误检测==OK:
 						脚本[循环+3].set_script(公式脚本)
 					else:
-						print("错误")
+						printerr("错误")
 				if 脚本[循环+3].get_script()!=null:
-					self.rotation[循环]=脚本[循环+3].函数(运动时间)
-				pass
+					if 四元数旋转状态==false:
+						self.rotation[循环]=脚本[循环+3].函数(运动时间)
+			if 四元数旋转状态==true&&脚本[3].get_script()!=null&&脚本[4].get_script()!=null&&脚本[5].get_script()!=null:
+				var 视角旋转四元数:Quaternion = Quaternion()
+				var 俯仰角 = Quaternion(Vector3.DOWN,脚本[3].函数(运动时间))
+				var 偏航角 = Quaternion(Vector3.LEFT,脚本[4].函数(运动时间))
+				var 滚转角 = Quaternion(Vector3.FORWARD,脚本[5].函数(运动时间))
+				# 更新旋转四元数
+				视角旋转四元数 *= 偏航角*滚转角*俯仰角
+				# 应用旋转到摄像机
+				self.quaternion*=视角旋转四元数
+			#视距更改
+			for 循环 in 视距变更表达式.size():
+				#检测表达式变更，以防止代码重复执行
+				if 状态变更==false:
+					var 公式脚本=GDScript.new()
+					#字符串转可执行代码
+					公式脚本.set_source_code("extends Object\nfunc 函数(t:float=0):\n\tvar s:float="+var_to_str(局部位置[循环+6])+"\n\treturn("+视距变更表达式[循环]+")")
+					var 公式错误检测=公式脚本.reload()
+					if 公式错误检测==OK:
+						#检测是否为空实例
+						脚本[循环+6].set_script(公式脚本)
+					else:
+						printerr("错误")
+				if 脚本[循环+6].get_script()!=null:
+					match 循环:
+						0:
+							match $"摄像机".projection:
+								0:
+									$"摄像机".fov=脚本[6].函数(运动时间)
+								1,2:
+									$"摄像机".size=脚本[6].函数(运动时间)
+						1:
+							$"摄像机".near=脚本[7].函数(运动时间)
+						2:
+							$"摄像机".far=脚本[8].函数(运动时间)
+			#视角偏移
+			for 循环 in 视角偏移表达式.size():
+				#检测表达式变更，以防止代码重复执行
+				if 状态变更==false:
+					var 公式脚本=GDScript.new()
+					#字符串转可执行代码
+					公式脚本.set_source_code("extends Object\nfunc 函数(t:float=0):\n\tvar s:float="+var_to_str(局部位置[循环+9])+"\n\treturn("+视角偏移表达式[循环]+")")
+					var 公式错误检测=公式脚本.reload()
+					if 公式错误检测==OK:
+						#检测是否为空实例
+						脚本[循环+9].set_script(公式脚本)
+					else:
+						printerr("错误")
+				if 脚本[循环+9].get_script()!=null:
+					match 循环:
+						0:
+							$"摄像机".h_offset=脚本[9].函数(运动时间)
+						1:
+							$"摄像机".v_offset=脚本[10].函数(运动时间)
+						2:
+							$"摄像机".frustum_offset[0]=脚本[11].函数(运动时间)
+						3:
+							$"摄像机".frustum_offset[1]=脚本[12].函数(运动时间)
 			if 状态变更==false:
 				状态变更=true
 	if 控制状态==true:
@@ -119,8 +191,11 @@ func _process(delta):
 				# 应用旋转到摄像机
 				self.quaternion*=视角旋转四元数
 				#self.quaternion.x+=视角移动向量[0]
-				Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+				#针对安卓平台无法通过鼠标拖拽视角的修复方法
+				if OS.get_name()=="Android":
+					Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 				指针位移差=Vector2.ZERO
+				Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 				$"/root/根场景/根界面/游戏界面/操作提示/表格/左列表".show()
 				$"/root/根场景/根界面/游戏界面/操作提示/表格/手柄左列表".hide()
 				if $"/root/根场景/根界面/游戏界面/操作提示".visible==false:
@@ -155,4 +230,26 @@ func _process(delta):
 			$"/root/根场景/根界面/游戏界面/操作提示/动画".stop()
 			$"/root/根场景/根界面/游戏界面/操作提示/动画".play("提示关闭")
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	pass
+func 恢复摄像机状态()->void:
+	$"摄像机".near=0.05
+	$"摄像机".far=4000
+	$"摄像机".h_offset=0
+	$"摄像机".v_offset=0
+	$"摄像机".frustum_offset=Vector2(0,0)
+	$"摄像机".keep_aspect=Camera3D.KEEP_HEIGHT
+	移动状态=false
+	if $/root/根场景/根界面/游戏菜单/歌曲信息/歌曲信息/容器/使用倾斜轨道/选项勾选盒.button_pressed == true:
+		$"摄像机".projection=Camera3D.PROJECTION_PERSPECTIVE
+		$"摄像机".fov=75
+		self.quaternion=Quaternion(0.383,0,0,0.924)
+		var 值:float=$"../主场景".物件位置占位.size()
+		self.position[0]=-(4-值)
+		self.position[2]=-9+值
+		$"/root/根场景/视角节点".position[1]=-4-(值/2)
+	else:
+		$"摄像机".projection=Camera3D.PROJECTION_ORTHOGONAL
+		$"摄像机".size=0.1
+		self.position=Vector3(0,0,0)
+		self.quaternion=Quaternion(0,0,0,1)
 	pass

@@ -15,12 +15,12 @@ config/name_localized={
 "zh_CN": "指向黑块",
 "zh_TW": "指向黑塊"
 }
-config/description="三维版的别踩白块模拟器"
-config/version="0.0.2"
+config/description="三维的别踩白块游戏"
+config/version="0.0.3_alpha"
 run/main_scene="res://场景/根场景.tscn"
 config/auto_accept_quit=false
 config/quit_on_go_back=false
-config/features=PackedStringArray("4.4", "GL Compatibility")
+config/features=PackedStringArray("4.5", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 config/icon="res://icon.svg"
 config/macos_native_icon="res://icon.svg"
@@ -36,15 +36,29 @@ driver/enable_input=true
 
 "全局脚本"="*res://脚本/全局脚本.gd"
 
+[debug]
+
+file_logging/enable_file_logging=true
+
 [display]
 
 window/size/initial_position_type=2
-window/size/extend_to_title=true
 window/handheld/orientation=6
+display_server/assembly_name="3"
 
-[dotnet]
+[file_customization]
 
-project/assembly_name="3"
+folder_colors={
+"res://场景/": "red",
+"res://字体/": "orange",
+"res://插件/": "green",
+"res://文字/": "teal",
+"res://模型/": "blue",
+"res://着色/": "purple",
+"res://纹理/": "pink",
+"res://脚本/": "gray",
+"res://音乐/": "yellow"
+}
 
 [filesystem]
 
@@ -107,16 +121,28 @@ pointing/emulate_touch_from_mouse=true
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://文字/语言.zh.translation", "res://文字/语言.zh_CN.translation", "res://文字/语言.zh_TW.translation", "res://音乐/旧式谱面/表格配置/language_music.zh_CN.translation", "res://音乐/旧式谱面/表格配置/language_music.zh_TW.translation")
+locale/translations=PackedStringArray("res://文字/语言.zh.translation", "res://文字/语言.zh_CN.translation", "res://文字/语言.zh_TW.translation", "res://音乐/旧式谱面/表格配置/language_music.zh_CN.translation", "res://音乐/旧式谱面/表格配置/language_music.zh_TW.translation", "res://文字/游戏引擎文本/菜单文本/zh_CN.po", "res://文字/游戏引擎文本/菜单文本/zh_HK.po", "res://文字/游戏引擎文本/菜单文本/zh_TW.po")
 locale/include_text_server_data=true
-locale/test="zh_CN"
 locale/fallback="zh_CN"
-locale/locale_filter_mode=0
+rendering/text_driver="ICU / HarfBuzz / Graphite (Built-in)"
+locale/locale_filter_mode=1
+
+[physics]
+
+2d/run_on_separate_thread=true
+3d/run_on_separate_thread=true
+3d/physics_engine="Jolt Physics"
 
 [rendering]
 
 gl_compatibility/nvidia_disable_threaded_optimization=false
 renderer/rendering_method="gl_compatibility"
-renderer/rendering_method.mobile="gl_compatibility"
+renderer/rendering_method.mobile="forward_plus"
+renderer/rendering_method.web="forward_plus"
 textures/vram_compression/import_etc2_astc=true
 environment/defaults/default_clear_color=Color(0.8, 1, 1, 1)
+
+[xr]
+
+openxr/enabled=true
+shaders/enabled=true

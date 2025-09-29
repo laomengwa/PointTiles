@@ -1,5 +1,5 @@
 extends AudioStreamPlayer
-@export var 人声消除:bool
+var 人声消除:bool
 var 音频流:AudioStreamGeneratorPlayback
 var 音效:AudioEffect
 func _ready():

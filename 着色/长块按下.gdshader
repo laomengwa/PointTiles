@@ -8,21 +8,21 @@ uniform vec3 color=vec3(0.4,0.7,1.0);
 uniform bool state = false;
 void vertex() {
 	if(state==true){
+		//着色片段扩大一圈
 		VERTEX += (0.01 * vec4(VERTEX, 1.0)).xyz;
-		VERTEX.y+=(time-1.0)*VERTEX.y-(0.01);
-		//VERTEX.y += 0.25 + sin(TIME * 2.0) * rand(vec2(VERTEX.xz)) * 0.5;
-		//VERTEX.y +=3.0* cos(VERTEX.z);
+		if(time>1.0){
+			VERTEX.y=1.01*VERTEX.y;
+		}else if(time<0.0){
+			VERTEX.y=0.0;
+		}else{
+			VERTEX.y+=(time-1.0)*VERTEX.y-(0.01);
+		}
 	}
 }
-//vec3 wave(vec2 uv){
-	//return color*step(0.5-sin(uv.x+TIME),uv.y);
-//}
 void fragment() {
 	if(state==true){
 		ALBEDO=color;
 		ALPHA=1.0;
-		//vec3 wave=wave(UV);
-		//COLOR.rgb=mix(color,wave,0.0).rgb;
 	}else{
 		ALPHA=0.0;
 	}

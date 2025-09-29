@@ -5,7 +5,7 @@ var 显示编号=0
 func _ready():
 	$'标签'.text=var_to_str(显示编号)
 	pass
-func _process(delta):
+func _process(_帧处理):
 	#print($'/root/根场景/视角节点/背景音乐播放节点'.播放时间-音符出现时间)
 	match 提示显示方向:
 		true:

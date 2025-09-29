@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "maaAcDUf5TY=",
+  "success": true,
+  "projectFilePath": "/home/mengwa/Documents/3/3.csproj",
+  "expectedPackageFiles": [
+    "/home/mengwa/.nuget/packages/godot.sourcegenerators/4.3.0/godot.sourcegenerators.4.3.0.nupkg.sha512",
+    "/home/mengwa/.nuget/packages/godotsharp/4.3.0/godotsharp.4.3.0.nupkg.sha512",
+    "/home/mengwa/.nuget/packages/godotsharpeditor/4.3.0/godotsharpeditor.4.3.0.nupkg.sha512",
+    "/home/mengwa/.nuget/packages/microsoft.netcore.app.ref/6.0.32/microsoft.netcore.app.ref.6.0.32.nupkg.sha512",
+    "/home/mengwa/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.32/microsoft.aspnetcore.app.ref.6.0.32.nupkg.sha512"
+  ],
+  "logs": []
+}

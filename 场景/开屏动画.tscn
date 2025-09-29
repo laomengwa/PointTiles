@@ -1,7 +1,8 @@
-[gd_scene load_steps=45 format=3 uid="uid://cag7616kwjoaa"]
+[gd_scene load_steps=42 format=3 uid="uid://cag7616kwjoaa"]
 
 [ext_resource type="Texture2D" uid="uid://clag3pw84fn8a" path="res://纹理/背景/1.jpg" id="1_6kcu4"]
 [ext_resource type="FontFile" uid="uid://dr7fcql13tm0" path="res://字体/NotoSans-Medium.ttf" id="2_cn4s8"]
+[ext_resource type="PackedScene" uid="uid://xlqyebirr3i2" path="res://场景/图标.tscn" id="3_ecp4c"]
 [ext_resource type="Texture2D" uid="uid://blmox2tndf1lh" path="res://模型/滑块.png" id="3_yacd5"]
 [ext_resource type="ArrayMesh" uid="uid://1aphyy4c1vna" path="res://模型/长条尾.obj" id="4_psdew"]
 [ext_resource type="ArrayMesh" uid="uid://cdxxrma2f7uj3" path="res://模型/长条腰.obj" id="5_8rwjh"]
@@ -52,67 +53,6 @@ next_pass = SubResource("StandardMaterial3D_pc2dm")
 shading_mode = 0
 albedo_texture = ExtResource("10_egywa")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_maybr"]
-cull_mode = 1
-shading_mode = 0
-grow = true
-grow_amount = 0.02
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8gfld"]
-next_pass = SubResource("StandardMaterial3D_maybr")
-shading_mode = 0
-albedo_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o8bua"]
-cull_mode = 1
-shading_mode = 0
-grow = true
-grow_amount = 0.02
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ukyht"]
-next_pass = SubResource("StandardMaterial3D_o8bua")
-shading_mode = 0
-diffuse_mode = 3
-specular_mode = 1
-albedo_texture = ExtResource("3_yacd5")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_41rxy"]
-shading_mode = 0
-diffuse_mode = 3
-specular_mode = 1
-albedo_texture = ExtResource("3_yacd5")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5yl2b"]
-next_pass = SubResource("StandardMaterial3D_o8bua")
-shading_mode = 0
-diffuse_mode = 3
-specular_mode = 1
-albedo_texture = ExtResource("3_yacd5")
-grow_amount = -0.02
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fn31t"]
-shading_mode = 0
-albedo_color = Color(1, 0.533333, 0.533333, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p3m0i"]
-shading_mode = 0
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ulrnd"]
-shading_mode = 0
-albedo_texture = ExtResource("13_jdda7")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ud4s"]
-transparency = 1
-cull_mode = 1
-shading_mode = 0
-grow = true
-grow_amount = 0.02
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kl8t7"]
-next_pass = SubResource("StandardMaterial3D_4ud4s")
-shading_mode = 0
-albedo_color = Color(0.4, 1, 0.4, 1)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_80gf0"]
 cull_mode = 1
 shading_mode = 0
@@ -136,6 +76,40 @@ grow_amount = -0.02
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0dedu"]
 size = Vector3(1, 10, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ulrnd"]
+shading_mode = 0
+albedo_texture = ExtResource("13_jdda7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fn31t"]
+shading_mode = 0
+albedo_color = Color(1, 0.533333, 0.533333, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p3m0i"]
+shading_mode = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ud4s"]
+transparency = 1
+cull_mode = 1
+shading_mode = 0
+grow = true
+grow_amount = 0.02
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kl8t7"]
+next_pass = SubResource("StandardMaterial3D_4ud4s")
+shading_mode = 0
+albedo_color = Color(0.4, 1, 0.4, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_maybr"]
+cull_mode = 1
+shading_mode = 0
+grow = true
+grow_amount = 0.02
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8gfld"]
+next_pass = SubResource("StandardMaterial3D_maybr")
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b17fc"]
 next_pass = SubResource("StandardMaterial3D_maybr")
@@ -410,513 +384,8 @@ transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, 
 current = true
 size = 12.0
 
-[node name="图标" type="Node3D" parent="物件动画/摄像机"]
-transform = Transform3D(0.063, 0, 0, 0, 0.063, 0, 0, 0, 0.063, -1.687, 0, -4)
-
-[node name="指" type="Node3D" parent="物件动画/摄像机/图标"]
-
-[node name="长块" type="Node3D" parent="物件动画/摄像机/图标/指"]
-rotation_edit_mode = 2
-
-[node name="长条尾" type="MeshInstance3D" parent="物件动画/摄像机/图标/指/长块"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13, 0)
-material_override = SubResource("StandardMaterial3D_y6vow")
-mesh = ExtResource("4_psdew")
-skeleton = NodePath("../../../../..")
-
-[node name="长条腰" type="MeshInstance3D" parent="物件动画/摄像机/图标/指/长块"]
-transform = Transform3D(1, 0, 0, 0, 4, 0, 0, 0, 1, 0, 1.5, 0)
-material_override = SubResource("StandardMaterial3D_nqthi")
-mesh = ExtResource("5_8rwjh")
-
-[node name="模型" type="Node3D" parent="物件动画/摄像机/图标/指/长块"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-
-[node name="长条头" type="MeshInstance3D" parent="物件动画/摄像机/图标/指/长块/模型"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
-material_override = SubResource("StandardMaterial3D_7yvcm")
-mesh = ExtResource("6_jru7i")
-skeleton = NodePath("../..")
-
-[node name="狂戳" type="Node3D" parent="物件动画/摄像机/图标/指"]
-transform = Transform3D(-4.37114e-08, -2, -1.06581e-14, 1, -8.74228e-08, 0, -4.23516e-22, -2.13163e-14, 1, 3, 12, 0)
-
-[node name="模型" type="MeshInstance3D" parent="物件动画/摄像机/图标/指/狂戳"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-material_override = SubResource("StandardMaterial3D_8gfld")
-mesh = ExtResource("7_kki1i")
-
-[node name="滑块" type="Node3D" parent="物件动画/摄像机/图标/指"]
-transform = Transform3D(1.5, 1, 0, 0, 0.5, 0, 0, 0, 1, -3, 5, 0)
-rotation_edit_mode = 2
-
-[node name="长条尾" type="MeshInstance3D" parent="物件动画/摄像机/图标/指/滑块"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
-material_override = SubResource("StandardMaterial3D_ukyht")
-mesh = ExtResource("4_psdew")
-skeleton = NodePath("../..")
-
-[node name="长条腰" type="MeshInstance3D" parent="物件动画/摄像机/图标/指/滑块"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-visible = false
-material_override = SubResource("StandardMaterial3D_41rxy")
-mesh = ExtResource("5_8rwjh")
-skeleton = NodePath("../..")
-
-[node name="长条头" type="MeshInstance3D" parent="物件动画/摄像机/图标/指/滑块"]
-material_override = SubResource("StandardMaterial3D_5yl2b")
-mesh = ExtResource("6_jru7i")
-skeleton = NodePath("../..")
-
-[node name="狂戳2" type="Node3D" parent="物件动画/摄像机/图标/指"]
-transform = Transform3D(-4.37114e-08, -1, -1.06581e-14, 1, -4.37114e-08, -4.65882e-22, 1.51461e-28, -1.06581e-14, 1, 0, 1, 0)
-
-[node name="模型" type="MeshInstance3D" parent="物件动画/摄像机/图标/指/狂戳2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-material_override = SubResource("StandardMaterial3D_8gfld")
-mesh = ExtResource("7_kki1i")
-
-[node name="长块2" type="Node3D" parent="物件动画/摄像机/图标/指"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 9, 0)
-rotation_edit_mode = 2
-
-[node name="长条尾" type="MeshInstance3D" parent="物件动画/摄像机/图标/指/长块2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
-material_override = SubResource("StandardMaterial3D_y6vow")
-mesh = ExtResource("4_psdew")
-skeleton = NodePath("../../../../..")
-
-[node name="长条腰" type="MeshInstance3D" parent="物件动画/摄像机/图标/指/长块2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-visible = false
-material_override = SubResource("StandardMaterial3D_nqthi")
-mesh = ExtResource("5_8rwjh")
-
-[node name="模型" type="Node3D" parent="物件动画/摄像机/图标/指/长块2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
-
-[node name="长条头" type="MeshInstance3D" parent="物件动画/摄像机/图标/指/长块2/模型"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
-material_override = SubResource("StandardMaterial3D_7yvcm")
-mesh = ExtResource("6_jru7i")
-skeleton = NodePath("../..")
-
-[node name="长块3" type="Node3D" parent="物件动画/摄像机/图标/指"]
-transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 5, 11, 0)
-
-[node name="长条尾" type="MeshInstance3D" parent="物件动画/摄像机/图标/指/长块3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
-material_override = SubResource("StandardMaterial3D_y6vow")
-mesh = ExtResource("4_psdew")
-skeleton = NodePath("../../../../..")
-
-[node name="长条腰" type="MeshInstance3D" parent="物件动画/摄像机/图标/指/长块3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-visible = false
-material_override = SubResource("StandardMaterial3D_nqthi")
-mesh = ExtResource("5_8rwjh")
-
-[node name="模型" type="Node3D" parent="物件动画/摄像机/图标/指/长块3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
-
-[node name="长条头" type="MeshInstance3D" parent="物件动画/摄像机/图标/指/长块3/模型"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
-material_override = SubResource("StandardMaterial3D_7yvcm")
-mesh = ExtResource("6_jru7i")
-skeleton = NodePath("../..")
-
-[node name="滑块2" type="Node3D" parent="物件动画/摄像机/图标/指"]
-transform = Transform3D(0.34202, 0.939693, 0, -0.939693, 0.34202, 0, 0, 0, 1, 5, 13, 0)
-
-[node name="长条尾" type="MeshInstance3D" parent="物件动画/摄像机/图标/指/滑块2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
-material_override = SubResource("StandardMaterial3D_ukyht")
-mesh = ExtResource("4_psdew")
-skeleton = NodePath("../..")
-
-[node name="长条腰" type="MeshInstance3D" parent="物件动画/摄像机/图标/指/滑块2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-visible = false
-material_override = SubResource("StandardMaterial3D_41rxy")
-mesh = ExtResource("5_8rwjh")
-skeleton = NodePath("../..")
-
-[node name="长条头" type="MeshInstance3D" parent="物件动画/摄像机/图标/指/滑块2"]
-material_override = SubResource("StandardMaterial3D_5yl2b")
-mesh = ExtResource("6_jru7i")
-skeleton = NodePath("../..")
-
-[node name="狂戳3" type="Node3D" parent="物件动画/摄像机/图标/指"]
-transform = Transform3D(4, 0, 0, 0, 3, 0, 0, 0, 1, 8, 0, 0)
-
-[node name="模型" type="MeshInstance3D" parent="物件动画/摄像机/图标/指/狂戳3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-material_override = SubResource("StandardMaterial3D_8gfld")
-mesh = ExtResource("7_kki1i")
-
-[node name="滑键" type="MeshInstance3D" parent="物件动画/摄像机/图标/指"]
-transform = Transform3D(-6.55671e-08, -1.5, 0, -6.55671e-08, 2.86603e-15, -1.5, 1.5, -6.55671e-08, -6.55671e-08, 8, 6.5, 0)
-mesh = ExtResource("14_if0ww")
-skeleton = NodePath("../../../../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_fn31t")
-surface_material_override/1 = SubResource("StandardMaterial3D_p3m0i")
-
-[node name="滑键2" type="MeshInstance3D" parent="物件动画/摄像机/图标/指"]
-transform = Transform3D(-6.55671e-08, -1.5, 0, -6.55671e-08, 2.86603e-15, -1.5, 1.5, -6.55671e-08, -6.55671e-08, 8, 3, 0)
-mesh = ExtResource("14_if0ww")
-skeleton = NodePath("../../../../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_fn31t")
-surface_material_override/1 = SubResource("StandardMaterial3D_p3m0i")
-
-[node name="向" type="Node3D" parent="物件动画/摄像机/图标"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 0)
-
-[node name="长块" type="Node3D" parent="物件动画/摄像机/图标/向"]
-rotation_edit_mode = 2
-
-[node name="长条尾" type="MeshInstance3D" parent="物件动画/摄像机/图标/向/长块"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
-material_override = SubResource("StandardMaterial3D_y6vow")
-mesh = ExtResource("4_psdew")
-skeleton = NodePath("../../../../..")
-
-[node name="长条腰" type="MeshInstance3D" parent="物件动画/摄像机/图标/向/长块"]
-transform = Transform3D(1, 0, 0, 0, 3, 0, 0, 0, 1, 0, 1.5, 0)
-material_override = SubResource("StandardMaterial3D_nqthi")
-mesh = ExtResource("5_8rwjh")
-
-[node name="模型" type="Node3D" parent="物件动画/摄像机/图标/向/长块"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-
-[node name="长条头" type="MeshInstance3D" parent="物件动画/摄像机/图标/向/长块/模型"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
-material_override = SubResource("StandardMaterial3D_7yvcm")
-mesh = ExtResource("6_jru7i")
-skeleton = NodePath("../..")
-
-[node name="长块2" type="Node3D" parent="物件动画/摄像机/图标/向"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
-rotation_edit_mode = 2
-
-[node name="长条尾" type="MeshInstance3D" parent="物件动画/摄像机/图标/向/长块2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
-material_override = SubResource("StandardMaterial3D_y6vow")
-mesh = ExtResource("4_psdew")
-skeleton = NodePath("../../../../..")
-
-[node name="长条腰" type="MeshInstance3D" parent="物件动画/摄像机/图标/向/长块2"]
-transform = Transform3D(1, 0, 0, 0, 3, 0, 0, 0, 1, 0, 1.5, 0)
-material_override = SubResource("StandardMaterial3D_nqthi")
-mesh = ExtResource("5_8rwjh")
-
-[node name="模型" type="Node3D" parent="物件动画/摄像机/图标/向/长块2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-
-[node name="长条头" type="MeshInstance3D" parent="物件动画/摄像机/图标/向/长块2/模型"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
-material_override = SubResource("StandardMaterial3D_7yvcm")
-mesh = ExtResource("6_jru7i")
-skeleton = NodePath("../..")
-
-[node name="滑块2" type="Node3D" parent="物件动画/摄像机/图标/向"]
-transform = Transform3D(-4.37114e-08, 1.333, 0, -1, -5.82673e-08, 0, 0, 0, 1, 1, 12, 0)
-
-[node name="长条尾" type="MeshInstance3D" parent="物件动画/摄像机/图标/向/滑块2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
-material_override = SubResource("StandardMaterial3D_ukyht")
-mesh = ExtResource("4_psdew")
-skeleton = NodePath("../..")
-
-[node name="长条腰" type="MeshInstance3D" parent="物件动画/摄像机/图标/向/滑块2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-visible = false
-material_override = SubResource("StandardMaterial3D_41rxy")
-mesh = ExtResource("5_8rwjh")
-skeleton = NodePath("../..")
-
-[node name="长条头" type="MeshInstance3D" parent="物件动画/摄像机/图标/向/滑块2"]
-material_override = SubResource("StandardMaterial3D_5yl2b")
-mesh = ExtResource("6_jru7i")
-skeleton = NodePath("../..")
-
-[node name="爆裂" type="MeshInstance3D" parent="物件动画/摄像机/图标/向"]
-transform = Transform3D(2, 0, -7.10543e-15, 0, 2, 0, 7.10543e-15, 0, 2, 5, 6, 0)
-mesh = ExtResource("12_a3c8x")
-skeleton = NodePath("../../../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_ulrnd")
-
-[node name="滑块3" type="Node3D" parent="物件动画/摄像机/图标/向"]
-transform = Transform3D(0.707107, 0.47164, 0, -0.707107, 0.47164, 0, 0, 0, 1, 1, 12, 0)
-
-[node name="长条尾" type="MeshInstance3D" parent="物件动画/摄像机/图标/向/滑块3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
-material_override = SubResource("StandardMaterial3D_ukyht")
-mesh = ExtResource("4_psdew")
-skeleton = NodePath("../..")
-
-[node name="长条腰" type="MeshInstance3D" parent="物件动画/摄像机/图标/向/滑块3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-visible = false
-material_override = SubResource("StandardMaterial3D_41rxy")
-mesh = ExtResource("5_8rwjh")
-skeleton = NodePath("../..")
-
-[node name="长条头" type="MeshInstance3D" parent="物件动画/摄像机/图标/向/滑块3"]
-material_override = SubResource("StandardMaterial3D_5yl2b")
-mesh = ExtResource("6_jru7i")
-skeleton = NodePath("../..")
-
-[node name="黑" type="Node3D" parent="物件动画/摄像机/图标"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 0)
-
-[node name="狂戳" type="Node3D" parent="物件动画/摄像机/图标/黑"]
-transform = Transform3D(-4.37114e-08, 4, 0, -1, -1.74846e-07, 0, 0, 0, 1, -3, 15, 0)
-
-[node name="模型" type="MeshInstance3D" parent="物件动画/摄像机/图标/黑/狂戳"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-material_override = SubResource("StandardMaterial3D_8gfld")
-mesh = ExtResource("7_kki1i")
-
-[node name="狂戳2" type="Node3D" parent="物件动画/摄像机/图标/黑"]
-transform = Transform3D(-4.37114e-08, 4, 0, -1, -1.74846e-07, 0, 0, 0, 1, -3, 10, 0)
-
-[node name="模型" type="MeshInstance3D" parent="物件动画/摄像机/图标/黑/狂戳2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-material_override = SubResource("StandardMaterial3D_8gfld")
-mesh = ExtResource("7_kki1i")
-
-[node name="狂戳3" type="Node3D" parent="物件动画/摄像机/图标/黑"]
-transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, -2, 10, 0)
-
-[node name="模型" type="MeshInstance3D" parent="物件动画/摄像机/图标/黑/狂戳3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-material_override = SubResource("StandardMaterial3D_8gfld")
-mesh = ExtResource("7_kki1i")
-
-[node name="狂戳4" type="Node3D" parent="物件动画/摄像机/图标/黑"]
-transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 8, 10, 0)
-
-[node name="模型" type="MeshInstance3D" parent="物件动画/摄像机/图标/黑/狂戳4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-material_override = SubResource("StandardMaterial3D_8gfld")
-mesh = ExtResource("7_kki1i")
-
-[node name="狂戳5" type="Node3D" parent="物件动画/摄像机/图标/黑"]
-transform = Transform3D(1, 0, 0, 0, 4, 0, 0, 0, 1, 3, 4, 0)
-
-[node name="模型" type="MeshInstance3D" parent="物件动画/摄像机/图标/黑/狂戳5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-material_override = SubResource("StandardMaterial3D_8gfld")
-mesh = ExtResource("7_kki1i")
-
-[node name="狂戳6" type="Node3D" parent="物件动画/摄像机/图标/黑"]
-transform = Transform3D(-4.37114e-08, 4, 0, -1, -1.74846e-07, 0, 0, 0, 1, -3, 4, 0)
-
-[node name="模型" type="MeshInstance3D" parent="物件动画/摄像机/图标/黑/狂戳6"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-material_override = SubResource("StandardMaterial3D_8gfld")
-mesh = ExtResource("7_kki1i")
-
-[node name="狂戳7" type="Node3D" parent="物件动画/摄像机/图标/黑"]
-transform = Transform3D(-4.37114e-08, 3, 0, -1, -1.31134e-07, 0, 0, 0, 1, -1.5, 7, 0)
-
-[node name="模型" type="MeshInstance3D" parent="物件动画/摄像机/图标/黑/狂戳7"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-material_override = SubResource("StandardMaterial3D_8gfld")
-mesh = ExtResource("7_kki1i")
-
-[node name="狂戳8" type="Node3D" parent="物件动画/摄像机/图标/黑"]
-transform = Transform3D(0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0, 1, 1.5, 11.5, 0)
-
-[node name="模型" type="MeshInstance3D" parent="物件动画/摄像机/图标/黑/狂戳8"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-material_override = SubResource("StandardMaterial3D_8gfld")
-mesh = ExtResource("7_kki1i")
-
-[node name="狂戳9" type="Node3D" parent="物件动画/摄像机/图标/黑"]
-transform = Transform3D(0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0, 1, 4.5, 11.5, 0)
-
-[node name="模型" type="MeshInstance3D" parent="物件动画/摄像机/图标/黑/狂戳9"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-material_override = SubResource("StandardMaterial3D_8gfld")
-mesh = ExtResource("7_kki1i")
-
-[node name="狂戳10" type="Node3D" parent="物件动画/摄像机/图标/黑"]
-transform = Transform3D(0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0, 1, -3, 0, 0)
-
-[node name="模型" type="MeshInstance3D" parent="物件动画/摄像机/图标/黑/狂戳10"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-material_override = SubResource("StandardMaterial3D_8gfld")
-mesh = ExtResource("7_kki1i")
-
-[node name="狂戳11" type="Node3D" parent="物件动画/摄像机/图标/黑"]
-transform = Transform3D(0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0, 1, 3, 0, 0)
-
-[node name="模型" type="MeshInstance3D" parent="物件动画/摄像机/图标/黑/狂戳11"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-material_override = SubResource("StandardMaterial3D_8gfld")
-mesh = ExtResource("7_kki1i")
-
-[node name="狂戳12" type="Node3D" parent="物件动画/摄像机/图标/黑"]
-transform = Transform3D(0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0, 1, 6, 0, 0)
-
-[node name="模型" type="MeshInstance3D" parent="物件动画/摄像机/图标/黑/狂戳12"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-material_override = SubResource("StandardMaterial3D_8gfld")
-mesh = ExtResource("7_kki1i")
-
-[node name="狂戳13" type="Node3D" parent="物件动画/摄像机/图标/黑"]
-transform = Transform3D(0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0, 1, 9, 0, 0)
-
-[node name="模型" type="MeshInstance3D" parent="物件动画/摄像机/图标/黑/狂戳13"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-material_override = SubResource("StandardMaterial3D_8gfld")
-mesh = ExtResource("7_kki1i")
-
-[node name="块" type="Node3D" parent="物件动画/摄像机/图标"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 0, 0)
-
-[node name="长块" type="Node3D" parent="物件动画/摄像机/图标/块"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 3, 0)
-rotation_edit_mode = 2
-
-[node name="长条尾" type="MeshInstance3D" parent="物件动画/摄像机/图标/块/长块"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
-material_override = SubResource("StandardMaterial3D_y6vow")
-mesh = ExtResource("4_psdew")
-skeleton = NodePath("../../../../..")
-
-[node name="长条腰" type="MeshInstance3D" parent="物件动画/摄像机/图标/块/长块"]
-transform = Transform3D(1, 0, 0, 0, 3, 0, 0, 0, 1, 0, 1.5, 0)
-material_override = SubResource("StandardMaterial3D_nqthi")
-mesh = ExtResource("5_8rwjh")
-
-[node name="模型" type="Node3D" parent="物件动画/摄像机/图标/块/长块"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-
-[node name="长条头" type="MeshInstance3D" parent="物件动画/摄像机/图标/块/长块/模型"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
-material_override = SubResource("StandardMaterial3D_7yvcm")
-mesh = ExtResource("6_jru7i")
-skeleton = NodePath("../..")
-
-[node name="狂戳" type="Node3D" parent="物件动画/摄像机/图标/块"]
-transform = Transform3D(-4.37114e-08, 2, 0, -1, -8.74228e-08, 0, 0, 0, 1, 0, 12, 0)
-
-[node name="模型" type="MeshInstance3D" parent="物件动画/摄像机/图标/块/狂戳"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-material_override = SubResource("StandardMaterial3D_8gfld")
-mesh = ExtResource("7_kki1i")
-
-[node name="狂戳2" type="Node3D" parent="物件动画/摄像机/图标/块"]
-transform = Transform3D(0.5, 1.73205, 0, -0.866025, 1, 0, 0, 0, 1, 0, 2, 0)
-
-[node name="模型" type="MeshInstance3D" parent="物件动画/摄像机/图标/块/狂戳2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-material_override = SubResource("StandardMaterial3D_8gfld")
-mesh = ExtResource("7_kki1i")
-
-[node name="滑块" type="Node3D" parent="物件动画/摄像机/图标/块"]
-transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 7, 12, 0)
-
-[node name="长条尾" type="MeshInstance3D" parent="物件动画/摄像机/图标/块/滑块"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
-material_override = SubResource("StandardMaterial3D_ukyht")
-mesh = ExtResource("4_psdew")
-skeleton = NodePath("../..")
-
-[node name="长条腰" type="MeshInstance3D" parent="物件动画/摄像机/图标/块/滑块"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-visible = false
-material_override = SubResource("StandardMaterial3D_41rxy")
-mesh = ExtResource("5_8rwjh")
-skeleton = NodePath("../..")
-
-[node name="长条头" type="MeshInstance3D" parent="物件动画/摄像机/图标/块/滑块"]
-material_override = SubResource("StandardMaterial3D_5yl2b")
-mesh = ExtResource("6_jru7i")
-skeleton = NodePath("../..")
-
-[node name="滑块2" type="Node3D" parent="物件动画/摄像机/图标/块"]
-transform = Transform3D(-4.37114e-08, 1.333, 0, -1, -5.82673e-08, 0, 0, 0, 1, 7, 7, 0)
-
-[node name="长条尾" type="MeshInstance3D" parent="物件动画/摄像机/图标/块/滑块2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
-material_override = SubResource("StandardMaterial3D_ukyht")
-mesh = ExtResource("4_psdew")
-skeleton = NodePath("../..")
-
-[node name="长条腰" type="MeshInstance3D" parent="物件动画/摄像机/图标/块/滑块2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-visible = false
-material_override = SubResource("StandardMaterial3D_41rxy")
-mesh = ExtResource("5_8rwjh")
-skeleton = NodePath("../..")
-
-[node name="长条头" type="MeshInstance3D" parent="物件动画/摄像机/图标/块/滑块2"]
-material_override = SubResource("StandardMaterial3D_5yl2b")
-mesh = ExtResource("6_jru7i")
-skeleton = NodePath("../..")
-
-[node name="滑块3" type="Node3D" parent="物件动画/摄像机/图标/块"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 7, 0)
-
-[node name="长条尾" type="MeshInstance3D" parent="物件动画/摄像机/图标/块/滑块3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
-material_override = SubResource("StandardMaterial3D_ukyht")
-mesh = ExtResource("4_psdew")
-skeleton = NodePath("../..")
-
-[node name="长条腰" type="MeshInstance3D" parent="物件动画/摄像机/图标/块/滑块3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-visible = false
-material_override = SubResource("StandardMaterial3D_41rxy")
-mesh = ExtResource("5_8rwjh")
-skeleton = NodePath("../..")
-
-[node name="长条头" type="MeshInstance3D" parent="物件动画/摄像机/图标/块/滑块3"]
-material_override = SubResource("StandardMaterial3D_5yl2b")
-mesh = ExtResource("6_jru7i")
-skeleton = NodePath("../..")
-
-[node name="长块2" type="Node3D" parent="物件动画/摄像机/图标/块"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 6, 0)
-
-[node name="长条尾" type="MeshInstance3D" parent="物件动画/摄像机/图标/块/长块2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.5, 0)
-material_override = SubResource("StandardMaterial3D_y6vow")
-mesh = ExtResource("4_psdew")
-skeleton = NodePath("../../../../..")
-
-[node name="长条腰" type="MeshInstance3D" parent="物件动画/摄像机/图标/块/长块2"]
-transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 1.5, 0)
-material_override = SubResource("StandardMaterial3D_nqthi")
-mesh = ExtResource("5_8rwjh")
-
-[node name="模型" type="Node3D" parent="物件动画/摄像机/图标/块/长块2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-
-[node name="长条头" type="MeshInstance3D" parent="物件动画/摄像机/图标/块/长块2/模型"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
-material_override = SubResource("StandardMaterial3D_7yvcm")
-mesh = ExtResource("6_jru7i")
-skeleton = NodePath("../..")
-
-[node name="宽键" type="Node3D" parent="物件动画/摄像机/图标/块"]
-transform = Transform3D(2, -0.577639, 0, 3.4641, 0.3335, 0, 0, 0, 1, 9, 3, 0)
-
-[node name="模型" type="MeshInstance3D" parent="物件动画/摄像机/图标/块/宽键"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-material_override = SubResource("StandardMaterial3D_kl8t7")
-mesh = ExtResource("7_kki1i")
-
-[node name="宽键2" type="Node3D" parent="物件动画/摄像机/图标/块"]
-transform = Transform3D(2.5, 0.577639, 0, -4.33013, 0.3335, 0, 0, 0, 1, 11, 3, 0)
-
-[node name="模型" type="MeshInstance3D" parent="物件动画/摄像机/图标/块/宽键2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-material_override = SubResource("StandardMaterial3D_kl8t7")
-mesh = ExtResource("7_kki1i")
+[node name="图标" parent="物件动画/摄像机" instance=ExtResource("3_ecp4c")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -1.4, 0, -4)
 
 [node name="废弃" type="Node3D" parent="物件动画"]
 transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, -27, 70, -50)

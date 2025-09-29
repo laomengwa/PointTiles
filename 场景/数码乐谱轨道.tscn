@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://br1pvukmr1d7r"]
+
+[ext_resource type="Texture2D" uid="uid://bmbhdd7mkvrj1" path="res://纹理/界面/钢琴键盘.svg" id="1_vogmo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fks76"]
+content_margin_left = 6.0
+content_margin_top = 6.0
+content_margin_right = 6.0
+content_margin_bottom = 6.0
+bg_color = Color(0.866667, 0.866667, 0.866667, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="数码乐谱轨道" type="HBoxContainer"]
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="乐器图标" type="Button" parent="."]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_fks76")
+icon = ExtResource("1_vogmo")
+icon_alignment = 1
+expand_icon = true
